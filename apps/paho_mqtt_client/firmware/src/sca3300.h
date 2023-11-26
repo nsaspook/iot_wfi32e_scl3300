@@ -68,7 +68,7 @@ extern "C" {
 	 */
 	void sca3300_set_spimode(void *);
 	bool sca3300_getid(void *);
-        bool sca3300_getserial(void *);
+	bool sca3300_getserial(void *);
 	bool sca3300_getdata(void *);
 	void sca3300_version(void);
 

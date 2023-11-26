@@ -121,7 +121,7 @@ extern "C" {
 
 #define SYS_MQTT_INDEX0_SUB_QOS							1
 #define SYS_MQTT_INDEX0_SUB_TOPIC_COUNT					1
-#define SYS_MQTT_INDEX0_TOPIC_NAME        				"mateq84/data/solar"
+#define SYS_MQTT_INDEX0_TOPIC_NAME        				"mateq84/data/info"
 #define SYS_MQTT_INDEX0_ENTRY_VALID        				true
 
 #define SYS_MQTT_CLICMD_ENABLED
@@ -529,7 +529,7 @@ extern "C" {
 #define SYS_WIFI_STA_PWD        			"01090203020206050003050003"
 
 
-#define SYS_WIFI_STA_AUTHTYPE				SYS_WIFI_WPA2WPA3MIXED
+#define SYS_WIFI_STA_AUTHTYPE				SYS_WIFI_WPAWPA2MIXED 
 
 
 

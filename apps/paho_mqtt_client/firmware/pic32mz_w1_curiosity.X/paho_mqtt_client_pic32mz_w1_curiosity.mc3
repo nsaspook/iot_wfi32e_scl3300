@@ -6174,7 +6174,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttPic32mzw1&gt;
   &lt;sysMqttPic32mzw1 dnOrder=&quot;0&quot; id=&quot;SYS_MQTT_SUB_TOPIC_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;mateq84/data/solar&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;mateq84/data/info&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sysMqttPic32mzw1&gt;
 &lt;/sysMqttPic32mzw1&gt;
@@ -6226,7 +6226,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysWifiPic32mzw1&gt;
   &lt;sysWifiPic32mzw1 dnOrder=&quot;0&quot; id=&quot;SYS_WIFI_STA_AUTH&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;WPA2WPA3&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;WPA2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sysWifiPic32mzw1&gt;
 &lt;/sysWifiPic32mzw1&gt;
@@ -8142,7 +8142,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/configuration.h</file>
-         <hash>06411f0443d3e936355ea8774fb1a2be2741f898c52912c78c4407fae99b53e7</hash>
+         <hash>e41ca796f7fe89542a4e0e34de0cdbf8d606ab1b23d4ea7a53174e46a222eba2</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi2_master.h</file>

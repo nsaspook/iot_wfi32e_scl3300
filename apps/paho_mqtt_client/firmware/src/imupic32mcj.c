@@ -17,6 +17,7 @@ void qei_index_cb(QEI_STATUS status, uintptr_t context)
 
 /*
  * configure the SPI port bit size for data transfers
+ * does nothing for this port
  */
 uint8_t set_imu_bits(void)
 {
@@ -27,7 +28,7 @@ uint8_t set_imu_bits(void)
 
 /*
  * microsecond busy wait delay, 90 seconds MAX
- * used wdtwait in a cpu look so it must be calibrated
+ * uses wdtdelay in a cpu loop so it must be calibrated using delay_freq
  */
 void delay_us(uint32_t us)
 {
@@ -39,7 +40,7 @@ void delay_us(uint32_t us)
 }
 
 /*
- * start core-timer for delay_us
+ * start time-stamp counter
  */
 void start_tick(void)
 {

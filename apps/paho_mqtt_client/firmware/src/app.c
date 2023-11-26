@@ -139,12 +139,6 @@ void APP_Initialize(void)
 {
 	/* Place the App state machine in its initial state. */
 	appData.state = APP_STATE_INIT;
-
-
-
-	/* TODO: Initialize your application's state machine and other
-	 * parameters.
-	 */
 }
 
 /******************************************************************************
@@ -194,7 +188,9 @@ void APP_Tasks(void)
 
 	case APP_STATE_SERVICE_TASKS:
 	{
-
+		/*
+		 * service the IMU data
+		 */
 		if (imu0.update) {
 			imu0.op.imu_getdata(&imu0); // read data from the chip
 			imu0.update = false;
@@ -207,11 +203,14 @@ void APP_Tasks(void)
 			qa2 = accel.za;
 		}
 
-		if (counter++ >= 20000) {
+		/*
+		 * convert IMU data to JSON string for MQTT publishing
+		 */
+		if (counter++ >= IMU_UPDATE_SPEED) {
 			/*
-			 * format data to JSON
+			 * format data to JSON using printf formatting
 			 */
-			snprintf(buffer, 250, "{\r\n     \"name\": \"%s\",\r\n     \"X\": %f,\r\n     \"Y\": %f,\r\n     \"Z\": %f,\r\n     \"XA\": %f,\r\n     \"YA\": %f,\r\n     \"ZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
+			snprintf(buffer, 250, "{\r\n     \"name\": \"%s\",\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
 				build_version, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
 
 			APP_MQTT_PublishMsg(buffer);
@@ -220,10 +219,6 @@ void APP_Tasks(void)
 		}
 		break;
 	}
-
-		/* TODO: implement your application state machine.*/
-
-
 		/* The default state should never be executed. */
 	default:
 	{

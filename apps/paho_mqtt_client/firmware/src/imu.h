@@ -37,10 +37,11 @@ extern "C" {
 		double w;
 	} sh2_Quaternion_t;
 
-	
+
 #define QUAT_HOST
-	
+
 #ifdef QUAT_HOST
+
 	typedef struct _sSensorData_t {
 		const uint16_t id;
 		sh2_Quaternion_t fusion;
@@ -58,6 +59,7 @@ extern "C" {
 		uint8_t buffer[64]; // can-fd frame buffer space
 	} sSensorData_t;
 #else
+
 	typedef struct _sSensorData_t {
 		const uint16_t id;
 		double x; /**< X-axis sensor data */

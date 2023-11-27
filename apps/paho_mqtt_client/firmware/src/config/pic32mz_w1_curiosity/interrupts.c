@@ -68,6 +68,7 @@
 // *****************************************************************************
 // *****************************************************************************
 void CORE_TIMER_Handler (void);
+void TIMER_4_Handler (void);
 void FLASH_CONTROL_Handler (void);
 void UART1_FAULT_Handler (void);
 void UART1_RX_Handler (void);
@@ -91,6 +92,11 @@ void __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
     CORE_TIMER_InterruptHandler();
 }
 
+void __ISR(_TIMER_4_VECTOR, ipl2SRS) TIMER_4_Handler (void)
+{
+    TIMER_4_InterruptHandler();
+}
+
 void __ISR(_FLASH_CONTROL_VECTOR, ipl1SRS) FLASH_CONTROL_Handler (void)
 {
     NVM_InterruptHandler();
@@ -111,12 +117,12 @@ void __ISR(_UART1_TX_VECTOR, ipl1SRS) UART1_TX_Handler (void)
     UART1_TX_InterruptHandler();
 }
 
-void __ISR(_SPI2_RX_VECTOR, ipl1SRS) SPI2_RX_Handler (void)
+void __ISR(_SPI2_RX_VECTOR, ipl3SRS) SPI2_RX_Handler (void)
 {
     SPI2_RX_InterruptHandler();
 }
 
-void __ISR(_SPI2_TX_VECTOR, ipl1SRS) SPI2_TX_Handler (void)
+void __ISR(_SPI2_TX_VECTOR, ipl3SRS) SPI2_TX_Handler (void)
 {
     SPI2_TX_InterruptHandler();
 }

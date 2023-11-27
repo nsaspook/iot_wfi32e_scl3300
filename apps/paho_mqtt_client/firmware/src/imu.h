@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   imu.h
  * Author: root
  *
@@ -17,7 +17,7 @@ extern "C" {
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include <math.h>
 
-#define IMU_DRIVER "V1.705" 
+#define IMU_DRIVER "V1.708"
 #define IMU_ALIAS "IMU"
 
 #define IMU_ID_DELAY 400
@@ -181,7 +181,7 @@ extern "C" {
 	};
 
 	/*! Earth's gravity in m/s^2 */
-#define GRAVITY_EARTH   (9.80665) 
+#define GRAVITY_EARTH   (9.80665)
 	/*
 	 * device earth gravity range calibration scalars
 	 */

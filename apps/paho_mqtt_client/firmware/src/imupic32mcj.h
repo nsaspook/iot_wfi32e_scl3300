@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   imupic32mcj.h
  * Author: nsasp
  *
@@ -71,7 +71,7 @@ extern "C" {
 #ifndef  LED_RED_On
 #define LED_RED_On() LED_RED_Set()
 #define LED_RED_Off() LED_RED_Clear()
-#endif 
+#endif
 
 #define WDT_CAL			25
 #define IMU_UPDATE_SPEED	20000

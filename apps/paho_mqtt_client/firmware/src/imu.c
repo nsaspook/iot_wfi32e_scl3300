@@ -155,7 +155,7 @@ void getAllData(sSensorData_t *accel, imu_cmd_t * imu)
 					z = z - 4096;
 				}
 				sdata.scan.channels[SCA3300_ACC_Z] = z;
-				accel->sensortime = sensortime; // time log each accel measurement from IMU		
+				accel->sensortime = sensortime; // time log each accel measurement from IMU
 #else
 				move_bma490_transfer_data(data, imu);
 				sensortime = (data[9] << 16) | (data[8] << 8) | data[7]; // 24-bit sensor time

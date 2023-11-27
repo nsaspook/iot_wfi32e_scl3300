@@ -1,4 +1,5 @@
 #include "imupic32mcj.h"
+#include "timers.h"
 
 static uint32_t delay_freq = WDT_CAL;
 volatile uint32_t NOPER = 0;
@@ -23,6 +24,10 @@ uint8_t set_imu_bits(void)
 {
 	uint8_t imu_bits = 32;
 
+#ifdef SCA3300
+	imu_bits = 32;
+#endif
+
 	return imu_bits;
 }
 
@@ -44,6 +49,8 @@ void delay_us(uint32_t us)
  */
 void start_tick(void)
 {
+	TMR4_CallbackRegister(timer_ms_tick, 0);
+	TMR4_Start(); // software timers counter
 
 #ifdef __32MK0512MCJ048__
 	TMR9_Start(); // IMU time-stamp counter

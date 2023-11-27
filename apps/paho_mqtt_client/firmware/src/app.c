@@ -30,6 +30,7 @@
 #include <stdio.h>
 #include "app.h"
 #include "app_mqtt.h"
+#include "timers.h"
 #include "imupic32mcj.h"
 #include "imu.h"
 #include "sca3300.h"
@@ -101,6 +102,8 @@ imu_cmd_t imu0 = {
 };
 #endif
 
+volatile uint16_t tickCount[TMR_COUNT];
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -169,6 +172,7 @@ void APP_Tasks(void)
 		printf(imu_buffer);
 		imu0.op.imu_set_spimode(&imu0); // setup the IMU chip for SPI comms, X updates per second @ selected G range
 
+		StartTimer(TMR_IMU, IMU_ID_DELAY);
 		while (wait) {
 			if (imu0.op.imu_getid(&imu0)) {
 				wait = false;
@@ -176,6 +180,13 @@ void APP_Tasks(void)
 			};
 			LED_RED_Toggle();
 			LED_GREEN_Toggle();
+			if (TimerDone(TMR_IMU)) {
+				LED_RED_On();
+				LED_GREEN_Off();
+				wait = false;
+				printf("Unable to get IMU ID\r\n");
+				break;
+			}
 		}
 
 

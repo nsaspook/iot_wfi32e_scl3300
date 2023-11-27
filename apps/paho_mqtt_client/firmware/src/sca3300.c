@@ -1,6 +1,7 @@
 #include "sca3300.h"
 #include <stdio.h>
 #include "imupic32mcj.h"
+#include "timers.h"
 
 static const char *build_date = __DATE__, *build_time = __TIME__;
 
@@ -78,11 +79,11 @@ bool sca3300_imu_transfer(imu_cmd_t * imu, uint32_t data)
 	imu_cs(imu); // select IMU on SPI bus after required delay between SPI requests
 	imu->tbuf32[SCA3300_TRM] = data; // data request command as 32-bit word with CRC
 	SPI2_WriteRead(imu->tbuf32, SCA3300_CHIP_BTYES_PER_SPI, imu->rbuf32, SCA3300_CHIP_BTYES_PER_SPI);
-	//	StartTimer(TMR_CS, SCA3300_CHIP_CS_DELAY); // milliseconds
+	StartTimer(TMR_CS, SCA3300_CHIP_CS_DELAY); // milliseconds
 	while (imu->run) { // wait until data has left the SPI buffer, run flag is set in SPI interrupt ISR
-		//		if (TimerDone(TMR_CS)) {
-		//			return false;
-		//		}
+		if (TimerDone(TMR_CS)) {
+			return false;
+		}
 	};
 
 	return true;
@@ -293,7 +294,7 @@ void sca3300_set_spimode(void * imup)
 
 /*
  * enable sca3300 CS and set run flag that will be cleared when the buffer interrupt
- * happens or the disable function is call manually
+ * happens or the disable function is called manually
  * we only use one gpio CS line on this board for either type of IMU device
  */
 bool imu_cs(imu_cmd_t * imu)
@@ -302,7 +303,7 @@ bool imu_cs(imu_cmd_t * imu)
 		switch (imu->cs) {
 		case 0:
 		default:
-			delay_us(SCA3300_CHIP_CS_DELAY); // 
+			delay_us(SCA3300_CHIP_CS_DELAY); //
 			imu->run = true;
 			IMU_CS_Clear();
 			// set SPI receive complete callback

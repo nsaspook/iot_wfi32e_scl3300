@@ -59,6 +59,7 @@
 #include "peripheral/uart/plib_uart3.h"
 #include "peripheral/uart/plib_uart1.h"
 #include "system/mqtt/sys_mqtt.h"
+#include "peripheral/tmr/plib_tmr4.h"
 #include "peripheral/tmr/plib_tmr2.h"
 #include "peripheral/spi/spi_master/plib_spi2_master.h"
 #include "system/int/sys_int.h"

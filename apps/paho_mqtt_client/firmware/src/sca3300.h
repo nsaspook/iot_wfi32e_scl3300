@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   sca3300.h
  * Author: nsasp
  *
@@ -23,7 +23,7 @@ extern "C" {
 #include "definitions.h"                // SYS function prototypes
 #include "imu.h"
 
-#define SCA3300_DRIVER	"V1.006" 
+#define SCA3300_DRIVER	"V1.008"
 
 #define SCA3300_ALIAS	"SCx3300  "
 
@@ -38,8 +38,8 @@ extern "C" {
 #define	SCA3300_ACC_Y_32B	0x080000FD
 #define	SCA3300_ACC_Z_32B	0x0C0000FB
 #define SCA3300_TEMP_32B	0x140000EF
-#define SCA3300_MODE1		0xB400001F	
-#define SCA3300_MODE2		0xB4000102	
+#define SCA3300_MODE1		0xB400001F
+#define SCA3300_MODE2		0xB4000102
 #define SCA3300_MODE3		0xB4000225
 #define SCA3300_MODE4		0xB4000338
 #define SCL3300_MODE1		0xB400001F
@@ -55,7 +55,7 @@ extern "C" {
 #define SCA3300_BANK0           0xFC000073
 #define SCA3300_BANK1           0xFC00016E
 #define SCA3300_SERIAL1         0x640000A7
-#define SCA3300_SERIAL2         0x680000AD    
+#define SCA3300_SERIAL2         0x680000AD
 
 #define SCA3300_CHIP_ID_DELAY		10000	// ID command repeat delays in usec
 #define SCA3300_CHIP_SWR_DELAY		10000	// chip software reset delay

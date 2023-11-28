@@ -1,7 +1,10 @@
 #include "imupic32mcj.h"
 #include "timers.h"
 
+#ifdef NO_CORE_TIME
 static uint32_t delay_freq = WDT_CAL;
+#endif
+
 volatile uint32_t NOPER = 0;
 
 #ifdef __32MK0512MCJ048__
@@ -38,9 +41,13 @@ uint8_t set_imu_bits(void)
 void delay_us(uint32_t us)
 {
 	TP1_Set();
+#ifndef NO_CORE_TIME
+	CORETIMER_DelayUs(us);
+#else
 	// Convert microseconds us into how many delay ticks it will take
 	us *= delay_freq;
 	wdtdelay(us);
+#endif
 	TP1_Clear();
 }
 

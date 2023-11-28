@@ -66,7 +66,7 @@ uint32_t count = 0;
 const char build_version[] = "MQTT Test PIC32mz_w1";
 const char *build_date = __DATE__, *build_time = __TIME__;
 
-char buffer[256], opbuffer[24];
+char buffer[512], opbuffer[24];
 bool wait = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
@@ -224,8 +224,8 @@ void APP_Tasks(void)
 			/*
 			 * format data to JSON using printf formatting
 			 */
-			snprintf(buffer, 250, "{\r\n     \"name\": \"%s\",\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
-				build_version, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
+			snprintf(buffer, 510, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %d,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
+				build_version, count++, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
 
 			APP_MQTT_PublishMsg(buffer);
 			counter = 0;

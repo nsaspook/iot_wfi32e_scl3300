@@ -36,7 +36,9 @@ uint8_t set_imu_bits(void)
 
 /*
  * microsecond busy wait delay, 90 seconds MAX
+ * if we have no core timer it
  * uses wdtdelay in a cpu loop so it must be calibrated using delay_freq
+ * for each different type of compile feature and option
  */
 void delay_us(uint32_t us)
 {

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "WFI32E01PE-I"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-11-30-12:32:37)
+    (mountForm default
+        (footprintRef "WFI32E01PEI")
+        (spec "System")
+    )
+)

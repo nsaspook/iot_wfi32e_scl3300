@@ -1,0 +1,9 @@
+Manufacturer=Microchip
+PartNumber=WFI32E01PE-I
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=56
+Version=1.4
+Released=2022-11-30 12:32:37
+Downloaded=2023-11-29 02:28:50
+3D=Y

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP WFI32E01PE-I
+D WiFi Modules - 802.11 54-pad Wi-Fi SoC module, 802.11 b/g/n, 1MB Flash, 320KB RAM, Crypto, PCB ant
+K
+F https://ww1.microchip.com/downloads/aemDocuments/documents/WSG/ProductDocuments/DataSheets/PIC32MZ1025W104-MCU-and-WFI32E01-Module-with-Wi-Fi-and-Hardware-based-Security-Accelerator-Data-Sheet-DS70005425.pdf
+$ENDCMP
+#
+#End Doc Library

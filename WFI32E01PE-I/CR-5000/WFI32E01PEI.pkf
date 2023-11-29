@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "WFI32E01PEI"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "WFI32E01PEI")
+        (spec "default")
+    )
+)

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'WFI32E01PE_I'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Microchip", "WFI32E01PE-I" (!) = "", "WFI32E01PEI", "Other", "579-WFI32E01PE-I", "https://www.mouser.co.uk/ProductDetail/Microchip-Technology-Atmel/WFI32E01PE-I?qs=W%2FMpXkg%252BdQ6FpmXU%2Fd7PKw%3D%3D", "WiFi Modules - 802.11 54-pad Wi-Fi SoC module, 802.11 b/g/n, 1MB Flash, 320KB RAM, Crypto, PCB ant", "https://ww1.microchip.com/downloads/aemDocuments/documents/WSG/ProductDocuments/DataSheets/PIC32MZ1025W104-MCU-and-WFI32E01-Module-with-Wi-Fi-and-Hardware-based-Security-Accelerator-Data-Sheet-DS70005425.pdf", "2.6 mm"
+END_PART
+
+END.

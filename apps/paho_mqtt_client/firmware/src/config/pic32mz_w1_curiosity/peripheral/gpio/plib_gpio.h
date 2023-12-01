@@ -62,14 +62,32 @@
 // *****************************************************************************
 
 
-/*** Macros for SST26_CS pin ***/
-#define SST26_CS_Set()               (LATASET = (1U<<1))
-#define SST26_CS_Clear()             (LATACLR = (1U<<1))
-#define SST26_CS_Toggle()            (LATAINV= (1U<<1))
-#define SST26_CS_OutputEnable()      (TRISACLR = (1U<<1))
-#define SST26_CS_InputEnable()       (TRISASET = (1U<<1))
-#define SST26_CS_Get()               ((PORTA >> 1) & 0x1U)
-#define SST26_CS_PIN                  GPIO_PIN_RA1
+/*** Macros for GPIO_RC15 pin ***/
+#define GPIO_RC15_Set()               (LATCSET = (1U<<15))
+#define GPIO_RC15_Clear()             (LATCCLR = (1U<<15))
+#define GPIO_RC15_Toggle()            (LATCINV= (1U<<15))
+#define GPIO_RC15_OutputEnable()      (TRISCCLR = (1U<<15))
+#define GPIO_RC15_InputEnable()       (TRISCSET = (1U<<15))
+#define GPIO_RC15_Get()               ((PORTC >> 15) & 0x1U)
+#define GPIO_RC15_PIN                  GPIO_PIN_RC15
+
+/*** Macros for QEB2_SIG pin ***/
+#define QEB2_SIG_Set()               (LATKSET = (1U<<13))
+#define QEB2_SIG_Clear()             (LATKCLR = (1U<<13))
+#define QEB2_SIG_Toggle()            (LATKINV= (1U<<13))
+#define QEB2_SIG_OutputEnable()      (TRISKCLR = (1U<<13))
+#define QEB2_SIG_InputEnable()       (TRISKSET = (1U<<13))
+#define QEB2_SIG_Get()               ((PORTK >> 13) & 0x1U)
+#define QEB2_SIG_PIN                  GPIO_PIN_RK13
+
+/*** Macros for DIS_CS pin ***/
+#define DIS_CS_Set()               (LATASET = (1U<<1))
+#define DIS_CS_Clear()             (LATACLR = (1U<<1))
+#define DIS_CS_Toggle()            (LATAINV= (1U<<1))
+#define DIS_CS_OutputEnable()      (TRISACLR = (1U<<1))
+#define DIS_CS_InputEnable()       (TRISASET = (1U<<1))
+#define DIS_CS_Get()               ((PORTA >> 1) & 0x1U)
+#define DIS_CS_PIN                  GPIO_PIN_RA1
 
 /*** Macros for EXT_SW1 pin ***/
 #define EXT_SW1_Set()               (LATASET = (1U<<4))
@@ -93,6 +111,10 @@
 #define TP1_Get()               ((PORTA >> 13) & 0x1U)
 #define TP1_PIN                  GPIO_PIN_RA13
 
+/*** Macros for AN1_T pin ***/
+#define AN1_T_Get()               ((PORTB >> 9) & 0x1U)
+#define AN1_T_PIN                  GPIO_PIN_RB9
+
 /*** Macros for IMU_CS pin ***/
 #define IMU_CS_Set()               (LATBSET = (1U<<7))
 #define IMU_CS_Clear()             (LATBCLR = (1U<<7))
@@ -102,6 +124,46 @@
 #define IMU_CS_Get()               ((PORTB >> 7) & 0x1U)
 #define IMU_CS_PIN                  GPIO_PIN_RB7
 
+/*** Macros for PWM1L_T pin ***/
+#define PWM1L_T_Get()               ((PORTC >> 11) & 0x1U)
+#define PWM1L_T_PIN                  GPIO_PIN_RC11
+
+/*** Macros for QEA2_SIG pin ***/
+#define QEA2_SIG_Set()               (LATKSET = (1U<<14))
+#define QEA2_SIG_Clear()             (LATKCLR = (1U<<14))
+#define QEA2_SIG_Toggle()            (LATKINV= (1U<<14))
+#define QEA2_SIG_OutputEnable()      (TRISKCLR = (1U<<14))
+#define QEA2_SIG_InputEnable()       (TRISKSET = (1U<<14))
+#define QEA2_SIG_Get()               ((PORTK >> 14) & 0x1U)
+#define QEA2_SIG_PIN                  GPIO_PIN_RK14
+
+/*** Macros for GPIO_RC9 pin ***/
+#define GPIO_RC9_Set()               (LATCSET = (1U<<9))
+#define GPIO_RC9_Clear()             (LATCCLR = (1U<<9))
+#define GPIO_RC9_Toggle()            (LATCINV= (1U<<9))
+#define GPIO_RC9_OutputEnable()      (TRISCCLR = (1U<<9))
+#define GPIO_RC9_InputEnable()       (TRISCSET = (1U<<9))
+#define GPIO_RC9_Get()               ((PORTC >> 9) & 0x1U)
+#define GPIO_RC9_PIN                  GPIO_PIN_RC9
+
+/*** Macros for GPIO_RA5 pin ***/
+#define GPIO_RA5_Set()               (LATASET = (1U<<5))
+#define GPIO_RA5_Clear()             (LATACLR = (1U<<5))
+#define GPIO_RA5_Toggle()            (LATAINV= (1U<<5))
+#define GPIO_RA5_OutputEnable()      (TRISACLR = (1U<<5))
+#define GPIO_RA5_InputEnable()       (TRISASET = (1U<<5))
+#define GPIO_RA5_Get()               ((PORTA >> 5) & 0x1U)
+#define GPIO_RA5_PIN                  GPIO_PIN_RA5
+
+/*** Macros for GPIO_RK7 pin ***/
+#define GPIO_RK7_Set()               (LATKSET = (1U<<7))
+#define GPIO_RK7_Clear()             (LATKCLR = (1U<<7))
+#define GPIO_RK7_Toggle()            (LATKINV= (1U<<7))
+#define GPIO_RK7_OutputEnable()      (TRISKCLR = (1U<<7))
+#define GPIO_RK7_InputEnable()       (TRISKSET = (1U<<7))
+#define GPIO_RK7_Get()               ((PORTK >> 7) & 0x1U)
+#define GPIO_RK7_PIN                  GPIO_PIN_RK7
+
 /*** Macros for IMU_INT2 pin ***/
 #define IMU_INT2_Set()               (LATASET = (1U<<14))
 #define IMU_INT2_Clear()             (LATACLR = (1U<<14))
@@ -110,6 +172,28 @@
 #define IMU_INT2_InputEnable()       (TRISASET = (1U<<14))
 #define IMU_INT2_Get()               ((PORTA >> 14) & 0x1U)
 #define IMU_INT2_PIN                  GPIO_PIN_RA14
+
+/*** Macros for VREF_IN pin ***/
+#define VREF_IN_Get()               ((PORTB >> 8) & 0x1U)
+#define VREF_IN_PIN                  GPIO_PIN_RB8
+
+/*** Macros for DIS_MODE pin ***/
+#define DIS_MODE_Set()               (LATCSET = (1U<<10))
+#define DIS_MODE_Clear()             (LATCCLR = (1U<<10))
+#define DIS_MODE_Toggle()            (LATCINV= (1U<<10))
+#define DIS_MODE_OutputEnable()      (TRISCCLR = (1U<<10))
+#define DIS_MODE_InputEnable()       (TRISCSET = (1U<<10))
+#define DIS_MODE_Get()               ((PORTC >> 10) & 0x1U)
+#define DIS_MODE_PIN                  GPIO_PIN_RC10
+
+/*** Macros for DIS_RESET pin ***/
+#define DIS_RESET_Set()               (LATCSET = (1U<<12))
+#define DIS_RESET_Clear()             (LATCCLR = (1U<<12))
+#define DIS_RESET_Toggle()            (LATCINV= (1U<<12))
+#define DIS_RESET_OutputEnable()      (TRISCCLR = (1U<<12))
+#define DIS_RESET_InputEnable()       (TRISCSET = (1U<<12))
+#define DIS_RESET_Get()               ((PORTC >> 12) & 0x1U)
+#define DIS_RESET_PIN                  GPIO_PIN_RC12
 
 
 // *****************************************************************************

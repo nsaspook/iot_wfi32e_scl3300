@@ -18816,6 +18816,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="-86.36" y="7.62"/>
 <junction x="-99.06" y="7.62"/>
 </segment>
+<segment>
+<wire x1="254" y1="43.18" x2="266.7" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="CVDT10_/_ETH_CLK_OUT_/_RPC12"/>
+<junction x="266.7" y="43.18"/>
+<junction x="254" y="43.18"/>
+<label x="241.3" y="43.18" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SDI1" class="0">
 <segment>
@@ -18899,6 +18906,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="-86.36" y="2.54"/>
 <junction x="-99.06" y="2.54"/>
 </segment>
+<segment>
+<wire x1="254" y1="48.26" x2="266.7" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="CVDT8_/_ERXD1_/_RPC10"/>
+<junction x="266.7" y="48.26"/>
+<junction x="254" y="48.26"/>
+<label x="243.84" y="48.26" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="DIS_CS" class="0">
 <segment>
@@ -18946,11 +18960,11 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="205.74" y="91.44"/>
 </segment>
 <segment>
-<wire x1="411.48" y1="60.96" x2="398.78" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="SCL1_/_RPA4"/>
-<junction x="398.78" y="60.96"/>
-<junction x="411.48" y="60.96"/>
-<label x="414.02" y="60.96" size="1.778" layer="95"/>
+<wire x1="411.48" y1="43.18" x2="398.78" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="AN17_/_CVD17_/_CVDR17_/_INT0_/_RPA10"/>
+<junction x="398.78" y="43.18"/>
+<junction x="411.48" y="43.18"/>
+<label x="414.02" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AN0" class="0">
@@ -18983,6 +18997,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="147.32" y="88.9" size="1.778" layer="95"/>
 <junction x="170.18" y="88.9"/>
 <junction x="157.48" y="88.9"/>
+</segment>
+<segment>
+<wire x1="411.48" y1="25.4" x2="398.78" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="TDI_/_PGD4_/_AN9_/_CVD9_/_CVDR9_/_RPB9"/>
+<label x="416.56" y="25.4" size="1.778" layer="95"/>
+<junction x="398.78" y="25.4"/>
+<junction x="411.48" y="25.4"/>
 </segment>
 </net>
 <net name="VREF+" class="0">
@@ -19019,6 +19040,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <pinref part="VREF_TP" gate="G$1" pin="TP"/>
 <junction x="137.16" y="-5.08"/>
 </segment>
+<segment>
+<wire x1="398.78" y1="27.94" x2="411.48" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="TCK_/_PGC4_/_AN8_/_CVD8_/_CVDR8_/_RPB8"/>
+<junction x="398.78" y="27.94"/>
+<junction x="411.48" y="27.94"/>
+<label x="414.02" y="27.94" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="DAC1" class="0">
 <segment>
@@ -19034,6 +19062,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="170.18" y="93.98"/>
 <junction x="157.48" y="93.98"/>
 <label x="147.32" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="398.78" y1="63.5" x2="411.48" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="SDA1_/_RPA5"/>
+<junction x="398.78" y="63.5"/>
+<junction x="411.48" y="63.5"/>
+<label x="414.02" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="QEA2" class="0">
@@ -19058,6 +19093,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="-86.36" y="15.24"/>
 <label x="-93.98" y="15.24" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="398.78" y1="68.58" x2="411.48" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="U1RX"/>
+<junction x="398.78" y="68.58"/>
+<junction x="411.48" y="68.58"/>
+<label x="414.02" y="68.58" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="QEB2" class="0">
 <segment>
@@ -19081,6 +19123,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="-86.36" y="17.78"/>
 <label x="-96.52" y="17.78" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="398.78" y1="71.12" x2="411.48" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="U1TX"/>
+<junction x="398.78" y="71.12"/>
+<junction x="411.48" y="71.12"/>
+<label x="414.02" y="71.12" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="INDX2" class="0">
 <segment>
@@ -19096,6 +19145,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="193.04" y="88.9"/>
 <junction x="205.74" y="88.9"/>
 <label x="198.12" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="398.78" y1="60.96" x2="411.48" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="SCL1_/_RPA4"/>
+<junction x="398.78" y="60.96"/>
+<junction x="411.48" y="60.96"/>
+<label x="414.02" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM1L" class="0">
@@ -19119,6 +19175,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="-66.04" y="63.5" size="1.778" layer="95"/>
 <junction x="-73.66" y="63.5"/>
 <junction x="-60.96" y="63.5"/>
+</segment>
+<segment>
+<wire x1="266.7" y1="50.8" x2="254" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="CVDT9_/_ERXD0_/_RPC11"/>
+<label x="243.84" y="50.8" size="1.778" layer="95"/>
+<junction x="266.7" y="50.8"/>
+<junction x="254" y="50.8"/>
 </segment>
 </net>
 <net name="PWM1H" class="0">
@@ -19144,6 +19207,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="-66.04" y="55.88" size="1.778" layer="95"/>
 <junction x="-73.66" y="55.88"/>
 <junction x="-60.96" y="55.88"/>
+</segment>
+<segment>
+<wire x1="266.7" y1="35.56" x2="254" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="CVDT14_/_ERXDV_/_RPK12"/>
+<junction x="266.7" y="35.56"/>
+<junction x="254" y="35.56"/>
+<label x="243.84" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM4L" class="0">

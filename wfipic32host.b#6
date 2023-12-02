@@ -77,7 +77,7 @@
 <wire x1="36.81" y1="17.78" x2="36.81" y2="60.63" width="0" layer="20"/>
 <wire x1="36.81" y1="60.63" x2="-58.42" y2="60.63" width="0" layer="20"/>
 <wire x1="-58.42" y1="60.63" x2="-58.42" y2="17.78" width="0" layer="20"/>
-<text x="21.59" y="20.32" size="1.016" layer="1" font="vector" ratio="17" distance="77" rot="R180">PIC32MK-CANFD HOST V1.7</text>
+<text x="21.59" y="20.32" size="1.016" layer="1" font="vector" ratio="17" distance="77" rot="R180">PIC32MK-CANFD HOST V1.8</text>
 <hole x="-55.88" y="20.32" drill="2.54"/>
 <hole x="-55.88" y="58.42" drill="2.54"/>
 <text x="-33.02" y="30.48" size="1.016" layer="1" font="vector" ratio="16">CAN-FD ON</text>

@@ -88,21 +88,22 @@ SYS_CMD_Tasks();
 
     /* Maintain Middleware & Other Libraries */
     
+NET_PRES_Tasks(sysObj.netPres);
+
+
+
 DRV_BA414E_Tasks(sysObj.ba414e);
-
-
-
-   TCPIP_STACK_Task(sysObj.tcpip);
 
    void APP_MQTT_Tasks(void);
 
 
-NET_PRES_Tasks(sysObj.netPres);
+   TCPIP_STACK_Task(sysObj.tcpip);
 
 
 SYS_WIFI_Tasks(sysObj.syswifi);
 
 APP_MQTT_Tasks();
+
 
 
     /* Maintain the application's state machine. */

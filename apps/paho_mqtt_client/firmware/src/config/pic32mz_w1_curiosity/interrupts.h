@@ -68,6 +68,9 @@ void SPI2_TX_InterruptHandler( void );
 void WDRV_PIC32MZW_TasksRFSMCISR( void );
 void WDRV_PIC32MZW_TasksRFMACISR( void );
 void WDRV_PIC32MZW_TasksRFTimer0ISR( void );
+void CAN2_RX_InterruptHandler( void );
+void CAN2_TX_InterruptHandler( void );
+void CAN2_MISC_InterruptHandler( void );
 void DRV_BA414E_InterruptHandler( void );
 void DRV_BA414E_ErrorInterruptHandler( void );
 

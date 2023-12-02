@@ -111,6 +111,15 @@
 #define TP1_Get()               ((PORTA >> 13) & 0x1U)
 #define TP1_PIN                  GPIO_PIN_RA13
 
+/*** Macros for GPIO_RB12 pin ***/
+#define GPIO_RB12_Set()               (LATBSET = (1U<<12))
+#define GPIO_RB12_Clear()             (LATBCLR = (1U<<12))
+#define GPIO_RB12_Toggle()            (LATBINV= (1U<<12))
+#define GPIO_RB12_OutputEnable()      (TRISBCLR = (1U<<12))
+#define GPIO_RB12_InputEnable()       (TRISBSET = (1U<<12))
+#define GPIO_RB12_Get()               ((PORTB >> 12) & 0x1U)
+#define GPIO_RB12_PIN                  GPIO_PIN_RB12
+
 /*** Macros for AN1_T pin ***/
 #define AN1_T_Get()               ((PORTB >> 9) & 0x1U)
 #define AN1_T_PIN                  GPIO_PIN_RB9
@@ -145,24 +154,6 @@
 #define GPIO_RC9_InputEnable()       (TRISCSET = (1U<<9))
 #define GPIO_RC9_Get()               ((PORTC >> 9) & 0x1U)
 #define GPIO_RC9_PIN                  GPIO_PIN_RC9
-
-/*** Macros for GPIO_RA5 pin ***/
-#define GPIO_RA5_Set()               (LATASET = (1U<<5))
-#define GPIO_RA5_Clear()             (LATACLR = (1U<<5))
-#define GPIO_RA5_Toggle()            (LATAINV= (1U<<5))
-#define GPIO_RA5_OutputEnable()      (TRISACLR = (1U<<5))
-#define GPIO_RA5_InputEnable()       (TRISASET = (1U<<5))
-#define GPIO_RA5_Get()               ((PORTA >> 5) & 0x1U)
-#define GPIO_RA5_PIN                  GPIO_PIN_RA5
-
-/*** Macros for GPIO_RK7 pin ***/
-#define GPIO_RK7_Set()               (LATKSET = (1U<<7))
-#define GPIO_RK7_Clear()             (LATKCLR = (1U<<7))
-#define GPIO_RK7_Toggle()            (LATKINV= (1U<<7))
-#define GPIO_RK7_OutputEnable()      (TRISKCLR = (1U<<7))
-#define GPIO_RK7_InputEnable()       (TRISKSET = (1U<<7))
-#define GPIO_RK7_Get()               ((PORTK >> 7) & 0x1U)
-#define GPIO_RK7_PIN                  GPIO_PIN_RK7
 
 /*** Macros for IMU_INT2 pin ***/
 #define IMU_INT2_Set()               (LATASET = (1U<<14))

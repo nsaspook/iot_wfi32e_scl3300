@@ -64,20 +64,20 @@ void GPIO_Initialize ( void )
 
     /* PORTA Initialization */
     LATA = 0x32U; /* Initial Latch Value */
-    TRISACLR = 0x2032U; /* Direction Control */
+    TRISACLR = 0x2012U; /* Direction Control */
     ANSELACLR = 0x6400U; /* Digital Mode Enable */
     CNPUASET = 0x2012U; /* Pull-Up Enable */
     /* PORTB Initialization */
-    LATB = 0x80U; /* Initial Latch Value */
-    TRISBCLR = 0x80U; /* Direction Control */
-    ANSELBCLR = 0x10c0U; /* Digital Mode Enable */
+    LATB = 0x1080U; /* Initial Latch Value */
+    TRISBCLR = 0x1080U; /* Direction Control */
+    ANSELBCLR = 0x1080U; /* Digital Mode Enable */
     CNPUBSET = 0x80U; /* Pull-Up Enable */
     /* PORTC Initialization */
     LATC = 0x9600U; /* Initial Latch Value */
     TRISCCLR = 0x9600U; /* Direction Control */
     /* PORTK Initialization */
     LATK = 0x6000U; /* Initial Latch Value */
-    TRISKCLR = 0x608aU; /* Direction Control */
+    TRISKCLR = 0x600aU; /* Direction Control */
     ANSELKCLR = 0x8U; /* Digital Mode Enable */
 
     /* Unlock system for PPS configuration */
@@ -91,14 +91,14 @@ void GPIO_Initialize ( void )
     U3RXR = 10;
     INT2R = 12;
     SDI2R = 12;
-    C1RXR = 4;
+    C2RXR = 12;
 
     /* PPS Output Remapping */
     RPC14R = 1;
     RPK4R = 4;
-    RPB12R = 6;
     RPC11R = 5;
     RPK12R = 5;
+    RPA5R = 6;
 
         /* Lock back the system after PPS configuration */
     CFGCON0bits.IOLOCK = 1U;

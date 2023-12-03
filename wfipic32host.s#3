@@ -18746,7 +18746,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="238.76" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="U1RX" class="0">
+<net name="U1RX_U3RX" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="OA3IN-/AN7/CVD7/C3IN1-/C4IN1-/RPC1/RC1"/>
 <wire x1="-17.78" y1="27.94" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
@@ -18783,7 +18783,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="246.38" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="U1TX" class="0">
+<net name="U1TX_U3TX" class="0">
 <segment>
 <wire x1="170.18" y1="121.92" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="3"/>
@@ -19504,7 +19504,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="-15.24" y="157.48"/>
 </segment>
 </net>
-<net name="C1TX_SIG" class="0">
+<net name="C1TX_SIG_C2TX" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="TXD"/>
 <wire x1="-53.34" y1="142.24" x2="-53.34" y2="149.86" width="0.1524" layer="91"/>
@@ -19522,7 +19522,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="416.56" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="C1RX_SIG" class="0">
+<net name="C1RX_SIG_C2RX" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="RXD"/>
 <wire x1="-53.34" y1="134.62" x2="-53.34" y2="124.46" width="0.1524" layer="91"/>

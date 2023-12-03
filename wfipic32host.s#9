@@ -16881,6 +16881,237 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="WFI32E01PE-I">
+<description>&lt;WiFi Modules - 802.11 54-pad Wi-Fi SoC module, 802.11 b/g/n, 1MB Flash, 320KB RAM, Crypto, PCB ant&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="WFI32E01PEI">
+<description>&lt;b&gt;WFI32E01PE-I-17&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-8.25" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="2" x="-6.98" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="3" x="-5.71" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="4" x="-4.44" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="5" x="-3.17" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="6" x="-1.9" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="7" x="-0.63" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="8" x="0.64" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="9" x="1.91" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="10" x="3.18" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="11" x="4.45" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="12" x="5.72" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="13" x="6.99" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="14" x="8.26" y="-11.28" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="15" x="9.29" y="-10.08" dx="1" dy="0.7" layer="1"/>
+<smd name="16" x="9.29" y="-8.81" dx="1" dy="0.7" layer="1"/>
+<smd name="17" x="9.29" y="-7.54" dx="1" dy="0.7" layer="1"/>
+<smd name="18" x="9.29" y="-6.27" dx="1" dy="0.7" layer="1"/>
+<smd name="19" x="9.29" y="-5" dx="1" dy="0.7" layer="1"/>
+<smd name="20" x="9.29" y="-3.73" dx="1" dy="0.7" layer="1"/>
+<smd name="21" x="9.29" y="-2.46" dx="1" dy="0.7" layer="1"/>
+<smd name="22" x="9.29" y="-1.19" dx="1" dy="0.7" layer="1"/>
+<smd name="23" x="9.29" y="0.08" dx="1" dy="0.7" layer="1"/>
+<smd name="24" x="9.29" y="1.35" dx="1" dy="0.7" layer="1"/>
+<smd name="25" x="9.29" y="2.62" dx="1" dy="0.7" layer="1"/>
+<smd name="26" x="9.29" y="3.89" dx="1" dy="0.7" layer="1"/>
+<smd name="27" x="8.26" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="28" x="6.99" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="29" x="5.72" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="30" x="4.45" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="31" x="3.18" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="32" x="1.91" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="33" x="0.64" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="34" x="-0.63" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="35" x="-1.9" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="36" x="-3.17" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="37" x="-4.44" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="39" x="-6.98" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="40" x="-8.25" y="5.09" dx="1" dy="0.7" layer="1" rot="R90"/>
+<smd name="41" x="-9.28" y="3.89" dx="1" dy="0.7" layer="1"/>
+<smd name="42" x="-9.28" y="2.62" dx="1" dy="0.7" layer="1"/>
+<smd name="43" x="-9.28" y="1.35" dx="1" dy="0.7" layer="1"/>
+<smd name="44" x="-9.28" y="0.08" dx="1" dy="0.7" layer="1"/>
+<smd name="45" x="-9.28" y="-1.19" dx="1" dy="0.7" layer="1"/>
+<smd name="46" x="-9.28" y="-2.46" dx="1" dy="0.7" layer="1"/>
+<smd name="47" x="-9.28" y="-3.73" dx="1" dy="0.7" layer="1"/>
+<smd name="48" x="-9.28" y="-5" dx="1" dy="0.7" layer="1"/>
+<smd name="49" x="-9.28" y="-6.27" dx="1" dy="0.7" layer="1"/>
+<smd name="50" x="-9.28" y="-7.54" dx="1" dy="0.7" layer="1"/>
+<smd name="51" x="-9.28" y="-8.81" dx="1" dy="0.7" layer="1"/>
+<smd name="52" x="-9.28" y="-10.08" dx="1" dy="0.7" layer="1"/>
+<smd name="53" x="-3.74" y="-5.44" dx="1" dy="0.7" layer="1" rot="R45"/>
+<smd name="54" x="-4.44" y="-4.74" dx="1" dy="0.7" layer="1" rot="R45"/>
+<smd name="55" x="1" y="-3.51" dx="5.5" dy="4.64" layer="1" rot="R135"/>
+<smd name="56" x="6.26" y="3.33" dx="2" dy="1" layer="1"/>
+<smd name="57" x="-5.99" y="1.82" dx="1.5" dy="1.42" layer="1" rot="R45"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-10.25" y1="-12.25" x2="10.25" y2="-12.25" width="0.1" layer="51"/>
+<wire x1="10.25" y1="-12.25" x2="10.25" y2="12.25" width="0.1" layer="51"/>
+<wire x1="10.25" y1="12.25" x2="-10.25" y2="12.25" width="0.1" layer="51"/>
+<wire x1="-10.25" y1="12.25" x2="-10.25" y2="-12.25" width="0.1" layer="51"/>
+<wire x1="-11.25" y1="13.25" x2="11.25" y2="13.25" width="0.1" layer="51"/>
+<wire x1="11.25" y1="13.25" x2="11.25" y2="-13.25" width="0.1" layer="51"/>
+<wire x1="11.25" y1="-13.25" x2="-11.25" y2="-13.25" width="0.1" layer="51"/>
+<wire x1="-11.25" y1="-13.25" x2="-11.25" y2="13.25" width="0.1" layer="51"/>
+<wire x1="-10.25" y1="-12.25" x2="10.25" y2="-12.25" width="0.2" layer="21"/>
+<wire x1="10.25" y1="-12.25" x2="10.25" y2="12.25" width="0.2" layer="21"/>
+<wire x1="10.25" y1="12.25" x2="-10.25" y2="12.25" width="0.2" layer="21"/>
+<wire x1="-10.25" y1="12.25" x2="-10.25" y2="-12.25" width="0.2" layer="21"/>
+<wire x1="-8.25" y1="-12.8" x2="-8.25" y2="-12.8" width="0.1" layer="21"/>
+<wire x1="-8.25" y1="-12.8" x2="-8.25" y2="-12.7" width="0.1" layer="21" curve="180"/>
+<wire x1="-8.25" y1="-12.7" x2="-8.25" y2="-12.7" width="0.1" layer="21"/>
+<wire x1="-8.25" y1="-12.7" x2="-8.25" y2="-12.8" width="0.1" layer="21" curve="180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="WFI32E01PE-I">
+<wire x1="5.08" y1="2.54" x2="127" y2="2.54" width="0.254" layer="94"/>
+<wire x1="127" y1="-71.12" x2="127" y2="2.54" width="0.254" layer="94"/>
+<wire x1="127" y1="-71.12" x2="5.08" y2="-71.12" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-71.12" width="0.254" layer="94"/>
+<text x="128.27" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="128.27" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="GND_1" x="0" y="0" length="middle"/>
+<pin name="PGC2_/_AN4_/_CVD4_/_CVDR4_/_CVDT3_/_RPB4" x="0" y="-2.54" length="middle"/>
+<pin name="AN1_/_CVD1_/_CVDR1_/_CVDT6_/_VBUSON_/_RPB1" x="0" y="-5.08" length="middle"/>
+<pin name="VBUS" x="0" y="-7.62" length="middle"/>
+<pin name="USB_D-" x="0" y="-10.16" length="middle"/>
+<pin name="USB_D+" x="0" y="-12.7" length="middle"/>
+<pin name="AN2_/_CVD2_/_CVDR2_/_CVDT5_/_USBID_/_RPB2" x="0" y="-15.24" length="middle"/>
+<pin name="CVDT11_/_ETXEN_/_RPC13" x="0" y="-17.78" length="middle"/>
+<pin name="CVDT9_/_ERXD0_/_RPC11" x="0" y="-20.32" length="middle"/>
+<pin name="CVDT8_/_ERXD1_/_RPC10" x="0" y="-22.86" length="middle"/>
+<pin name="GND_2" x="0" y="-25.4" length="middle"/>
+<pin name="CVDT10_/_ETH_CLK_OUT_/_RPC12" x="0" y="-27.94" length="middle"/>
+<pin name="CVDT12_/_ETXD1_/_RPC14" x="0" y="-30.48" length="middle"/>
+<pin name="CVDT13_/_ETXD0_/_RPC15" x="0" y="-33.02" length="middle"/>
+<pin name="CVDT14_/_ERXDV_/_RPK12" x="0" y="-35.56" length="middle"/>
+<pin name="CVDT15_/_EMDIO_/_RPK13" x="0" y="-38.1" length="middle"/>
+<pin name="CVDT16_/_EMDC_/_RPK14" x="0" y="-40.64" length="middle"/>
+<pin name="CVDT7_/_ERXERR_/_RPC9" x="0" y="-43.18" length="middle"/>
+<pin name="SDI1_/_RPC7" x="0" y="-45.72" length="middle"/>
+<pin name="!SPI1CS_!/_RPA1" x="0" y="-48.26" length="middle"/>
+<pin name="SCK1_/_RPC6" x="0" y="-50.8" length="middle"/>
+<pin name="GND_3" x="0" y="-53.34" length="middle"/>
+<pin name="SDO1_/_RPC8" x="0" y="-55.88" length="middle"/>
+<pin name="BT_CLK_OUT_/_RPK4" x="0" y="-58.42" length="middle"/>
+<pin name="PTA_BT_PRIO_/_RPK6" x="0" y="-60.96" length="middle"/>
+<pin name="!MCLR" x="0" y="-63.5" length="middle"/>
+<pin name="PTA_WLAN_ACTIVE_/_RPK5" x="0" y="-66.04" length="middle"/>
+<pin name="PTA_BT_ACTIVE_/_RPK7" x="0" y="-68.58" length="middle"/>
+<pin name="U1TX" x="132.08" y="0" length="middle" rot="R180"/>
+<pin name="U1RX" x="132.08" y="-2.54" length="middle" rot="R180"/>
+<pin name="GND_4" x="132.08" y="-5.08" length="middle" rot="R180"/>
+<pin name="SDA1_/_RPA5" x="132.08" y="-7.62" length="middle" rot="R180"/>
+<pin name="SCL1_/_RPA4" x="132.08" y="-10.16" length="middle" rot="R180"/>
+<pin name="RF_FE_4_/_RPK1" x="132.08" y="-12.7" length="middle" rot="R180"/>
+<pin name="RF_FE_2_/_RPK3" x="132.08" y="-15.24" length="middle" rot="R180"/>
+<pin name="GND_5" x="132.08" y="-17.78" length="middle" rot="R180"/>
+<pin name="GND_6" x="132.08" y="-20.32" length="middle" rot="R180"/>
+<pin name="GND_7" x="132.08" y="-22.86" length="middle" rot="R180"/>
+<pin name="GND_8" x="132.08" y="-25.4" length="middle" rot="R180"/>
+<pin name="AN17_/_CVD17_/_CVDR17_/_INT0_/_RPA10" x="132.08" y="-27.94" length="middle" rot="R180"/>
+<pin name="AN15_/_ANN1_/_CVD15_/_CVDR15_/_RPA13" x="132.08" y="-30.48" length="middle" rot="R180"/>
+<pin name="SCK2_/_RPA11" x="132.08" y="-33.02" length="middle" rot="R180"/>
+<pin name="AN14_/_ANN0_/_CVD14_/_CVDR14_/_RPA14" x="132.08" y="-35.56" length="middle" rot="R180"/>
+<pin name="ANA0_/_RPB12" x="132.08" y="-38.1" length="middle" rot="R180"/>
+<pin name="TMS_/_AN6_/_CVD6_/_CVDR6_/_RPB6" x="132.08" y="-40.64" length="middle" rot="R180"/>
+<pin name="TCK_/_PGC4_/_AN8_/_CVD8_/_CVDR8_/_RPB8" x="132.08" y="-43.18" length="middle" rot="R180"/>
+<pin name="TDI_/_PGD4_/_AN9_/_CVD9_/_CVDR9_/_RPB9" x="132.08" y="-45.72" length="middle" rot="R180"/>
+<pin name="TDO_/_AN7_/_CVD7_/_CVDR7_/_RPB7" x="132.08" y="-48.26" length="middle" rot="R180"/>
+<pin name="VDD_1" x="132.08" y="-50.8" length="middle" rot="R180"/>
+<pin name="VDD_2" x="132.08" y="-53.34" length="middle" rot="R180"/>
+<pin name="PGD2_/_AN5_/_CVD5_/_CVDR5_/_CVDT2_/_RTCC_/_RPB5" x="132.08" y="-55.88" length="middle" rot="R180"/>
+<pin name="SOSCI/PB15" x="132.08" y="-58.42" length="middle" rot="R180"/>
+<pin name="SOSCO/PK15" x="132.08" y="-60.96" length="middle" rot="R180"/>
+<pin name="EP_1" x="132.08" y="-63.5" length="middle" rot="R180"/>
+<pin name="EP_2" x="132.08" y="-66.04" length="middle" rot="R180"/>
+<pin name="EP_3" x="132.08" y="-68.58" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="WFI32E01PE-I" prefix="IC">
+<description>&lt;b&gt;WiFi Modules - 802.11 54-pad Wi-Fi SoC module, 802.11 b/g/n, 1MB Flash, 320KB RAM, Crypto, PCB ant&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/WSG/ProductDocuments/DataSheets/PIC32MZ1025W104-MCU-and-WFI32E01-Module-with-Wi-Fi-and-Hardware-based-Security-Accelerator-Data-Sheet-DS70005425.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="WFI32E01PE-I" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="WFI32E01PEI">
+<connects>
+<connect gate="G$1" pin="!MCLR" pad="26"/>
+<connect gate="G$1" pin="!SPI1CS_!/_RPA1" pad="20"/>
+<connect gate="G$1" pin="AN14_/_ANN0_/_CVD14_/_CVDR14_/_RPA14" pad="44"/>
+<connect gate="G$1" pin="AN15_/_ANN1_/_CVD15_/_CVDR15_/_RPA13" pad="42"/>
+<connect gate="G$1" pin="AN17_/_CVD17_/_CVDR17_/_INT0_/_RPA10" pad="41"/>
+<connect gate="G$1" pin="AN1_/_CVD1_/_CVDR1_/_CVDT6_/_VBUSON_/_RPB1" pad="3"/>
+<connect gate="G$1" pin="AN2_/_CVD2_/_CVDR2_/_CVDT5_/_USBID_/_RPB2" pad="7"/>
+<connect gate="G$1" pin="ANA0_/_RPB12" pad="45"/>
+<connect gate="G$1" pin="BT_CLK_OUT_/_RPK4" pad="24"/>
+<connect gate="G$1" pin="CVDT10_/_ETH_CLK_OUT_/_RPC12" pad="12"/>
+<connect gate="G$1" pin="CVDT11_/_ETXEN_/_RPC13" pad="8"/>
+<connect gate="G$1" pin="CVDT12_/_ETXD1_/_RPC14" pad="13"/>
+<connect gate="G$1" pin="CVDT13_/_ETXD0_/_RPC15" pad="14"/>
+<connect gate="G$1" pin="CVDT14_/_ERXDV_/_RPK12" pad="15"/>
+<connect gate="G$1" pin="CVDT15_/_EMDIO_/_RPK13" pad="16"/>
+<connect gate="G$1" pin="CVDT16_/_EMDC_/_RPK14" pad="17"/>
+<connect gate="G$1" pin="CVDT7_/_ERXERR_/_RPC9" pad="18"/>
+<connect gate="G$1" pin="CVDT8_/_ERXD1_/_RPC10" pad="10"/>
+<connect gate="G$1" pin="CVDT9_/_ERXD0_/_RPC11" pad="9"/>
+<connect gate="G$1" pin="EP_1" pad="55"/>
+<connect gate="G$1" pin="EP_2" pad="56"/>
+<connect gate="G$1" pin="EP_3" pad="57"/>
+<connect gate="G$1" pin="GND_1" pad="1"/>
+<connect gate="G$1" pin="GND_2" pad="11"/>
+<connect gate="G$1" pin="GND_3" pad="22"/>
+<connect gate="G$1" pin="GND_4" pad="31"/>
+<connect gate="G$1" pin="GND_5" pad="36"/>
+<connect gate="G$1" pin="GND_6" pad="37"/>
+<connect gate="G$1" pin="GND_7" pad="39"/>
+<connect gate="G$1" pin="GND_8" pad="40"/>
+<connect gate="G$1" pin="PGC2_/_AN4_/_CVD4_/_CVDR4_/_CVDT3_/_RPB4" pad="2"/>
+<connect gate="G$1" pin="PGD2_/_AN5_/_CVD5_/_CVDR5_/_CVDT2_/_RTCC_/_RPB5" pad="52"/>
+<connect gate="G$1" pin="PTA_BT_ACTIVE_/_RPK7" pad="28"/>
+<connect gate="G$1" pin="PTA_BT_PRIO_/_RPK6" pad="25"/>
+<connect gate="G$1" pin="PTA_WLAN_ACTIVE_/_RPK5" pad="27"/>
+<connect gate="G$1" pin="RF_FE_2_/_RPK3" pad="35"/>
+<connect gate="G$1" pin="RF_FE_4_/_RPK1" pad="34"/>
+<connect gate="G$1" pin="SCK1_/_RPC6" pad="21"/>
+<connect gate="G$1" pin="SCK2_/_RPA11" pad="43"/>
+<connect gate="G$1" pin="SCL1_/_RPA4" pad="33"/>
+<connect gate="G$1" pin="SDA1_/_RPA5" pad="32"/>
+<connect gate="G$1" pin="SDI1_/_RPC7" pad="19"/>
+<connect gate="G$1" pin="SDO1_/_RPC8" pad="23"/>
+<connect gate="G$1" pin="SOSCI/PB15" pad="53"/>
+<connect gate="G$1" pin="SOSCO/PK15" pad="54"/>
+<connect gate="G$1" pin="TCK_/_PGC4_/_AN8_/_CVD8_/_CVDR8_/_RPB8" pad="47"/>
+<connect gate="G$1" pin="TDI_/_PGD4_/_AN9_/_CVD9_/_CVDR9_/_RPB9" pad="48"/>
+<connect gate="G$1" pin="TDO_/_AN7_/_CVD7_/_CVDR7_/_RPB7" pad="49"/>
+<connect gate="G$1" pin="TMS_/_AN6_/_CVD6_/_CVDR6_/_RPB6" pad="46"/>
+<connect gate="G$1" pin="U1RX" pad="30"/>
+<connect gate="G$1" pin="U1TX" pad="29"/>
+<connect gate="G$1" pin="USB_D+" pad="6"/>
+<connect gate="G$1" pin="USB_D-" pad="5"/>
+<connect gate="G$1" pin="VBUS" pad="4"/>
+<connect gate="G$1" pin="VDD_1" pad="50"/>
+<connect gate="G$1" pin="VDD_2" pad="51"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="WiFi Modules - 802.11 54-pad Wi-Fi SoC module, 802.11 b/g/n, 1MB Flash, 320KB RAM, Crypto, PCB ant" constant="no"/>
+<attribute name="HEIGHT" value="2.6mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Microchip" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="WFI32E01PE-I" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="579-WFI32E01PE-I" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Microchip-Technology-Atmel/WFI32E01PE-I?qs=W%2FMpXkg%252BdQ6FpmXU%2Fd7PKw%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -17021,6 +17252,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="GND_POINTS" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="GND_TEST"/>
 <part name="VSS43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="UART_POINTS" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="UART_TEST"/>
+<part name="IC3" library="WFI32E01PE-I" deviceset="WFI32E01PE-I" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17464,6 +17696,10 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="UART_POINTS" gate="G$1" x="-99.06" y="63.5" smashed="yes">
 <attribute name="NAME" x="-105.41" y="69.215" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-105.41" y="58.42" size="1.778" layer="96"/>
+</instance>
+<instance part="IC3" gate="G$1" x="266.7" y="71.12" smashed="yes">
+<attribute name="NAME" x="394.97" y="78.74" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="394.97" y="76.2" size="1.778" layer="96" align="center-left"/>
 </instance>
 </instances>
 <busses>

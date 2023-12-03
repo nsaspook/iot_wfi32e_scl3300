@@ -17259,6 +17259,14 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X6" device="" package3d_urn="urn:adsk.eagle:package:22472/2" value="USB_HEADER"/>
 <part name="VSS26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="C26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
+<part name="VSS47" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="C27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
+<part name="C28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
+<part name="C29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
+<part name="C30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
+<part name="C31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
+<part name="C32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
 </parts>
 <sheets>
 <sheet>
@@ -17728,6 +17736,37 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <instance part="VSS46" gate="G$1" x="398.78" y="-7.62" smashed="yes">
 <attribute name="VALUE" x="396.24" y="-12.7" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="C26" gate="G$1" x="279.4" y="-30.48" smashed="yes">
+<attribute name="NAME" x="280.416" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="280.416" y="-34.671" size="1.778" layer="96"/>
+</instance>
+<instance part="VSS47" gate="G$1" x="325.12" y="-38.1" smashed="yes">
+<attribute name="VALUE" x="322.58" y="-43.18" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C27" gate="G$1" x="292.1" y="-30.48" smashed="yes">
+<attribute name="NAME" x="293.116" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="293.116" y="-34.671" size="1.778" layer="96"/>
+</instance>
+<instance part="C28" gate="G$1" x="304.8" y="-30.48" smashed="yes">
+<attribute name="NAME" x="305.816" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="305.816" y="-34.671" size="1.778" layer="96"/>
+</instance>
+<instance part="C29" gate="G$1" x="320.04" y="-30.48" smashed="yes">
+<attribute name="NAME" x="321.056" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="321.056" y="-34.671" size="1.778" layer="96"/>
+</instance>
+<instance part="C30" gate="G$1" x="332.74" y="-30.48" smashed="yes">
+<attribute name="NAME" x="333.756" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="333.756" y="-34.671" size="1.778" layer="96"/>
+</instance>
+<instance part="C31" gate="G$1" x="342.9" y="-30.48" smashed="yes">
+<attribute name="NAME" x="343.916" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="343.916" y="-34.671" size="1.778" layer="96"/>
+</instance>
+<instance part="C32" gate="G$1" x="353.06" y="-30.48" smashed="yes">
+<attribute name="NAME" x="354.076" y="-29.845" size="1.778" layer="95"/>
+<attribute name="VALUE" x="354.076" y="-34.671" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17948,6 +17987,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <pinref part="C25" gate="G$1" pin="1"/>
 <junction x="408.94" y="0"/>
 <label x="414.02" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="353.06" y1="-27.94" x2="353.06" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="C32" gate="G$1" pin="1"/>
+<junction x="353.06" y="-15.24"/>
+<label x="353.06" y="-17.78" size="1.778" layer="95"/>
+<junction x="353.06" y="-27.94"/>
 </segment>
 </net>
 <net name="VSS" class="2">
@@ -18372,6 +18418,31 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="398.78" y="5.08"/>
 <junction x="398.78" y="7.62"/>
 </segment>
+<segment>
+<pinref part="C26" gate="G$1" pin="2"/>
+<wire x1="279.4" y1="-35.56" x2="292.1" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="325.12" y="-35.56"/>
+<wire x1="292.1" y1="-35.56" x2="304.8" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="-35.56" x2="320.04" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="-35.56" x2="325.12" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="-35.56" x2="332.74" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="VSS47" gate="G$1" pin="VSS"/>
+<pinref part="C27" gate="G$1" pin="2"/>
+<junction x="292.1" y="-35.56"/>
+<pinref part="C28" gate="G$1" pin="2"/>
+<junction x="304.8" y="-35.56"/>
+<pinref part="C29" gate="G$1" pin="2"/>
+<junction x="320.04" y="-35.56"/>
+<pinref part="C30" gate="G$1" pin="2"/>
+<wire x1="332.74" y1="-35.56" x2="342.9" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="332.74" y="-35.56"/>
+<pinref part="C31" gate="G$1" pin="2"/>
+<wire x1="342.9" y1="-35.56" x2="353.06" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="342.9" y="-35.56"/>
+<pinref part="C32" gate="G$1" pin="2"/>
+<junction x="279.4" y="-35.56"/>
+<junction x="353.06" y="-35.56"/>
+</segment>
 </net>
 <net name="AVDD" class="2">
 <segment>
@@ -18550,6 +18621,14 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="266.7" y="7.62"/>
 <junction x="254" y="7.62"/>
 </segment>
+<segment>
+<pinref part="C28" gate="G$1" pin="1"/>
+<wire x1="304.8" y1="-27.94" x2="304.8" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="-15.24" x2="304.8" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="304.8" y="-15.24"/>
+<label x="304.8" y="-17.78" size="1.778" layer="95"/>
+<junction x="304.8" y="-27.94"/>
+</segment>
 </net>
 <net name="SCK2" class="0">
 <segment>
@@ -18623,6 +18702,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="254" y="12.7"/>
 <label x="246.38" y="12.7" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="332.74" y1="-27.94" x2="332.74" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="C30" gate="G$1" pin="1"/>
+<junction x="332.74" y="-15.24"/>
+<label x="332.74" y="-17.78" size="1.778" layer="95"/>
+<junction x="332.74" y="-27.94"/>
+</segment>
 </net>
 <net name="SDI2" class="0">
 <segment>
@@ -18659,6 +18745,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="266.7" y="5.08"/>
 <junction x="254" y="5.08"/>
 <label x="246.38" y="5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="292.1" y1="-27.94" x2="292.1" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="C27" gate="G$1" pin="1"/>
+<junction x="292.1" y="-15.24"/>
+<label x="292.1" y="-17.78" size="1.778" layer="95"/>
+<junction x="292.1" y="-27.94"/>
 </segment>
 </net>
 <net name="EXT_INT2" class="0">
@@ -18908,6 +19001,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="266.7" y="15.24"/>
 <junction x="254" y="15.24"/>
 <label x="246.38" y="15.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="342.9" y1="-27.94" x2="342.9" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="C31" gate="G$1" pin="1"/>
+<junction x="342.9" y="-15.24"/>
+<label x="342.9" y="-17.78" size="1.778" layer="95"/>
+<junction x="342.9" y="-27.94"/>
 </segment>
 </net>
 <net name="DIS_MODE" class="0">
@@ -19422,11 +19522,18 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="154.94" y="142.24"/>
 </segment>
 <segment>
-<wire x1="238.76" y1="10.16" x2="266.7" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="254" y1="10.16" x2="266.7" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="PTA_BT_PRIO_/_RPK6"/>
 <junction x="266.7" y="10.16"/>
-<junction x="238.76" y="10.16"/>
+<junction x="254" y="10.16"/>
 <label x="236.22" y="10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="320.04" y1="-27.94" x2="320.04" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="C29" gate="G$1" pin="1"/>
+<junction x="320.04" y="-15.24"/>
+<label x="320.04" y="-17.78" size="1.778" layer="95"/>
+<junction x="320.04" y="-27.94"/>
 </segment>
 </net>
 <net name="TP2_SIG" class="0">
@@ -19533,11 +19640,18 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="-73.66" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="266.7" y1="2.54" x2="241.3" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="2.54" x2="254" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="PTA_BT_ACTIVE_/_RPK7"/>
 <junction x="266.7" y="2.54"/>
-<junction x="241.3" y="2.54"/>
+<junction x="254" y="2.54"/>
 <label x="236.22" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="279.4" y1="-15.24" x2="279.4" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="C26" gate="G$1" pin="1"/>
+<junction x="279.4" y="-15.24"/>
+<label x="269.24" y="-17.78" size="1.778" layer="95"/>
+<junction x="279.4" y="-27.94"/>
 </segment>
 </net>
 <net name="CAN_N" class="3">
@@ -19650,10 +19764,10 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="-99.06" y="-22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="27.94" x2="266.7" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="254" y1="27.94" x2="266.7" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="CVDT7_/_ERXERR_/_RPC9"/>
 <junction x="266.7" y="27.94"/>
-<junction x="256.54" y="27.94"/>
+<junction x="254" y="27.94"/>
 <label x="238.76" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -19666,10 +19780,10 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="-99.06" y="-25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="38.1" x2="266.7" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="254" y1="38.1" x2="266.7" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="CVDT13_/_ETXD0_/_RPC15"/>
 <junction x="266.7" y="38.1"/>
-<junction x="256.54" y="38.1"/>
+<junction x="254" y="38.1"/>
 <label x="236.22" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -19698,10 +19812,10 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="-68.58" y="-27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="261.62" y1="55.88" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="55.88" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="AN2_/_CVD2_/_CVDR2_/_CVDT5_/_USBID_/_RPB2"/>
 <junction x="266.7" y="55.88"/>
-<junction x="261.62" y="55.88"/>
+<junction x="256.54" y="55.88"/>
 <label x="243.84" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>

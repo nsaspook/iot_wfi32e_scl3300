@@ -17163,6 +17163,61 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 </deviceset>
 </devicesets>
 </library>
+<library name="frames" urn="urn:adsk.eagle:library:229">
+<description>&lt;b&gt;Frames for Sheet and Layout&lt;/b&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="FRAME_C_L" urn="urn:adsk.eagle:symbol:13884/1" library_version="1">
+<frame x1="0" y1="0" x2="558.8" y2="431.8" columns="11" rows="9" layer="94" border-bottom="no"/>
+</symbol>
+<symbol name="DOCFIELD" urn="urn:adsk.eagle:symbol:13864/1" library_version="1">
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="87.63" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="0" y1="5.08" x2="71.12" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="101.6" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="71.12" y2="0" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="87.63" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="0" x2="101.6" y2="0" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="87.63" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="0" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="5.08" x2="101.6" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="5.08" x2="101.6" y2="0" width="0.1016" layer="94"/>
+<wire x1="0" y1="15.24" x2="0" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="0" y2="35.56" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="101.6" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="0" y1="22.86" x2="101.6" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="0" y1="22.86" x2="0" y2="35.56" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="22.86" x2="101.6" y2="15.24" width="0.1016" layer="94"/>
+<text x="1.27" y="1.27" size="2.54" layer="94">Date:</text>
+<text x="12.7" y="1.27" size="2.54" layer="94">&gt;LAST_DATE_TIME</text>
+<text x="72.39" y="1.27" size="2.54" layer="94">Sheet:</text>
+<text x="86.36" y="1.27" size="2.54" layer="94">&gt;SHEET</text>
+<text x="88.9" y="11.43" size="2.54" layer="94">REV:</text>
+<text x="1.27" y="19.05" size="2.54" layer="94">TITLE:</text>
+<text x="1.27" y="11.43" size="2.54" layer="94">Document Number:</text>
+<text x="17.78" y="19.05" size="2.54" layer="94">&gt;DRAWING_NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FRAME_C_L" urn="urn:adsk.eagle:component:13947/1" prefix="FRAME" uservalue="yes" library_version="1">
+<description>&lt;b&gt;FRAME&lt;/b&gt; C Size , 17 x 22 INCH, Landscape&lt;p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FRAME_C_L" x="0" y="0" addlevel="always"/>
+<gate name="G$2" symbol="DOCFIELD" x="452.12" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -17319,7 +17374,8 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <part name="C31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
 <part name="C32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
 <part name="VSS48" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
-<part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
+<part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2" value="VSS"/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_C_L" device="" value="1.0"/>
 </parts>
 <sheets>
 <sheet>
@@ -17826,6 +17882,12 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <instance part="JP4" gate="G$1" x="71.12" y="-45.72" smashed="yes">
 <attribute name="NAME" x="64.77" y="-42.545" size="1.778" layer="95"/>
 <attribute name="VALUE" x="64.77" y="-50.8" size="1.778" layer="96"/>
+</instance>
+<instance part="FRAME1" gate="G$1" x="-121.92" y="-124.46" smashed="yes"/>
+<instance part="FRAME1" gate="G$2" x="330.2" y="-124.46" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="342.9" y="-123.19" size="2.54" layer="94"/>
+<attribute name="SHEET" x="416.56" y="-123.19" size="2.54" layer="94"/>
+<attribute name="DRAWING_NAME" x="347.98" y="-105.41" size="2.54" layer="94"/>
 </instance>
 </instances>
 <busses>
@@ -18930,7 +18992,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <pinref part="UART_POINTS" gate="G$1" pin="1"/>
 <junction x="-101.6" y="66.04"/>
 <junction x="-114.3" y="66.04"/>
-<label x="-121.92" y="66.04" size="1.778" layer="95"/>
+<label x="-111.76" y="68.58" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <wire x1="266.7" y1="53.34" x2="254" y2="53.34" width="0.1524" layer="91"/>
@@ -18967,7 +19029,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <pinref part="UART_POINTS" gate="G$1" pin="2"/>
 <junction x="-101.6" y="63.5"/>
 <junction x="-114.3" y="63.5"/>
-<label x="-121.92" y="63.5" size="1.778" layer="95"/>
+<label x="-114.3" y="60.96" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
 <wire x1="266.7" y1="40.64" x2="254" y2="40.64" width="0.1524" layer="91"/>
@@ -19690,7 +19752,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <pinref part="IC3" gate="G$1" pin="SDA1_/_RPA5"/>
 <junction x="398.78" y="63.5"/>
 <junction x="424.18" y="63.5"/>
-<label x="416.56" y="63.5" size="1.778" layer="95"/>
+<label x="411.48" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="C1RX_SIG_C2RX" class="0">

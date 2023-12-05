@@ -90,6 +90,10 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>rng</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>spi1</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -239,8 +243,16 @@
          <value>TCP/IP STACK</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="APPLICATION LAYER" name="harmonyGroupDysplayName"/>
+         <value>APPLICATION LAYER</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BASIC CONFIGURATION" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>TCP/IP STACK</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BASIC CONFIGURATION" name="harmonyGroupDysplayName"/>
+         <value>BASIC CONFIGURATION</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BSP_PIC32MZ_W1_Curiosity" name="#&amp;__MCC_Group_Parrent_id"/>
@@ -699,6 +711,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="DRIVER LAYER" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>TCP/IP STACK</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="DRIVER LAYER" name="harmonyGroupDysplayName"/>
+         <value>DRIVER LAYER</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="!@#harmonyAttachmentState"/>
@@ -1167,20 +1183,40 @@
          <value>TCP/IP STACK</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="NETWORK LAYER" name="harmonyGroupDysplayName"/>
+         <value>NETWORK LAYER</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PRESENTATION LAYER" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>TCP/IP STACK</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PRESENTATION LAYER" name="harmonyGroupDysplayName"/>
+         <value>PRESENTATION LAYER</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="System Configuration" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="System Configuration" name="harmonyGroupDysplayName"/>
+         <value>System Configuration</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TCP/IP STACK" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>System Configuration</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TCP/IP STACK" name="harmonyGroupDysplayName"/>
+         <value>TCP/IP STACK</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TRANSPORT LAYER" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>TCP/IP STACK</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TRANSPORT LAYER" name="harmonyGroupDysplayName"/>
+         <value>TRANSPORT LAYER</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="#&amp;__MCC_Group_Parrent_id"/>
@@ -5806,16 +5842,17 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;can2&quot; x=&quot;1080&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;core&quot; x=&quot;433&quot; y=&quot;155&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;452&quot; y=&quot;80&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;spi1&quot; x=&quot;1360&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;spi2&quot; x=&quot;660&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;stdio&quot; x=&quot;271&quot; y=&quot;158&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sysMqttPic32mzw1&quot; x=&quot;445&quot; y=&quot;258&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sysNetPic32mzw1&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sysWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sysWifiProvPic32mzw1&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tmr2&quot; x=&quot;800&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tmr4&quot; x=&quot;940&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;uart3&quot; x=&quot;87&quot; y=&quot;192&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;rng&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;spi1&quot; x=&quot;1360&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;spi2&quot; x=&quot;660&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;stdio&quot; x=&quot;271&quot; y=&quot;158&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sysMqttPic32mzw1&quot; x=&quot;445&quot; y=&quot;258&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sysNetPic32mzw1&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sysWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sysWifiProvPic32mzw1&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tmr2&quot; x=&quot;800&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tmr4&quot; x=&quot;940&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;uart3&quot; x=&quot;87&quot; y=&quot;192&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -6892,6 +6929,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_69_SR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_69_SR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_6_FUNCTION_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_6_FUNCTION_TYPE&quot;&gt;
@@ -6930,6 +6978,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_74_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_74_SR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_74_SR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -9970,6 +10029,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_C_SRCON0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_SRCON0&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24576&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_C_SRCON1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_SRCON1&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_C_TRIS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_TRIS&quot;&gt;
@@ -11643,6 +11724,83 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>System Configuration</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNGCON_CONT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNGCON_CONT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNGCON_PLEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNGCON_PLEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNGCON_PRNGEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNGCON_PRNGEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNGCON_TRNGEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNGCON_TRNGEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNGCON_TRNGMODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNGCON_TRNGMODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNGCON_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNGCON_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;rng&quot; value=&quot;3328&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rng" name="RNG_INSTANCE_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rng&gt;
+  &lt;rng dnOrder=&quot;0&quot; id=&quot;RNG_INSTANCE_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/rng&gt;
+&lt;/rng&gt;
+</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="spi1" name="#&amp;__MCC_Group_Parrent_id"/>
@@ -13335,6 +13493,7 @@
   &lt;tcpipNetConfig_0 dnOrder=&quot;0&quot; id=&quot;TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipNetConfig_0&quot; value=&quot;MCHPBOARD_W&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;MCHPBOARD_W&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipNetConfig_0&gt;
 &lt;/tcpipNetConfig_0&gt;
@@ -13412,6 +13571,17 @@
   &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_DEFAULT_IF&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipSntp&quot; value=&quot;PIC32MZW1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_SERVER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_SERVER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;10.1.1.172&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipSntp&gt;
 &lt;/tcpipSntp&gt;
@@ -14640,7 +14810,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/configuration.h</file>
-         <hash>3fb4175588f15ee9a5e746a9b563a8d0ad1a10a61c8dd002f888083779da8781</hash>
+         <hash>f2a06667d781d18c89096cf50284c5a8eeee4d714d71a85332aaf77f749d2f86</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/crypto/crypto.h</file>
@@ -14652,7 +14822,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/definitions.h</file>
-         <hash>5b88abec2f7757668a497d59f7636888213043b645b354949b8a34bcc47f693c</hash>
+         <hash>b527aa379bf251bbc6fe29ca960352fe85ce8a5bfb32694bcc9e397d0e8a512b</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/device.h</file>
@@ -14832,7 +15002,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/initialization.c</file>
-         <hash>216cbec8807314a005c7cdc10330dd58b308e9df3997c17bb718459874386533</hash>
+         <hash>225411e90a5f5e2a0d110f2704a596181cc0427965695dbd5fb6d0ccafc15498</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.c</file>
@@ -15524,7 +15694,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/gpio/plib_gpio.c</file>
-         <hash>d48c4f972b7644f2117c890fd40504067b6e81762b13f71413be6713be7f8b71</hash>
+         <hash>5f9e3b12715c6b7df26f05366dbdeb4058e893e313421be054c66ebb80f9d663</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/gpio/plib_gpio.h</file>
@@ -15537,6 +15707,14 @@
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.h</file>
          <hash>0d8aaf0054c6b03cb7c7d256a07a28c6460211ec1553649cd45957595f215a4f</hash>
+      </entry>
+      <entry>
+         <file>../src/config/pic32mz_w1_curiosity/peripheral/rng/plib_rng.c</file>
+         <hash>e52d0aef54b13394f18760f61e3918b4d72cf68b5f36284a0e9ed29696c0e873</hash>
+      </entry>
+      <entry>
+         <file>../src/config/pic32mz_w1_curiosity/peripheral/rng/plib_rng.h</file>
+         <hash>ee1569ef9f416965ba4f309bb6feab47eb235cbb51037c563ff5a26124e91af8</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi1_master.c</file>

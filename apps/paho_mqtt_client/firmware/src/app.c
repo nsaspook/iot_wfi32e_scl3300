@@ -59,6 +59,10 @@
     Application strings and buffers are be defined outside this structure.
  */
 
+#define BUFFER_SIZE	512
+#define MAX_BBUF	BUFFER_SIZE-2
+
+
 APP_DATA appData;
 uint32_t counter = 0;
 uint32_t count = 0;
@@ -66,7 +70,7 @@ uint32_t count = 0;
 const char build_version[] = "MQTT Test PIC32mz_w1";
 const char *build_date = __DATE__, *build_time = __TIME__;
 
-char buffer[512], opbuffer[24];
+char buffer[BUFFER_SIZE];
 bool wait = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
@@ -106,6 +110,11 @@ imu_cmd_t imu0 = {
 #endif
 
 volatile uint16_t tickCount[TMR_COUNT];
+
+TCPIP_SNTP_TIME_STAMP pTStamp;
+TCPIP_SNTP_RESULT ntp_ret;
+uint32_t pLastUpdate;
+uint32_t pUTCSeconds, pMs;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -194,7 +203,6 @@ void APP_Tasks(void)
 
 
 		if (appInitialized) {
-
 			appData.state = APP_STATE_SERVICE_TASKS;
 		}
 		break;
@@ -215,6 +223,16 @@ void APP_Tasks(void)
 			qa0 = accel.xa;
 			qa1 = accel.ya;
 			qa2 = accel.za;
+
+			ntp_ret = TCPIP_SNTP_TimeGet(&pUTCSeconds, &pMs);
+			if (ntp_ret == SNTP_RES_OK) {
+				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
+				snprintf(buffer, MAX_BBUF, "Last %d %d", pMs, pUTCSeconds);
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
+			} else {
+				snprintf(buffer, MAX_BBUF, "SNTP, Failed %d", ntp_ret);
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
+			}
 		}
 
 		/*
@@ -224,7 +242,7 @@ void APP_Tasks(void)
 			/*
 			 * format data to JSON using printf formatting
 			 */
-			snprintf(buffer, 510, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %d,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
+			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %d,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
 				build_version, count++, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
 
 			APP_MQTT_PublishMsg(buffer);

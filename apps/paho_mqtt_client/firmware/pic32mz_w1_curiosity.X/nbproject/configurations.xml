@@ -222,6 +222,9 @@
             <logicalFolder name="f1" displayName="nvm" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="rng" displayName="rng" projectFiles="true">
+              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/rng/plib_rng.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <logicalFolder name="spi_master" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi_master_common.h</itemPath>
@@ -574,6 +577,9 @@
             </logicalFolder>
             <logicalFolder name="f1" displayName="nvm" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="rng" displayName="rng" projectFiles="true">
+              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/rng/plib_rng.c</itemPath>
             </logicalFolder>
             <logicalFolder name="spi" displayName="spi" projectFiles="true">
               <logicalFolder name="spi_master" displayName="spi_master" projectFiles="true">
@@ -1049,7 +1055,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -1062,7 +1067,7 @@
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
         <property key="optimization-level" value="-O2"/>
-        <property key="place-data-into-section" value="false"/>
+        <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
@@ -1107,7 +1112,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1133,7 +1137,7 @@
         <property key="no-device-startup-code" value="true"/>
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value="-mreserve=prog@0x100FF000:0x100FFFFF"/>
-        <property key="optimization-level" value=""/>
+        <property key="optimization-level" value="-O2"/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
@@ -1147,7 +1151,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

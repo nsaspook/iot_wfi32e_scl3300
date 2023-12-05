@@ -75,6 +75,7 @@ void GPIO_Initialize ( void )
     /* PORTC Initialization */
     LATC = 0x9600U; /* Initial Latch Value */
     TRISCCLR = 0x9600U; /* Direction Control */
+    SRCON0CSET = 0x6000U; /* Slew Rate Control */
     /* PORTK Initialization */
     LATK = 0x6000U; /* Initial Latch Value */
     TRISKCLR = 0x600aU; /* Direction Control */

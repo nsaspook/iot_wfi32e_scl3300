@@ -724,6 +724,8 @@ void SYS_Initialize ( void* data )
 
     TMR2_Initialize();
 
+	RNG_Initialize();
+
 
 
     /* MISRAC 2012 deviation block start */

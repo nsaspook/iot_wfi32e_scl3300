@@ -61,7 +61,7 @@ extern "C" {
 #define FFT_MIX false
 
 #define FBUFFER_SIZE	256
-#define max_buf		FBUFFER_SIZE-1
+#define MAX_FBUF	FBUFFER_SIZE-1
 #define RBUFFER_SIZE	FBUFFER_SIZE
 
 #ifndef  LED_GREEN_On

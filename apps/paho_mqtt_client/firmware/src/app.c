@@ -242,8 +242,8 @@ void APP_Tasks(void)
 			/*
 			 * format data to JSON using printf formatting
 			 */
-			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %d,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
-				build_version, count++, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
+			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %u,\r\n     \"WUTC\": %u,\r\n     \"WUTCMs\": %u,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
+				build_version, count++, pUTCSeconds, pMs, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
 
 			APP_MQTT_PublishMsg(buffer);
 			counter = 0;

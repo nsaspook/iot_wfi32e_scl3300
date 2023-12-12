@@ -102,6 +102,10 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>stdio</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>sysMqttPic32mzw1</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -5795,21 +5799,22 @@
     &lt;ComponentGraph dnOrder=&quot;6&quot; id=&quot;System Configuration&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; x=&quot;410&quot; y=&quot;520&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;core_timer&quot; x=&quot;160&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;drvWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;380&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;drv_ba414e&quot; x=&quot;450&quot; y=&quot;160&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;lib_crypto&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;lib_pahomqtt&quot; x=&quot;410&quot; y=&quot;620&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;lib_wolfcrypt&quot; x=&quot;270&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;nvm&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_command&quot; x=&quot;230&quot; y=&quot;260&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_console&quot; x=&quot;30&quot; y=&quot;180&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sys_debug&quot; x=&quot;430&quot; y=&quot;260&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sys_time&quot; x=&quot;450&quot; y=&quot;40&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;tcpipNetConfig&quot; x=&quot;250&quot; y=&quot;520&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tcpipSntp&quot; x=&quot;166&quot; y=&quot;211&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tcpipStack&quot; x=&quot;390&quot; y=&quot;380&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;uart1&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;TCP/IP STACK&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;core_timer&quot; x=&quot;160&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;drvWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;380&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;drv_ba414e&quot; x=&quot;450&quot; y=&quot;160&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;lib_crypto&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;lib_pahomqtt&quot; x=&quot;410&quot; y=&quot;620&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;lib_wolfcrypt&quot; x=&quot;270&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;nvm&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_command&quot; x=&quot;230&quot; y=&quot;260&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sys_console&quot; x=&quot;30&quot; y=&quot;180&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sys_debug&quot; x=&quot;430&quot; y=&quot;260&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sys_time&quot; x=&quot;450&quot; y=&quot;40&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tcpipNetConfig&quot; x=&quot;250&quot; y=&quot;520&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tcpipSntp&quot; x=&quot;166&quot; y=&quot;211&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tcpipStack&quot; x=&quot;390&quot; y=&quot;380&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;uart1&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;7&quot; id=&quot;TCP/IP STACK&quot;&gt;
@@ -5817,9 +5822,8 @@
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;APPLICATION LAYER&quot; x=&quot;170&quot; y=&quot;80&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;BASIC CONFIGURATION&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;DRIVER LAYER&quot; x=&quot;30&quot; y=&quot;80&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;NETWORK LAYER&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;PRESENTATION LAYER&quot; x=&quot;350&quot; y=&quot;80&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;TRANSPORT LAYER&quot; x=&quot;380&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;PRESENTATION LAYER&quot; x=&quot;350&quot; y=&quot;80&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;TRANSPORT LAYER&quot; x=&quot;380&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;8&quot; id=&quot;TRANSPORT LAYER&quot;&gt;
@@ -5832,8 +5836,8 @@
     &lt;ComponentGraph dnOrder=&quot;9&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MZ_W1_Curiosity&quot; x=&quot;240&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;System Configuration&quot; x=&quot;170&quot; y=&quot;60&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;TCP/IP STACK&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;NETWORK LAYER&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;System Configuration&quot; x=&quot;170&quot; y=&quot;60&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;adchs&quot; x=&quot;1220&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;can2&quot; x=&quot;1080&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;core&quot; x=&quot;433&quot; y=&quot;155&quot;/&gt;
@@ -5841,13 +5845,14 @@
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;rng&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;spi1&quot; x=&quot;1360&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;spi2&quot; x=&quot;660&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sysMqttPic32mzw1&quot; x=&quot;445&quot; y=&quot;258&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sysNetPic32mzw1&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sysWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sysWifiProvPic32mzw1&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tmr2&quot; x=&quot;800&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tmr4&quot; x=&quot;940&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;uart3&quot; x=&quot;87&quot; y=&quot;192&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;stdio&quot; x=&quot;271&quot; y=&quot;158&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sysMqttPic32mzw1&quot; x=&quot;445&quot; y=&quot;258&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sysNetPic32mzw1&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sysWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sysWifiProvPic32mzw1&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tmr2&quot; x=&quot;800&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;tmr4&quot; x=&quot;940&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;uart3&quot; x=&quot;87&quot; y=&quot;192&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -7648,17 +7653,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CONFIG_SOSCSEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
-  &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SOSCSEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/core&gt;
-&lt;/core&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CONFIG_SYS_CLK_PBCLK1_FREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SYS_CLK_PBCLK1_FREQ&quot;&gt;
@@ -8796,7 +8790,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_62_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8807,7 +8801,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_62_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8818,7 +8812,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_62_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART3_FAULT_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART3_FAULT_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8829,7 +8823,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_63_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8840,7 +8834,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_63_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8851,7 +8845,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_63_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART3_RX_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART3_RX_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8862,7 +8856,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_64_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8873,7 +8867,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_64_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8884,7 +8878,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_64_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART3_TX_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;UART3_TX_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10882,7 +10876,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_FAULT_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10893,7 +10887,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_FAULT_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10904,7 +10898,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_FAULT_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;UART3_FAULT_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;UART3_FAULT_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10915,7 +10909,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_FAULT_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10926,7 +10920,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_RX_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10937,7 +10931,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_RX_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10948,7 +10942,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_RX_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;UART3_RX_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;UART3_RX_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10959,7 +10953,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_RX_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10970,7 +10964,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_TX_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10981,7 +10975,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_TX_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -10992,7 +10986,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_TX_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;UART3_TX_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;UART3_TX_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -11003,7 +10997,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;UART3_TX_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -12696,6 +12690,41 @@
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/spi2&gt;
 &lt;/spi2&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="stdio" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;stdio&gt;
+  &lt;stdio dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;UART&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;uart3&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;UART3_UART&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/stdio&gt;
+&lt;/stdio&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="stdio" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="stdio" name="DEBUG_PERIPHERAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;stdio&gt;
+  &lt;stdio dnOrder=&quot;0&quot; id=&quot;DEBUG_PERIPHERAL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;stdio&quot; value=&quot;uart3&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/stdio&gt;
+&lt;/stdio&gt;
 </value>
       </entry>
       <entry>
@@ -14668,7 +14697,20 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart3" name="!@#harmonyAttachmentState"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
-  &lt;uart3 dnOrder=&quot;0&quot;/&gt;
+  &lt;uart3 dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;UART3_UART&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;stdio&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;UART&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+    &lt;/Attachments&gt;
+  &lt;/uart3&gt;
 &lt;/uart3&gt;
 </value>
       </entry>
@@ -14710,24 +14752,11 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart3" name="UART_HEADER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
-  &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_HEADER&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;../peripheral/uart_02478/templates/plib_uart_ring_buffer.h.ftl&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-  &lt;/uart3&gt;
-&lt;/uart3&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart3" name="UART_INTERRUPT_MODE_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
   &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_INTERRUPT_MODE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/uart3&gt;
 &lt;/uart3&gt;
@@ -14739,12 +14768,11 @@
   &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_OPERATING_MODE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;0&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/uart3&gt;
 &lt;/uart3&gt;
@@ -14755,52 +14783,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
   &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_RING_BUFFER_MODE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/uart3&gt;
-&lt;/uart3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart3" name="UART_RX_RING_BUFFER_SIZE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
-  &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_RX_RING_BUFFER_SIZE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;512&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/uart3&gt;
-&lt;/uart3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart3" name="UART_SOURCE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
-  &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_SOURCE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;source&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;../peripheral/uart_02478/templates/plib_uart_ring_buffer.c.ftl&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-  &lt;/uart3&gt;
-&lt;/uart3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart3" name="UART_TX_RING_BUFFER_SIZE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart3&gt;
-  &lt;uart3 dnOrder=&quot;0&quot; id=&quot;UART_TX_RING_BUFFER_SIZE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;512&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart3&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/uart3&gt;
 &lt;/uart3&gt;
@@ -14861,7 +14844,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/definitions.h</file>
-         <hash>e77f755bd49643e902ae2f1062764036c3646229791be5d6819023912b4c6fb2</hash>
+         <hash>615bd935046c12bbf37fd4873f3d8a8b364f61c48a039113d593dd7e06002d20</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/device.h</file>
@@ -15041,15 +15024,15 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/initialization.c</file>
-         <hash>cc80dd0221b9518543df1d3b5e7fd156b8f0d4618e56bbd797cf21c1e3293d37</hash>
+         <hash>225411e90a5f5e2a0d110f2704a596181cc0427965695dbd5fb6d0ccafc15498</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.c</file>
-         <hash>b3391562b524ca243055ff2d2fa1290d4b565980fbadeae161bdabe296423804</hash>
+         <hash>decbc1dff6e9a60f98c73be65075ce3f1fa6f57db64deb08f11ff25916453918</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.h</file>
-         <hash>0f469cf6ce79d2a4ec20ad9a748e295eb2b53160587558a432d005cf6e1b8601</hash>
+         <hash>43619cf9fc99031a84ff49e63878386035ae8ea12f87ce71c7e742bc2f2fc6f4</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/arp.h</file>
@@ -15178,10 +15161,6 @@
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/common/helpers.h</file>
          <hash>0e107c845b72ae6c7fdc28b33038641e8412f6fae5e3900f3808eb972d0971c4</hash>
-      </entry>
-      <entry>
-         <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/common/sys_fs_shell.h</file>
-         <hash>bacdc9c802c7ec4f22b52367f13c3f7b7209078df3de74a24f428b6018eb3c27</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/ddns_manager.h</file>
@@ -15725,7 +15704,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.c</file>
-         <hash>194575974c0c89d36132c2cc597c6f2a0949d2ff8dfb6172de270ad1731103be</hash>
+         <hash>7013c8f75473189bea02870f00c9a46aa232f0e8708fcf1c48cf5ce5d7b4ffc1</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.h</file>
@@ -15805,11 +15784,11 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart3.c</file>
-         <hash>fb08c0f1065f0142b20edd5cfc73267f41e41a33d20c044d6b53fc4c815b7916</hash>
+         <hash>702af41fd49787e2bf1977968542f1f6d9d37b5a708115d6fd5c11862295d4fd</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart3.h</file>
-         <hash>5e7b85071da0c442a9b0a602b0b2dab6541f825bb8053df08240d3a3f98b47fd</hash>
+         <hash>2ee312aef4949f3668a3dabd9688d6d1ca7573e2cc6a31b4881db1b95ce52f37</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart_common.h</file>
@@ -15821,7 +15800,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/stdio/xc32_monitor.c</file>
-         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
+         <hash>3a324a9f25cb6591130f8103d7d936ca701680d174fd9dcd48b214ac10cd81b3</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/sys_tasks.h</file>

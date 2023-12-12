@@ -64,6 +64,9 @@ void EVIC_Initialize( void )
     IPC10SET = 0x4U | 0x0U;  /* UART1_TX:  Priority 1 / Subpriority 0 */
     IPC13SET = 0xc0000U | 0x0U;  /* SPI2_RX:  Priority 3 / Subpriority 0 */
     IPC13SET = 0xc000000U | 0x0U;  /* SPI2_TX:  Priority 3 / Subpriority 0 */
+    IPC15SET = 0x40000U | 0x0U;  /* UART3_FAULT:  Priority 1 / Subpriority 0 */
+    IPC15SET = 0x4000000U | 0x0U;  /* UART3_RX:  Priority 1 / Subpriority 0 */
+    IPC16SET = 0x4U | 0x0U;  /* UART3_TX:  Priority 1 / Subpriority 0 */
     IPC20SET = 0x4000000U | 0x0U;  /* RFSMC:  Priority 1 / Subpriority 0 */
     IPC21SET = 0x4U | 0x0U;  /* RFMAC:  Priority 1 / Subpriority 0 */
     IPC21SET = 0x40000U | 0x0U;  /* RFTM0:  Priority 1 / Subpriority 0 */

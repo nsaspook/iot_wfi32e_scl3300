@@ -107,7 +107,7 @@
 #pragma config DMTINTV =    WIN_63_64
 #pragma config POSCMOD =    HS
 #pragma config WDTRMCS =    LPRC
-#pragma config SOSCSEL =    CRYSTAL
+#pragma config SOSCSEL =    DIGITAL
 #pragma config WAKE2SPD =    ON
 #pragma config CKSWEN =    ON
 #pragma config FSCMEN =    ON
@@ -564,12 +564,12 @@ static const SYS_TIME_INIT sysTimeInitData =
 
 static const SYS_CONSOLE_UART_PLIB_INTERFACE sysConsole0UARTPlibAPI =
 {
-    .read_t = (SYS_CONSOLE_UART_PLIB_READ)UART1_Read,
-    .readCountGet = (SYS_CONSOLE_UART_PLIB_READ_COUNT_GET)UART1_ReadCountGet,
-    .readFreeBufferCountGet = (SYS_CONSOLE_UART_PLIB_READ_FREE_BUFFFER_COUNT_GET)UART1_ReadFreeBufferCountGet,
-    .write_t = (SYS_CONSOLE_UART_PLIB_WRITE)UART1_Write,
-    .writeCountGet = (SYS_CONSOLE_UART_PLIB_WRITE_COUNT_GET)UART1_WriteCountGet,
-    .writeFreeBufferCountGet = (SYS_CONSOLE_UART_PLIB_WRITE_FREE_BUFFER_COUNT_GET)UART1_WriteFreeBufferCountGet,
+    .read_t = (SYS_CONSOLE_UART_PLIB_READ)UART3_Read,
+    .readCountGet = (SYS_CONSOLE_UART_PLIB_READ_COUNT_GET)UART3_ReadCountGet,
+    .readFreeBufferCountGet = (SYS_CONSOLE_UART_PLIB_READ_FREE_BUFFFER_COUNT_GET)UART3_ReadFreeBufferCountGet,
+    .write_t = (SYS_CONSOLE_UART_PLIB_WRITE)UART3_Write,
+    .writeCountGet = (SYS_CONSOLE_UART_PLIB_WRITE_COUNT_GET)UART3_WriteCountGet,
+    .writeFreeBufferCountGet = (SYS_CONSOLE_UART_PLIB_WRITE_FREE_BUFFER_COUNT_GET)UART3_WriteFreeBufferCountGet,
 };
 
 static const SYS_CONSOLE_UART_INIT_DATA sysConsole0UARTInitData =
@@ -647,28 +647,6 @@ static const SYS_DEBUG_INIT debugInit =
 // *****************************************************************************
 // *****************************************************************************
 
-/*******************************************************************************
-  Function:
-    void STDIO_BufferModeSet ( void )
-
-  Summary:
-    Sets the buffering mode for stdin and stdout
-
-  Remarks:
- ********************************************************************************/
-static void STDIO_BufferModeSet(void)
-{
-    /* MISRAC 2012 deviation block start */
-    /* MISRA C-2012 Rule 21.6 deviated 2 times in this file.  Deviation record ID -  H3_MISRAC_2012_R_21_6_DR_3 */
-
-    /* Make stdin unbuffered */
-    setbuf(stdin, NULL);
-
-    /* Make stdout unbuffered */
-    setbuf(stdout, NULL);
-}
-
-
 /* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
@@ -686,9 +664,6 @@ void SYS_Initialize ( void* data )
 
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
-
-    STDIO_BufferModeSet();
-
 
     /* Start out with interrupts disabled before configuring any modules */
     (void)__builtin_disable_interrupts();

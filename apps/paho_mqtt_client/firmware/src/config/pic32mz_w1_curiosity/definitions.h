@@ -48,7 +48,6 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include <stdio.h>
 #include "crypto/crypto.h"
 #include "bsp/bsp.h"
 #include "system/time/sys_time.h"

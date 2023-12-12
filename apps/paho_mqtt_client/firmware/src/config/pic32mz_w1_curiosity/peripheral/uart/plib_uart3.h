@@ -69,26 +69,41 @@ void UART3_Initialize( void );
 
 bool UART3_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
 
-bool UART3_Write( void *buffer, const size_t size );
-
-bool UART3_Read( void *buffer, const size_t size );
-
 UART_ERROR UART3_ErrorGet( void );
 
 bool UART3_AutoBaudQuery( void );
 
 void UART3_AutoBaudSet( bool enable );
 
-int UART3_ReadByte( void );
+size_t UART3_Write(uint8_t* pWrBuffer, const size_t size );
 
-bool UART3_ReceiverIsReady( void );
+size_t UART3_WriteCountGet(void);
 
-void UART3_WriteByte( int data );
+size_t UART3_WriteFreeBufferCountGet(void);
 
-bool UART3_TransmitterIsReady( void );
+size_t UART3_WriteBufferSizeGet(void);
 
+bool UART3_TransmitComplete(void);
 
-bool UART3_TransmitComplete( void );
+bool UART3_WriteNotificationEnable(bool isEnabled, bool isPersistent);
+
+void UART3_WriteThresholdSet(uint32_t nBytesThreshold);
+
+void UART3_WriteCallbackRegister( UART_RING_BUFFER_CALLBACK callback, uintptr_t context);
+
+size_t UART3_Read(uint8_t* pRdBuffer, const size_t size);
+
+size_t UART3_ReadCountGet(void);
+
+size_t UART3_ReadFreeBufferCountGet(void);
+
+size_t UART3_ReadBufferSizeGet(void);
+
+bool UART3_ReadNotificationEnable(bool isEnabled, bool isPersistent);
+
+void UART3_ReadThresholdSet(uint32_t nBytesThreshold);
+
+void UART3_ReadCallbackRegister( UART_RING_BUFFER_CALLBACK callback, uintptr_t context);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

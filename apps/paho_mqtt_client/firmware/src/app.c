@@ -67,7 +67,7 @@ APP_DATA appData;
 uint32_t counter = 0;
 uint32_t count = 0;
 
-const char build_version[] = "MQTT Test PIC32mz_w1";
+const char build_version[] = "MQTT WFI32E01 IoT";
 const char *build_date = __DATE__, *build_time = __TIME__;
 
 char buffer[BUFFER_SIZE];
@@ -228,10 +228,10 @@ void APP_Tasks(void)
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
 				snprintf(buffer, MAX_BBUF, "Last %d %d", pMs, pUTCSeconds);
-				UART1_Write((uint8_t*) buffer, strlen(buffer));
+				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
 				snprintf(buffer, MAX_BBUF, "SNTP, Failed %d", ntp_ret);
-				UART1_Write((uint8_t*) buffer, strlen(buffer));
+				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			}
 		}
 

@@ -75,6 +75,9 @@ void UART1_RX_Handler (void);
 void UART1_TX_Handler (void);
 void SPI2_RX_Handler (void);
 void SPI2_TX_Handler (void);
+void UART3_FAULT_Handler (void);
+void UART3_RX_Handler (void);
+void UART3_TX_Handler (void);
 void RFSMC_Handler (void);
 void RFMAC_Handler (void);
 void RFTM0_Handler (void);
@@ -128,6 +131,21 @@ void __ISR(_SPI2_RX_VECTOR, ipl3SRS) SPI2_RX_Handler (void)
 void __ISR(_SPI2_TX_VECTOR, ipl3SRS) SPI2_TX_Handler (void)
 {
     SPI2_TX_InterruptHandler();
+}
+
+void __ISR(_UART3_FAULT_VECTOR, ipl1SRS) UART3_FAULT_Handler (void)
+{
+    UART3_FAULT_InterruptHandler();
+}
+
+void __ISR(_UART3_RX_VECTOR, ipl1SRS) UART3_RX_Handler (void)
+{
+    UART3_RX_InterruptHandler();
+}
+
+void __ISR(_UART3_TX_VECTOR, ipl1SRS) UART3_TX_Handler (void)
+{
+    UART3_TX_InterruptHandler();
 }
 
 void __ISR(_RFSMC_VECTOR, ipl1SRS) RFSMC_Handler (void)

@@ -213,6 +213,9 @@
             <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/coretimer/plib_coretimer.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="dmac" displayName="dmac" projectFiles="true">
+              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/dmac/plib_dmac.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f6" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
@@ -472,6 +475,24 @@
       <itemPath>../src/imupic32mcj.h</itemPath>
       <itemPath>../src/timers.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="lcd_drv" displayName="lcd_drv" projectFiles="true">
+      <itemPath>../lcd_drv/OledGrph.c</itemPath>
+      <itemPath>../lcd_drv/OledChar.c</itemPath>
+      <itemPath>../lcd_drv/lcd_drv.c</itemPath>
+      <itemPath>../lcd_drv/FillPat.c</itemPath>
+      <itemPath>../lcd_drv/eadog.c</itemPath>
+      <itemPath>../lcd_drv/dogm-graphic.c</itemPath>
+      <itemPath>../lcd_drv/OledDriver.c</itemPath>
+      <itemPath>../lcd_drv/foo.c</itemPath>
+      <itemPath>../lcd_drv/ChrFont0.c</itemPath>
+      <itemPath>../lcd_drv/OledDriver.h</itemPath>
+      <itemPath>../lcd_drv/lcd_drv.h</itemPath>
+      <itemPath>../lcd_drv/eadog.h</itemPath>
+      <itemPath>../lcd_drv/OledGrph.h</itemPath>
+      <itemPath>../lcd_drv/OledChar.h</itemPath>
+      <itemPath>../lcd_drv/dogm-graphic.h</itemPath>
+      <itemPath>../lcd_drv/display_type.h</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -568,6 +589,9 @@
             </logicalFolder>
             <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/coretimer/plib_coretimer.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="dmac" displayName="dmac" projectFiles="true">
+              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/dmac/plib_dmac.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.c</itemPath>
@@ -864,6 +888,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
+    <Elem>../lcd_drv</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -1471,6 +1496,8 @@
         <property key="memories.rww" value="true"/>
         <property key="memories.userotp" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/ldrv/wireless_apps_pic32mzw1_wfi32e01/apps/paho_mqtt_client/firmware/pic32mz_w1_curiosity.X/debug/pic32mz_w1_curiosity/pic32mz_w1_curiosity_ptg"/>
         <property key="programmerToGoImageName" value="pic32mz_w1_curiosity_ptg"/>
         <property key="programmertogo.imagename" value=""/>
         <property key="programoptions.donoteraseauxmem" value="false"/>

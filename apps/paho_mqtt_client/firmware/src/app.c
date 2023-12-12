@@ -37,6 +37,7 @@
 #include "imupic32mcj.h"
 #include "imu.h"
 #include "sca3300.h"
+#include "../../firmware/lcd_drv/lcd_drv.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -62,13 +63,17 @@
 #define BUFFER_SIZE	512
 #define MAX_BBUF	BUFFER_SIZE-2
 
+#define WDRV_PIC32MZW_MAC_ADDR_LEN              6
 
 APP_DATA appData;
 uint32_t counter = 0;
 uint32_t count = 0;
 
-const char build_version[] = "MQTT WFI32E01 IoT";
+static TCPIP_NET_HANDLE netHdl;
+
+const char build_version[] = "MQTT WFI32E01 IoT     V0.001 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
+void iot_version(void);
 
 char buffer[BUFFER_SIZE];
 bool wait = true;
@@ -177,11 +182,19 @@ void APP_Tasks(void)
 
 		start_tick();
 
+		lcd_version();
+		init_lcd_drv(D_INIT);
+		OledClearBuffer();
+		eaDogM_WriteStringAtPos(0, 0, dis_buffer);
+		imu0.op.info_ptr();
+		eaDogM_WriteStringAtPos(2, 0, imu_buffer);
+		iot_version();
+		eaDogM_WriteStringAtPos(4, 0, imu_buffer);
+
 		/*
 		 * print the driver version
 		 */
-		imu0.op.info_ptr(); // print driver version on the serial port
-		printf(imu_buffer);
+
 		imu0.op.imu_set_spimode(&imu0); // setup the IMU chip for SPI comms, X updates per second @ selected G range
 
 		StartTimer(TMR_IMU, IMU_ID_DELAY);
@@ -196,7 +209,8 @@ void APP_Tasks(void)
 				LED_RED_On();
 				LED_GREEN_Off();
 				wait = false;
-				printf("Unable to get IMU ID\r\n");
+				snprintf(buffer, MAX_BBUF, "Unable to get IMU ID");
+				eaDogM_WriteStringAtPos(11, 0, buffer);
 				break;
 			}
 		}
@@ -204,7 +218,10 @@ void APP_Tasks(void)
 
 		if (appInitialized) {
 			appData.state = APP_STATE_SERVICE_TASKS;
+			snprintf(buffer, MAX_BBUF, "Starting WFI");
+			eaDogM_WriteStringAtPos(7, 0, buffer);
 		}
+		OledUpdate();
 		break;
 	}
 
@@ -227,12 +244,28 @@ void APP_Tasks(void)
 			ntp_ret = TCPIP_SNTP_TimeGet(&pUTCSeconds, &pMs);
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
-				snprintf(buffer, MAX_BBUF, "Last %d %d", pMs, pUTCSeconds);
+				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d        ", pUTCSeconds, pMs);
 				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
-				snprintf(buffer, MAX_BBUF, "SNTP, Failed %d", ntp_ret);
+				snprintf(buffer, MAX_BBUF, "SNTP, Waiting %d  ", ntp_ret);
 				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			}
+			eaDogM_WriteStringAtPos(9, 0, buffer);
+			/*
+			 * net functions in  tcpip_manager.h
+			 */
+			netHdl = TCPIP_STACK_NetHandleGet("PIC32MZW1");
+			IPV4_ADDR ipAddr;
+			ipAddr.Val = TCPIP_STACK_NetAddress(netHdl);
+			if (ipAddr.Val) {
+				snprintf(buffer, MAX_BBUF, "STA IP:%d.%d.%d.%d           ", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
+				eaDogM_WriteStringAtPos(8, 0, buffer);
+			} else {
+				snprintf(buffer, MAX_BBUF, "Waiting for IP Address ");
+				eaDogM_WriteStringAtPos(8, 0, buffer);
+			}
+
+			OledUpdate();
 		}
 
 		/*
@@ -243,11 +276,18 @@ void APP_Tasks(void)
 			 * format data to JSON using printf formatting
 			 */
 			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %u,\r\n     \"WUTC\": %u,\r\n     \"WUTCMs\": %u,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
-				build_version, count++, pUTCSeconds, pMs, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
+				build_version, count++, pMs, pUTCSeconds, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
 
 			APP_MQTT_PublishMsg(buffer);
 			counter = 0;
 			imu0.update = true;
+			/*
+			 * send updates to the GLCD screen
+			 */
+			snprintf(buffer, MAX_BBUF, "X %7.3f,Y %7.3f,Z %7.3f", q0, q1, q2);
+			eaDogM_WriteStringAtPos(11, 0, buffer);
+			snprintf(buffer, MAX_BBUF, "XA%7.3f,YA%7.3f,ZA%7.3f", qa0, qa1, qa2);
+			eaDogM_WriteStringAtPos(12, 0, buffer);
 		}
 		break;
 	}
@@ -260,7 +300,10 @@ void APP_Tasks(void)
 	}
 }
 
-
+void iot_version(void)
+{
+	snprintf(imu_buffer, MAX_FBUF, "%s %s %s", build_version, build_date, build_time);
+}
 /*******************************************************************************
  End of File
  */

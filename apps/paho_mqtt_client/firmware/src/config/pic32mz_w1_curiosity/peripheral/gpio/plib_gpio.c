@@ -74,7 +74,7 @@ void GPIO_Initialize ( void )
     CNPUBSET = 0x80U; /* Pull-Up Enable */
     /* PORTC Initialization */
     LATC = 0x9600U; /* Initial Latch Value */
-    TRISCCLR = 0x9600U; /* Direction Control */
+    TRISCCLR = 0x9400U; /* Direction Control */
     SRCON0CSET = 0x6000U; /* Slew Rate Control */
     /* PORTK Initialization */
     LATK = 0x6000U; /* Initial Latch Value */
@@ -97,6 +97,7 @@ void GPIO_Initialize ( void )
     /* PPS Output Remapping */
     RPC14R = 1;
     RPK4R = 4;
+    RPC9R = 3;
     RPC11R = 5;
     RPK12R = 5;
     RPA5R = 6;

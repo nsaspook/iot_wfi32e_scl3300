@@ -14,6 +14,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../src</sourceRootElem>
+                <sourceRootElem>../lcd_drv</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

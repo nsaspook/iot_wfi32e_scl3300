@@ -70,6 +70,8 @@
 void CORE_TIMER_Handler (void);
 void TIMER_4_Handler (void);
 void FLASH_CONTROL_Handler (void);
+void SPI1_RX_Handler (void);
+void SPI1_TX_Handler (void);
 void UART1_FAULT_Handler (void);
 void UART1_RX_Handler (void);
 void UART1_TX_Handler (void);
@@ -78,6 +80,8 @@ void SPI2_TX_Handler (void);
 void UART3_FAULT_Handler (void);
 void UART3_RX_Handler (void);
 void UART3_TX_Handler (void);
+void DMA0_Handler (void);
+void DMA1_Handler (void);
 void RFSMC_Handler (void);
 void RFMAC_Handler (void);
 void RFTM0_Handler (void);
@@ -106,6 +110,16 @@ void __ISR(_TIMER_4_VECTOR, ipl2SRS) TIMER_4_Handler (void)
 void __ISR(_FLASH_CONTROL_VECTOR, ipl1SRS) FLASH_CONTROL_Handler (void)
 {
     NVM_InterruptHandler();
+}
+
+void __ISR(_SPI1_RX_VECTOR, ipl1SRS) SPI1_RX_Handler (void)
+{
+    SPI1_RX_InterruptHandler();
+}
+
+void __ISR(_SPI1_TX_VECTOR, ipl1SRS) SPI1_TX_Handler (void)
+{
+    SPI1_TX_InterruptHandler();
 }
 
 void __ISR(_UART1_FAULT_VECTOR, ipl1SRS) UART1_FAULT_Handler (void)
@@ -146,6 +160,16 @@ void __ISR(_UART3_RX_VECTOR, ipl1SRS) UART3_RX_Handler (void)
 void __ISR(_UART3_TX_VECTOR, ipl1SRS) UART3_TX_Handler (void)
 {
     UART3_TX_InterruptHandler();
+}
+
+void __ISR(_DMA0_VECTOR, ipl1SRS) DMA0_Handler (void)
+{
+    DMA0_InterruptHandler();
+}
+
+void __ISR(_DMA1_VECTOR, ipl1SRS) DMA1_Handler (void)
+{
+    DMA1_InterruptHandler();
 }
 
 void __ISR(_RFSMC_VECTOR, ipl1SRS) RFSMC_Handler (void)

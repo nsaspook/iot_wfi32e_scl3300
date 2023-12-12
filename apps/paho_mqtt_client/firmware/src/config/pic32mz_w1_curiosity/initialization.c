@@ -701,6 +701,8 @@ void SYS_Initialize ( void* data )
 
 	RNG_Initialize();
 
+    DMAC_Initialize();
+
 
 
     /* MISRAC 2012 deviation block start */

@@ -146,14 +146,14 @@
 #define QEA2_SIG_Get()               ((PORTK >> 14) & 0x1U)
 #define QEA2_SIG_PIN                  GPIO_PIN_RK14
 
-/*** Macros for GPIO_RC9 pin ***/
-#define GPIO_RC9_Set()               (LATCSET = (1U<<9))
-#define GPIO_RC9_Clear()             (LATCCLR = (1U<<9))
-#define GPIO_RC9_Toggle()            (LATCINV= (1U<<9))
-#define GPIO_RC9_OutputEnable()      (TRISCCLR = (1U<<9))
-#define GPIO_RC9_InputEnable()       (TRISCSET = (1U<<9))
-#define GPIO_RC9_Get()               ((PORTC >> 9) & 0x1U)
-#define GPIO_RC9_PIN                  GPIO_PIN_RC9
+/*** Macros for should_be_sdo1 pin ***/
+#define should_be_sdo1_Set()               (LATCSET = (1U<<8))
+#define should_be_sdo1_Clear()             (LATCCLR = (1U<<8))
+#define should_be_sdo1_Toggle()            (LATCINV= (1U<<8))
+#define should_be_sdo1_OutputEnable()      (TRISCCLR = (1U<<8))
+#define should_be_sdo1_InputEnable()       (TRISCSET = (1U<<8))
+#define should_be_sdo1_Get()               ((PORTC >> 8) & 0x1U)
+#define should_be_sdo1_PIN                  GPIO_PIN_RC8
 
 /*** Macros for IMU_INT2 pin ***/
 #define IMU_INT2_Set()               (LATASET = (1U<<14))

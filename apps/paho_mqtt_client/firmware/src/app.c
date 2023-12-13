@@ -315,7 +315,7 @@ void APP_Tasks(void)
 					temp_raw = millivolt;
 					temp = (millivolt - 500) * (125 + 40) / (1300 - 500); /* 800 millivolt from -40 to +125 */
 					temp = temp - 40; /* offset temperature */
-					snprintf(buffer, MAX_BBUF, "WFI32 TEMP %dC Raw %d counts   ", temp, temp_raw);
+					snprintf(buffer, MAX_BBUF, "WFI32 TEMP %dC Raw ADC %d  ", temp, temp_raw);
 					eaDogM_WriteStringAtPos(13, 0, buffer);
 				}
 			}

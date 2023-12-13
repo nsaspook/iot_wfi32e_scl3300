@@ -288,6 +288,7 @@ void APP_Tasks(void)
 		 * convert IMU data to JSON string for MQTT publishing
 		 */
 		if (counter++ >= IMU_UPDATE_SPEED) {
+			ADCHS_ChannelConversionStart(ADCHS_CH21);
 			/*
 			 * format data to JSON using printf formatting
 			 */
@@ -306,6 +307,18 @@ void APP_Tasks(void)
 			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME);
 			eaDogM_WriteStringAtPos(15, 0, buffer);
 			appData.state = APP_STATE_SERVICE_TASKS;
+			{
+				int millivolt, temp, temp_raw;
+
+				if (ADCHS_ChannelResultIsReady(ADCHS_CH21)) {
+					millivolt = ADCHS_ChannelResultGet(ADCHS_CH21)* 3100 >> 12;
+					temp_raw = millivolt;
+					temp = (millivolt - 500) * (125 + 40) / (1300 - 500); /* 800 millivolt from -40 to +125 */
+					temp = temp - 40; /* offset temperature */
+					snprintf(buffer, MAX_BBUF, "WFI32 TEMP %dC Raw %d counts   ", temp, temp_raw);
+					eaDogM_WriteStringAtPos(13, 0, buffer);
+				}
+			}
 		}
 		break;
 

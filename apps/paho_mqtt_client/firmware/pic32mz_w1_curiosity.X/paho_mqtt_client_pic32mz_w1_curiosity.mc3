@@ -1875,7 +1875,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCCON3__CONCLKDIV"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCCON3__CONCLKDIV&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;30&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2391,7 +2393,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_0_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_0_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2449,7 +2453,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_ADCCON3"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_ADCCON3&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;486539264&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2550,7 +2556,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_ADCTRGMODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_ADCTRGMODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2568,7 +2576,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_CONV_RATE0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_CONV_RATE0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;104.166664&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2583,7 +2598,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;250.0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;16.666666&quot;/&gt;
     &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
@@ -2847,7 +2862,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_TADC0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_TADC0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;600.0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2862,7 +2884,7 @@
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;200.0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;3000.0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
@@ -2872,7 +2894,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_TCLK"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_TCLK&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;10.0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -2881,7 +2905,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="ADCHS_TQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;ADCHS_TQ&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;adchs&quot; value=&quot;300.0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -3565,7 +3591,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="adchs" name="AN21"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;adchs&gt;
   &lt;adchs dnOrder=&quot;0&quot; id=&quot;AN21&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/adchs&gt;
 &lt;/adchs&gt;
 </value>
@@ -15293,7 +15321,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/definitions.h</file>
-         <hash>d4bae00cefe5093857c658ff4cdd5872c3eb26c6cc0c41e580f7ef31c3cd63d2</hash>
+         <hash>68c909b4d95ff3bc4b1e3a9d363584ebd2dd37090a0104c9605db98728f50917</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/device.h</file>
@@ -15473,7 +15501,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/initialization.c</file>
-         <hash>bb3d551d29b447e4bd401671b7b65e41378f6be2373ff863e89cc94a1066a1cf</hash>
+         <hash>1e9bc5618840e9c1ed4f0c7efa74d7ae6170933cfc6b08c18a745b44f2109cc7</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.c</file>
@@ -16117,7 +16145,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/adchs/plib_adchs.c</file>
-         <hash>93234bc3005a3295c9e28268f31cde29a79b8c88d83b801c70d43e5582ad9b69</hash>
+         <hash>b30949c7f8ea55c8c179ff5fde2193a57a11ce7456a09bdbac9260a342e5310c</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/adchs/plib_adchs.h</file>

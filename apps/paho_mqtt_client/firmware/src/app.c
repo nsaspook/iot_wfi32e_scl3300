@@ -66,17 +66,17 @@
 #define WDRV_PIC32MZW_MAC_ADDR_LEN              6
 
 APP_DATA appData;
-uint32_t counter = 0;
+uint32_t counter = 0, ip_update = 0;
 uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V0.001 ";
+const char build_version[] = "MQTT WFI32E01 IoT     V1.000 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 void iot_version(void);
 
 char buffer[BUFFER_SIZE];
-bool wait = true;
+bool wait = true, ip_show = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 volatile double qa0 = 1.0, qa1 = 0.0, qa2 = 0.0, qa3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
@@ -171,7 +171,7 @@ void APP_Initialize(void)
 
 void APP_Tasks(void)
 {
-
+	TP1_Set();
 	/* Check the application's current state. */
 	switch (appData.state) {
 		/* Application's initial state. */
@@ -220,13 +220,18 @@ void APP_Tasks(void)
 			appData.state = APP_STATE_SERVICE_TASKS;
 			snprintf(buffer, MAX_BBUF, "Starting WFI");
 			eaDogM_WriteStringAtPos(7, 0, buffer);
+			snprintf(buffer, MAX_BBUF, "USERID 0x%X, IMUID 0x%X", cpu_serial_id, board_serial_id);
+			eaDogM_WriteStringAtPos(14, 0, buffer);
 		}
 		OledUpdate();
 		break;
 	}
 
 	case APP_STATE_SERVICE_TASKS:
-	{
+		appData.state = APP_STATE_IMU;
+		break;
+
+	case APP_STATE_IMU:
 		/*
 		 * service the IMU data
 		 */
@@ -251,23 +256,34 @@ void APP_Tasks(void)
 				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			}
 			eaDogM_WriteStringAtPos(9, 0, buffer);
-			/*
-			 * net functions in  tcpip_manager.h
-			 */
-			netHdl = TCPIP_STACK_NetHandleGet("PIC32MZW1");
-			IPV4_ADDR ipAddr;
-			ipAddr.Val = TCPIP_STACK_NetAddress(netHdl);
-			if (ipAddr.Val) {
-				snprintf(buffer, MAX_BBUF, "STA IP:%d.%d.%d.%d           ", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
-				eaDogM_WriteStringAtPos(8, 0, buffer);
+			if (ip_show) {
+				/*
+				 * net functions in  tcpip_manager.h
+				 */
+				netHdl = TCPIP_STACK_NetHandleGet("PIC32MZW1");
+				IPV4_ADDR ipAddr;
+				ipAddr.Val = TCPIP_STACK_NetAddress(netHdl);
+				if (ipAddr.Val) {
+					snprintf(buffer, MAX_BBUF, "STA IP:%d.%d.%d.%d           ", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
+					eaDogM_WriteStringAtPos(8, 0, buffer);
+					ip_show = false;
+				} else {
+					snprintf(buffer, MAX_BBUF, "Waiting for IP Address ");
+					eaDogM_WriteStringAtPos(8, 0, buffer);
+				}
 			} else {
-				snprintf(buffer, MAX_BBUF, "Waiting for IP Address ");
-				eaDogM_WriteStringAtPos(8, 0, buffer);
+				if (ip_update++ > IP_UPDATE_SPEED) {
+					ip_update = 0;
+					ip_show = true;
+				}
 			}
 
 			OledUpdate();
+			appData.state = APP_STATE_MQTT;
 		}
+		break;
 
+	case APP_STATE_MQTT:
 		/*
 		 * convert IMU data to JSON string for MQTT publishing
 		 */
@@ -277,7 +293,6 @@ void APP_Tasks(void)
 			 */
 			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %u,\r\n     \"WUTC\": %u,\r\n     \"WUTCMs\": %u,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
 				build_version, count++, pMs, pUTCSeconds, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
-
 			APP_MQTT_PublishMsg(buffer);
 			counter = 0;
 			imu0.update = true;
@@ -288,16 +303,19 @@ void APP_Tasks(void)
 			eaDogM_WriteStringAtPos(11, 0, buffer);
 			snprintf(buffer, MAX_BBUF, "XA%7.3f,YA%7.3f,ZA%7.3f", qa0, qa1, qa2);
 			eaDogM_WriteStringAtPos(12, 0, buffer);
+			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME);
+			eaDogM_WriteStringAtPos(15, 0, buffer);
+			appData.state = APP_STATE_SERVICE_TASKS;
 		}
 		break;
-	}
+
 		/* The default state should never be executed. */
 	default:
-	{
 		/* TODO: Handle error in application's state machine. */
+		appData.state = APP_STATE_INIT;
 		break;
 	}
-	}
+	TP1_Clear();
 }
 
 void iot_version(void)

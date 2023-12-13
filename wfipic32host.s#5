@@ -19016,7 +19016,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="414.02" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="AN1" class="0">
+<net name="AN1_AN9" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="OA2IN+/AN1/C2IN1+/RPA1/RA1"/>
 <wire x1="-17.78" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>

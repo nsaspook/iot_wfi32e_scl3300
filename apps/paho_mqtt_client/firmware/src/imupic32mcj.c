@@ -42,7 +42,7 @@ uint8_t set_imu_bits(void)
  */
 void delay_us(uint32_t us)
 {
-	TP1_Set();
+//	TP1_Set();
 #ifndef NO_CORE_TIME
 	CORETIMER_DelayUs(us);
 #else
@@ -50,7 +50,7 @@ void delay_us(uint32_t us)
 	us *= delay_freq;
 	wdtdelay(us);
 #endif
-	TP1_Clear();
+//	TP1_Clear();
 }
 
 /*

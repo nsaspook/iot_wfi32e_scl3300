@@ -17374,8 +17374,8 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <part name="C31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
 <part name="C32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10pf"/>
 <part name="VSS48" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
-<part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_C_L" device=""/>
+<part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2" value="VSS"/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_C_L" device="" value="1.0"/>
 </parts>
 <sheets>
 <sheet>
@@ -19752,7 +19752,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <pinref part="IC3" gate="G$1" pin="SDA1_/_RPA5"/>
 <junction x="398.78" y="63.5"/>
 <junction x="424.18" y="63.5"/>
-<label x="416.56" y="63.5" size="1.778" layer="95"/>
+<label x="411.48" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="C1RX_SIG_C2RX" class="0">

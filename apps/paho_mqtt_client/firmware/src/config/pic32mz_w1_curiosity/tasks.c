@@ -55,7 +55,7 @@
 #include "sys_tasks.h"
 
 
-
+void APP_MQTT_Tasks(void);
 
 // *****************************************************************************
 // *****************************************************************************
@@ -84,8 +84,6 @@ void SYS_Tasks(void)
 	NET_PRES_Tasks(sysObj.netPres);
 
 	DRV_BA414E_Tasks(sysObj.ba414e);
-
-	void APP_MQTT_Tasks(void);
 
 	TCPIP_STACK_Task(sysObj.tcpip);
 

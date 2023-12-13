@@ -79,20 +79,6 @@ extern "C" {
 // Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* TIME System Service Configuration Options */
-#define SYS_TIME_INDEX_0                            (0)
-#define SYS_TIME_MAX_TIMERS                         (5)
-#define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (200000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (620)
-
-#define SYS_CONSOLE_INDEX_0                       0
-
-
-
-
 
 #define SYS_NET_SUPP_INTF_WIFI_ONLY
 #define SYS_NET_SUPP_NUM_OF_SOCKS        		2
@@ -112,6 +98,15 @@ extern "C" {
 #define SYS_NET_CLICMD_ENABLED
 
 
+
+/* TIME System Service Configuration Options */
+#define SYS_TIME_INDEX_0                            (0)
+#define SYS_TIME_MAX_TIMERS                         (5)
+#define SYS_TIME_HW_COUNTER_WIDTH                   (32)
+#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
+#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
+#define SYS_TIME_CPU_CLOCK_FREQUENCY                (200000000)
+#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (620)
 
 #define SYS_MQTT_PAHO
 
@@ -138,6 +133,11 @@ extern "C" {
 
 
 #define SYS_MQTT_CFG_LWT_ENABLE								false
+
+#define SYS_CONSOLE_INDEX_0                       0
+
+
+
 
 
 #define SYS_CMD_ENABLE
@@ -182,6 +182,33 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 
+
+/*** DNS Client Configuration ***/
+#define TCPIP_STACK_USE_DNS
+#define TCPIP_DNS_CLIENT_SERVER_TMO					60
+#define TCPIP_DNS_CLIENT_TASK_PROCESS_RATE			200
+#define TCPIP_DNS_CLIENT_CACHE_ENTRIES				5
+#define TCPIP_DNS_CLIENT_CACHE_ENTRY_TMO			0
+#define TCPIP_DNS_CLIENT_CACHE_PER_IPV4_ADDRESS		5
+#define TCPIP_DNS_CLIENT_CACHE_PER_IPV6_ADDRESS		1
+#define TCPIP_DNS_CLIENT_ADDRESS_TYPE			    IP_ADDRESS_TYPE_IPV4
+#define TCPIP_DNS_CLIENT_CACHE_DEFAULT_TTL_VAL		1200
+#define TCPIP_DNS_CLIENT_LOOKUP_RETRY_TMO			2
+#define TCPIP_DNS_CLIENT_MAX_HOSTNAME_LEN			64
+#define TCPIP_DNS_CLIENT_MAX_SELECT_INTERFACES		4
+#define TCPIP_DNS_CLIENT_DELETE_OLD_ENTRIES			true
+#define TCPIP_DNS_CLIENT_CONSOLE_CMD               	true
+#define TCPIP_DNS_CLIENT_USER_NOTIFICATION   false
+
+
+
+/* MPLAB Harmony BA414E Driver Definitions*/
+#define DRV_BA414E_NUM_CLIENTS 5
+
+
+
+
+
 /*** ICMPv4 Server Configuration ***/
 #define TCPIP_STACK_USE_ICMP_SERVER
 #define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
@@ -192,6 +219,10 @@ extern "C" {
 #define TCPIP_ICMP_TASK_TICK_RATE              33
 #define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
 #define TCPIP_ICMP_COMMAND_ENABLE              false
+
+#define SYS_WIFIPROV_NVMADDR        		0x900FF000
+#define SYS_WIFIPROV_SAVECONFIG        			true
+#define SYS_WIFIPROV_SOCKETPORT        		6666
 
 
 /*** TCP Configuration ***/
@@ -216,6 +247,24 @@ extern "C" {
 #define TCPIP_TCP_COMMANDS   false
 #define TCPIP_TCP_EXTERN_PACKET_PROCESS   false
 #define TCPIP_TCP_DISABLE_CRYPTO_USAGE		        	    false
+
+
+
+/*** DHCP Configuration ***/
+#define TCPIP_STACK_USE_DHCP_CLIENT
+#define TCPIP_DHCP_TIMEOUT                          10
+#define TCPIP_DHCP_TASK_TICK_RATE                   5
+#define TCPIP_DHCP_HOST_NAME_SIZE                   20
+#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
+#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
+#define TCPIP_DHCP_CLIENT_CONSOLE_CMD               true
+
+#define TCPIP_DHCP_USE_OPTION_TIME_SERVER           0
+#define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
+#define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
+#define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
+#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
+#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
 
 
 
@@ -258,6 +307,11 @@ extern "C" {
 
 
 
+	/*** tcpip_cmd Configuration ***/
+	#define TCPIP_STACK_COMMAND_ENABLE
+
+
+
 /*** IPv4 Configuration ***/
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
@@ -265,127 +319,6 @@ extern "C" {
 #define TCPIP_IPV4_COMMANDS false
 
 #define TCPIP_IPV4_FORWARDING_ENABLE    false 
-
-
-
-
-
-/*** UDP Configuration ***/
-#define TCPIP_UDP_MAX_SOCKETS		                	10
-#define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
-#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
-#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			16
-#define TCPIP_UDP_USE_POOL_BUFFERS   false
-#define TCPIP_UDP_USE_TX_CHECKSUM             			true
-#define TCPIP_UDP_USE_RX_CHECKSUM             			true
-#define TCPIP_UDP_COMMANDS   false
-#define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
-
-
-/* MPLAB Harmony Net Presentation Layer Definitions*/
-#define NET_PRES_NUM_INSTANCE 1
-#define NET_PRES_NUM_SOCKETS 10
-
-
-
-
-/*** DNS Server Configuration ***/
-#define TCPIP_STACK_USE_DNS_SERVER
-#define TCPIP_DNSS_HOST_NAME_LEN		    	64
-#define TCPIP_DNSS_REPLY_BOARD_ADDR				true
-#define TCPIP_DNSS_CACHE_PER_IPV4_ADDRESS		2
-#define TCPIP_DNSS_CACHE_PER_IPV6_ADDRESS		1
-#define TCPIP_DNSS_TTL_TIME						600
-#define TCPIP_DNSS_TASK_PROCESS_RATE			33
-#define TCPIP_DNSS_DELETE_OLD_LEASE				true
-#define TCPIP_DNSS_CONSOLE_CMD           false
-/***Maximum DNS server Cache entries. It is the sum of TCPIP_DNSS_CACHE_PER_IPV4_ADDRESS and TCPIP_DNSS_CACHE_PER_IPV6_ADDRESS.***/
-#define TCPIP_DNSS_CACHE_MAX_SERVER_ENTRIES     (TCPIP_DNSS_CACHE_PER_IPV4_ADDRESS + TCPIP_DNSS_CACHE_PER_IPV6_ADDRESS)
-
-
-
-
-/*** DNS Client Configuration ***/
-#define TCPIP_STACK_USE_DNS
-#define TCPIP_DNS_CLIENT_SERVER_TMO					60
-#define TCPIP_DNS_CLIENT_TASK_PROCESS_RATE			200
-#define TCPIP_DNS_CLIENT_CACHE_ENTRIES				5
-#define TCPIP_DNS_CLIENT_CACHE_ENTRY_TMO			0
-#define TCPIP_DNS_CLIENT_CACHE_PER_IPV4_ADDRESS		5
-#define TCPIP_DNS_CLIENT_CACHE_PER_IPV6_ADDRESS		1
-#define TCPIP_DNS_CLIENT_ADDRESS_TYPE			    IP_ADDRESS_TYPE_IPV4
-#define TCPIP_DNS_CLIENT_CACHE_DEFAULT_TTL_VAL		1200
-#define TCPIP_DNS_CLIENT_LOOKUP_RETRY_TMO			2
-#define TCPIP_DNS_CLIENT_MAX_HOSTNAME_LEN			64
-#define TCPIP_DNS_CLIENT_MAX_SELECT_INTERFACES		4
-#define TCPIP_DNS_CLIENT_DELETE_OLD_ENTRIES			true
-#define TCPIP_DNS_CLIENT_CONSOLE_CMD               	true
-#define TCPIP_DNS_CLIENT_USER_NOTIFICATION   false
-
-
-
-/* MPLAB Harmony BA414E Driver Definitions*/
-#define DRV_BA414E_NUM_CLIENTS 5
-
-
-
-
-#define SYS_WIFIPROV_NVMADDR        		0x900FF000
-#define SYS_WIFIPROV_SAVECONFIG        			true
-#define SYS_WIFIPROV_SOCKETPORT        		6666
-
-
-/*** DHCP Configuration ***/
-#define TCPIP_STACK_USE_DHCP_CLIENT
-#define TCPIP_DHCP_TIMEOUT                          10
-#define TCPIP_DHCP_TASK_TICK_RATE                   5
-#define TCPIP_DHCP_HOST_NAME_SIZE                   20
-#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
-#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
-#define TCPIP_DHCP_CLIENT_CONSOLE_CMD               true
-
-#define TCPIP_DHCP_USE_OPTION_TIME_SERVER           0
-#define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
-#define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
-#define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
-#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
-#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
-
-
-
-	/*** tcpip_cmd Configuration ***/
-	#define TCPIP_STACK_COMMAND_ENABLE
-
-
-
-/*** DHCP Server Configuration ***/
-#define TCPIP_STACK_USE_DHCP_SERVER
-#define TCPIP_DHCPS_TASK_PROCESS_RATE                     	200
-#define TCPIP_DHCPS_MAX_NUMBER_INSTANCES					1
-#define TCPIP_DHCPS_LEASE_ENTRIES_DEFAULT                   15
-#define TCPIP_DHCPS_LEASE_SOLVED_ENTRY_TMO                  1200
-#define TCPIP_DHCPS_LEASE_REMOVED_BEFORE_ACK                5
-#define TCPIP_DHCP_SERVER_DELETE_OLD_ENTRIES              	true
-#define TCPIP_DHCPS_LEASE_DURATION	TCPIP_DHCPS_LEASE_SOLVED_ENTRY_TMO
-
-/*** DHCP Server Instance 0 Configuration ***/
-#define TCPIP_DHCPS_DEFAULT_IP_ADDRESS_RANGE_START_IDX0             "192.168.1.100"
-
-#define TCPIP_DHCPS_DEFAULT_SERVER_IP_ADDRESS_IDX0                  "192.168.1.1"
-
-#define TCPIP_DHCPS_DEFAULT_SERVER_NETMASK_ADDRESS_IDX0             "255.255.255.0"
-
-#define TCPIP_DHCPS_DEFAULT_SERVER_GATEWAY_ADDRESS_IDX0             "192.168.1.1"
-
-#define TCPIP_DHCPS_DEFAULT_SERVER_PRIMARY_DNS_ADDRESS_IDX0         "192.168.1.1"
-
-#define TCPIP_DHCPS_DEFAULT_SERVER_SECONDARY_DNS_ADDRESS_IDX0       "192.168.1.1"
-
-#define TCPIP_DHCP_SERVER_INTERFACE_INDEX_IDX0                      0
-
-#define TCPIP_DHCP_SERVER_POOL_ENABLED_IDX0                         true
-
-#define TCPIP_DHCP_SERVER_POOL_INDEX_IDX0								0
 
 
 
@@ -465,6 +398,19 @@ extern "C" {
 
 
 
+/*** UDP Configuration ***/
+#define TCPIP_UDP_MAX_SOCKETS		                	10
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			16
+#define TCPIP_UDP_USE_POOL_BUFFERS   false
+#define TCPIP_UDP_USE_TX_CHECKSUM             			true
+#define TCPIP_UDP_USE_RX_CHECKSUM             			true
+#define TCPIP_UDP_COMMANDS   false
+#define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
+
+
+
 /*** wolfCrypt Library Configuration ***/
 #define MICROCHIP_PIC32
 #define MICROCHIP_MPLAB_HARMONY
@@ -519,6 +465,12 @@ extern "C" {
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
+/* MPLAB Harmony Net Presentation Layer Definitions*/
+#define NET_PRES_NUM_INSTANCE 1
+#define NET_PRES_NUM_SOCKETS 10
+
+
+
 /* WIFI System Service Configuration Options */
 #define SYS_WIFI_DEVMODE        			SYS_WIFI_STA
 
@@ -529,18 +481,13 @@ extern "C" {
 #define SYS_WIFI_STA_PWD        			"01090203020206050003050003"
 
 
-#define SYS_WIFI_STA_AUTHTYPE				SYS_WIFI_WPAWPA2MIXED 
+#define SYS_WIFI_STA_AUTHTYPE				SYS_WIFI_WPA2WPA3MIXED
 
 
 
 #define SYS_WIFI_STA_AUTOCONNECT   			true
 
 
-#define SYS_WIFI_AP_SSID					"DEMO_AP_SOFTAP"
-#define SYS_WIFI_AP_PWD        				"password"
-#define SYS_WIFI_AP_AUTHTYPE				SYS_WIFI_WPA2
-#define SYS_WIFI_AP_CHANNEL					1
-#define SYS_WIFI_AP_SSIDVISIBILE   			true
 
 
 

@@ -550,7 +550,6 @@
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/arp.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_commands.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/ipv4.c</itemPath>
-                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcps.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_heap_alloc.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_heap_external.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcp.c</itemPath>
@@ -563,7 +562,6 @@
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_notify.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_packet.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/udp.c</itemPath>
-                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dnss.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/sntp.c</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -1080,7 +1078,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -1138,7 +1135,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1178,7 +1174,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1350,8 +1345,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="10000000-100fffff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="/ldrv/wireless_apps_pic32mzw1_wfi32e01/apps/paho_mqtt_client/firmware/pic32mz_w1_curiosity.X/debug/pic32mz_w1_curiosity/pic32mz_w1_curiosity_ptg"/>
         <property key="programmerToGoImageName" value="pic32mz_w1_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

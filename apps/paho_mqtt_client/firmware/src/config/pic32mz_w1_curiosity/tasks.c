@@ -57,6 +57,7 @@
 
 void APP_MQTT_Tasks(void);
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System "Tasks" Routine
@@ -70,30 +71,48 @@ void APP_MQTT_Tasks(void);
   Remarks:
     See prototype in system/common/sys_module.h.
  */
-void SYS_Tasks(void)
+void SYS_Tasks ( void )
 {
 	/* Maintain system services */
 
+
 	SYS_CMD_Tasks();
+
+
+
 
 	/* Maintain Device Drivers */
 	WDRV_PIC32MZW_Tasks(sysObj.drvWifiPIC32MZW1);
 
-	/* Maintain Middleware & Other Libraries */
 
-	NET_PRES_Tasks(sysObj.netPres);
+
+
+	/* Maintain Middleware & Other Libraries */
 
 	DRV_BA414E_Tasks(sysObj.ba414e);
 
+
+
 	TCPIP_STACK_Task(sysObj.tcpip);
+
+
+
+NET_PRES_Tasks(sysObj.netPres);
+
 
 	SYS_WIFI_Tasks(sysObj.syswifi);
 
 	APP_MQTT_Tasks();
 
+
+
 	/* Maintain the application's state machine. */
 	/* Call Application task APP. */
 	APP_Tasks();
+
+
+
+
 }
 
 /*******************************************************************************

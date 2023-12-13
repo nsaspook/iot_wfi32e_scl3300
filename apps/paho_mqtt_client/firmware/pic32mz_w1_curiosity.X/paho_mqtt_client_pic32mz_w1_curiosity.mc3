@@ -150,15 +150,7 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
-         <string>tcpipDhcps</string>
-         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
-      </entry>
-      <entry>
          <string>tcpipDns</string>
-         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
-      </entry>
-      <entry>
-         <string>tcpipDnss</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -5790,10 +5782,8 @@
     &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;APPLICATION LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipDhcp&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipDhcps&quot; x=&quot;440&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipDns&quot; x=&quot;30&quot; y=&quot;80&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpipDnss&quot; x=&quot;170&quot; y=&quot;140&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;tcpip_apps_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipDns&quot; x=&quot;30&quot; y=&quot;80&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpip_apps_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;BASIC CONFIGURATION&quot;&gt;
@@ -13292,6 +13282,17 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysWifiPic32mzw1" name="SYS_WIFI_AP_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysWifiPic32mzw1&gt;
+  &lt;sysWifiPic32mzw1 dnOrder=&quot;0&quot; id=&quot;SYS_WIFI_AP_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sysWifiPic32mzw1&gt;
+&lt;/sysWifiPic32mzw1&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysWifiPic32mzw1" name="SYS_WIFI_COUNTRYCODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysWifiPic32mzw1&gt;
   &lt;sysWifiPic32mzw1 dnOrder=&quot;0&quot; id=&quot;SYS_WIFI_COUNTRYCODE&quot;&gt;
@@ -13307,7 +13308,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysWifiPic32mzw1&gt;
   &lt;sysWifiPic32mzw1 dnOrder=&quot;0&quot; id=&quot;SYS_WIFI_STA_AUTH&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;WPA2&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;WPA2WPA3&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sysWifiPic32mzw1&gt;
 &lt;/sysWifiPic32mzw1&gt;
@@ -13349,6 +13350,17 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysWifiProvPic32mzw1" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysWifiProvPic32mzw1" name="SYS_WIFIPROV_AP_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysWifiProvPic32mzw1&gt;
+  &lt;sysWifiProvPic32mzw1 dnOrder=&quot;0&quot; id=&quot;SYS_WIFIPROV_AP_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sysWifiProvPic32mzw1&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sysWifiProvPic32mzw1&gt;
+&lt;/sysWifiProvPic32mzw1&gt;
+</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="!@#harmonyAttachmentState"/>
@@ -13757,17 +13769,6 @@
          <value>APPLICATION LAYER</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipDhcps" name="!@#harmonyAttachmentState"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipDhcps&gt;
-  &lt;tcpipDhcps dnOrder=&quot;0&quot;/&gt;
-&lt;/tcpipDhcps&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipDhcps" name="#&amp;__MCC_Group_Parrent_id"/>
-         <value>APPLICATION LAYER</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipDns" name="!@#harmonyAttachmentState"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipDns&gt;
   &lt;tcpipDns dnOrder=&quot;0&quot;/&gt;
@@ -13776,17 +13777,6 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipDns" name="#&amp;__MCC_Group_Parrent_id"/>
-         <value>APPLICATION LAYER</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipDnss" name="!@#harmonyAttachmentState"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipDnss&gt;
-  &lt;tcpipDnss dnOrder=&quot;0&quot;/&gt;
-&lt;/tcpipDnss&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipDnss" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>APPLICATION LAYER</value>
       </entry>
       <entry>
@@ -14109,7 +14099,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_HEAP_SIZE_RECOMMEND&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipStack&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipStack&quot; value=&quot;28&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
@@ -14236,8 +14226,22 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpip_apps_config&gt;
   &lt;tcpip_apps_config dnOrder=&quot;0&quot; id=&quot;TCPIP_AUTOCONFIG_ENABLE_DHCP_SERVER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sysWifiPic32mzw1&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sysWifiPic32mzw1&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
+  &lt;/tcpip_apps_config&gt;
+&lt;/tcpip_apps_config&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpip_apps_config" name="TCPIP_AUTOCONFIG_ENABLE_DHCP_SERVER_V2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpip_apps_config&gt;
+  &lt;tcpip_apps_config dnOrder=&quot;0&quot; id=&quot;TCPIP_AUTOCONFIG_ENABLE_DHCP_SERVER_V2&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/tcpip_apps_config&gt;
 &lt;/tcpip_apps_config&gt;
 </value>
@@ -14258,7 +14262,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpip_apps_config&gt;
   &lt;tcpip_apps_config dnOrder=&quot;0&quot; id=&quot;TCPIP_AUTOCONFIG_ENABLE_DNS_SERVER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sysWifiPic32mzw1&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sysWifiPic32mzw1&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpip_apps_config&gt;
 &lt;/tcpip_apps_config&gt;
@@ -15309,7 +15313,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/configuration.h</file>
-         <hash>f2a06667d781d18c89096cf50284c5a8eeee4d714d71a85332aaf77f749d2f86</hash>
+         <hash>588e9296b4934ed590940b9799859075efb3fb8f392b5d5ea8fd34ef74930e3f</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/crypto/crypto.h</file>
@@ -15321,7 +15325,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/definitions.h</file>
-         <hash>68c909b4d95ff3bc4b1e3a9d363584ebd2dd37090a0104c9605db98728f50917</hash>
+         <hash>22db1a2877e94ff10efbca7e1e2846ec098a60a33ff036943fb8e773eff372f4</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/device.h</file>
@@ -15501,7 +15505,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/initialization.c</file>
-         <hash>1e9bc5618840e9c1ed4f0c7efa74d7ae6170933cfc6b08c18a745b44f2109cc7</hash>
+         <hash>f4f35c99de8884d4a206f1dca1786404bfc618abdd4bc9deb86b6ebbf7ad562f</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.c</file>
@@ -15668,10 +15672,6 @@
          <hash>f095fba0413f7cf9ff254b5e4f8a370b052bdf260e3859d261128ceccfcbbbfb</hash>
       </entry>
       <entry>
-         <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcps.c</file>
-         <hash>d1d2ddcb76ddc27cd7ef887a01361fee7e3659122af0762386912b67b2363b65</hash>
-      </entry>
-      <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcps_manager.h</file>
          <hash>0f7a5bec2beb400e1b90dc554784ae1275ec9f62800b69025d26e909eacb1245</hash>
       </entry>
@@ -15698,10 +15698,6 @@
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dns_private.h</file>
          <hash>f9f7f3018ecb8b718f967ab36a6c4d1f2b22180e7f2f43d22ec2a71287489e9d</hash>
-      </entry>
-      <entry>
-         <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dnss.c</file>
-         <hash>19d86cd0beb231a2b9736abbeaecf08d56c5a3d152ad823ed46a3e55553912b0</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dnss_manager.h</file>
@@ -15953,7 +15949,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_private.h</file>
-         <hash>90331724084eeced5d06e70b95e4515f20f4b2b1968b1e94b751dc85feb45894</hash>
+         <hash>551172f07671ce52b09e8337d276fa981eb5ad86dd9e7d9c83c800288ed26205</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_reboot_manager.h</file>
@@ -16013,7 +16009,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/tcpip.h</file>
-         <hash>c63d045c609307026710a226e5f37ac7000db9272360bc1988317ca1f59c6e23</hash>
+         <hash>f7ff307c071b379e27406ea20f90e8cee929cf5688b4e0539149a54e226c2b70</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/tcpip_announce.h</file>
@@ -16433,15 +16429,15 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/system/wifi/src/sys_wifi.c</file>
-         <hash>18b2d6911b5a89a8f142ac3ef010d316d931dc258bf88d622d1d55b72c042f7d</hash>
+         <hash>93bff072e70b1341c1ed45304202e0ad0910cf0be54c4cc0eef5aba38d00863e</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/system/wifi/sys_wifi.h</file>
-         <hash>589d2a90d89b2c7aef6db8842903e1bd71799e548fd673f7e54ce551ed76d432</hash>
+         <hash>01c132b1e7eb118e1e7457490ae8921385d05a72be7b39d663773bbda790f226</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/system/wifiprov/src/sys_wifiprov.c</file>
-         <hash>2f60547711110867622dd7598f690b8b38b7f7e90d1edaf57fa4d6d46c0eaabe</hash>
+         <hash>326fab9119f21b488cc29bab1d33545a59b3c7132e1b247b8e9c702f042d0d80</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/system/wifiprov/src/sys_wifiprov_json.c</file>
@@ -16449,7 +16445,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/system/wifiprov/sys_wifiprov.h</file>
-         <hash>81e078fde71559deff32729f70d3d7df7febb616fcd01d03456217e41c5968cf</hash>
+         <hash>a1bd9128eafc54ad82316c8b4dcbede191e762a497ca4752c289a691f21b7dbb</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/system/wifiprov/sys_wifiprov_json.h</file>
@@ -16465,7 +16461,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/tasks.c</file>
-         <hash>6213f7cfbb1c41df1874b040bd2a5c0ad9779bc8ebe6fe146898366d1911fcda</hash>
+         <hash>62c89bc31fd0c06ee0bcfad17d0f81f40e50a2011461fdf625c252a4fcbdd4ac</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/toolchain_specifics.h</file>

@@ -38,6 +38,7 @@
 #include "imu.h"
 #include "sca3300.h"
 #include "../../firmware/lcd_drv/lcd_drv.h"
+#include "config/pic32mz_w1_curiosity/system/mqtt/sys_mqtt_paho.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -71,15 +72,23 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V1.000 ";
+const char build_version[] = "MQTT WFI32E01 IoT     V1.001 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
+char id_string[128], id_client[128];
 void iot_version(void);
+int32_t APP_MQTT_PublishMsg_local(char *message);
 
 char buffer[BUFFER_SIZE];
 bool wait = true, ip_show = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 volatile double qa0 = 1.0, qa1 = 0.0, qa2 = 0.0, qa3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
+
+extern SYS_MQTT_Handle g_asSysMqttHandle[1];
+#define MQTT_DEVICE	"mateq84wfi"	// client base-name
+
+extern SYS_MODULE_OBJ g_sSysMqttHandle;
+#define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL	"mateq84/data/imu"
 
 sSensorData_t accel = {
 	.id = 1,
@@ -218,10 +227,16 @@ void APP_Tasks(void)
 
 		if (appInitialized) {
 			appData.state = APP_STATE_SERVICE_TASKS;
-			snprintf(buffer, MAX_BBUF, "Starting WFI");
-			eaDogM_WriteStringAtPos(7, 0, buffer);
 			snprintf(buffer, MAX_BBUF, "USERID 0x%X, IMUID 0x%X", cpu_serial_id, board_serial_id);
 			eaDogM_WriteStringAtPos(14, 0, buffer);
+			snprintf(id_string, 110, "IMUID 0x%X", board_serial_id);
+			/*
+			 * make unique client id from IMU serial number
+			 */
+			snprintf(id_client, 110, "%s%X", MQTT_DEVICE, board_serial_id);
+			strcpy((char *) &g_asSysMqttHandle[0].sCfgInfo.sBrokerConfig.clientId, id_client);
+			snprintf(buffer, MAX_BBUF, "Starting WFI %s", id_client);
+			eaDogM_WriteStringAtPos(7, 0, buffer);
 		}
 		OledUpdate();
 		break;
@@ -292,9 +307,9 @@ void APP_Tasks(void)
 			/*
 			 * format data to JSON using printf formatting
 			 */
-			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s\",\r\n     \"Wsequence\": %u,\r\n     \"WUTC\": %u,\r\n     \"WUTCMs\": %u,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
-				build_version, count++, pMs, pUTCSeconds, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
-			APP_MQTT_PublishMsg(buffer);
+			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s %s\",\r\n     \"Wsequence\": %u,\r\n     \"WUTC\": %u,\r\n     \"WUTCMs\": %u,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
+				build_version, id_string, count++, pMs, pUTCSeconds, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
+			APP_MQTT_PublishMsg_local(buffer);
 			counter = 0;
 			imu0.update = true;
 			/*
@@ -304,7 +319,7 @@ void APP_Tasks(void)
 			eaDogM_WriteStringAtPos(11, 0, buffer);
 			snprintf(buffer, MAX_BBUF, "XA%7.3f,YA%7.3f,ZA%7.3f", qa0, qa1, qa2);
 			eaDogM_WriteStringAtPos(12, 0, buffer);
-			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME);
+			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
 			eaDogM_WriteStringAtPos(15, 0, buffer);
 			appData.state = APP_STATE_SERVICE_TASKS;
 			{
@@ -335,6 +350,27 @@ void iot_version(void)
 {
 	snprintf(imu_buffer, MAX_FBUF, "%s %s %s", build_version, build_date, build_time);
 }
+
+int32_t APP_MQTT_PublishMsg_local(char *message)
+{
+	SYS_MQTT_PublishTopicCfg sMqttTopicCfg;
+	int32_t retVal = SYS_MQTT_FAILURE;
+
+	strcpy(sMqttTopicCfg.topicName, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+	sMqttTopicCfg.topicLength = strlen(SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+	sMqttTopicCfg.retain = SYS_MQTT_DEF_PUB_RETAIN;
+	sMqttTopicCfg.qos = SYS_MQTT_DEF_PUB_QOS;
+
+	retVal = SYS_MQTT_Publish(g_sSysMqttHandle,
+		&sMqttTopicCfg,
+		message,
+		strlen(message));
+	if (retVal != SYS_MQTT_SUCCESS) {
+		SYS_CONSOLE_PRINT("\nPublish_PeriodicMsg(): Failed (%d)\r\n", retVal);
+	}
+	return retVal;
+}
+
 /*******************************************************************************
  End of File
  */

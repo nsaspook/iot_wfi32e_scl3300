@@ -1,10 +1,10 @@
 /************************************************************************/
-/*																		*/
-/*	OledGrph.h	--	Declarations for OLED Graphics Routines				*/
-/*																		*/
+/*									*/
+/*	OledGrph.h	--	Declarations for OLED Graphics Routines	*/
+/*									*/
 /************************************************************************/
-/*	Author:		Gene Apperson											*/
-/*	Copyright 2011, Digilent Inc.										*/
+/*	Author:		Gene Apperson					*/
+/*	Copyright 2011, Digilent Inc.					*/
 /************************************************************************/
 /*
   This library is free software; you can redistribute it and/or
@@ -22,15 +22,15 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 /************************************************************************/
-/*  File Description:													*/
-/*																		*/
-/*	Interface declarations for OledGrph.c								*/
-/*																		*/
+/*  File Description:							*/
+/*									*/
+/*	Interface declarations for OledGrph.c				*/
+/*									*/
 /************************************************************************/
-/*  Revision History:													*/
-/*																		*/
-/*	06/03/2011(GeneA): created											*/
-/*																		*/
+/*  Revision History:							*/
+/*									*/
+/*	06/03/2011(GeneA): created					*/
+/*									*/
 /************************************************************************/
 
 #if !defined(OLEDGRPH_H)

@@ -1,10 +1,10 @@
 /************************************************************************/
-/*																		*/
-/*	OledGrph.c	--	OLED Display Graphics Routines						*/
-/*																		*/
+/*									*/
+/*	OledGrph.c	--	OLED Display Graphics Routines		*/
+/*									*/
 /************************************************************************/
-/*	Author: 	Gene Apperson											*/
-/*	Copyright 2011, Digilent Inc.										*/
+/*	Author: 	Gene Apperson					*/
+/*	Copyright 2011, Digilent Inc.					*/
 /************************************************************************/
 /*
   This library is free software; you can redistribute it and/or
@@ -22,16 +22,16 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 /************************************************************************/
-/*  Module Description: 												*/
-/*																		*/
-/*	This module contains the implementation of the graphics functions	*/
-/*	for the OLED display driver.										*/
-/*																		*/
+/*  Module Description: 						*/
+/*									*/
+/* This module contains the implementation of the graphics functions	*/
+/* for the OLED display driver.						*/
+/*									*/
 /************************************************************************/
-/*  Revision History:													*/
-/*																		*/
-/*	06/03/2011(GeneA): created											*/
-/*																		*/
+/*  Revision History:							*/
+/*									*/
+/*	06/03/2011(GeneA): created					*/
+/*									*/
 /************************************************************************/
 
 #include "OledGrph.h"
@@ -779,7 +779,7 @@ void OledDrawChar(char ch)
 	} else if ((ch & 0x80) == 0) {
 		pbFont = pbOledFontCur + (ch - chOledUserMax) * cbOledChar;
 	} else {
-		
+
 	}
 
 	OledPutBmp(dxcoOledFontCur, dycoOledFontCur, pbFont);

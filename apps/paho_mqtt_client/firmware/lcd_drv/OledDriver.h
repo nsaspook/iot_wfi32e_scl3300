@@ -1,10 +1,10 @@
 /************************************************************************/
-/*																		*/
-/*	OledDriver.h -- Interface Declarations for OLED Display Driver 		*/
-/*																		*/
+/*									*/
+/*	OledDriver.h -- Interface Declarations for OLED Display Driver 	*/
+/*									*/
 /************************************************************************/
-/*	Author:		Gene Apperson											*/
-/*	Copyright 2011, Digilent Inc.										*/
+/*	Author:		Gene Apperson					*/
+/*	Copyright 2011, Digilent Inc.					*/
 /************************************************************************/
 /*
   This library is free software; you can redistribute it and/or
@@ -22,15 +22,15 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 /************************************************************************/
-/*  File Description:													*/
-/*																		*/
-/*	Interface to OledDriver.c											*/
-/*																		*/
+/*  File Description:							*/
+/*									*/
+/*	Interface to OledDriver.c					*/
+/*									*/
 /************************************************************************/
-/*  Revision History:													*/
-/*																		*/
-/*	04/29/2011(GeneA): created											*/
-/*																		*/
+/*  Revision History:							*/
+/*									*/
+/*	04/29/2011(GeneA): created					*/
+/*									*/
 /************************************************************************/
 
 /*

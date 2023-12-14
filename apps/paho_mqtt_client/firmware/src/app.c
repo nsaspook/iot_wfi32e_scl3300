@@ -39,6 +39,7 @@
 #include "sca3300.h"
 #include "../../firmware/lcd_drv/lcd_drv.h"
 #include "config/pic32mz_w1_curiosity/system/mqtt/sys_mqtt_paho.h"
+#include "gfx.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -264,7 +265,7 @@ void APP_Tasks(void)
 			ntp_ret = TCPIP_SNTP_TimeGet(&pUTCSeconds, &pMs);
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
-				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d        ", pUTCSeconds, pMs);
+				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d ", pUTCSeconds, pMs);
 				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
 				snprintf(buffer, MAX_BBUF, "SNTP, Waiting %d  ", ntp_ret);
@@ -322,6 +323,20 @@ void APP_Tasks(void)
 			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
 			eaDogM_WriteStringAtPos(15, 0, buffer);
 			appData.state = APP_STATE_SERVICE_TASKS;
+
+			/*
+			 * visualize tilt values
+			 */
+			OledSetDrawColor(0); // clear all tilt display lines
+			line_rot(0, GFX_Y_X, ccolOledMax, GFX_Y_X);
+			line_rot(0, GFX_Y_Y, ccolOledMax, GFX_Y_Y);
+			line_rot(0, GFX_Y_Z, ccolOledMax, GFX_Y_Z);
+
+			OledSetDrawColor(1); // redraw tilt lines
+			line_rot(GFX_X_MID, GFX_Y_X, GFX_X_MID + (int) qa0, GFX_Y_X);
+			line_rot(GFX_X_MID, GFX_Y_Y, GFX_X_MID + (int) qa1, GFX_Y_Y);
+			line_rot(GFX_X_MID, GFX_Y_Z, GFX_X_MID + (int) qa2, GFX_Y_Z);
+
 			{
 				int millivolt, temp, temp_raw;
 

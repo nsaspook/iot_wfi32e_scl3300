@@ -62,7 +62,7 @@
     Application strings and buffers are be defined outside this structure.
  */
 
-#define BUFFER_SIZE	512
+#define BUFFER_SIZE	2048
 #define MAX_BBUF	BUFFER_SIZE-2
 
 #define WDRV_PIC32MZW_MAC_ADDR_LEN              6
@@ -73,9 +73,9 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V1.001 ";
+const char build_version[] = "MQTT WFI32E01 IoT     V1.002 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
-char id_string[128], id_client[128];
+char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
 int32_t APP_MQTT_PublishMsg_local(char *message);
 
@@ -231,6 +231,7 @@ void APP_Tasks(void)
 			snprintf(buffer, MAX_BBUF, "USERID 0x%X, IMUID 0x%X", cpu_serial_id, board_serial_id);
 			eaDogM_WriteStringAtPos(14, 0, buffer);
 			snprintf(id_string, 110, "IMUID 0x%X", board_serial_id);
+			snprintf(id_mqtt, 110, "%X", board_serial_id);
 			/*
 			 * make unique client id from IMU serial number
 			 */
@@ -308,8 +309,8 @@ void APP_Tasks(void)
 			/*
 			 * format data to JSON using printf formatting
 			 */
-			snprintf(buffer, MAX_BBUF, "{\r\n     \"name\": \"%s %s\",\r\n     \"Wsequence\": %u,\r\n     \"WUTC\": %u,\r\n     \"WUTCMs\": %u,\r\n     \"WX\": %f,\r\n     \"WY\": %f,\r\n     \"WZ\": %f,\r\n     \"WXA\": %f,\r\n     \"WYA\": %f,\r\n     \"WZA\": %f,\r\n     \"build_date\": \"%s\",\r\n     \"build_time\": \"%s\"\r\n}",
-				build_version, id_string, count++, pMs, pUTCSeconds, q0, q1, q2, qa0, qa1, qa2, build_date, build_time);
+			snprintf(buffer, MAX_BBUF, "{\r\n     \"%sWname\": \"%s\",\r\n     \"%sWsequence\": %u,\r\n     \"%sWUTC\": %u,\r\n     \"%sWUTCMs\": %u,\r\n     \"%sWX\": %f,\r\n     \"%sWY\": %f,\r\n     \"%sWZ\": %f,\r\n     \"%sWXA\": %f,\r\n     \"%sWYA\": %f,\r\n     \"%sWZA\": %f,\r\n     \"%sWbuild_date\": \"%s\",\r\n     \"%sWbuild_time\": \"%s\"\r\n}",
+				id_mqtt, build_version, id_mqtt, count++, id_mqtt, pUTCSeconds, id_mqtt, pMs, id_mqtt, q0, id_mqtt, q1, id_mqtt, q2, id_mqtt, qa0, id_mqtt, qa1, id_mqtt, qa2, id_mqtt, build_date, id_mqtt, build_time);
 			APP_MQTT_PublishMsg_local(buffer);
 			counter = 0;
 			imu0.update = true;

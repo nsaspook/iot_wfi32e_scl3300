@@ -40,6 +40,7 @@
 #include "../../firmware/lcd_drv/lcd_drv.h"
 #include "config/pic32mz_w1_curiosity/system/mqtt/sys_mqtt_paho.h"
 #include "gfx.h"
+#include "../../firmware/cjson/cJSON.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -73,11 +74,13 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V1.002 ";
+const char build_version[] = "MQTT WFI32E01 IoT     V1.100 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
-int32_t APP_MQTT_PublishMsg_local(char *message);
+int32_t APP_MQTT_PublishMsg_local(char *);
+static void add_mqtt_id(char *);
+cJSON *json;
 
 char buffer[BUFFER_SIZE];
 bool wait = true, ip_show = true;
@@ -308,10 +311,43 @@ void APP_Tasks(void)
 			ADCHS_ChannelConversionStart(ADCHS_CH21);
 			/*
 			 * format data to JSON using printf formatting
+			 * create the json formatted data
 			 */
-			snprintf(buffer, MAX_BBUF, "{\r\n     \"%sWname\": \"%s\",\r\n     \"%sWsequence\": %u,\r\n     \"%sWUTC\": %u,\r\n     \"%sWUTCMs\": %u,\r\n     \"%sWX\": %f,\r\n     \"%sWY\": %f,\r\n     \"%sWZ\": %f,\r\n     \"%sWXA\": %f,\r\n     \"%sWYA\": %f,\r\n     \"%sWZA\": %f,\r\n     \"%sWbuild_date\": \"%s\",\r\n     \"%sWbuild_time\": \"%s\"\r\n}",
-				id_mqtt, build_version, id_mqtt, count++, id_mqtt, pUTCSeconds, id_mqtt, pMs, id_mqtt, q0, id_mqtt, q1, id_mqtt, q2, id_mqtt, qa0, id_mqtt, qa1, id_mqtt, qa2, id_mqtt, build_date, id_mqtt, build_time);
-			APP_MQTT_PublishMsg_local(buffer);
+			json = cJSON_CreateObject();
+			add_mqtt_id("Wname"); // results in global buffer variable
+			cJSON_AddStringToObject(json, buffer, build_version);
+			add_mqtt_id("Wsequence");
+			cJSON_AddNumberToObject(json, buffer, count);
+			add_mqtt_id("WUTC");
+			cJSON_AddNumberToObject(json, buffer, pUTCSeconds);
+			add_mqtt_id("WUTCMs");
+			cJSON_AddNumberToObject(json, buffer, pMs);
+			add_mqtt_id("WX");
+			cJSON_AddNumberToObject(json, buffer, q0);
+			add_mqtt_id("WY");
+			cJSON_AddNumberToObject(json, buffer, q1);
+			add_mqtt_id("WZ");
+			cJSON_AddNumberToObject(json, buffer, q2);
+			add_mqtt_id("WXA");
+			cJSON_AddNumberToObject(json, buffer, qa0);
+			add_mqtt_id("WYA");
+			cJSON_AddNumberToObject(json, buffer, qa1);
+			add_mqtt_id("WZA");
+			cJSON_AddNumberToObject(json, buffer, qa2);
+			add_mqtt_id("Wbuild_date");
+			cJSON_AddStringToObject(json, buffer, build_date);
+			add_mqtt_id("Wbuild_time");
+			cJSON_AddStringToObject(json, buffer, build_time);
+			/*
+			 * get the data string for publishing
+			 */
+			char *json_str = cJSON_Print(json);
+			//			eaDogM_WriteStringAtPos(6, 0, json_str);
+			APP_MQTT_PublishMsg_local(json_str);
+			cJSON_free(json_str);
+			cJSON_Delete(json);
+
+			count++;
 			counter = 0;
 			imu0.update = true;
 			/*
@@ -387,6 +423,14 @@ int32_t APP_MQTT_PublishMsg_local(char *message)
 	return retVal;
 }
 
+/*
+ * Append id in front of name string
+ */
+static void add_mqtt_id(char * name)
+{
+	strcpy(buffer, id_mqtt);
+	strncat(buffer, name, MAX_BBUF);
+}
 /*******************************************************************************
  End of File
  */

@@ -15,6 +15,7 @@
             <sourceRootList>
                 <sourceRootElem>../src</sourceRootElem>
                 <sourceRootElem>../lcd_drv</sourceRootElem>
+                <sourceRootElem>../cjson</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

@@ -487,6 +487,7 @@ void OledClearBuffer(void)
 	DMAC_ChannelTransfer(DMAC_CHANNEL_1, (const void *) rgbOledBmp_blank, (size_t) 4, (const void*) pb, (size_t) cbOledDispMax, (size_t) cbOledDispMax);
 	DCH1ECONSET = _DCH1ECON_CFORCE_MASK; // set CFORCE to 1 to start the transfer
 #else
+	SPI1_Write(pb, (size_t) cbOledDispMax);
 #endif
 }
 
@@ -626,6 +627,9 @@ uint16_t SPI1_to_Buffer(uint8_t *dataIn, uint16_t bufLen, uint8_t *dataOut)
 	}
 	return bytesWritten;
 #else
+	SPI1_Write(dataIn, bufLen);
+	bytesWritten = bufLen;
+	return bytesWritten;
 #endif
 }
 
@@ -643,5 +647,5 @@ void wait_lcd_done(void)
 
 void lcd_version(void)
 {
-	snprintf(dis_buffer, DBUFFER_SIZE,"%s Driver Ver. %s  %s %s", LCD_ALIAS, LCD_DRIVER, build_date, build_time);
+	snprintf(dis_buffer, DBUFFER_SIZE, "%s Driver Ver. %s  %s %s", LCD_ALIAS, LCD_DRIVER, build_date, build_time);
 }

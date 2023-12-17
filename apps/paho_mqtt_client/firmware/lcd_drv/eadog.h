@@ -37,7 +37,7 @@ extern "C" {
 	/*
 	 * for 2MHz SPI clock
 	 */
-#define IS_DELAYSHORT	4
+#define IS_DELAYSHORT	4  // 4,5,800, 400000
 #define IS_DELAYMED	5
 #define IS_DELAYLONG	800
 #define IS_DELAYPOWERUP	400000

@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: paho_mqtt_client_pic32mz_w1_curiosity
-creation_date: 2023-12-13T13:34:15.841-08:00[America/Los_Angeles]
+creation_date: 2023-12-17T11:53:49.324-08:00[America/Los_Angeles]
 operating_system: Linux
 mcc_mode: IDE
 mcc_mode_version: v6.15

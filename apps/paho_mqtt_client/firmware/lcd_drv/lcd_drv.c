@@ -12,11 +12,8 @@
 
 static void delay_us(uint32_t);
 
-static uint32_t delay_freq = 0;
-
 void init_lcd_drv(LCD_DVR_STATE init_type)
 {
-	delay_freq = CORETIMER_FrequencyGet() / 1000000;
 	switch (init_type) {
 	case D_MISC:
 	case D_INIT: // send the GLCD buffer data via DMA
@@ -32,7 +29,6 @@ void init_lcd_drv(LCD_DVR_STATE init_type)
 	default:
 		break;
 	}
-
 }
 
 /*

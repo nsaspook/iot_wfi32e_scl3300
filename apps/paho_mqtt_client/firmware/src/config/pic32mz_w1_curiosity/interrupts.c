@@ -82,6 +82,7 @@ void UART3_RX_Handler (void);
 void UART3_TX_Handler (void);
 void DMA0_Handler (void);
 void DMA1_Handler (void);
+void DMA2_Handler (void);
 void RFSMC_Handler (void);
 void RFMAC_Handler (void);
 void RFTM0_Handler (void);
@@ -170,6 +171,11 @@ void __ISR(_DMA0_VECTOR, ipl1SRS) DMA0_Handler (void)
 void __ISR(_DMA1_VECTOR, ipl1SRS) DMA1_Handler (void)
 {
     DMA1_InterruptHandler();
+}
+
+void __ISR(_DMA2_VECTOR, ipl1SRS) DMA2_Handler (void)
+{
+    DMA2_InterruptHandler();
 }
 
 void __ISR(_RFSMC_VECTOR, ipl1SRS) RFSMC_Handler (void)

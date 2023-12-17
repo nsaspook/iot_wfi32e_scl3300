@@ -247,9 +247,9 @@ void CLK_Initialize( void )
         /* EWPLLFBDIV    = 800 */
         /* EWPLLREFDIV   = 20 */
         /* EWPLLICLK     = POSC */
-        /* ETHCLKOUTEN   = ENABLED */
+        /* ETHCLKOUTEN   = DISABLED */
         /* EWPLL_BYP     = NO_BYPASS */
-        EWPLLCON = 0x15320206U ^ EWPLLCON_MSK;
+        EWPLLCON = 0x5320206U ^ EWPLLCON_MSK;
          DelayUs(200);
         EWPLLCON &= ~PLL_PWROFF;
         /****************************************************************
@@ -328,9 +328,9 @@ void CLK_Initialize( void )
         /* EWPLLFBDIV    = 800 */
         /* EWPLLREFDIV   = 20 */
         /* EWPLLICLK     = POSC */
-        /* ETHCLKOUTEN   = ENABLED */
+        /* ETHCLKOUTEN   = DISABLED */
         /* EWPLL_BYP     = NO_BYPASS */
-        EWPLLCON = 0x15320206U ^ 0x438080cU;
+        EWPLLCON = 0x5320206U ^ 0x438080cU;
         CFGCON0bits.ETHPLLHWMD = 1;
         while(((*PLLDBG) & 0x4U) == 0U)
         {

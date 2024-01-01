@@ -17376,6 +17376,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <part name="VSS48" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2" value="VSS"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_C_L" device="" value="1.0"/>
+<part name="SJ3" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ2W" device="" package3d_urn="urn:adsk.eagle:package:15474/1" value="sdo1_jmp"/>
 </parts>
 <sheets>
 <sheet>
@@ -17888,6 +17889,10 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <attribute name="LAST_DATE_TIME" x="342.9" y="-123.19" size="2.54" layer="94"/>
 <attribute name="SHEET" x="416.56" y="-123.19" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="347.98" y="-105.41" size="2.54" layer="94"/>
+</instance>
+<instance part="SJ3" gate="G$1" x="-43.18" y="-2.54" smashed="yes">
+<attribute name="NAME" x="-38.1" y="-4.699" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-50.8" y="3.175" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -19115,25 +19120,18 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="170.18" y="127"/>
 </segment>
 <segment>
-<wire x1="-99.06" y1="-2.54" x2="-86.36" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="SV2" gate="1" pin="2"/>
-<label x="-86.36" y="-2.54" size="1.778" layer="95"/>
-<junction x="-86.36" y="-2.54"/>
-<junction x="-99.06" y="-2.54"/>
-</segment>
-<segment>
-<wire x1="254" y1="15.24" x2="266.7" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="SDO1_/_RPC8"/>
-<junction x="266.7" y="15.24"/>
-<junction x="254" y="15.24"/>
-<label x="246.38" y="15.24" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="342.9" y1="-27.94" x2="342.9" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C31" gate="G$1" pin="1"/>
 <junction x="342.9" y="-15.24"/>
 <label x="342.9" y="-17.78" size="1.778" layer="95"/>
 <junction x="342.9" y="-27.94"/>
+</segment>
+<segment>
+<wire x1="-43.18" y1="-7.62" x2="-30.48" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="SJ3" gate="G$1" pin="3"/>
+<junction x="-43.18" y="-7.62"/>
+<junction x="-30.48" y="-7.62"/>
+<label x="-27.94" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DIS_MODE" class="0">
@@ -19881,7 +19879,7 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <label x="172.72" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="WFI_C9_SIG" class="0">
+<net name="WFI_SDO1" class="0">
 <segment>
 <pinref part="SV4" gate="G$1" pin="3"/>
 <wire x1="-101.6" y1="-22.86" x2="-91.44" y2="-22.86" width="0.1524" layer="91"/>
@@ -19895,6 +19893,13 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="266.7" y="27.94"/>
 <junction x="254" y="27.94"/>
 <label x="238.76" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-43.18" y1="2.54" x2="-30.48" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="SJ3" gate="G$1" pin="1"/>
+<junction x="-43.18" y="2.54"/>
+<junction x="-30.48" y="2.54"/>
+<label x="-27.94" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="WFI_C15_SIG" class="0">
@@ -20016,6 +20021,16 @@ Source: &lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/W
 <junction x="259.08" y="104.14"/>
 <junction x="269.24" y="104.14"/>
 <label x="284.48" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIS_SDO" class="0">
+<segment>
+<pinref part="SV2" gate="1" pin="2"/>
+<pinref part="SJ3" gate="G$1" pin="2"/>
+<wire x1="-99.06" y1="-2.54" x2="-48.26" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="-99.06" y="-2.54"/>
+<junction x="-48.26" y="-2.54"/>
+<label x="-71.12" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

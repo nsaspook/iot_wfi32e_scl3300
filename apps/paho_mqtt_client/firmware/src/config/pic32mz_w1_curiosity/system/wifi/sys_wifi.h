@@ -155,6 +155,8 @@ typedef enum
     SYS_WIFI_GETDRVHANDLE,
     /*Control message type for requesting a Assoc handle */
     SYS_WIFI_GETDRVASSOCHANDLE,
+    /*Event message type for connectivity with IPv6 */
+    SYS_WIFI_CONNECT_WITH_IPV6,
 
 } SYS_WIFI_CTRLMSG ;
 
@@ -216,6 +218,8 @@ typedef struct
     /* Wi-Fi station mode IP address */
     IPV4_ADDR ipAddr;
 
+    /* Wi-Fi station mode IPv6 address */
+    IPV6_ADDR ipv6Addr[3];
 
 } SYS_WIFI_STA_CONFIG;
 
@@ -291,6 +295,8 @@ typedef enum
     /* Wi-Fi system service is in station mode IP address received status*/        
     SYS_WIFI_STATUS_STA_IP_RECIEVED,
 
+    /* Wi-Fi system service is in station mode IP v6 address received status*/        
+    SYS_WIFI_STATUS_STA_IPV6_RECIEVED,
  
     /* Wi-Fi system service is in TCPIP ready status, waiting for client request.*/
     SYS_WIFI_STATUS_TCPIP_READY,

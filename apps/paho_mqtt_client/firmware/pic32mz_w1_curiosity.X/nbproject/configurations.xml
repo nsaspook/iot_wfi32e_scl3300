@@ -584,6 +584,10 @@
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_packet.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/udp.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/sntp.c</itemPath>
+                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/ipv6.c</itemPath>
+                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcpv6.c</itemPath>
+                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/ndp.c</itemPath>
+                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/icmpv6.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>

@@ -89,15 +89,15 @@ void SYS_Tasks ( void )
 
 	/* Maintain Middleware & Other Libraries */
 
-	DRV_BA414E_Tasks(sysObj.ba414e);
-
-
-
-	TCPIP_STACK_Task(sysObj.tcpip);
-
-
-
 NET_PRES_Tasks(sysObj.netPres);
+
+
+
+DRV_BA414E_Tasks(sysObj.ba414e);
+
+
+
+   TCPIP_STACK_Task(sysObj.tcpip);
 
 
 	SYS_WIFI_Tasks(sysObj.syswifi);

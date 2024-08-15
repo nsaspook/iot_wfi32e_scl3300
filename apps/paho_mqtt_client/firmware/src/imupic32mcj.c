@@ -42,7 +42,7 @@ uint8_t set_imu_bits(void)
  */
 void delay_us(uint32_t us)
 {
-//	TP1_Set();
+	//	TP1_Set();
 #ifndef NO_CORE_TIME
 	CORETIMER_DelayUs(us);
 #else
@@ -50,7 +50,7 @@ void delay_us(uint32_t us)
 	us *= delay_freq;
 	wdtdelay(us);
 #endif
-//	TP1_Clear();
+	//	TP1_Clear();
 }
 
 /*
@@ -70,10 +70,20 @@ void start_tick(void)
 	TMR2_Start(); // IMU time-stamp counter
 #endif
 
+#ifdef __32MZ2051W104132__
+	TMR2_Start(); // IMU time-stamp counter
+#endif
+	// default serial ID
+#ifdef __32MK0512MCJ048__
+	cpu_serial_id = DEVSN0 & 0x1fffffff; // get CPU device 32-bit serial number and convert that to 29 - bit ID for CAN - FD	
+#endif
+
 #ifdef __32MZ1025W104132__
 	cpu_serial_id = USERID & 0x1fffffff; // get CPU device 32-bit serial number and convert that to 29 - bit ID for CAN - FD
-#else
-	cpu_serial_id = DEVSN0 & 0x1fffffff; // get CPU device 32-bit serial number and convert that to 29 - bit ID for CAN - FD
+#endif
+
+#ifdef __32MZ2051W104132__
+	cpu_serial_id = USERID & 0x1fffffff; // get CPU device 32-bit serial number and convert that to 29 - bit ID for CAN - FD
 #endif
 }
 

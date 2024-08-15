@@ -162,6 +162,9 @@ bool sca3300_getdata(void * imup)
 #ifdef __32MZ1025W104132__
 			sdata.scan.ts = TMR2_CounterGet(); // load a clock time-stamp from timer9 32-bit counter, frequency 234,375KHz, 266.66 min roll-over
 #endif
+#ifdef __32MZ2051W104132__
+			sdata.scan.ts = TMR2_CounterGet(); // load a clock time-stamp from timer9 32-bit counter, frequency 234,375KHz, 266.66 min roll-over
+#endif		
 		}
 		return imu->online;
 	} else {

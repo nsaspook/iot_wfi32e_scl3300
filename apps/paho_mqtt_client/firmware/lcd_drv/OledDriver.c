@@ -120,6 +120,15 @@ static uint8_t __attribute__((address(BANK2 - 8), coherent)) rgbOledBmp_blank[4]
 volatile uint8_t __attribute__((address(BANK2 - 16), coherent)) rgbOledBmp_page[5];
 #endif
 
+#ifdef __32MZ2051W104132__	// bank 2 for this CPU
+uint8_t __attribute__((address(BANK2), coherent)) rgbOledBmp0[cbOledDispMax]; // two display buffers for page flipping
+uint8_t __attribute__((address(BANK2 + cbOledDispMax), coherent)) rgbOledBmp1[cbOledDispMax];
+#ifdef USE_DMA
+static uint8_t __attribute__((address(BANK2 - 8), coherent)) rgbOledBmp_blank[4] = {0x00, 0x00, 0x00, 0x00}; // 32-bit frame-buffer clearing variable
+#endif
+volatile uint8_t __attribute__((address(BANK2 - 16), coherent)) rgbOledBmp_page[5];
+#endif
+
 static volatile DMA_RUN_STATE dstate = D_idle;
 
 static const char *build_date = __DATE__, *build_time = __TIME__;

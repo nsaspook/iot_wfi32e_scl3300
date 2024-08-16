@@ -28,7 +28,7 @@
 // *****************************************************************************
 
 /*
- * Testing example:  mosquitto_sub -t "mateq84/data/solar" -h 10.1.1.172
+ * Testing example:  mosquitto_sub -t "mateq84/data/imu" -h 10.1.1.172
  */
 #include <stdio.h>
 #include "app.h"
@@ -73,7 +73,7 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V1.101 ";
+const char build_version[] = "MQTT WFI32E03 IoT     V1.00 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);

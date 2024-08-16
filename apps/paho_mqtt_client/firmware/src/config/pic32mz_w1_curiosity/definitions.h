@@ -99,7 +99,7 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MZ1025W104132"
+#define DEVICE_NAME			 "PIC32MZ2051W104132"
 #define DEVICE_ARCH			 "MIPS"
 #define DEVICE_FAMILY		 "PIC32MZW"
 #define DEVICE_SERIES		 "PIC32MZW"
@@ -231,6 +231,7 @@ typedef struct
 
 
     SYS_MODULE_OBJ  drvWifiPIC32MZW1;
+
     SYS_MODULE_OBJ  syswifi;
 
 } SYSTEM_OBJECTS;

@@ -71,14 +71,14 @@
 #define GPIO_RC15_Get()               ((PORTC >> 15) & 0x1U)
 #define GPIO_RC15_PIN                  GPIO_PIN_RC15
 
-/*** Macros for QEB2_SIG pin ***/
-#define QEB2_SIG_Set()               (LATKSET = (1U<<13))
-#define QEB2_SIG_Clear()             (LATKCLR = (1U<<13))
-#define QEB2_SIG_Toggle()            (LATKINV= (1U<<13))
-#define QEB2_SIG_OutputEnable()      (TRISKCLR = (1U<<13))
-#define QEB2_SIG_InputEnable()       (TRISKSET = (1U<<13))
-#define QEB2_SIG_Get()               ((PORTK >> 13) & 0x1U)
-#define QEB2_SIG_PIN                  GPIO_PIN_RK13
+/*** Macros for RD401 pin ***/
+#define RD401_Set()               (LATKSET = (1U<<13))
+#define RD401_Clear()             (LATKCLR = (1U<<13))
+#define RD401_Toggle()            (LATKINV= (1U<<13))
+#define RD401_OutputEnable()      (TRISKCLR = (1U<<13))
+#define RD401_InputEnable()       (TRISKSET = (1U<<13))
+#define RD401_Get()               ((PORTK >> 13) & 0x1U)
+#define RD401_PIN                  GPIO_PIN_RK13
 
 /*** Macros for RD400 pin ***/
 #define RD400_Set()               (LATKSET = (1U<<12))
@@ -146,14 +146,14 @@
 #define PWM1L_T_Get()               ((PORTC >> 11) & 0x1U)
 #define PWM1L_T_PIN                  GPIO_PIN_RC11
 
-/*** Macros for QEA2_SIG pin ***/
-#define QEA2_SIG_Set()               (LATKSET = (1U<<14))
-#define QEA2_SIG_Clear()             (LATKCLR = (1U<<14))
-#define QEA2_SIG_Toggle()            (LATKINV= (1U<<14))
-#define QEA2_SIG_OutputEnable()      (TRISKCLR = (1U<<14))
-#define QEA2_SIG_InputEnable()       (TRISKSET = (1U<<14))
-#define QEA2_SIG_Get()               ((PORTK >> 14) & 0x1U)
-#define QEA2_SIG_PIN                  GPIO_PIN_RK14
+/*** Macros for RD402 pin ***/
+#define RD402_Set()               (LATKSET = (1U<<14))
+#define RD402_Clear()             (LATKCLR = (1U<<14))
+#define RD402_Toggle()            (LATKINV= (1U<<14))
+#define RD402_OutputEnable()      (TRISKCLR = (1U<<14))
+#define RD402_InputEnable()       (TRISKSET = (1U<<14))
+#define RD402_Get()               ((PORTK >> 14) & 0x1U)
+#define RD402_PIN                  GPIO_PIN_RK14
 
 /*** Macros for should_be_sdo1 pin ***/
 #define should_be_sdo1_Set()               (LATCSET = (1U<<8))

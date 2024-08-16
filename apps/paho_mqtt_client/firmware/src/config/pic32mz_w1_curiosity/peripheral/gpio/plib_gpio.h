@@ -80,6 +80,15 @@
 #define QEB2_SIG_Get()               ((PORTK >> 13) & 0x1U)
 #define QEB2_SIG_PIN                  GPIO_PIN_RK13
 
+/*** Macros for RD400 pin ***/
+#define RD400_Set()               (LATKSET = (1U<<12))
+#define RD400_Clear()             (LATKCLR = (1U<<12))
+#define RD400_Toggle()            (LATKINV= (1U<<12))
+#define RD400_OutputEnable()      (TRISKCLR = (1U<<12))
+#define RD400_InputEnable()       (TRISKSET = (1U<<12))
+#define RD400_Get()               ((PORTK >> 12) & 0x1U)
+#define RD400_PIN                  GPIO_PIN_RK12
+
 /*** Macros for DIS_CS pin ***/
 #define DIS_CS_Set()               (LATASET = (1U<<1))
 #define DIS_CS_Clear()             (LATACLR = (1U<<1))

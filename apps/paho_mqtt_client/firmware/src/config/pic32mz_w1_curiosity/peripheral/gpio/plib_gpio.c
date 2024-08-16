@@ -77,8 +77,8 @@ void GPIO_Initialize ( void )
     TRISCCLR = 0x9400U; /* Direction Control */
     SRCON0CSET = 0x6000U; /* Slew Rate Control */
     /* PORTK Initialization */
-    LATK = 0x6000U; /* Initial Latch Value */
-    TRISKCLR = 0x600aU; /* Direction Control */
+    LATK = 0x7000U; /* Initial Latch Value */
+    TRISKCLR = 0x700aU; /* Direction Control */
     ANSELKCLR = 0x8U; /* Digital Mode Enable */
 
     /* Unlock system for PPS configuration */
@@ -99,7 +99,6 @@ void GPIO_Initialize ( void )
     RPK4R = 4;
     RPC9R = 3;
     RPC11R = 5;
-    RPK12R = 5;
     RPA5R = 6;
 
         /* Lock back the system after PPS configuration */

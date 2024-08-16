@@ -168,12 +168,17 @@ extern "C" {
 // *****************************************************************************
 
 /*** WiFi PIC32MZW1 Driver Configuration ***/
+
+#pragma region name="wlan_mem" origin=0xa0080000 size=0x20000
+#define PIC32MZW_RSR_PKT_NUM    (0x20000 / sizeof(WDRV_PIC32MZW_PKT_LIST_NODE))
+
 #define WDRV_PIC32MZW1_DEVICE_USE_SYS_DEBUG
 #define WDRV_PIC32MZW_WPA3_PERSONAL_SUPPORT
 #define WDRV_PIC32MZW_BA414E_SUPPORT
 #define WDRV_PIC32MZW_BIGINTSW_SUPPORT
 #define WDRV_PIC32MZW_ALARM_PERIOD_1MS          390
 #define WDRV_PIC32MZW_ALARM_PERIOD_MAX          168
+
 
 
 // *****************************************************************************
@@ -186,12 +191,6 @@ extern "C" {
 #define TCPIP_STACK_USE_ICMP_SERVER
 #define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
 
-/*** ICMPv4 Client Configuration ***/
-#define TCPIP_STACK_USE_ICMP_CLIENT
-#define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
-#define TCPIP_ICMP_TASK_TICK_RATE              33
-#define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
-#define TCPIP_ICMP_COMMAND_ENABLE              false
 
 /******************************************************************************/
 /*wolfSSL TLS Layer Configuration*/
@@ -336,7 +335,7 @@ extern "C" {
 #define TCPIP_UDP_MAX_SOCKETS		                	10
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
-#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			16
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
 #define TCPIP_UDP_USE_POOL_BUFFERS   false
 #define TCPIP_UDP_USE_TX_CHECKSUM             			true
 #define TCPIP_UDP_USE_RX_CHECKSUM             			true
@@ -516,7 +515,7 @@ extern "C" {
 #define TCPIP_NTP_SERVER_MAX_LENGTH				30
 #define TCPIP_NTP_QUERY_INTERVAL				600
 #define TCPIP_NTP_FAST_QUERY_INTERVAL	    	14
-#define TCPIP_NTP_TASK_TICK_RATE				10
+#define TCPIP_NTP_TASK_TICK_RATE				1100
 #define TCPIP_NTP_RX_QUEUE_LIMIT				2
 
 

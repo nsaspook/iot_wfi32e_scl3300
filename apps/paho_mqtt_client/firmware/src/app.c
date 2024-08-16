@@ -171,6 +171,7 @@ void APP_Initialize(void)
 {
 	/* Place the App state machine in its initial state. */
 	appData.state = APP_STATE_INIT;
+	RD400_Clear();
 }
 
 /******************************************************************************

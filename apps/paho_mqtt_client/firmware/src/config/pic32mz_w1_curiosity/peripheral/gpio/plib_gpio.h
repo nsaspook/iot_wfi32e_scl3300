@@ -62,14 +62,14 @@
 // *****************************************************************************
 
 
-/*** Macros for GPIO_RC15 pin ***/
-#define GPIO_RC15_Set()               (LATCSET = (1U<<15))
-#define GPIO_RC15_Clear()             (LATCCLR = (1U<<15))
-#define GPIO_RC15_Toggle()            (LATCINV= (1U<<15))
-#define GPIO_RC15_OutputEnable()      (TRISCCLR = (1U<<15))
-#define GPIO_RC15_InputEnable()       (TRISCSET = (1U<<15))
-#define GPIO_RC15_Get()               ((PORTC >> 15) & 0x1U)
-#define GPIO_RC15_PIN                  GPIO_PIN_RC15
+/*** Macros for IMU_CS pin ***/
+#define IMU_CS_Set()               (LATCSET = (1U<<15))
+#define IMU_CS_Clear()             (LATCCLR = (1U<<15))
+#define IMU_CS_Toggle()            (LATCINV= (1U<<15))
+#define IMU_CS_OutputEnable()      (TRISCCLR = (1U<<15))
+#define IMU_CS_InputEnable()       (TRISCSET = (1U<<15))
+#define IMU_CS_Get()               ((PORTC >> 15) & 0x1U)
+#define IMU_CS_PIN                  GPIO_PIN_RC15
 
 /*** Macros for RD401 pin ***/
 #define RD401_Set()               (LATKSET = (1U<<13))
@@ -133,14 +133,14 @@
 #define AN1_T_Get()               ((PORTB >> 9) & 0x1U)
 #define AN1_T_PIN                  GPIO_PIN_RB9
 
-/*** Macros for IMU_CS pin ***/
-#define IMU_CS_Set()               (LATBSET = (1U<<7))
-#define IMU_CS_Clear()             (LATBCLR = (1U<<7))
-#define IMU_CS_Toggle()            (LATBINV= (1U<<7))
-#define IMU_CS_OutputEnable()      (TRISBCLR = (1U<<7))
-#define IMU_CS_InputEnable()       (TRISBSET = (1U<<7))
-#define IMU_CS_Get()               ((PORTB >> 7) & 0x1U)
-#define IMU_CS_PIN                  GPIO_PIN_RB7
+/*** Macros for GPIO_RB7 pin ***/
+#define GPIO_RB7_Set()               (LATBSET = (1U<<7))
+#define GPIO_RB7_Clear()             (LATBCLR = (1U<<7))
+#define GPIO_RB7_Toggle()            (LATBINV= (1U<<7))
+#define GPIO_RB7_OutputEnable()      (TRISBCLR = (1U<<7))
+#define GPIO_RB7_InputEnable()       (TRISBSET = (1U<<7))
+#define GPIO_RB7_Get()               ((PORTB >> 7) & 0x1U)
+#define GPIO_RB7_PIN                  GPIO_PIN_RB7
 
 /*** Macros for PWM1L_T pin ***/
 #define PWM1L_T_Get()               ((PORTC >> 11) & 0x1U)

@@ -270,10 +270,10 @@ void APP_Tasks(void)
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
 				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d ", pUTCSeconds, pMs);
-				UART3_Write((uint8_t*) buffer, strlen(buffer));
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
 				snprintf(buffer, MAX_BBUF, "SNTP, Waiting %d  ", ntp_ret);
-				UART3_Write((uint8_t*) buffer, strlen(buffer));
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			}
 			eaDogM_WriteStringAtPos(9, 0, buffer);
 			if (ip_show) {

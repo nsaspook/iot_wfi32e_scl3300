@@ -485,6 +485,10 @@ void OledClearBuffer(void)
 		pb = rgbOledBmp1;
 	}
 
+#ifdef __32MZ2051W104132__
+	return;
+#endif
+
 #ifdef USE_DMA
 	/*
 	 * DMAC_ChannelCallbackRegister in OledInit
@@ -519,6 +523,12 @@ void OledClearBuffer(void)
 
 void OledUpdate(void)
 {
+
+#ifdef __32MZ2051W104132__
+	RD401_Toggle();
+	return;
+#endif
+
 #ifdef DMA_STATE_M
 	wait_lcd_done();
 	SPI1DmaChannelHandler_State(0, DMA_MAGIC); // set DMA state machine init mode to start transfers

@@ -87,8 +87,8 @@ void SPI1_Initialize_internal(void)
 	SPI1CONSET = 0x00000005;
 
 	/* Initialize global variables */
-//	spi1Obj.transferIsBusy = false;
-//	spi1Obj.callback = NULL;
+	//	spi1Obj.transferIsBusy = false;
+	//	spi1Obj.callback = NULL;
 
 	/* Enable SPI1 */
 	SPI1CONSET = _SPI1CON_ON_MASK;
@@ -250,6 +250,12 @@ void eaDogM_WriteString(char *strPtr)
 
 void eaDogM_WriteStringAtPos(const uint8_t r, const uint8_t c, char *strPtr)
 {
+	
+#ifdef __32MZ2051W104132__
+	UART1_Write((uint8_t*) strPtr, strlen(strPtr));
+	UART1_Write((uint8_t*)"\r\n", strlen("\r\n"));
+	return;
+#endif
 #ifdef EDOGS
 	OledSetCursor(c, r);
 	OledPutString(strPtr);

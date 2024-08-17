@@ -222,7 +222,7 @@ static inline void SYS_WIFIPROV_NVMErase(void)
 static void SYS_WIFIPROV_PrintConfig(void) 
 {
     SYS_CONSOLE_PRINT("\r\n mode=%d (0-STA,1-AP) saveConfig=%d countryCode=%s\r\n ", g_wifiProvSrvcConfig.mode, g_wifiProvSrvcConfig.saveConfig, g_wifiProvSrvcConfig.countryCode);
-    SYS_CONSOLE_PRINT("\r\n STA Configuration :\r\n channel=%d \r\n autoConnect=%d \r\n ssid=%s \r\n passphase=%s \r\n authentication type=%d (1-Open,2-WEP,3-Mixed mode(WPA/WPA2),4-WPA2,5-Mixed mode(WPA2/WPA3),6-WPA3) \r\n", g_wifiProvSrvcConfig.staConfig.channel, g_wifiProvSrvcConfig.staConfig.autoConnect, g_wifiProvSrvcConfig.staConfig.ssid, g_wifiProvSrvcConfig.staConfig.psk, g_wifiProvSrvcConfig.staConfig.authType);
+    SYS_CONSOLE_PRINT("\r\n STA Configuration :\r\n channel=%d \r\n autoConnect=%d \r\n ssid=%s \r\n passphase=%s \r\n authentication type=%d (1-Open,2-WEP,3-Mixed mode(WPA/WPA2),4-WPA2,5-Mixed mode(WPA2/WPA3),6-WPA3) \r\n", g_wifiProvSrvcConfig.staConfig.channel, g_wifiProvSrvcConfig.staConfig.autoConnect, g_wifiProvSrvcConfig.staConfig.ssid, "foo", g_wifiProvSrvcConfig.staConfig.authType);
 }
 static void SYS_WIFIPROV_WriteConfig(void) 
 {

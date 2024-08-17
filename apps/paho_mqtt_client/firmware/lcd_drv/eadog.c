@@ -252,8 +252,10 @@ void eaDogM_WriteStringAtPos(const uint8_t r, const uint8_t c, char *strPtr)
 {
 	
 #ifdef __32MZ2051W104132__
+#ifdef DB_LOG
 	UART1_Write((uint8_t*) strPtr, strlen(strPtr));
 	UART1_Write((uint8_t*)"\r\n", strlen("\r\n"));
+#endif
 	return;
 #endif
 #ifdef EDOGS

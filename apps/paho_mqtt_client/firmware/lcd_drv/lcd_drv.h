@@ -21,7 +21,8 @@ extern "C" {
 #endif
 
 #define EDOGS
-
+//#define DB_LOG // log messages to uart1 via USB for debugging
+	
 	/*
 	 * DMA driver for DOGXL240 @15MHz SPI clock
 	 * 2021 XC32 and H3

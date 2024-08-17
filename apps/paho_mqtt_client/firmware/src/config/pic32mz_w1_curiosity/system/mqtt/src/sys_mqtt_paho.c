@@ -281,16 +281,18 @@ void SYS_MQTT_Paho_Task(SYS_MODULE_OBJ obj)
 
 		hdl->netSrvcHdl = SYS_NET_Open(&sSysNetCfg, SYS_MQTT_TcpClientCallback, hdl);
 		if (hdl->netSrvcHdl != SYS_MODULE_OBJ_INVALID) {
-			LED_GREEN_On();
-			LED_RED_Off();
+			RD401_Toggle();
+//			LED_GREEN_On();
+//			LED_RED_Off();
 			SYS_MQTTDEBUG_DBG_PRINT(g_AppDebugHdl, MQTT_CFG, "TCPIP Socket Opened\r\n");
 
 			SYS_MQTT_SetInstStatus(hdl, SYS_MQTT_STATUS_SOCK_CLIENT_CONNECTING);
 
 			return;
 		} else {
-			LED_RED_On();
-			LED_GREEN_Off();
+			RD401_Toggle();
+//			LED_RED_On();
+//			LED_GREEN_Off();
 			SYS_MQTTDEBUG_ERR_PRINT(g_AppDebugHdl, MQTT_CFG, "TCPIP Socket Open FAILED\r\n");
 
 			SYS_MQTT_SetInstStatus(hdl, SYS_MQTT_STATUS_SOCK_OPEN_FAILED);

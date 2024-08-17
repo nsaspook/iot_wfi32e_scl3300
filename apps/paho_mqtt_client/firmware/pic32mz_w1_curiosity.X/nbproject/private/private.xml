@@ -9,14 +9,11 @@
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app_mqtt.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/eadog.h</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/sca3300.c</file>
-            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_commands.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/lcd_drv.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/OledDriver.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/wdrv_pic32mzw.c</file>
-            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/library/tcpip/src/berkeley_manager.h</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/eadog.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imu.c</file>
-            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/system/wifi/src/sys_wifi.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/lcd_drv.h</file>
         </group>

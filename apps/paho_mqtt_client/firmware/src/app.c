@@ -270,10 +270,8 @@ void APP_Tasks(void)
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
 				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d ", pUTCSeconds, pMs);
-				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
 				snprintf(buffer, MAX_BBUF, "SNTP, Waiting %d  ", ntp_ret);
-				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			}
 			eaDogM_WriteStringAtPos(9, 0, buffer);
 			if (ip_show) {
@@ -290,6 +288,7 @@ void APP_Tasks(void)
 				} else {
 					snprintf(buffer, MAX_BBUF, "Waiting for IP Address ");
 					eaDogM_WriteStringAtPos(8, 0, buffer);
+					ip_show = false;
 				}
 			} else {
 				if (ip_update++ > IP_UPDATE_SPEED) {

@@ -660,10 +660,6 @@
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/tcpip_packet.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/udp.c</itemPath>
                 <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/sntp.c</itemPath>
-                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/ipv6.c</itemPath>
-                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcpv6.c</itemPath>
-                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/ndp.c</itemPath>
-                <itemPath>../src/config/pic32mz_w1_curiosity/library/tcpip/src/icmpv6.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -673,6 +669,7 @@
                 <itemPath>../src/config/pic32mz_w1_curiosity/net_pres/pres/src/net_pres.c</itemPath>
               </logicalFolder>
               <itemPath>../src/config/pic32mz_w1_curiosity/net_pres/pres/net_pres_cert_store.c</itemPath>
+              <itemPath>../src/config/pic32mz_w1_curiosity/net_pres/pres/net_pres_enc_glue.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
@@ -880,6 +877,8 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/idea.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hc128.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rabbit.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_encrypt.c</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfssl" displayName="wolfssl" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/src/tls.c</itemPath>
@@ -1093,6 +1092,18 @@
           <property key="stack-smashing" value=""/>
           <property key="wpo-lto" value="false"/>
         </C32Global>
+      </item>
+      <item path="../src/config/pic32mz_w1_curiosity/net_pres/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_encrypt.c"
+            ex="true"
+            overriding="false">
       </item>
       <C32>
         <property key="additional-warnings" value="true"/>

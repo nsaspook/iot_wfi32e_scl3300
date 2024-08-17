@@ -74,8 +74,8 @@ extern "C" {
 #endif
 
 #define WDT_CAL			25
-#define IMU_UPDATE_SPEED	20000
-#define IP_UPDATE_SPEED		290000
+#define IMU_UPDATE_SPEED	5000
+#define IP_UPDATE_SPEED		90000
 
 	/*
 	 * setup external interrupt #2 for IMU BMA4x0 data update interrupt trigger output

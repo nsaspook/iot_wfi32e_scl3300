@@ -41,6 +41,7 @@
 #include "config/pic32mz_w1_curiosity/system/mqtt/sys_mqtt_paho.h"
 #include "gfx.h"
 #include "../../firmware/cjson/cJSON.h"
+#include "do_fft.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -73,7 +74,7 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E03 IoT     V1.00 ";
+const char build_version[] = "MQTT WFI32E03 IoT     V1.01 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
@@ -132,6 +133,10 @@ TCPIP_SNTP_TIME_STAMP pTStamp;
 TCPIP_SNTP_RESULT ntp_ret;
 uint32_t pLastUpdate;
 uint32_t pUTCSeconds, pMs;
+
+bool fft_settle = false;
+uint8_t ffti = 0, w = 0;
+uint16_t fft_count = 0;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -203,6 +208,9 @@ void APP_Tasks(void)
 		eaDogM_WriteStringAtPos(2, 0, imu_buffer);
 		iot_version();
 		eaDogM_WriteStringAtPos(4, 0, imu_buffer);
+
+		fft_version();
+		do_fft_version();
 
 		/*
 		 * print the driver version
@@ -348,6 +356,35 @@ void APP_Tasks(void)
 			APP_MQTT_PublishMsg_local(json_str);
 			cJSON_free(json_str);
 			cJSON_Delete(json);
+
+			/*
+			 * load FFT sample 128 element 8-bit buffer from
+			 * 256 element signal buffer
+			 * as we process each IMU 3-axis sample
+			 * if FFT_mIX is set this is not a pure FFT as it mixes bin data
+			 * with sample data for a feedback signature
+			 * 
+			 * it recomputes with every new IMU data update
+			 * unless FFT_MIX is set to false
+			 */
+			TP3_Set(); // FFT processing timing mark
+			inB[ffti] = 128 + (uint8_t) (fft_gain * (do_fft_dc_x(accel.x) + do_fft_dc_y(accel.y) + do_fft_dc_z(accel.z))); // select one axis for display
+
+			ffti++;
+			if (FFT_MIX || ffti == 0) {
+				do_fft(false); // convert to 256 frequency bins in 8-bit sample buffer
+				memset(inB + (N_FFT / 2), 0, N_FFT / 2); // clear upper 128 bytes
+				memcpy(fft_buffer, inB, N_FFT); // copy to results buffer
+			}
+			if (fft_settle) {
+				//				snprintf(buffer, max_buf, "FFTs %3d,%3d ", fft_buffer[ffti], ffti);
+				//				eaDogM_WriteStringAtPos(7, 4, buffer);
+			}
+
+			if (!fft_settle && (fft_count++ >= FFT_COUNT)) {
+				fft_settle = true;
+			}
+			TP3_Clear(); // end of FFT function
 
 			count++;
 			counter = 0;

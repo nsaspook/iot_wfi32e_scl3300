@@ -487,6 +487,8 @@
       <itemPath>../src/imupic32mcj.h</itemPath>
       <itemPath>../src/timers.h</itemPath>
       <itemPath>../src/gfx.h</itemPath>
+      <itemPath>../src/fft.h</itemPath>
+      <itemPath>../src/do_fft.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -899,6 +901,8 @@
       <itemPath>../src/imupic32mcj.c</itemPath>
       <itemPath>../src/timers.c</itemPath>
       <itemPath>../src/gfx.c</itemPath>
+      <itemPath>../src/fft.c</itemPath>
+      <itemPath>../src/do_fft.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1096,14 +1100,56 @@
       <item path="../src/config/pic32mz_w1_curiosity/net_pres/pres/net_pres_enc_glue.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_encrypt.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <C32>
         <property key="additional-warnings" value="true"/>

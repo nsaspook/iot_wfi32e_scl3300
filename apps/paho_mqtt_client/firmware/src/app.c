@@ -256,6 +256,7 @@ void APP_Tasks(void)
 		 * service the IMU data
 		 */
 		if (imu0.update) {
+			appData.state = APP_STATE_MQTT;
 			imu0.op.imu_getdata(&imu0); // read data from the chip
 			imu0.update = false;
 			getAllData(&accel, &imu0); // convert data from the chip
@@ -289,6 +290,8 @@ void APP_Tasks(void)
 					snprintf(buffer, MAX_BBUF, "Waiting for IP Address ");
 					eaDogM_WriteStringAtPos(8, 0, buffer);
 					ip_show = false;
+					appData.state = APP_STATE_IMU;
+					imu0.update = true;
 				}
 			} else {
 				if (ip_update++ > IP_UPDATE_SPEED) {
@@ -298,7 +301,7 @@ void APP_Tasks(void)
 			}
 
 			OledUpdate();
-			appData.state = APP_STATE_MQTT;
+
 		}
 		break;
 
@@ -417,7 +420,13 @@ int32_t APP_MQTT_PublishMsg_local(char *message)
 		message,
 		strlen(message));
 	if (retVal != SYS_MQTT_SUCCESS) {
-		SYS_CONSOLE_PRINT("\nPublish_PeriodicMsg(): Failed (%d)\r\n", retVal);
+		retVal = SYS_MQTT_Publish(g_sSysMqttHandle,
+			&sMqttTopicCfg,
+			message,
+			strlen(message));
+		if (retVal != SYS_MQTT_SUCCESS) {
+			SYS_CONSOLE_PRINT("\nPublish_PeriodicMsg(): Failed (%d)\r\n", retVal);
+		}
 	}
 	return retVal;
 }

@@ -74,7 +74,7 @@ extern "C" {
 #endif
 
 #define WDT_CAL			25
-#define IMU_UPDATE_SPEED	5000
+#define IMU_UPDATE_SPEED	800
 #define IP_UPDATE_SPEED		90000
 	
 	/*

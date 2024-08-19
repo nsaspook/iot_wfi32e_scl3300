@@ -313,6 +313,43 @@ void APP_Tasks(void)
 		}
 		break;
 
+	case APP_STATE_FFT:
+		/*
+		 * load FFT sample 128 element 8-bit buffer from
+		 * 256 element signal buffer
+		 * as we process each IMU 3-axis sample
+		 * if FFT_mIX is set this is not a pure FFT as it mixes bin data
+		 * with sample data for a feedback signature
+		 * 
+		 * it recomputes with every new IMU data update
+		 * unless FFT_MIX is set to false
+		 */
+		TP3_Set(); // FFT processing timing mark
+		if (fft_settle) {
+			snprintf(buffer, MAX_BBUF, "FFT data ");
+			UART1_Write((uint8_t*) buffer, strlen(buffer));
+			for (uint8_t k = 6; k < 100; k++) {
+				snprintf(buffer, MAX_BBUF, "%3d ", inB[k]);
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
+			}
+			UART1_Write((uint8_t*) "\r\n", strlen("\r\n"));
+		}
+		do_fft(false); // convert to 256 frequency bins in 8-bit sample buffer
+		memset(inB + (N_FFT / 2), 0, N_FFT / 2); // clear upper 128 bytes
+		memcpy(fft_buffer, inB, N_FFT); // copy to results buffer
+		if (fft_settle) {
+			snprintf(buffer, MAX_BBUF, "FFT bins ");
+			UART1_Write((uint8_t*) buffer, strlen(buffer));
+			for (uint8_t k = 6; k < 100; k++) {
+				snprintf(buffer, MAX_BBUF, "%3d ", fft_buffer[k]);
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
+			}
+			UART1_Write((uint8_t*) "\r\n", strlen("\r\n"));
+		}
+
+		TP3_Clear(); // end of FFT function
+		appData.state = APP_STATE_SERVICE_TASKS;
+		break;
 	case APP_STATE_MQTT:
 		/*
 		 * convert IMU data to JSON string for MQTT publishing
@@ -352,37 +389,24 @@ void APP_Tasks(void)
 			 * get the data string for publishing
 			 */
 			char *json_str = cJSON_Print(json);
-			//			eaDogM_WriteStringAtPos(6, 0, json_str);
 			APP_MQTT_PublishMsg_local(json_str);
 			cJSON_free(json_str);
 			cJSON_Delete(json);
 
 			/*
-			 * load FFT sample 128 element 8-bit buffer from
-			 * 256 element signal buffer
-			 * as we process each IMU 3-axis sample
-			 * if FFT_mIX is set this is not a pure FFT as it mixes bin data
-			 * with sample data for a feedback signature
-			 * 
-			 * it recomputes with every new IMU data update
-			 * unless FFT_MIX is set to false
+			 * load data into fft array
 			 */
 			TP3_Set(); // FFT processing timing mark
 			inB[ffti] = 128 + (uint8_t) (fft_gain * (do_fft_dc_x(accel.x) + do_fft_dc_y(accel.y) + do_fft_dc_z(accel.z))); // select one axis for display
-
 			ffti++;
-			if (FFT_MIX || ffti == 0) {
-				do_fft(false); // convert to 256 frequency bins in 8-bit sample buffer
-				memset(inB + (N_FFT / 2), 0, N_FFT / 2); // clear upper 128 bytes
-				memcpy(fft_buffer, inB, N_FFT); // copy to results buffer
-			}
-			if (fft_settle) {
-				//				snprintf(buffer, max_buf, "FFTs %3d,%3d ", fft_buffer[ffti], ffti);
-				//				eaDogM_WriteStringAtPos(7, 4, buffer);
-			}
-
 			if (!fft_settle && (fft_count++ >= FFT_COUNT)) {
 				fft_settle = true;
+			}
+
+			if (FFT_MIX || ffti == 0) {
+				appData.state = APP_STATE_FFT;
+			} else {
+				appData.state = APP_STATE_SERVICE_TASKS;
 			}
 			TP3_Clear(); // end of FFT function
 
@@ -398,7 +422,6 @@ void APP_Tasks(void)
 			eaDogM_WriteStringAtPos(12, 0, buffer);
 			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
 			eaDogM_WriteStringAtPos(15, 0, buffer);
-			appData.state = APP_STATE_SERVICE_TASKS;
 
 			/*
 			 * visualize tilt values

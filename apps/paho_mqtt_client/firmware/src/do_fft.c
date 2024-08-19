@@ -21,7 +21,6 @@ void __delay_us_fft(uint32_t delay)
 
 void do_fft(bool sine)
 {
-
 	uint32_t i;
 	double f;
 

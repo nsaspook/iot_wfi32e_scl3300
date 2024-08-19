@@ -66,6 +66,7 @@ extern "C" {
 		/* TODO: Define states used by the application state machine. */
 		APP_STATE_IMU,
 		APP_STATE_MQTT,
+		APP_STATE_FFT,
 	} APP_STATES;
 
 

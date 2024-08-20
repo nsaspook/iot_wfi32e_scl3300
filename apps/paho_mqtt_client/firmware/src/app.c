@@ -79,11 +79,16 @@ const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
 int32_t APP_MQTT_PublishMsg_local(char *);
+int32_t APP_MQTT_PublishMsg_fft(char *);
+#ifdef RAWDATA
 static void add_mqtt_id(char *);
+#else
+static void add_mqtt_fft(char * name);
+#endif
 cJSON *json;
 
 char buffer[BUFFER_SIZE];
-bool wait = true, ip_show = true;
+bool wait = true, ip_show = true, do_pub = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 volatile double qa0 = 1.0, qa1 = 0.0, qa2 = 0.0, qa3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
@@ -93,6 +98,7 @@ extern SYS_MQTT_Handle g_asSysMqttHandle[1];
 
 extern SYS_MODULE_OBJ g_sSysMqttHandle;
 #define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL	"mateq84/data/imu"
+#define SYS_MQTT_DEF_PUB_TOPIC_NAME_FFT		"mateq84/data/fft"
 
 sSensorData_t accel = {
 	.id = 1,
@@ -346,7 +352,7 @@ void APP_Tasks(void)
 			}
 			UART1_Write((uint8_t*) "\r\n", strlen("\r\n"));
 		}
-
+		do_pub = true;
 		TP3_Clear(); // end of FFT function
 		appData.state = APP_STATE_SERVICE_TASKS;
 		break;
@@ -361,6 +367,8 @@ void APP_Tasks(void)
 			 * create the json formatted data
 			 */
 			json = cJSON_CreateObject();
+#ifdef RAWDATA
+			do_pub = true;
 			add_mqtt_id("Wname"); // results in global buffer variable
 			cJSON_AddStringToObject(json, buffer, build_version);
 			add_mqtt_id("Wsequence");
@@ -381,15 +389,28 @@ void APP_Tasks(void)
 			cJSON_AddNumberToObject(json, buffer, qa1);
 			add_mqtt_id("WZA");
 			cJSON_AddNumberToObject(json, buffer, qa2);
+#else
+			char binbuf[MAX_BBUF];
+			for (uint8_t k = 6; k < 36; k++) {
+				snprintf(binbuf, MAX_BBUF - 1, "%d", k);
+				add_mqtt_fft(binbuf);
+				cJSON_AddNumberToObject(json, buffer, fft_buffer[k]);
+			}
+#endif
+#ifdef RAWDATA
 			add_mqtt_id("Wbuild_date");
 			cJSON_AddStringToObject(json, buffer, build_date);
 			add_mqtt_id("Wbuild_time");
 			cJSON_AddStringToObject(json, buffer, build_time);
+#endif
 			/*
 			 * get the data string for publishing
 			 */
 			char *json_str = cJSON_Print(json);
-			APP_MQTT_PublishMsg_local(json_str);
+			if (do_pub) {
+				APP_MQTT_PublishMsg_local(json_str);
+				do_pub = false;
+			}
 			cJSON_free(json_str);
 			cJSON_Delete(json);
 
@@ -491,6 +512,34 @@ int32_t APP_MQTT_PublishMsg_local(char *message)
 	return retVal;
 }
 
+int32_t APP_MQTT_PublishMsg_fft(char *message)
+{
+	SYS_MQTT_PublishTopicCfg sMqttTopicCfg;
+	int32_t retVal = SYS_MQTT_FAILURE;
+
+	strcpy(sMqttTopicCfg.topicName, SYS_MQTT_DEF_PUB_TOPIC_NAME_FFT);
+	sMqttTopicCfg.topicLength = strlen(SYS_MQTT_DEF_PUB_TOPIC_NAME_FFT);
+	sMqttTopicCfg.retain = SYS_MQTT_DEF_PUB_RETAIN;
+	sMqttTopicCfg.qos = SYS_MQTT_DEF_PUB_QOS;
+
+	retVal = SYS_MQTT_Publish(g_sSysMqttHandle,
+		&sMqttTopicCfg,
+		message,
+		strlen(message));
+	if (retVal != SYS_MQTT_SUCCESS) {
+		retVal = SYS_MQTT_Publish(g_sSysMqttHandle,
+			&sMqttTopicCfg,
+			message,
+			strlen(message));
+		if (retVal != SYS_MQTT_SUCCESS) {
+			SYS_CONSOLE_PRINT("\nPublish_PeriodicMsg(): Failed (%d)\r\n", retVal);
+		}
+	}
+	return retVal;
+}
+
+#ifdef RAWDATA
+
 /*
  * Append id in front of name string
  */
@@ -499,6 +548,14 @@ static void add_mqtt_id(char * name)
 	strcpy(buffer, id_mqtt);
 	strncat(buffer, name, MAX_BBUF);
 }
+#else
+
+static void add_mqtt_fft(char * name)
+{
+	strcpy(buffer, "F");
+	strncat(buffer, name, MAX_BBUF);
+}
+#endif
 /*******************************************************************************
  End of File
  */

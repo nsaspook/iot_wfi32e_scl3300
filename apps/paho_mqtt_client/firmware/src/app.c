@@ -391,7 +391,7 @@ void APP_Tasks(void)
 			cJSON_AddNumberToObject(json, buffer, qa2);
 #else
 			char binbuf[MAX_BBUF];
-			for (uint8_t k = 6; k < 36; k++) {
+			for (uint8_t k = 6; k < 46; k++) {
 				snprintf(binbuf, MAX_BBUF - 1, "%d", k);
 				add_mqtt_fft(binbuf);
 				cJSON_AddNumberToObject(json, buffer, fft_buffer[k]);

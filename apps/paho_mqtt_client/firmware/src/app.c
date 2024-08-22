@@ -334,7 +334,7 @@ void APP_Tasks(void)
 		if (fft_settle) {
 			snprintf(buffer, MAX_BBUF, "FFT data ");
 			UART1_Write((uint8_t*) buffer, strlen(buffer));
-			for (uint8_t k = 6; k < 100; k++) {
+			for (uint8_t k = BIN_FIRST; k < BIN_SIZE; k++) {
 				snprintf(buffer, MAX_BBUF, "%3d ", inB[k]);
 				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			}
@@ -346,7 +346,7 @@ void APP_Tasks(void)
 		if (fft_settle) {
 			snprintf(buffer, MAX_BBUF, "FFT bins ");
 			UART1_Write((uint8_t*) buffer, strlen(buffer));
-			for (uint8_t k = 6; k < 100; k++) {
+			for (uint8_t k = BIN_FIRST; k < BIN_SIZE; k++) {
 				snprintf(buffer, MAX_BBUF, "%3d ", fft_buffer[k]);
 				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			}
@@ -391,7 +391,7 @@ void APP_Tasks(void)
 			cJSON_AddNumberToObject(json, buffer, qa2);
 #else
 			char binbuf[MAX_BBUF];
-			for (uint8_t k = 6; k < 46; k++) {
+			for (uint8_t k = BIN_FIRST; k < BIN_SIZE; k++) {
 				snprintf(binbuf, MAX_BBUF - 1, "%d", k);
 				add_mqtt_fft(binbuf);
 				cJSON_AddNumberToObject(json, buffer, fft_buffer[k]);

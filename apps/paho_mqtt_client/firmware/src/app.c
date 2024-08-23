@@ -74,7 +74,7 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E03 IoT     V1.01 ";
+const char build_version[] = "MQTT WFI32E03 IoT     V1.02 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
@@ -341,13 +341,25 @@ void APP_Tasks(void)
 			UART1_Write((uint8_t*) "\r\n", strlen("\r\n"));
 		}
 		do_fft(false); // convert to 256 frequency bins in 8-bit sample buffer
-		memset(inB + (N_FFT / 2), 0, N_FFT / 2); // clear upper 128 bytes
+
+		if (FFT_MIX) {
+			memset(inB + (N_FFT / 2), 0, N_FFT / 2); // clear upper 128 bytes
+		}
+
 		memcpy(fft_buffer, inB, N_FFT); // copy to results buffer
 		if (fft_settle) {
+			uint32_t bin_total = 0;
 			snprintf(buffer, MAX_BBUF, "FFT bins ");
 			UART1_Write((uint8_t*) buffer, strlen(buffer));
 			for (uint8_t k = BIN_FIRST; k < BIN_SIZE; k++) {
 				snprintf(buffer, MAX_BBUF, "%3d ", fft_buffer[k]);
+				UART1_Write((uint8_t*) buffer, strlen(buffer));
+				bin_total += fft_buffer[k];
+			}
+			if (bin_total > BIN_TOTAL_MAX) {
+				memset(inB, 0, N_FFT);
+				memcpy(fft_buffer, inB, N_FFT); // copy DC total bin value to results buffer
+				snprintf(buffer, MAX_BBUF, " %d ", bin_total);
 				UART1_Write((uint8_t*) buffer, strlen(buffer));
 			}
 			UART1_Write((uint8_t*) "\r\n", strlen("\r\n"));
@@ -417,7 +429,7 @@ void APP_Tasks(void)
 			/*
 			 * load data into fft array
 			 */
-			TP3_Set(); // FFT processing timing mark
+			//			TP3_Set(); // FFT processing timing mark
 			inB[ffti] = 128 + (uint8_t) (fft_gain * (do_fft_dc_x(accel.x) + do_fft_dc_y(accel.y) + do_fft_dc_z(accel.z))); // select one axis for display
 			ffti++;
 			if (!fft_settle && (fft_count++ >= FFT_COUNT)) {
@@ -429,7 +441,7 @@ void APP_Tasks(void)
 			} else {
 				appData.state = APP_STATE_SERVICE_TASKS;
 			}
-			TP3_Clear(); // end of FFT function
+			//			TP3_Clear(); // end of FFT function
 
 			count++;
 			counter = 0;

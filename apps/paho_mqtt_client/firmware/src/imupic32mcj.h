@@ -79,6 +79,7 @@ extern "C" {
 	
 #define BIN_SIZE		40
 #define BIN_FIRST		6
+#define BIN_TOTAL_MAX		8500
 	
 	/*
 	 * setup external interrupt #2 for IMU BMA4x0 data update interrupt trigger output

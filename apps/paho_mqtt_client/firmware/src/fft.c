@@ -6,20 +6,20 @@ static const char *build_date = __DATE__, *build_time = __TIME__;
 
 uint8_t inB[N_FFT];
 uint8_t fft_buffer[N_FFT];
-double xr[N_FFT];
-double xi[N_FFT];
+FPU xr[N_FFT];
+FPU xi[N_FFT];
 
-double wr[N_FFT / 2];
-double wi[N_FFT / 2];
+FPU wr[N_FFT / 2];
+FPU wi[N_FFT / 2];
 int16_t rev[N_FFT / 2];
-double ww[N_FFT];
+FPU ww[N_FFT];
 
-double fft_gain = FFT_GAIN;
+FPU fft_gain = FFT_GAIN;
 
 void initFFT(void)
 {
 	int32_t i, m, t, k;
-	double *wwp;
+	FPU *wwp;
 
 	for (i = 0; i < N_FFT / 2; i++) {
 		wr[i] = cos(PI2N * i);
@@ -37,13 +37,13 @@ void initFFT(void)
 	}
 
 	for (wwp = ww, i = 0; i < N_FFT; i++)
-		*wwp++ = 0.5 - 0.5 * cos(PI2N * i);
+		*wwp++ = 0.5f - 0.5f * cos(PI2N * i);
 }
 
 void FFT(void)
 {
 	int32_t m, k, i, j;
-	double a, b, c, d, wwr, wwi, pr, pi;
+	FPU a, b, c, d, wwr, wwi, pr, pi;
 
 	m = N_FFT / 2;
 	j = 0;
@@ -74,7 +74,7 @@ void FFT(void)
 void windowFFT(uint8_t *s)
 {
 	int32_t i;
-	double *xrp, *xip, *wwp;
+	FPU *xrp, *xip, *wwp;
 
 	xrp = xr;
 	xip = xi;
@@ -88,8 +88,8 @@ void windowFFT(uint8_t *s)
 void powerScale(uint8_t *r)
 {
 	int32_t i, j;
-	double t, max;
-	double xrp, xip;
+	FPU t, max;
+	FPU xrp, xip;
 
 	max = 0;
 	for (i = 0; i < N_FFT / 2; i++) {
@@ -101,7 +101,7 @@ void powerScale(uint8_t *r)
 		if (t > max) max = t;
 	}
 
-	max = 255.0 / max;
+	max = 255.0f / max;
 	for (i = 0; i < N_FFT / 2; i++) {
 		t = xr[rev[i]] * max;
 		*r++ = t;

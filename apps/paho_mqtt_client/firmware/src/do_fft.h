@@ -23,20 +23,20 @@ extern "C" {
 
 #define _XTAL_FREQ 100000000UL
 	
-#define DO_FFT_DRIVER	"V1.003" 
+#define DO_FFT_DRIVER	"V1.005" 
 #define DO_FFT_ALIAS	"DO_FFT  "
 	
-#define fft_sample_rate	400.0
-#define fft_cutoff_freq	50.0
+#define fft_sample_rate	400.0f
+#define fft_cutoff_freq	50.0f
 		
 void do_fft(bool);
 void __delay_ms_fft(uint32_t);
 void __delay_us_fft(uint32_t);
 void do_fft_version(void);
 
-double do_fft_dc_x(double input);
-double do_fft_dc_y(double input);
-double do_fft_dc_z(double input);
+FPU do_fft_dc_x(FPU input);
+FPU do_fft_dc_y(FPU input);
+FPU do_fft_dc_z(FPU input);
 
 extern uint8_t inB[N_FFT];
 

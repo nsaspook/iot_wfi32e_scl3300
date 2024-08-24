@@ -27,13 +27,15 @@ extern "C" {
 #define FFT_COUNT   256
 
 #ifdef BMA400 // Bosch devices, gain and noise product
-#define FFT_GAIN	5.0  // low cost, high noise
+#define FFT_GAIN	5.0f  // low cost, high noise
 #else
-#define FFT_GAIN	40.0 // Murata imu
+#define FFT_GAIN	40.0f // Murata imu
 #endif
+	
+#define FPU	float
 
 	extern uint8_t inB[], fft_buffer[];
-	extern double fft_gain;
+	extern FPU fft_gain;
 
 	void initFFT(void);
 	void windowFFT(uint8_t *source);

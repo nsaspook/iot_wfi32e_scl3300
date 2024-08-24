@@ -22,7 +22,7 @@ void __delay_us_fft(uint32_t delay)
 void do_fft(bool sine)
 {
 	uint32_t i;
-	double f;
+	FPU f;
 
 	TP3_Toggle();
 	initFFT();
@@ -65,35 +65,35 @@ void do_fft_version(void)
 /*
  * DC bias removal for each channel
  */
-double do_fft_dc_x(double input)
+FPU do_fft_dc_x(FPU input)
 {
-	static double state = 0;
-	static const double cutoff_frequency = fft_cutoff_freq;
-	static const double gain = cutoff_frequency / (2 * M_PI * fft_sample_rate);
+	static FPU state = 0;
+	static const FPU cutoff_frequency = fft_cutoff_freq;
+	static const FPU gain = cutoff_frequency / (2 * M_PI * fft_sample_rate);
 
-	double retval = input - state;
+	FPU retval = input - state;
 	state += gain * retval;
 	return retval;
 }
 
-double do_fft_dc_y(double input)
+FPU do_fft_dc_y(FPU input)
 {
-	static double state = 0;
-	static const double cutoff_frequency = fft_cutoff_freq;
-	static const double gain = cutoff_frequency / (2 * M_PI * fft_sample_rate);
+	static FPU state = 0;
+	static const FPU cutoff_frequency = fft_cutoff_freq;
+	static const FPU gain = cutoff_frequency / (2 * M_PI * fft_sample_rate);
 
-	double retval = input - state;
+	FPU retval = input - state;
 	state += gain * retval;
 	return retval;
 }
 
-double do_fft_dc_z(double input)
+FPU do_fft_dc_z(FPU input)
 {
-	static double state = 0;
-	static const double cutoff_frequency = fft_cutoff_freq;
-	static const double gain = cutoff_frequency / (2 * M_PI * fft_sample_rate);
+	static FPU state = 0;
+	static const FPU cutoff_frequency = fft_cutoff_freq;
+	static const FPU gain = cutoff_frequency / (2 * M_PI * fft_sample_rate);
 
-	double retval = input - state;
+	FPU retval = input - state;
 	state += gain * retval;
 	return retval;
 }

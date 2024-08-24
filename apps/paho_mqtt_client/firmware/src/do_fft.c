@@ -47,12 +47,14 @@ void do_fft(bool sine)
 	/*
 	 * clear the first few bins of noise
 	 */
+#ifdef RAWDATA
 	inB[0] = 0;
 	inB[1] = 0;
 	inB[2] = 0;
 	inB[3] = 0;
 	inB[4] = 0;
 	inB[5] = 0;
+#endif
 }
 
 void do_fft_version(void)

@@ -78,7 +78,7 @@ extern "C" {
 #define IP_UPDATE_SPEED		90000
 	
 #define BIN_SIZE		40
-#define BIN_FIRST		6
+#define BIN_FIRST		1
 #define BIN_TOTAL_MAX		8500
 	
 	/*

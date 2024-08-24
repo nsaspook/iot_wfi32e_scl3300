@@ -24,6 +24,7 @@ void do_fft(bool sine)
 	uint32_t i;
 	double f;
 
+	TP3_Toggle();
 	initFFT();
 
 	if (sine) {
@@ -35,9 +36,14 @@ void do_fft(bool sine)
 	}
 
 	/* fft */
+	TP3_Toggle();
 	windowFFT(inB);
+	TP3_Toggle();
 	FFT();
+	TP3_Toggle();
 	powerScale(inB);
+	TP3_Toggle();
+	TP3_Set();
 	/*
 	 * clear the first few bins of noise
 	 */

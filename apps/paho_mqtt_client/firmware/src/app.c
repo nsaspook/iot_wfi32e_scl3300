@@ -429,7 +429,6 @@ void APP_Tasks(void)
 			/*
 			 * load data into fft array
 			 */
-			//			TP3_Set(); // FFT processing timing mark
 			inB[ffti] = 128 + (uint8_t) (fft_gain * (do_fft_dc_x(accel.x) + do_fft_dc_y(accel.y) + do_fft_dc_z(accel.z))); // select one axis for display
 			ffti++;
 			if (!fft_settle && (fft_count++ >= FFT_COUNT)) {
@@ -441,11 +440,11 @@ void APP_Tasks(void)
 			} else {
 				appData.state = APP_STATE_SERVICE_TASKS;
 			}
-			//			TP3_Clear(); // end of FFT function
 
 			count++;
 			counter = 0;
 			imu0.update = true;
+#ifdef RAWDATA
 			/*
 			 * send updates to the GLCD screen
 			 */
@@ -481,6 +480,7 @@ void APP_Tasks(void)
 					eaDogM_WriteStringAtPos(13, 0, buffer);
 				}
 			}
+#endif
 		}
 		break;
 

@@ -76,11 +76,12 @@ extern "C" {
 #define WDT_CAL			25
 #define IMU_UPDATE_SPEED	50
 #define IP_UPDATE_SPEED		90000
-	
+
 #define BIN_SIZE		40
 #define BIN_FIRST		1
-#define BIN_TOTAL_MAX		8500
-	
+	// bin filter limit
+#define BIN_TOTAL_MAX		(BIN_SIZE-BIN_FIRST) * 245
+
 	/*
 	 * setup external interrupt #2 for IMU BMA4x0 data update interrupt trigger output
 	 */

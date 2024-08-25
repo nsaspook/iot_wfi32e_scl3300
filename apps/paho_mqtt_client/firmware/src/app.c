@@ -137,8 +137,8 @@ volatile uint16_t tickCount[TMR_COUNT];
 
 TCPIP_SNTP_TIME_STAMP pTStamp;
 TCPIP_SNTP_RESULT ntp_ret;
-uint32_t pLastUpdate;
-uint32_t pUTCSeconds, pMs;
+uint32_t pLastUpdate = 0;
+uint32_t pUTCSeconds = 0, pMs = 0;
 
 bool fft_settle = false;
 uint8_t ffti = 0, w = 0;

@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imupic32mcj.h</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/sca3300.h</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imupic32mcj.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/OledDriver.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app_mqtt.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/main.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/eadog.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imu.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/sca3300.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/lcd_drv.h</file>
         </group>
     </open-files>
 </project-private>

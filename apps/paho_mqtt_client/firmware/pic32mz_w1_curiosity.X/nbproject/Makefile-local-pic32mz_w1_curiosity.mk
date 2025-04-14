@@ -14,23 +14,23 @@
 # You can invoke make with the values of the macros:
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
-PATH_TO_IDE_BIN=/ldrv/microchip/mplabx/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/
+PATH_TO_IDE_BIN=/ldrv/microchip/mplabx/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
-PATH:=/ldrv/microchip/mplabx/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
+PATH:=/ldrv/microchip/mplabx/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
-MP_JAVA_PATH="/ldrv/microchip/mplabx/v6.20/sys/java/zulu8.64.0.19-ca-fx-jre8.0.345-linux_x64/bin/"
+MP_JAVA_PATH="/ldrv/microchip/mplabx/v6.25/sys/java/zulu8.80.0.17-ca-fx-jre8.0.422-linux_x64/bin/"
 OS_CURRENT="$(shell uname -s)"
-MP_CC="/ldrv/v4.45/bin/xc32-gcc"
-MP_CPPC="/ldrv/v4.45/bin/xc32-g++"
+MP_CC="/ldrv/microchip/xc32/v4.60/bin/xc32-gcc"
+MP_CPPC="/ldrv/microchip/xc32/v4.60/bin/xc32-g++"
 # MP_BC is not defined
-MP_AS="/ldrv/v4.45/bin/xc32-as"
-MP_LD="/ldrv/v4.45/bin/xc32-ld"
-MP_AR="/ldrv/v4.45/bin/xc32-ar"
-DEP_GEN=${MP_JAVA_PATH}java -jar "/ldrv/microchip/mplabx/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
-MP_CC_DIR="/ldrv/v4.45/bin"
-MP_CPPC_DIR="/ldrv/v4.45/bin"
+MP_AS="/ldrv/microchip/xc32/v4.60/bin/xc32-as"
+MP_LD="/ldrv/microchip/xc32/v4.60/bin/xc32-ld"
+MP_AR="/ldrv/microchip/xc32/v4.60/bin/xc32-ar"
+DEP_GEN=${MP_JAVA_PATH}java -jar "/ldrv/microchip/mplabx/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="/ldrv/microchip/xc32/v4.60/bin"
+MP_CPPC_DIR="/ldrv/microchip/xc32/v4.60/bin"
 # MP_BC_DIR is not defined
-MP_AS_DIR="/ldrv/v4.45/bin"
-MP_LD_DIR="/ldrv/v4.45/bin"
-MP_AR_DIR="/ldrv/v4.45/bin"
-DFP_DIR=/root/.mchp_packs/Microchip/PIC32MZ-W_DFP/1.9.330
+MP_AS_DIR="/ldrv/microchip/xc32/v4.60/bin"
+MP_LD_DIR="/ldrv/microchip/xc32/v4.60/bin"
+MP_AR_DIR="/ldrv/microchip/xc32/v4.60/bin"
+DFP_DIR=/ldrv/microchip/mplabx/v6.25/packs/Microchip/PIC32MZ-W_DFP/1.10.334

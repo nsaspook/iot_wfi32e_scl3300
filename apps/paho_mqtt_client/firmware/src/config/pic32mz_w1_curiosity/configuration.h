@@ -16,31 +16,31 @@
     definitions (or include any files that do).  It only provides macro
     definitions for build-time configuration options
 
-*******************************************************************************/
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
-*
-* Subject to your compliance with these terms, you may use Microchip software
-* and any derivatives exclusively with Microchip products. It is your
-* responsibility to comply with third party license terms applicable to your
-* use of third party software (including open source software) that may
-* accompany Microchip software.
-*
-* THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-* PARTICULAR PURPOSE.
-*
-* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+ *
+ * Subject to your compliance with these terms, you may use Microchip software
+ * and any derivatives exclusively with Microchip products. It is your
+ * responsibility to comply with third party license terms applicable to your
+ * use of third party software (including open source software) that may
+ * accompany Microchip software.
+ *
+ * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
+ * EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
+ * WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+ * PARTICULAR PURPOSE.
+ *
+ * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+ * INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+ * WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
+ * BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
+ * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
+ * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+ * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *******************************************************************************/
 // DOM-IGNORE-END
 
 #ifndef CONFIGURATION_H
@@ -53,7 +53,7 @@
 // *****************************************************************************
 /*  This section Includes other configuration headers necessary to completely
     define this configuration.
-*/
+ */
 
 #include "user.h"
 #include "device.h"
@@ -64,22 +64,22 @@
 extern "C" {
 
 #endif
-// DOM-IGNORE-END
+	// DOM-IGNORE-END
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Configuration
-// *****************************************************************************
-// *****************************************************************************
+	// *****************************************************************************
+	// *****************************************************************************
+	// Section: System Configuration
+	// *****************************************************************************
+	// *****************************************************************************
 
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Service Configuration
-// *****************************************************************************
-// *****************************************************************************
-/* TIME System Service Configuration Options */
+	// *****************************************************************************
+	// *****************************************************************************
+	// Section: System Service Configuration
+	// *****************************************************************************
+	// *****************************************************************************
+	/* TIME System Service Configuration Options */
 #define SYS_TIME_INDEX_0                            (0)
 #define SYS_TIME_MAX_TIMERS                         (5)
 #define SYS_TIME_HW_COUNTER_WIDTH                   (32)
@@ -161,13 +161,13 @@ extern "C" {
 
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Driver Configuration
-// *****************************************************************************
-// *****************************************************************************
+	// *****************************************************************************
+	// *****************************************************************************
+	// Section: Driver Configuration
+	// *****************************************************************************
+	// *****************************************************************************
 
-/*** WiFi PIC32MZW1 Driver Configuration ***/
+	/*** WiFi PIC32MZW1 Driver Configuration ***/
 #define WDRV_PIC32MZW1_DEVICE_USE_SYS_DEBUG
 #define WDRV_PIC32MZW_WPA3_PERSONAL_SUPPORT
 #define WDRV_PIC32MZW_BA414E_SUPPORT
@@ -176,26 +176,26 @@ extern "C" {
 #define WDRV_PIC32MZW_ALARM_PERIOD_MAX          168
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Middleware & Other Library Configuration
-// *****************************************************************************
-// *****************************************************************************
+	// *****************************************************************************
+	// *****************************************************************************
+	// Section: Middleware & Other Library Configuration
+	// *****************************************************************************
+	// *****************************************************************************
 
-/*** ICMPv4 Server Configuration ***/
+	/*** ICMPv4 Server Configuration ***/
 #define TCPIP_STACK_USE_ICMP_SERVER
 #define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
 
-/*** ICMPv4 Client Configuration ***/
+	/*** ICMPv4 Client Configuration ***/
 #define TCPIP_STACK_USE_ICMP_CLIENT
 #define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
 #define TCPIP_ICMP_TASK_TICK_RATE              33
 #define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
 #define TCPIP_ICMP_COMMAND_ENABLE              false
 
-/******************************************************************************/
-/*wolfSSL TLS Layer Configuration*/
-/******************************************************************************/
+	/******************************************************************************/
+	/*wolfSSL TLS Layer Configuration*/
+	/******************************************************************************/
 
 #define WOLFSSL_ALT_NAMES
 #define WOLFSSL_DER_LOAD
@@ -215,7 +215,7 @@ extern "C" {
 #define NO_OLD_TLS
 
 
-/*** TCP Configuration ***/
+	/*** TCP Configuration ***/
 #define TCPIP_TCP_MAX_SEG_SIZE_TX		        	1460
 #define TCPIP_TCP_SOCKET_DEFAULT_TX_SIZE			512
 #define TCPIP_TCP_SOCKET_DEFAULT_RX_SIZE			512
@@ -240,7 +240,7 @@ extern "C" {
 
 
 
-/*** ARP Configuration ***/
+	/*** ARP Configuration ***/
 #define TCPIP_ARP_CACHE_ENTRIES                 		5
 #define TCPIP_ARP_CACHE_DELETE_OLD		        	true
 #define TCPIP_ARP_CACHE_SOLVED_ENTRY_TMO			1200
@@ -272,7 +272,7 @@ extern "C" {
 #define TCPIP_IPV6_NDP_TASK_TIMER_RATE 				32
 
 
-/* Network Configuration Index 0 */
+	/* Network Configuration Index 0 */
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 "PIC32MZW1"
 #define TCPIP_IF_PIC32MZW1
 
@@ -289,13 +289,13 @@ extern "C" {
                                                     TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
                                                     TCPIP_NETWORK_CONFIG_DNS_CLIENT_ON |\
                                                     TCPIP_NETWORK_CONFIG_IP_STATIC
-                                                    
+
 #define TCPIP_NETWORK_DEFAULT_MAC_DRIVER_IDX0         WDRV_PIC32MZW1_MACObject
 
 
 
 
-/*** IPv6 Configuration ***/
+	/*** IPv6 Configuration ***/
 #define TCPIP_IPV6_DEFAULT_ALLOCATION_BLOCK_SIZE 		64
 #define TCPIP_IPV6_MINIMUM_LINK_MTU 					1280
 #define TCPIP_IPV6_DEFAULT_LINK_MTU 					1500
@@ -320,7 +320,7 @@ extern "C" {
 
 
 
-/*** IPv4 Configuration ***/
+	/*** IPv4 Configuration ***/
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
 
@@ -332,7 +332,7 @@ extern "C" {
 
 
 
-/*** UDP Configuration ***/
+	/*** UDP Configuration ***/
 #define TCPIP_UDP_MAX_SOCKETS		                	10
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
@@ -344,18 +344,18 @@ extern "C" {
 #define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
 
 
-/* MPLAB Harmony Net Presentation Layer Definitions*/
+	/* MPLAB Harmony Net Presentation Layer Definitions*/
 #define NET_PRES_NUM_INSTANCE 1
 #define NET_PRES_NUM_SOCKETS 10
 
 
 
 
-/*** DHCP Configuration ***/
+	/*** DHCP Configuration ***/
 #define TCPIP_STACK_USE_DHCPV6_CLIENT
 #define TCPIP_DHCPV6_CONFIG_STARTUP_FLAG                       		\
 																	TCPIP_DHCPV6_FLAG_NONE
-																	
+
 #define TCPIP_DHCPV6_MIN_UDP_TX_BUFFER_SIZE                         512
 #define TCPIP_DHCPV6_DUID_TYPE_CONFIG								TCPIP_DHCPV6_DUID_TYPE_LL
 #define TCPIP_DHCPV6_IANA_DESCRIPTORS_NO							1
@@ -390,7 +390,7 @@ extern "C" {
 
 
 
-/*** DNS Client Configuration ***/
+	/*** DNS Client Configuration ***/
 #define TCPIP_STACK_USE_DNS
 #define TCPIP_DNS_CLIENT_SERVER_TMO					60
 #define TCPIP_DNS_CLIENT_TASK_PROCESS_RATE			200
@@ -409,7 +409,7 @@ extern "C" {
 
 
 
-/* MPLAB Harmony BA414E Driver Definitions*/
+	/* MPLAB Harmony BA414E Driver Definitions*/
 #define DRV_BA414E_NUM_CLIENTS 5
 
 
@@ -420,7 +420,7 @@ extern "C" {
 #define SYS_WIFIPROV_SOCKETPORT        		6666
 
 
-/*** DHCP Configuration ***/
+	/*** DHCP Configuration ***/
 #define TCPIP_STACK_USE_DHCP_CLIENT
 #define TCPIP_DHCP_TIMEOUT                          10
 #define TCPIP_DHCP_TASK_TICK_RATE                   5
@@ -442,11 +442,11 @@ extern "C" {
 
 
 	/*** tcpip_cmd Configuration ***/
-	#define TCPIP_STACK_COMMAND_ENABLE
+#define TCPIP_STACK_COMMAND_ENABLE
 
 
 
-/*** TCPIP Heap Configuration ***/
+	/*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_EXTERNAL_HEAP
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -466,11 +466,11 @@ extern "C" {
 
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: TCPIP Stack Configuration
-// *****************************************************************************
-// *****************************************************************************
+	// *****************************************************************************
+	// *****************************************************************************
+	// Section: TCPIP Stack Configuration
+	// *****************************************************************************
+	// *****************************************************************************
 
 #define TCPIP_STACK_USE_IPV4
 #define TCPIP_STACK_USE_IPV6
@@ -485,7 +485,7 @@ extern "C" {
 
 #define TCPIP_PACKET_LOG_ENABLE     0
 
-/* TCP/IP stack event notification */
+	/* TCP/IP stack event notification */
 #define TCPIP_STACK_USE_EVENT_NOTIFICATION
 #define TCPIP_STACK_USER_NOTIFICATION   true
 #define TCPIP_STACK_DOWN_OPERATION   true
@@ -503,7 +503,7 @@ extern "C" {
 
 
 
-/*** SNTP Configuration ***/
+	/*** SNTP Configuration ***/
 #define TCPIP_STACK_USE_SNTP_CLIENT
 #define TCPIP_NTP_DEFAULT_IF		        	"PIC32MZW1"
 #define TCPIP_NTP_VERSION             			4
@@ -521,7 +521,7 @@ extern "C" {
 
 
 
-/*** wolfCrypt Library Configuration ***/
+	/*** wolfCrypt Library Configuration ***/
 #define MICROCHIP_PIC32
 #define MICROCHIP_MPLAB_HARMONY
 #define MICROCHIP_MPLAB_HARMONY_3
@@ -536,13 +536,13 @@ extern "C" {
 #define WOLF_CRYPTO_CB  // provide call-back support
 #define WOLFCRYPT_ONLY
 #define WOLFSSL_MICROCHIP_PIC32MZ
-// ---------- CRYPTO HARDWARE MANIFEST START ----------
+	// ---------- CRYPTO HARDWARE MANIFEST START ----------
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_ECC_HW_BA414E
 #define WOLFSSL_HAVE_MCHP_BA414E_CRYPTO
-// ---------- CRYPTO HARDWARE MANIFEST END ----------
+	// ---------- CRYPTO HARDWARE MANIFEST END ----------
 #undef WOLFSSL_HAVE_MIN
 #undef WOLFSSL_HAVE_MAX
-// ---------- FUNCTIONAL CONFIGURATION START ----------
+	// ---------- FUNCTIONAL CONFIGURATION START ----------
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
 #define WOLFSSL_SHA224
@@ -573,9 +573,9 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
-// ---------- FUNCTIONAL CONFIGURATION END ----------
+	// ---------- FUNCTIONAL CONFIGURATION END ----------
 
-/* WIFI System Service Configuration Options */
+	/* WIFI System Service Configuration Options */
 #define SYS_WIFI_DEVMODE        			SYS_WIFI_STA
 
 
@@ -607,14 +607,14 @@ extern "C" {
 
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Application Configuration
-// *****************************************************************************
-// *****************************************************************************
+	// *****************************************************************************
+	// *****************************************************************************
+	// Section: Application Configuration
+	// *****************************************************************************
+	// *****************************************************************************
 
 
-//DOM-IGNORE-BEGIN
+	//DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }
 #endif
@@ -623,4 +623,4 @@ extern "C" {
 #endif // CONFIGURATION_H
 /*******************************************************************************
  End of File
-*/
+ */

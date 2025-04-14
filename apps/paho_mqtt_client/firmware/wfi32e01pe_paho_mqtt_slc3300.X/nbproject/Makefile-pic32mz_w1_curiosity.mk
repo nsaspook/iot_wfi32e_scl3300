@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
 DEBUGGABLE_SUFFIX=elf
-FINAL_IMAGE=${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=hex
 DEBUGGABLE_SUFFIX=elf
-FINAL_IMAGE=${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
@@ -82,7 +82,7 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-pic32mz_w1_curiosity.mk ${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-pic32mz_w1_curiosity.mk ${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=32MZ1025W104132
 MP_LINKER_FILE_OPTION=,--script="../src/config/pic32mz_w1_curiosity/p32MZ1025W104132.ld"
@@ -2769,15 +2769,15 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a  ../src/config/pic32mz_w1_curiosity/p32MZ1025W104132.ld
+${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a  ../src/config/pic32mz_w1_curiosity/p32MZ1025W104132.ld
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -g   -mprocessor=$(MP_PROCESSOR_OPTION)  -mreserve=prog@0x100FF000:0x100FFFFF -O2 -o ${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}    ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a      -DXPRJ_pic32mz_w1_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)   -mreserve=data@0x0:0x1FC   -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--defsym=_min_heap_size=160000,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
+	${MP_CC} $(MP_EXTRA_LD_PRE) -g   -mprocessor=$(MP_PROCESSOR_OPTION)  -mreserve=prog@0x100FF000:0x100FFFFF -O2 -o ${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}    ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a      -DXPRJ_pic32mz_w1_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)   -mreserve=data@0x0:0x1FC   -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--defsym=_min_heap_size=160000,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
 	
 else
-${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a ../src/config/pic32mz_w1_curiosity/p32MZ1025W104132.ld
+${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a ../src/config/pic32mz_w1_curiosity/p32MZ1025W104132.ld
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -mreserve=prog@0x100FF000:0x100FFFFF -O2 -o ${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}    ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a      -DXPRJ_pic32mz_w1_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=_min_heap_size=160000,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
-	${MP_CC_DIR}/xc32-bin2hex ${DISTDIR}/pic32mz_w1_curiosity.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -mreserve=prog@0x100FF000:0x100FFFFF -O2 -o ${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}    ../src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/lib/pic32mzw1.a      -DXPRJ_pic32mz_w1_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=_min_heap_size=160000,--gc-sections,--no-code-in-dinit,--no-dinit-in-serial-mem,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}"
+	${MP_CC_DIR}/xc32-bin2hex ${DISTDIR}/wfi32e01pe_paho_mqtt_slc3300.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} 
 endif
 
 

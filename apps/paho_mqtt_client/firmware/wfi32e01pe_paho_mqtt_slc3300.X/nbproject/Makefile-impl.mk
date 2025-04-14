@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=pic32mz_w1_curiosity.X
+PROJECTNAME=wfi32e01pe_paho_mqtt_slc3300.X
 
 # Active Configuration
 DEFAULTCONF=pic32mz_w1_curiosity

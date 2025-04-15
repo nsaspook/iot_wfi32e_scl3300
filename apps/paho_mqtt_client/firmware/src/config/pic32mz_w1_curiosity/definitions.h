@@ -69,8 +69,8 @@
 #include "peripheral/uart/plib_uart3.h"
 #include "peripheral/adchs/plib_adchs.h"
 #include "peripheral/uart/plib_uart1.h"
-#include "peripheral/tmr/plib_tmr4.h"
 #include "system/mqtt/sys_mqtt.h"
+#include "peripheral/tmr/plib_tmr4.h"
 #include "peripheral/tmr/plib_tmr2.h"
 #include "peripheral/rng/plib_rng.h"
 #include "library/tcpip/tcpip.h"
@@ -99,13 +99,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MZ1025W104132"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MZW"
-#define DEVICE_SERIES		 "PIC32MZW"
+#define DEVICE_NAME          "PIC32MZ1025W104132"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MZW"
+#define DEVICE_SERIES        "PIC32MZW"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 200000000
+#define CPU_CLOCK_FREQUENCY 200000000U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -227,10 +227,13 @@ typedef struct
 
 
     SYS_MODULE_OBJ  tcpip;
+    SYS_MODULE_OBJ sysCommand;
+
     SYS_MODULE_OBJ  sysDebug;
 
 
     SYS_MODULE_OBJ  drvWifiPIC32MZW1;
+
     SYS_MODULE_OBJ  syswifi;
 
 } SYSTEM_OBJECTS;

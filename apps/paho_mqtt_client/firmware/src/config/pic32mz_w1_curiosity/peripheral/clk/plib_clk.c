@@ -376,6 +376,46 @@ void CLK_Initialize( void )
     PB4DIVbits.PBDIV = 9;
 
 
+    /* Set up Reference Clock 1 */
+    /* REFO1CON register */
+    /* ROSEL =  PBCLK */
+    /* DIVSWEN = 1 */
+    /* RODIV = 0 */
+    REFO1CON = 0x201;
+
+    /* Enable oscillator (ON bit) */
+    REFO1CONSET = 0x00008000;
+
+    /* Set up Reference Clock 2 */
+    /* REFO2CON register */
+    /* ROSEL =  PBCLK */
+    /* DIVSWEN = 1 */
+    /* RODIV = 0 */
+    REFO2CON = 0x201;
+
+    /* Enable oscillator (ON bit) */
+    REFO2CONSET = 0x00008000;
+
+    /* Set up Reference Clock 3 */
+    /* REFO3CON register */
+    /* ROSEL =  PBCLK */
+    /* DIVSWEN = 1 */
+    /* RODIV = 0 */
+    REFO3CON = 0x201;
+
+    /* Enable oscillator (ON bit) */
+    REFO3CONSET = 0x00008000;
+
+    /* Set up Reference Clock 4 */
+    /* REFO4CON register */
+    /* ROSEL =  PBCLK */
+    /* DIVSWEN = 1 */
+    /* RODIV = 0 */
+    REFO4CON = 0x201;
+
+    /* Enable oscillator (ON bit) */
+    REFO4CONSET = 0x00008000;
+
   
 
     /* Peripheral Module Disable Configuration */

@@ -218,6 +218,12 @@ extern "C" {
 #define TCPIP_STACK_USE_ICMP_SERVER
 #define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
 
+/*** ICMPv4 Client Configuration ***/
+#define TCPIP_STACK_USE_ICMP_CLIENT
+#define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
+#define TCPIP_ICMP_TASK_TICK_RATE              33
+#define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
+#define TCPIP_ICMP_COMMAND_ENABLE              false
 
 #define SYS_WIFIPROV_NVMADDR        		0x900FF000
 #define SYS_WIFIPROV_SAVECONFIG        			true
@@ -242,6 +248,7 @@ extern "C" {
 #define WOLFSSL_DTLS
 #define NO_PWDBASED
 #define NO_ERROR_STRINGS
+#define WOLFSSL_MAX_ERROR_SZ 38 // Fix Mandatory Misra 21.18 caused by removing error strings with defining NO_ERROR_STRINGS
 #define NO_OLD_TLS
 
 
@@ -482,6 +489,7 @@ extern "C" {
 #define SINGLE_THREADED
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
+#define WOLFSSL_MAX_ERROR_SZ 38 // Fix Mandatory Misra 21.18 caused by removing error strings with defining NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
     // ---------- FUNCTIONAL CONFIGURATION END ----------
 

@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/root/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/configuration.h</file>
-            <file>file:/root/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imupic32mcj.c</file>
-            <file>file:/root/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imupic32mcj.h</file>
-            <file>file:/root/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app.c</file>
-            <file>file:/root/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/main.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imupic32mcj.h</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/imupic32mcj.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/OledDriver.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/main.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app.c</file>
         </group>
     </open-files>
 </project-private>

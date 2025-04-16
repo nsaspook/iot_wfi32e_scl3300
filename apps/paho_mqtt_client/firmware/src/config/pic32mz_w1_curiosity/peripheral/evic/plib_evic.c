@@ -56,11 +56,11 @@ void EVIC_Initialize( void )
     INTCONSET = _INTCON_MVEC_MASK;
 
     /* Set up priority and subpriority of enabled interrupts */
-    IPC0SET = 0x4U | 0x0U;  /* CORE_TIMER:  Priority 1 / Subpriority 0 */
+    IPC0SET = 0x1cU | 0x0U;  /* CORE_TIMER:  Priority 7 / Subpriority 0 */
     IPC4SET = 0x8000000U | 0x0U;  /* TIMER_4:  Priority 2 / Subpriority 0 */
     IPC7SET = 0x40000U | 0x0U;  /* FLASH_CONTROL:  Priority 1 / Subpriority 0 */
-    IPC9SET = 0x4U | 0x0U;  /* SPI1_RX:  Priority 1 / Subpriority 0 */
-    IPC9SET = 0x400U | 0x0U;  /* SPI1_TX:  Priority 1 / Subpriority 0 */
+    IPC9SET = 0xcU | 0x0U;  /* SPI1_RX:  Priority 3 / Subpriority 0 */
+    IPC9SET = 0xc00U | 0x0U;  /* SPI1_TX:  Priority 3 / Subpriority 0 */
     IPC9SET = 0x40000U | 0x0U;  /* UART1_FAULT:  Priority 1 / Subpriority 0 */
     IPC9SET = 0x4000000U | 0x0U;  /* UART1_RX:  Priority 1 / Subpriority 0 */
     IPC10SET = 0x4U | 0x0U;  /* UART1_TX:  Priority 1 / Subpriority 0 */
@@ -69,17 +69,17 @@ void EVIC_Initialize( void )
     IPC15SET = 0x40000U | 0x0U;  /* UART3_FAULT:  Priority 1 / Subpriority 0 */
     IPC15SET = 0x4000000U | 0x0U;  /* UART3_RX:  Priority 1 / Subpriority 0 */
     IPC16SET = 0x4U | 0x0U;  /* UART3_TX:  Priority 1 / Subpriority 0 */
-    IPC17SET = 0x4U | 0x0U;  /* DMA0:  Priority 1 / Subpriority 0 */
-    IPC17SET = 0x400U | 0x0U;  /* DMA1:  Priority 1 / Subpriority 0 */
-    IPC17SET = 0x40000U | 0x0U;  /* DMA2:  Priority 1 / Subpriority 0 */
-    IPC20SET = 0x4000000U | 0x0U;  /* RFSMC:  Priority 1 / Subpriority 0 */
-    IPC21SET = 0x4U | 0x0U;  /* RFMAC:  Priority 1 / Subpriority 0 */
-    IPC21SET = 0x40000U | 0x0U;  /* RFTM0:  Priority 1 / Subpriority 0 */
+    IPC17SET = 0x18U | 0x3U;  /* DMA0:  Priority 6 / Subpriority 3 */
+    IPC17SET = 0x1800U | 0x200U;  /* DMA1:  Priority 6 / Subpriority 2 */
+    IPC17SET = 0x80000U | 0x0U;  /* DMA2:  Priority 2 / Subpriority 0 */
+    IPC20SET = 0x1c000000U | 0x0U;  /* RFSMC:  Priority 7 / Subpriority 0 */
+    IPC21SET = 0x1cU | 0x0U;  /* RFMAC:  Priority 7 / Subpriority 0 */
+    IPC21SET = 0x1c0000U | 0x0U;  /* RFTM0:  Priority 7 / Subpriority 0 */
     IPC35SET = 0x4000000U | 0x0U;  /* CAN2_RX:  Priority 1 / Subpriority 0 */
     IPC36SET = 0x4U | 0x0U;  /* CAN2_TX:  Priority 1 / Subpriority 0 */
     IPC36SET = 0x400U | 0x0U;  /* CAN2_MISC:  Priority 1 / Subpriority 0 */
-    IPC41SET = 0x40000U | 0x0U;  /* CRYPTO1:  Priority 1 / Subpriority 0 */
-    IPC41SET = 0x4000000U | 0x0U;  /* CRYPTO1_FAULT:  Priority 1 / Subpriority 0 */
+    IPC41SET = 0x80000U | 0x0U;  /* CRYPTO1:  Priority 2 / Subpriority 0 */
+    IPC41SET = 0x8000000U | 0x0U;  /* CRYPTO1_FAULT:  Priority 2 / Subpriority 0 */
 
 
 

@@ -54,7 +54,7 @@
 #include "interrupts.h"
 
 
-volatile static TMR_TIMER_OBJECT tmr4Obj;
+static volatile TMR_TIMER_OBJECT tmr4Obj;
 
 
 void TMR4_Initialize(void)

@@ -5886,21 +5886,22 @@
     &lt;ComponentGraph dnOrder=&quot;8&quot; id=&quot;System Configuration&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; x=&quot;410&quot; y=&quot;520&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;core_timer&quot; x=&quot;160&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;drvWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;380&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;drv_ba414e&quot; x=&quot;450&quot; y=&quot;160&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;lib_crypto&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;lib_pahomqtt&quot; x=&quot;410&quot; y=&quot;620&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;lib_wolfcrypt&quot; x=&quot;270&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;nvm&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;sys_command&quot; x=&quot;230&quot; y=&quot;260&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_console&quot; x=&quot;30&quot; y=&quot;180&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sys_debug&quot; x=&quot;430&quot; y=&quot;260&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sys_time&quot; x=&quot;450&quot; y=&quot;40&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;tcpipNetConfig&quot; x=&quot;250&quot; y=&quot;520&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tcpipSntp&quot; x=&quot;166&quot; y=&quot;211&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tcpipStack&quot; x=&quot;390&quot; y=&quot;380&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;uart1&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;TCP/IP STACK&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;core_timer&quot; x=&quot;160&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;drvWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;380&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;drv_ba414e&quot; x=&quot;450&quot; y=&quot;160&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;lib_crypto&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;lib_pahomqtt&quot; x=&quot;410&quot; y=&quot;620&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;lib_wolfcrypt&quot; x=&quot;270&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;nvm&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sys_command&quot; x=&quot;230&quot; y=&quot;260&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sys_console&quot; x=&quot;30&quot; y=&quot;180&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sys_debug&quot; x=&quot;430&quot; y=&quot;260&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sys_time&quot; x=&quot;450&quot; y=&quot;40&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tcpipNetConfig&quot; x=&quot;250&quot; y=&quot;520&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tcpipSntp&quot; x=&quot;166&quot; y=&quot;211&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tcpipStack&quot; x=&quot;390&quot; y=&quot;380&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;uart1&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;9&quot; id=&quot;TCP/IP STACK&quot;&gt;
@@ -5925,22 +5926,21 @@
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MZ_W1_Curiosity&quot; x=&quot;240&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;System Configuration&quot; x=&quot;170&quot; y=&quot;60&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;TCP/IP STACK&quot; x=&quot;904&quot; y=&quot;296&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;adchs&quot; x=&quot;1220&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;can2&quot; x=&quot;1080&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;core&quot; x=&quot;433&quot; y=&quot;155&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;dfp&quot; x=&quot;452&quot; y=&quot;80&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;lib_wolfssl&quot; x=&quot;650&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;rng&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;spi1&quot; x=&quot;1360&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;spi2&quot; x=&quot;660&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sysMqttPic32mzw1&quot; x=&quot;445&quot; y=&quot;258&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sysNetPic32mzw1&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sysWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sysWifiProvPic32mzw1&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tmr2&quot; x=&quot;800&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;tmr4&quot; x=&quot;940&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;uart3&quot; x=&quot;87&quot; y=&quot;192&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;adchs&quot; x=&quot;1220&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;can2&quot; x=&quot;1080&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;core&quot; x=&quot;433&quot; y=&quot;155&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;452&quot; y=&quot;80&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;lib_wolfssl&quot; x=&quot;650&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;rng&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;spi1&quot; x=&quot;1010&quot; y=&quot;187&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;spi2&quot; x=&quot;660&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;sysMqttPic32mzw1&quot; x=&quot;445&quot; y=&quot;258&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;sysNetPic32mzw1&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;sysWifiPic32mzw1&quot; x=&quot;30&quot; y=&quot;60&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sysWifiProvPic32mzw1&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tmr2&quot; x=&quot;800&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tmr4&quot; x=&quot;940&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;uart3&quot; x=&quot;87&quot; y=&quot;192&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -8843,6 +8843,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_0_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_0_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;7&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_0_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_0_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;28&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_13_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_13_ENABLE&quot;&gt;
@@ -9008,6 +9030,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_166_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_166_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_166_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_166_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;524288&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_167_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_167_ENABLE&quot;&gt;
@@ -9035,6 +9079,28 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_167_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drv_ba414e&quot; value=&quot;DRV_BA414E_ErrorInterruptHandler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_167_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_167_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_167_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_167_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;134217728&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -9272,6 +9338,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_36_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_36_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;3&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_36_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_36_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;12&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_37_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_37_ENABLE&quot;&gt;
@@ -9299,6 +9387,28 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_37_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SPI1_TX_InterruptHandler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_37_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_37_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;3&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_37_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_37_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3072&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -9800,6 +9910,50 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_68_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_68_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;6&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_68_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_68_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_68_SUBPRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_68_SUBPRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;3&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_68_SUBPRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_68_SUBPRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;3&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_69_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_69_ENABLE&quot;&gt;
@@ -9827,6 +9981,50 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_69_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;DMA1_InterruptHandler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_69_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_69_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;6&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_69_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_69_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;6144&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_69_SUBPRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_69_SUBPRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_69_SUBPRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_69_SUBPRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;512&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -9866,6 +10064,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_70_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_70_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_70_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_70_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;524288&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_83_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_83_ENABLE&quot;&gt;
@@ -9893,6 +10113,28 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_83_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;WDRV_PIC32MZW_TasksRFSMCISR&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_83_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_83_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;7&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_83_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_83_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;469762048&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -9932,6 +10174,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_84_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_84_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;7&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_84_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_84_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;28&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_86_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_86_ENABLE&quot;&gt;
@@ -9959,6 +10223,28 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_86_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;WDRV_PIC32MZW_TasksRFTimer0ISR&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_86_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_86_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;7&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EVIC_86_PRIVALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EVIC_86_PRIVALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1835008&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15925,23 +16211,23 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/configuration.h</file>
-         <hash>9f6de4f9e03d408a47b3001683d2e832fccd2e1569bac8675db2d4ee26e70f24</hash>
+         <hash>f7721822387746280e205c48cf2fd2621704d99961b1e55f33e5620c82fabc20</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/crypto/crypto.h</file>
-         <hash>89d2747602540d5216047edf6aaaa8e4bcf092c4a8b3ee2b700f1a7237514f57</hash>
+         <hash>63bc6589b6538aeb76bc00351d3b99016c8357699c9403067f79a7f43461d208</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/crypto/src/crypto.c</file>
-         <hash>4d62f32e7abe92e85613c095176465c1a0a92e207eb85f050730f8c45039bfa5</hash>
+         <hash>4c1b271685e092105d8271ee0615ac36c95abbea944b3e3c8e5bc194da00c014</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/definitions.h</file>
-         <hash>e82866795656b5055b2081c37282d3e07e487d80fcd5a106e47603972de23f0d</hash>
+         <hash>499560a3ea15d4270c8072c132d77aadea9a9da0a7f0595644156f23738cb779</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/driver/ba414e/drv_ba414e.h</file>
@@ -16113,19 +16399,19 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/exceptions.c</file>
-         <hash>d8d867098b4578d1c8221d25728bd2ea5d88c688fddda30d355fa7a5fb952de1</hash>
+         <hash>b6ed58355aadf2de29c8713c14914a5ad4e8fca3ea06c1ff67c7d76eb85d707b</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/initialization.c</file>
-         <hash>e6bb10b072f08c41b8a68d9acb66c36901d917b92ca95acce7237e7e6280b3f6</hash>
+         <hash>9c537965e6609b0381e5d52bc6581f207017f2543dcfe88b68f4f8fc0115205c</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.c</file>
-         <hash>28219970e5c4040dd2b20537e9399f9a6c2bc29e26c334e67aed9c7f1e26a79f</hash>
+         <hash>b07278baf7442645e815d17c5124eef39159d1b0e11220b725497c8f64c3b68f</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/interrupts.h</file>
-         <hash>5c380169e24630e740b57a405bfff1a40559428a973d298606920054ac85f078</hash>
+         <hash>245681b4b0fe0ebfd9b89c6e9e647d8d650b324aee0f2672d3b8958e1c65669a</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/arp.h</file>
@@ -16173,11 +16459,11 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/http.h</file>
-         <hash>c624983fac1a910df704aea42e31de2dabf37e54f0994f36b945243d76fb69a9</hash>
+         <hash>df36d178361352fa474d64c109658ec02024f7727f801b7e965b5e8051e5dece</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/http_net.h</file>
-         <hash>4428032129f5f2552a9a49e01d9734dc77d8859047cf88223eede6747fcdcdfd</hash>
+         <hash>3a19db57be2ad27a5c8e6d5f297bc251506d2c7f8b975a78320afaf4f26f5357</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/icmp.h</file>
@@ -16189,7 +16475,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/igmp.h</file>
-         <hash>fcd3d579e90c20763d0188b19a058e7f5c1a0694f9560c8cc8fdfff3c1a15ee9</hash>
+         <hash>0ea2e17f2689cb1c6fbe4392a8cd3e4ec220784dfef0b57e6c66a2889ec8a39f</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/iperf.h</file>
@@ -16273,7 +16559,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcp_private.h</file>
-         <hash>239cf6740eedd49b616c0ed0d19a0e753d23ea39005ac45917cca0a739ea9c5c</hash>
+         <hash>d9038d03bafe1ed6f8edf0bf8535ed1798693217523974e2686e137ee7542149</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcp_server_manager.h</file>
@@ -16297,7 +16583,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dhcpv6_private.h</file>
-         <hash>c8e4315fb00317b1f84f7a314a225c2c8fc501343db360dd5be5787ae4137baf</hash>
+         <hash>0fb8c8ad613185db824dede3d9d4b0831c418f9bed753eddcff42e8b943c47c1</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/library/tcpip/src/dns.c</file>
@@ -16765,7 +17051,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd2.c</file>
-         <hash>9f54fe66f96e9bc09046fcbccf06b73b440d55c41693eb3af54c7e51999fdb20</hash>
+         <hash>da409078295d600a481ffe791553a08cad816c12fa453f9bfd88df047b021264</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd2.h</file>
@@ -16785,7 +17071,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/coretimer/plib_coretimer.c</file>
-         <hash>2f636a8a90403a73ce55b8397c9ea548bb1e4ef7c022796ec2b3dffe7f97e96c</hash>
+         <hash>d2e0839da9beba86ea927aad046330882835e6d1177f6f327eba3e7ecc7e66ff</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/coretimer/plib_coretimer.h</file>
@@ -16793,7 +17079,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/dmac/plib_dmac.c</file>
-         <hash>e458a0afa6db4173c9b4a9f92694a99bb47cb6a03feb4b7c5fe2fb012b0a3073</hash>
+         <hash>989322cd2c2fc4fdf980e68d9e40dc16d1481469f5093355f16b39f9d2bcc531</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/dmac/plib_dmac.h</file>
@@ -16801,7 +17087,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.c</file>
-         <hash>4265f11ca011bd33632cc9667e2a17d876466f4197153ea0d4cc622a732de415</hash>
+         <hash>da5de07d878361d99ad6edac44f5da54012c8b635730a1e08840fa98c7562224</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.h</file>
@@ -16817,7 +17103,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.c</file>
-         <hash>8f9c4847fe39537770fcd2e9bdf2c316197228da667ecde963de89f872510097</hash>
+         <hash>542cf01bc5cf42693c9f93aa410b319a2db299ea1c62ba68591f8a9b5c00428e</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.h</file>
@@ -16833,7 +17119,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi1_master.c</file>
-         <hash>7f62dbc1471dc66138be2866b6d0eb5532986508bd936513b5900715046b26e6</hash>
+         <hash>03fc5d8cc64f4894dd980b7fbcc2fba96af5cc236555ddf4bf65ccd315099d5c</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi1_master.h</file>
@@ -16841,7 +17127,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi2_master.c</file>
-         <hash>509bcc51b7ade3bcdbc9f9bed88a407628f8ff9563ed72ecdc24a69ac6964770</hash>
+         <hash>cab83e51dfad3b9663fd4214f0f459f434cfefdb3cd0bcd5dc7ae1a76846fc55</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/spi/spi_master/plib_spi2_master.h</file>
@@ -16861,7 +17147,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/tmr/plib_tmr4.c</file>
-         <hash>000158439d4067ddc3f611f62e3ea85cc777be0ecb4fc79f8c9093527a400744</hash>
+         <hash>38be7bf8b8381c66e7b4a2203ee58f474d0c1f22bc7ff2b5b6aedb155e599d50</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/tmr/plib_tmr4.h</file>
@@ -16873,7 +17159,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart1.c</file>
-         <hash>2ac68464dc7812745171a686e68c0a484b14b25eb95f7d712cfc739f0f3c8e77</hash>
+         <hash>f74b81e08b17bbf6cd6f548d5cadaf643ebc1c92a379f3d7d221ac2b1c8466b9</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart1.h</file>
@@ -16881,7 +17167,7 @@
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart3.c</file>
-         <hash>fb08c0f1065f0142b20edd5cfc73267f41e41a33d20c044d6b53fc4c815b7916</hash>
+         <hash>4d2af36fe53a055affe87836a7f716568ea49a37d86eee890c833609a3a7972f</hash>
       </entry>
       <entry>
          <file>../src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart3.h</file>
@@ -17269,7 +17555,7 @@
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/test.h</file>
-         <hash>c34f8ea561b0c0324536c1aff9626aa3efaa3db796def8177fbea66ae6d75689</hash>
+         <hash>67802e03654a0a706c98a795d98146c8dcd76f700f52fe65d6c72dd3481ccf35</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/version.h</file>

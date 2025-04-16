@@ -20,7 +20,7 @@
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -98,7 +98,7 @@ void CRYPTO1_FAULT_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __attribute__((used)) __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
+void __attribute__((used)) __ISR(_CORE_TIMER_VECTOR, ipl7SRS) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
 }
@@ -113,12 +113,12 @@ void __attribute__((used)) __ISR(_FLASH_CONTROL_VECTOR, ipl1SRS) FLASH_CONTROL_H
     NVM_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_SPI1_RX_VECTOR, ipl1SRS) SPI1_RX_Handler (void)
+void __attribute__((used)) __ISR(_SPI1_RX_VECTOR, ipl3SRS) SPI1_RX_Handler (void)
 {
     SPI1_RX_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_SPI1_TX_VECTOR, ipl1SRS) SPI1_TX_Handler (void)
+void __attribute__((used)) __ISR(_SPI1_TX_VECTOR, ipl3SRS) SPI1_TX_Handler (void)
 {
     SPI1_TX_InterruptHandler();
 }
@@ -163,32 +163,32 @@ void __attribute__((used)) __ISR(_UART3_TX_VECTOR, ipl1SRS) UART3_TX_Handler (vo
     UART3_TX_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA0_VECTOR, ipl1SRS) DMA0_Handler (void)
+void __attribute__((used)) __ISR(_DMA0_VECTOR, ipl6SRS) DMA0_Handler (void)
 {
     DMA0_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA1_VECTOR, ipl1SRS) DMA1_Handler (void)
+void __attribute__((used)) __ISR(_DMA1_VECTOR, ipl6SRS) DMA1_Handler (void)
 {
     DMA1_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_DMA2_VECTOR, ipl1SRS) DMA2_Handler (void)
+void __attribute__((used)) __ISR(_DMA2_VECTOR, ipl2SRS) DMA2_Handler (void)
 {
     DMA2_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_RFSMC_VECTOR, ipl1SRS) RFSMC_Handler (void)
+void __attribute__((used)) __ISR(_RFSMC_VECTOR, ipl7SRS) RFSMC_Handler (void)
 {
     WDRV_PIC32MZW_TasksRFSMCISR();
 }
 
-void __attribute__((used)) __ISR(_RFMAC_VECTOR, ipl1SRS) RFMAC_Handler (void)
+void __attribute__((used)) __ISR(_RFMAC_VECTOR, ipl7SRS) RFMAC_Handler (void)
 {
     WDRV_PIC32MZW_TasksRFMACISR();
 }
 
-void __attribute__((used)) __ISR(_RFTM0_VECTOR, ipl1SRS) RFTM0_Handler (void)
+void __attribute__((used)) __ISR(_RFTM0_VECTOR, ipl7SRS) RFTM0_Handler (void)
 {
     WDRV_PIC32MZW_TasksRFTimer0ISR();
 }
@@ -208,12 +208,12 @@ void __attribute__((used)) __ISR(_CAN2_MISC_VECTOR, ipl1SRS) CAN2_MISC_Handler (
     CAN2_MISC_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_CRYPTO1_VECTOR, ipl1SRS) CRYPTO1_Handler (void)
+void __attribute__((used)) __ISR(_CRYPTO1_VECTOR, ipl2SRS) CRYPTO1_Handler (void)
 {
     DRV_BA414E_InterruptHandler();
 }
 
-void __attribute__((used)) __ISR(_CRYPTO1_FAULT_VECTOR, ipl1SRS) CRYPTO1_FAULT_Handler (void)
+void __attribute__((used)) __ISR(_CRYPTO1_FAULT_VECTOR, ipl2SRS) CRYPTO1_FAULT_Handler (void)
 {
     DRV_BA414E_ErrorInterruptHandler();
 }

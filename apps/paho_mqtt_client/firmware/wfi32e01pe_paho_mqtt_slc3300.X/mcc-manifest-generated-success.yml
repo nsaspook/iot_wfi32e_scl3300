@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: wfi32e01pe_paho_mqtt_slc3300
-creation_date: 2025-04-15T18:30:56.795-07:00[America/Los_Angeles]
+creation_date: 2025-04-16T07:33:00.027-07:00[America/Los_Angeles]
 operating_system: Linux
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -19,11 +19,11 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
 packs: {name: PIC32MZ-W_DFP, version: 1.10.334}
 modules:
 - {name: core, type: HARMONY, version: v3.15.1}
-- {name: csp, type: HARMONY, version: v3.20.0}
+- {name: csp, type: HARMONY, version: v3.22.2}
 - {name: wireless_wifi, type: HARMONY, version: v3.12.0}
 - {name: paho.mqtt.embedded-c, type: HARMONY, version: v1.2.3}
 - {name: wireless_system_pic32mzw1_wfi32e01, type: HARMONY, version: v3.9.1}
 - {name: wolfssl, type: HARMONY, version: v5.4.0}
 - {name: net, type: HARMONY, version: v3.13.0}
 - {name: bsp, type: HARMONY, version: v3.22.0}
-- {name: crypto, type: HARMONY, version: v3.8.1}
+- {name: crypto, type: HARMONY, version: v3.8.2}

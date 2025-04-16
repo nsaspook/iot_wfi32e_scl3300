@@ -28,6 +28,25 @@
 // *****************************************************************************
 
 /*
+ Harmony components to be cloned with MCC Content Manager	Version
+bsp	v3.17.0
+CMSIS-FreeRTOS	v11.0.1
+core	v3.13.2
+crypto	v3.8.0
+cryptoauthlib	v3.7.4
+csp	v3.18.2
+dev_packs	v3.18.1
+net	v3.11.0
+paho.mqtt.embedded-c	v1.2.3
+usb	v3.12.0
+wireless_wifi	v3.9.1
+wireless_system_pic32mzw1_wfi32e01	v3.9.0
+wolfssl	v5.4.0
+Devices	Master Branch
+touch	v3.15.0
+
+ */
+/*
  * Testing example:  mosquitto_sub -t "mateq84/data/imu" -h 10.1.1.172
  */
 #include <stdio.h>
@@ -348,7 +367,7 @@ void APP_Tasks(void)
 					millivolt = ADCHS_ChannelResultGet(ADCHS_CH21)* 3100 >> 12;
 					temp_raw = millivolt;
 					temp = (millivolt - 500) * (125 + 40) / (1300 - 500); /* 800 millivolt from -40 to +125 */
-					temp = temp - 40; /* offset temperature */
+					temp = temp - 50; /* offset temperature */
 					snprintf(buffer, MAX_BBUF, "WFI32 TEMP %dC Raw ADC %d  ", temp, temp_raw);
 					eaDogM_WriteStringAtPos(13, 0, buffer);
 				}

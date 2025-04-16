@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -57,9 +57,9 @@
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "peripheral/uart/plib_uart3.h"
 #include "peripheral/adchs/plib_adchs.h"
-#include "peripheral/uart/plib_uart1.h"
 #include "peripheral/tmr/plib_tmr4.h"
 #include "system/mqtt/sys_mqtt.h"
+#include "peripheral/uart/plib_uart1.h"
 #include "peripheral/tmr/plib_tmr2.h"
 #include "peripheral/rng/plib_rng.h"
 #include "peripheral/spi/spi_master/plib_spi2_master.h"

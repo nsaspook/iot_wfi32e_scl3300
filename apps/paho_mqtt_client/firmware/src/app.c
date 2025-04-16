@@ -28,7 +28,7 @@
 // *****************************************************************************
 
 /*
- * Testing example:  mosquitto_sub -t "mateq84/data/solar" -h 10.1.1.172
+ * Testing example:  mosquitto_sub -t "mateq84/data/imu" -h 10.1.1.172
  */
 #include <stdio.h>
 #include "app.h"
@@ -82,7 +82,7 @@ volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor 
 volatile double qa0 = 1.0, qa1 = 0.0, qa2 = 0.0, qa3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 
 extern SYS_MQTT_Handle g_asSysMqttHandle[1];
-#define MQTT_DEVICE	"mateq84wfi"	// client base-name
+#define MQTT_DEVICE	"slc3300wfi"	// client base-name
 
 extern SYS_MODULE_OBJ g_sSysMqttHandle;
 #define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL	"mateq84/data/imu"

@@ -60,7 +60,7 @@ extern "C" {
 	
 #define DBUFFER_SIZE	256
 
-#define LCD_DRIVER	"V1.004" 
+#define LCD_DRIVER	"V1.005" 
 #define LCD_ALIAS	"EADOG LCD"
 
 	typedef enum {

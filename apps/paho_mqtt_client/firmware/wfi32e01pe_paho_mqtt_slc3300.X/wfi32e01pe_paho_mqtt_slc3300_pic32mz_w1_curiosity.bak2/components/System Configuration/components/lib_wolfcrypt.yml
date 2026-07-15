@@ -1,0 +1,112 @@
+configVersion: 1.0.0
+componentName: lib_wolfcrypt
+coreVersion: 5.8.4
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: lib_wolfcrypt
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: crypto
+  type: package
+  version: v3.8.2
+- dependencyPackage: ''
+  name: wolfssl
+  type: package
+  version: v5.7.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: System Configuration
+    children:
+    - children:
+      - attributes:
+          id: lib_wolfcrypt
+          x: '270'
+          y: '100'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    cryptoCrya_03710:
+      attributes:
+        id: cryptoCrya_03710
+      children:
+      - children:
+        - attributes:
+            id: lib_wolfcrypt
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    cryptoCrya_U2803:
+      attributes:
+        id: cryptoCrya_U2803
+      children:
+      - children:
+        - attributes:
+            id: lib_wolfcrypt
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    cryptoCrya_U2805:
+      attributes:
+        id: cryptoCrya_U2805
+      children:
+      - children:
+        - attributes:
+            id: lib_wolfcrypt
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    wolfSslRTOSSupport:
+      attributes:
+        id: wolfSslRTOSSupport
+      children:
+      - children:
+        - attributes:
+            id: sysNetPic32mzw1
+            value: FreeRTOS
+          type: Dynamic
+        - attributes:
+            value: Single Threaded
+          type: User
+        type: Values
+      type: Combo
+    wolfcrypt_hw:
+      attributes:
+        id: wolfcrypt_hw
+      children:
+      - children:
+        - attributes:
+            id: sysWifiPic32mzw1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    wolfcrypt_random:
+      attributes:
+        id: wolfcrypt_random
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: lib_wolfcrypt
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}

@@ -86,7 +86,7 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V1.102 ";
+const char build_version[] = "MQTT WFI32E01 IoT     V1.103 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);

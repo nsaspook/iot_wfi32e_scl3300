@@ -1,0 +1,102 @@
+configVersion: 1.0.0
+componentName: sysWifiPic32mzw1
+coreVersion: 5.8.4
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysWifiPic32mzw1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysWifiPic32mzw1
+          x: '30'
+          y: '60'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_WIFI_AP_ENABLE:
+      attributes:
+        id: SYS_WIFI_AP_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_WIFI_COUNTRYCODE:
+      attributes:
+        id: SYS_WIFI_COUNTRYCODE
+      children:
+      - children:
+        - attributes:
+            value: GEN
+          type: User
+        type: Values
+      type: Combo
+    SYS_WIFI_IPTYPE:
+      attributes:
+        id: SYS_WIFI_IPTYPE
+      children:
+      - children:
+        - attributes:
+            value: IPv4 ONLY
+          type: User
+        type: Values
+      type: Combo
+    SYS_WIFI_STA_AUTH:
+      attributes:
+        id: SYS_WIFI_STA_AUTH
+      children:
+      - children:
+        - attributes:
+            value: WPA2
+          type: User
+        type: Values
+      type: Combo
+    SYS_WIFI_STA_ENT_DATE_EPOCH:
+      attributes:
+        id: SYS_WIFI_STA_ENT_DATE_EPOCH
+      children:
+      - children:
+        - attributes:
+            id: sysWifiPic32mzw1
+            value: '1658431260'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SYS_WIFI_STA_PWD_NAME:
+      attributes:
+        id: SYS_WIFI_STA_PWD_NAME
+      children:
+      - children:
+        - attributes:
+            value: '01090203020206050003050003'
+          type: User
+        type: Values
+      type: String
+    SYS_WIFI_STA_SSID_NAME:
+      attributes:
+        id: SYS_WIFI_STA_SSID_NAME
+      children:
+      - children:
+        - attributes:
+            value: newage
+          type: User
+        type: Values
+      type: String
+  userData: {}

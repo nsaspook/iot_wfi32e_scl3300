@@ -1,0 +1,31 @@
+configVersion: 1.0.0
+componentName: drv_ba414e
+coreVersion: 5.9.0
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: drv_ba414e
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: crypto
+  type: package
+  version: v3.8.2
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: System Configuration
+    children:
+    - children:
+      - attributes:
+          id: drv_ba414e
+          x: '450'
+          y: '160'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}

@@ -1,0 +1,63 @@
+configVersion: 1.0.0
+componentName: BASIC CONFIGURATION
+coreVersion: 5.9.0
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyGroupModule
+  name: BASIC CONFIGURATION
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.24.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.0
+- dependencyPackage: ''
+  name: crypto
+  type: package
+  version: v3.8.2
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.0
+- dependencyPackage: ''
+  name: net
+  type: package
+  version: v3.14.5
+- dependencyPackage: ''
+  name: paho.mqtt.embedded-c
+  type: package
+  version: v1.2.3
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+- dependencyPackage: ''
+  name: wireless_wifi
+  type: package
+  version: v3.12.2
+- dependencyPackage: ''
+  name: wolfssl
+  type: package
+  version: v5.4.0-stable
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: TCP/IP STACK
+    children:
+    - children:
+      - attributes:
+          id: BASIC CONFIGURATION
+          x: '180'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}

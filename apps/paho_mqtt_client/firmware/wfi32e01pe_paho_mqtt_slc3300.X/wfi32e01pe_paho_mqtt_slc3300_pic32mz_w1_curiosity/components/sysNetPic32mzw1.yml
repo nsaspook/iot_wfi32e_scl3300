@@ -1,0 +1,51 @@
+configVersion: 1.0.0
+componentName: sysNetPic32mzw1
+coreVersion: 5.9.0
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysNetPic32mzw1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysNetPic32mzw1
+          x: '460'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_NET_HOST_NAME:
+      attributes:
+        id: SYS_NET_HOST_NAME
+      children:
+      - children:
+        - attributes:
+            value: 10.1.1.201
+          type: User
+        type: Values
+      type: String
+    SYS_NET_PORT:
+      attributes:
+        id: SYS_NET_PORT
+      children:
+      - children:
+        - attributes:
+            value: '1883'
+          type: User
+        type: Values
+      type: Integer
+  userData: {}

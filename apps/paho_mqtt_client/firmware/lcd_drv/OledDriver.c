@@ -113,9 +113,9 @@ volatile uint8_t __attribute__((address(BANK1 - 16), coherent)) rgbOledBmp_page[
 
 #ifdef __32MZ1025W104132__	// bank 2 for this CPU
 uint8_t __attribute__((address(BANK2), coherent)) rgbOledBmp0[cbOledDispMax]; // two display buffers for page flipping
-uint8_t __attribute__((address(BANK2 + cbOledDispMax), coherent)) rgbOledBmp1[cbOledDispMax];
+//uint8_t __attribute__((address(BANK2 + cbOledDispMax), coherent)) rgbOledBmp1[cbOledDispMax];
 #ifdef USE_DMA
-static uint8_t __attribute__((address(BANK2 - 8), coherent)) rgbOledBmp_blank[4] = {0x00, 0x00, 0x00, 0x00}; // 32-bit frame-buffer clearing variable
+static uint8_t __attribute__((address(BANK2 + cbOledDispMax), coherent)) rgbOledBmp_blank[4] = {0x00, 0x00, 0x00, 0x00}; // 32-bit frame-buffer clearing variable
 #endif
 volatile uint8_t __attribute__((address(BANK2 - 16), coherent)) rgbOledBmp_page[5];
 #endif
@@ -473,7 +473,7 @@ void OledClearBuffer(void)
 	if (disp_frame) {
 		pb = rgbOledBmp0;
 	} else {
-		pb = rgbOledBmp1;
+		pb = rgbOledBmp0;
 	}
 
 #ifdef USE_DMA
@@ -541,7 +541,7 @@ void SPI1DmaChannelHandler_State(DMAC_TRANSFER_EVENT event, uintptr_t contextHan
 		if (disp_frame) { // select flipper buffer
 			pb = rgbOledBmp0;
 		} else {
-			pb = rgbOledBmp1;
+			pb = rgbOledBmp0;
 		}
 		/* FALLTHRU */
 	case D_page: // send the page address commands via DMA

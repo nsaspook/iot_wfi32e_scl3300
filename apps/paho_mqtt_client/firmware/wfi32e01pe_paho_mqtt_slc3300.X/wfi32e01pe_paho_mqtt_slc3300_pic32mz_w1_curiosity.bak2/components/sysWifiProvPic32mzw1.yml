@@ -1,0 +1,42 @@
+configVersion: 1.0.0
+componentName: sysWifiProvPic32mzw1
+coreVersion: 5.8.4
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysWifiProvPic32mzw1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysWifiProvPic32mzw1
+          x: '20'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_WIFIPROV_AP_ENABLE:
+      attributes:
+        id: SYS_WIFIPROV_AP_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: sysWifiProvPic32mzw1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}

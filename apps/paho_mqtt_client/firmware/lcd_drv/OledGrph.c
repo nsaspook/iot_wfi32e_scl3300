@@ -84,7 +84,7 @@ void OledMoveTo(int32_t xco, int32_t yco)
 	if (disp_frame) {
 		pbOledCur = &rgbOledBmp0[((yco / 8) * ccolOledMax) + xco];
 	} else {
-		pbOledCur = &rgbOledBmp1[((yco / 8) * ccolOledMax) + xco];
+		pbOledCur = &rgbOledBmp0[((yco / 8) * ccolOledMax) + xco];
 	}
 	bnOledCur = yco & 7;
 }
@@ -691,7 +691,7 @@ void OledPutBmp(int32_t dxco, int32_t dyco, uint8_t * pbBits)
 	if (disp_frame) {
 		pbDspLeft = &rgbOledBmp0[((ycoTop / 8) * ccolOledMax) + xcoLeft];
 	} else {
-		pbDspLeft = &rgbOledBmp1[((ycoTop / 8) * ccolOledMax) + xcoLeft];
+		pbDspLeft = &rgbOledBmp0[((ycoTop / 8) * ccolOledMax) + xcoLeft];
 	}
 	pbBmpLeft = pbBits;
 	fTop = 1;
@@ -929,7 +929,7 @@ void OledMoveUp(void)
 				pbOledCur += ccolOledMax;
 			}
 		} else {
-			if (pbOledCur < rgbOledBmp1) {
+			if (pbOledCur < rgbOledBmp0) {
 				pbOledCur += ccolOledMax;
 			}
 		}
@@ -974,7 +974,7 @@ void OledMoveDown(void)
 				pbOledCur -= ccolOledMax;
 			}
 		} else {
-			if (pbOledCur >= rgbOledBmp1 + cbOledDispMax) {
+			if (pbOledCur >= rgbOledBmp0 + cbOledDispMax) {
 				pbOledCur -= ccolOledMax;
 			}
 		}
@@ -1008,7 +1008,7 @@ void OledMoveLeft(void)
 			return;
 		}
 	} else {
-		if (((pbOledCur - rgbOledBmp1) & ((ccolOledMax << 1) - 1)) == 0) { // check for bad edge limiting
+		if (((pbOledCur - rgbOledBmp0) & ((ccolOledMax << 1) - 1)) == 0) { // check for bad edge limiting
 			return;
 		}
 	}

@@ -1,0 +1,121 @@
+configVersion: 1.0.0
+componentName: sysMqttPic32mzw1
+coreVersion: 5.8.4
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysMqttPic32mzw1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysMqttPic32mzw1
+          x: '445'
+          y: '258'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_MQTT_APPDEBUG_DBG_LEVEL:
+      attributes:
+        id: SYS_MQTT_APPDEBUG_DBG_LEVEL
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_APPDEBUG_ENABLE:
+      attributes:
+        id: SYS_MQTT_APPDEBUG_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_APPDEBUG_INFO_LEVEL:
+      attributes:
+        id: SYS_MQTT_APPDEBUG_INFO_LEVEL
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_BROKER_NAME:
+      attributes:
+        id: SYS_MQTT_BROKER_NAME
+      children:
+      - children:
+        - attributes:
+            value: 10.1.1.172
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_CLIENT_ID:
+      attributes:
+        id: SYS_MQTT_CLIENT_ID
+      children:
+      - children:
+        - attributes:
+            value: slc3300wfi
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_PUB_ENABLE:
+      attributes:
+        id: SYS_MQTT_PUB_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_PUB_TOPIC_NAME:
+      attributes:
+        id: SYS_MQTT_PUB_TOPIC_NAME
+      children:
+      - children:
+        - attributes:
+            value: mateq84/data/imu
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_SUB_ENABLE:
+      attributes:
+        id: SYS_MQTT_SUB_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_SUB_TOPIC_NAME:
+      attributes:
+        id: SYS_MQTT_SUB_TOPIC_NAME
+      children:
+      - children:
+        - attributes:
+            value: mateq84/data/info
+          type: User
+        type: Values
+      type: String
+  userData: {}

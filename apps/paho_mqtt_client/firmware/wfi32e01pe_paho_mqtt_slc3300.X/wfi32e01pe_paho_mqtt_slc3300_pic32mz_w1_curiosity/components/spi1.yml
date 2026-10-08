@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: spi1
-          x: '1010'
-          y: '187'
+          x: '645'
+          y: '185'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -31,6 +31,7 @@ data:
     SPIS_SLAVE_SELECT_ENABLE:
       attributes:
         id: SPIS_SLAVE_SELECT_ENABLE
+        label: Enable Slave Select
       children:
       - children:
         - attributes:
@@ -42,27 +43,30 @@ data:
     SPI_BAUD_RATE:
       attributes:
         id: SPI_BAUD_RATE
+        label: Baud Rate in Hz
       children:
       - children:
         - attributes:
-            value: '15000000'
+            value: '10000000'
           type: User
         type: Values
       type: Integer
     SPI_BRG_VALUE:
       attributes:
         id: SPI_BRG_VALUE
+        label: SPI_BRG_VALUE
       children:
       - children:
         - attributes:
             id: spi1
-            value: '2'
+            value: '4'
           type: Dynamic
         type: Values
       type: Integer
     SPI_DUMMY_DATA:
       attributes:
         id: SPI_DUMMY_DATA
+        label: Dummy Data
       children:
       - children:
         - attributes:
@@ -82,6 +86,7 @@ data:
     SPI_INTERRUPT_MODE:
       attributes:
         id: SPI_INTERRUPT_MODE
+        label: Enable Interrupts ?
       children:
       - children:
         - attributes:
@@ -92,6 +97,7 @@ data:
     SPI_SPICON_CLK_PH:
       attributes:
         id: SPI_SPICON_CLK_PH
+        label: SPI Clock Edge Select bit
       children:
       - children:
         - attributes:
@@ -102,6 +108,7 @@ data:
     SPI_SPICON_CLK_POL:
       attributes:
         id: SPI_SPICON_CLK_POL
+        label: Clock Polarity Select bit
       children:
       - children:
         - attributes:
@@ -112,6 +119,7 @@ data:
     SPI_SPICON_MODE:
       attributes:
         id: SPI_SPICON_MODE
+        label: Data Width
       children:
       - children:
         - attributes:
@@ -122,6 +130,7 @@ data:
     SPI_SPICON_MSSEN:
       attributes:
         id: SPI_SPICON_MSSEN
+        label: Master Mode Slave Select Enable bit
       children:
       - children:
         - attributes:
@@ -132,6 +141,7 @@ data:
     SPI_SPICON_SMP:
       attributes:
         id: SPI_SPICON_SMP
+        label: SPI Data Input Sample Phase bit
       children:
       - children:
         - attributes:

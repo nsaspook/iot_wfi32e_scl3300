@@ -31,6 +31,7 @@ data:
     SYS_WIFIPROV_AP_ENABLE:
       attributes:
         id: SYS_WIFIPROV_AP_ENABLE
+        label: SYS_WIFIPROV_AP_ENABLE
       children:
       - children:
         - attributes:

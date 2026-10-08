@@ -11,11 +11,11 @@ dependency:
 - dependencyPackage: ''
   name: bsp
   type: package
-  version: v3.24.0
+  version: v3.22.0
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.16.0
+  version: v3.15.1
 - dependencyPackage: ''
   name: crypto
   type: package
@@ -23,11 +23,11 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 - dependencyPackage: ''
   name: net
   type: package
-  version: v3.14.5
+  version: v3.13.0
 - dependencyPackage: ''
   name: paho.mqtt.embedded-c
   type: package
@@ -39,11 +39,11 @@ dependency:
 - dependencyPackage: ''
   name: wireless_wifi
   type: package
-  version: v3.12.2
+  version: v3.12.0
 - dependencyPackage: ''
   name: wolfssl
   type: package
-  version: v5.4.0-stable
+  version: v5.4.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}

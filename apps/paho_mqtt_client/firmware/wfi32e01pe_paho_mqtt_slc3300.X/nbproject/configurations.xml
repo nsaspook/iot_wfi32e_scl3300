@@ -579,13 +579,128 @@
         <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/sysWifiProvPic32mzw1.yml</itemPath>
         <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/uart3.yml</itemPath>
       </logicalFolder>
+      <logicalFolder name="wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity"
+                     displayName="wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <logicalFolder name="System Configuration"
+                         displayName="System Configuration"
+                         projectFiles="true">
+            <logicalFolder name="components" displayName="components" projectFiles="true">
+              <logicalFolder name="TCP_forwardSlash_IP STACK"
+                             displayName="TCP_forwardSlash_IP STACK"
+                             projectFiles="true">
+                <logicalFolder name="components" displayName="components" projectFiles="true">
+                  <logicalFolder name="APPLICATION LAYER"
+                                 displayName="APPLICATION LAYER"
+                                 projectFiles="true">
+                    <logicalFolder name="components" displayName="components" projectFiles="true">
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/APPLICATION LAYER/components/tcpipDhcp.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/APPLICATION LAYER/components/tcpipDns.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/APPLICATION LAYER/components/tcpip_apps_config.yml</itemPath>
+                    </logicalFolder>
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/APPLICATION LAYER/APPLICATION LAYER.yml</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="BASIC CONFIGURATION"
+                                 displayName="BASIC CONFIGURATION"
+                                 projectFiles="true">
+                    <logicalFolder name="components" displayName="components" projectFiles="true">
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/BASIC CONFIGURATION/components/tcpipCmd.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/BASIC CONFIGURATION/components/tcpip_basic_config.yml</itemPath>
+                    </logicalFolder>
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/BASIC CONFIGURATION/BASIC CONFIGURATION.yml</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="DATA LINK LAYER"
+                                 displayName="DATA LINK LAYER"
+                                 projectFiles="true">
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/DATA LINK LAYER/DATA LINK LAYER.yml</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="DRIVER LAYER"
+                                 displayName="DRIVER LAYER"
+                                 projectFiles="true">
+                    <logicalFolder name="components" displayName="components" projectFiles="true">
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/DRIVER LAYER/components/tcpip_driver_config.yml</itemPath>
+                    </logicalFolder>
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/DRIVER LAYER/DRIVER LAYER.yml</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="NETWORK LAYER"
+                                 displayName="NETWORK LAYER"
+                                 projectFiles="true">
+                    <logicalFolder name="components" displayName="components" projectFiles="true">
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/NETWORK LAYER/components/tcpipIPv4.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/NETWORK LAYER/components/tcpipIcmp.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/NETWORK LAYER/components/tcpipArp.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/NETWORK LAYER/components/tcpip_network_config.yml</itemPath>
+                    </logicalFolder>
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/NETWORK LAYER/NETWORK LAYER.yml</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="PRESENTATION LAYER"
+                                 displayName="PRESENTATION LAYER"
+                                 projectFiles="true">
+                    <logicalFolder name="components" displayName="components" projectFiles="true">
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/PRESENTATION LAYER/components/net_Pres.yml</itemPath>
+                    </logicalFolder>
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/PRESENTATION LAYER/PRESENTATION LAYER.yml</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="TRANSPORT LAYER"
+                                 displayName="TRANSPORT LAYER"
+                                 projectFiles="true">
+                    <logicalFolder name="components" displayName="components" projectFiles="true">
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/TRANSPORT LAYER/components/tcpip_transport_config.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/TRANSPORT LAYER/components/tcpipUdp.yml</itemPath>
+                      <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/TRANSPORT LAYER/components/tcpipTcp.yml</itemPath>
+                    </logicalFolder>
+                    <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/components/TRANSPORT LAYER/TRANSPORT LAYER.yml</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/TCP_forwardSlash_IP STACK/TCP_forwardSlash_IP STACK.yml</itemPath>
+              </logicalFolder>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/sys_console.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/core_timer.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/lib_crypto.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/lib_wolfcrypt.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/tcpipNetConfig.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/lib_pahomqtt.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/tcpipSntp.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/tcpipStack.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/uart1.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/nvm.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/sys_command.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/sys_time.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/drv_ba414e.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/sys_debug.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/HarmonyCore.yml</itemPath>
+              <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/components/drvWifiPic32mzw1.yml</itemPath>
+            </logicalFolder>
+            <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/System Configuration/System Configuration.yml</itemPath>
+          </logicalFolder>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/adchs.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/tcpipNetConfig_0.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/BSP_PIC32MZ_W1_Curiosity.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sysNetPic32mzw1.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/spi1.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/uart3.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/lib_wolfssl.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sysWifiPic32mzw1.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/spi2.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/rng.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sysWifiProvPic32mzw1.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/core.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sys_console_0.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/can2.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/tmr4.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/dfp.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sysMqttPic32mzw1.yml</itemPath>
+          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/tmr2.yml</itemPath>
+        </logicalFolder>
+        <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <logicalFolder name="f2" displayName="wolfcrypt" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/evp.c</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_w1_curiosity/harmony-manifest-success.yml</itemPath>
-      <itemPath>paho_mqtt_client_pic32mz_w1_curiosity.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="lcd_drv" displayName="lcd_drv" projectFiles="true">
       <itemPath>../lcd_drv/OledGrph.c</itemPath>
@@ -604,6 +719,10 @@
       <itemPath>../lcd_drv/OledChar.h</itemPath>
       <itemPath>../lcd_drv/dogm-graphic.h</itemPath>
       <itemPath>../lcd_drv/display_type.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -1137,6 +1256,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -1216,6 +1336,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1261,6 +1382,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1382,6 +1504,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="10000000-100fffff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/wfi32e01pe_paho_mqtt_slc3300.X/debug/pic32mz_w1_curiosity/wfi32e01pe_paho_mqtt_slc3300_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgcconfig" value="pull up"/>

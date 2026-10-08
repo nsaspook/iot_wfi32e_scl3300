@@ -31,6 +31,7 @@ data:
     SYS_NET_HOST_NAME:
       attributes:
         id: SYS_NET_HOST_NAME
+        label: Host Name/ IP Address
       children:
       - children:
         - attributes:
@@ -41,6 +42,7 @@ data:
     SYS_NET_PORT:
       attributes:
         id: SYS_NET_PORT
+        label: Server Port
       children:
       - children:
         - attributes:

@@ -642,7 +642,7 @@ void SYS_Initialize ( void* data )
 	CLK_Initialize();
 
     /* Configure Wait States */
-    PRECONbits.PFMWS = 5;
+    PRECONbits.PFMWS = 3;
 
 
     CAN2_Initialize();
@@ -658,9 +658,9 @@ void SYS_Initialize ( void* data )
 
     ADCHS_Initialize();
 
-    TMR4_Initialize();
-
 	UART1_Initialize();
+
+    TMR4_Initialize();
 
     TMR2_Initialize();
 

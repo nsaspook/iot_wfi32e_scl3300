@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.16.0
+  version: v3.15.1
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments:
@@ -53,6 +53,7 @@ data:
     SYS_TIME_OPERATING_MODE:
       attributes:
         id: SYS_TIME_OPERATING_MODE
+        label: Operating Mode
       children:
       - children:
         - attributes:
@@ -72,6 +73,7 @@ data:
     SYS_TIME_PLIB:
       attributes:
         id: SYS_TIME_PLIB
+        label: PLIB Used
       children:
       - children:
         - attributes:
@@ -83,6 +85,7 @@ data:
     SYS_TIME_REMOTE_COMPONENT_ID:
       attributes:
         id: SYS_TIME_REMOTE_COMPONENT_ID
+        label: Remote component id
       children:
       - children:
         - attributes:

@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -31,6 +31,7 @@ data:
     BRG_VALUE:
       attributes:
         id: BRG_VALUE
+        label: BRG_VALUE
       children:
       - children:
         - attributes:
@@ -42,6 +43,7 @@ data:
     UART_BRGH:
       attributes:
         id: UART_BRGH
+        label: High Baud Rate Enable bit
       children:
       - children:
         - attributes:
@@ -53,6 +55,7 @@ data:
     UART_CLOCK_FREQ:
       attributes:
         id: UART_CLOCK_FREQ
+        label: Clock Frequency
       children:
       - children:
         - attributes:
@@ -64,6 +67,7 @@ data:
     UART_INTERRUPT_MODE_ENABLE:
       attributes:
         id: UART_INTERRUPT_MODE_ENABLE
+        label: Enable Interrrupts ?
       children:
       - children:
         - attributes:
@@ -75,6 +79,7 @@ data:
     UART_OPERATING_MODE:
       attributes:
         id: UART_OPERATING_MODE
+        label: Operating Mode
       children:
       - children:
         - attributes:
@@ -89,6 +94,7 @@ data:
     UART_RING_BUFFER_MODE_ENABLE:
       attributes:
         id: UART_RING_BUFFER_MODE_ENABLE
+        label: Enable Ring Buffer ?
       children:
       - children:
         - attributes:
@@ -100,6 +106,7 @@ data:
     UART_RX_RING_BUFFER_SIZE:
       attributes:
         id: UART_RX_RING_BUFFER_SIZE
+        label: RX Ring Buffer Size
       children:
       - children:
         - attributes:
@@ -118,6 +125,7 @@ data:
     UART_TX_RING_BUFFER_SIZE:
       attributes:
         id: UART_TX_RING_BUFFER_SIZE
+        label: TX Ring Buffer Size
       children:
       - children:
         - attributes:
@@ -136,6 +144,7 @@ data:
     UMODE_VALUE:
       attributes:
         id: UMODE_VALUE
+        label: UMODE_VALUE
       children:
       - children:
         - attributes:

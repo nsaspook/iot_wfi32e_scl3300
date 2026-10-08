@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: net
   type: package
-  version: v3.14.5
+  version: v3.13.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments:
@@ -53,6 +53,7 @@ data:
     TCPIP_STACK_CALLOC_FUNC:
       attributes:
         id: TCPIP_STACK_CALLOC_FUNC
+        label: Stack allocation function, calloc style
       children:
       - children:
         - attributes:
@@ -64,6 +65,7 @@ data:
     TCPIP_STACK_DRAM_SIZE:
       attributes:
         id: TCPIP_STACK_DRAM_SIZE
+        label: TCP/IP Stack Dynamic RAM Size
       children:
       - children:
         - attributes:
@@ -83,6 +85,7 @@ data:
     TCPIP_STACK_FREE_FUNC:
       attributes:
         id: TCPIP_STACK_FREE_FUNC
+        label: Stack deallocation function, free style
       children:
       - children:
         - attributes:
@@ -106,6 +109,7 @@ data:
     TCPIP_STACK_MALLOC_FUNC:
       attributes:
         id: TCPIP_STACK_MALLOC_FUNC
+        label: Stack allocation function, malloc style
       children:
       - children:
         - attributes:
@@ -117,6 +121,7 @@ data:
     TCPIP_STACK_NET_INTERFACE_NAME_IDX0:
       attributes:
         id: TCPIP_STACK_NET_INTERFACE_NAME_IDX0
+        label: Interface Name
       children:
       - children:
         - attributes:
@@ -128,6 +133,7 @@ data:
     TCPIP_STACK_SYS_RANDOM_H2_ADAPTER:
       attributes:
         id: TCPIP_STACK_SYS_RANDOM_H2_ADAPTER
+        label: TCPIP_STACK_SYS_RANDOM_H2_ADAPTER
       children:
       - children:
         - attributes:
@@ -139,6 +145,7 @@ data:
     TCPIP_STACK_USER_NOTIFICATION:
       attributes:
         id: TCPIP_STACK_USER_NOTIFICATION
+        label: Enable User Notification
       children:
       - children:
         - attributes:
@@ -150,6 +157,7 @@ data:
     TCPIP_STACK_USE_HEAP_CONFIG:
       attributes:
         id: TCPIP_STACK_USE_HEAP_CONFIG
+        label: Use Heap Config
       children:
       - children:
         - attributes:

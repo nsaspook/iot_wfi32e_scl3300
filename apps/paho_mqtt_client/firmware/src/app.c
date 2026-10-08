@@ -86,7 +86,7 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 IoT     V1.103 ";
+const char build_version[] = "MQTT WFI32E01 Serial  V0.100 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
@@ -224,9 +224,9 @@ void APP_Tasks(void)
 			/*
 			 * make unique client id from IMU serial number
 			 */
-			snprintf(id_client, 110, "%s%X", MQTT_DEVICE, board_serial_id);
+			snprintf(id_client, 110, "%s", MQTT_DEVICE);
 			strcpy((char *) &g_asSysMqttHandle[0].sCfgInfo.sBrokerConfig.clientId, id_client);
-			snprintf(buffer, MAX_BBUF, "Starting WFI %s", id_client);
+			snprintf(buffer, MAX_BBUF, "Starting WIFI %s", id_client);
 			eaDogM_WriteStringAtPos(7, 0, buffer);
 		}
 		OledUpdate();
@@ -270,7 +270,7 @@ void APP_Tasks(void)
 				IPV4_ADDR ipAddr;
 				ipAddr.Val = TCPIP_STACK_NetAddress(netHdl);
 				if (ipAddr.Val) {
-					snprintf(buffer, MAX_BBUF, "STA IP:%d.%d.%d.%d           ", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
+					snprintf(buffer, MAX_BBUF, "STA IPADDR:%d.%d.%d.%d           ", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
 					eaDogM_WriteStringAtPos(8, 0, buffer);
 					ip_show = false;
 				} else {

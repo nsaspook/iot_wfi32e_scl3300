@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.16.0
+  version: v3.15.1
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments:
@@ -42,6 +42,7 @@ data:
     SYS_CONSOLE_DEVICE:
       attributes:
         id: SYS_CONSOLE_DEVICE
+        label: Device Used
       children:
       - children:
         - attributes:
@@ -53,6 +54,7 @@ data:
     SYS_CONSOLE_DEVICE_SET:
       attributes:
         id: SYS_CONSOLE_DEVICE_SET
+        label: Device Set
       children:
       - children:
         - attributes:
@@ -64,6 +66,7 @@ data:
     SYS_CONSOLE_DEVICE_UART_INDEX:
       attributes:
         id: SYS_CONSOLE_DEVICE_UART_INDEX
+        label: SYS_CONSOLE_DEVICE_UART_INDEX
       children:
       - children:
         - attributes:

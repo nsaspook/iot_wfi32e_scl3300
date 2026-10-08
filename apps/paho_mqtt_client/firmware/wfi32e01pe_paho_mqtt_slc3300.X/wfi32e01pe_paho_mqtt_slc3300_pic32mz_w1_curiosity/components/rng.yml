@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -31,6 +31,7 @@ data:
     RNGCON_CONT:
       attributes:
         id: RNGCON_CONT
+        label: PRNG Number Shift Enable bit
       children:
       - children:
         - attributes:
@@ -41,6 +42,7 @@ data:
     RNGCON_PLEN:
       attributes:
         id: RNGCON_PLEN
+        label: RNGCON_PLEN
       children:
       - children:
         - attributes:
@@ -51,6 +53,7 @@ data:
     RNGCON_TRNGEN:
       attributes:
         id: RNGCON_TRNGEN
+        label: TRNG Operation Enable bit
       children:
       - children:
         - attributes:
@@ -61,6 +64,7 @@ data:
     RNGCON_TRNGMODE:
       attributes:
         id: RNGCON_TRNGMODE
+        label: TRNG Mode Selection bit
       children:
       - children:
         - attributes:
@@ -71,6 +75,7 @@ data:
     RNGCON_VALUE:
       attributes:
         id: RNGCON_VALUE
+        label: RNGCON_VALUE
       children:
       - children:
         - attributes:

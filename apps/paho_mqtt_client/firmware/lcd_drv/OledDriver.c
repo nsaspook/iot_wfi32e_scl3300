@@ -476,7 +476,7 @@ void OledClearBuffer(void)
 		pb = rgbOledBmp0;
 	}
 
-#ifdef USE_DMA
+#ifdef USE_DMA0
 	/*
 	 * DMAC_ChannelCallbackRegister in OledInit
 	 */
@@ -487,6 +487,7 @@ void OledClearBuffer(void)
 	DMAC_ChannelTransfer(DMAC_CHANNEL_1, (const void *) rgbOledBmp_blank, (size_t) 4, (const void*) pb, (size_t) cbOledDispMax, (size_t) cbOledDispMax);
 	DCH1ECONSET = _DCH1ECON_CFORCE_MASK; // set CFORCE to 1 to start the transfer
 #else
+	memset(pb, 0, cbOledDispMax);
 	SPI1_Write(pb, (size_t) cbOledDispMax);
 #endif
 }

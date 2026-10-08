@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: can2
-          x: '1080'
-          y: '20'
+          x: '820'
+          y: '266'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -31,6 +31,7 @@ data:
     AUTO_DATA_BIT_TIMING_CALCULATION:
       attributes:
         id: AUTO_DATA_BIT_TIMING_CALCULATION
+        label: Automatic Data Bit Timing Calculation
       children:
       - children:
         - attributes:
@@ -41,6 +42,7 @@ data:
     AUTO_NOMINAL_BIT_TIMING_CALCULATION:
       attributes:
         id: AUTO_NOMINAL_BIT_TIMING_CALCULATION
+        label: Automatic Nominal Bit Timing Calculation
       children:
       - children:
         - attributes:
@@ -51,6 +53,7 @@ data:
     CALCULATED_DATA_BITRATE:
       attributes:
         id: CALCULATED_DATA_BITRATE
+        label: Calculated Bit Rate (Kbps)
       children:
       - children:
         - attributes:
@@ -62,6 +65,7 @@ data:
     CALCULATED_DATA_ERRORRATE:
       attributes:
         id: CALCULATED_DATA_ERRORRATE
+        label: Error %
       children:
       - children:
         - attributes:
@@ -73,6 +77,7 @@ data:
     CALCULATED_NOMINAL_BITRATE:
       attributes:
         id: CALCULATED_NOMINAL_BITRATE
+        label: Calculated Bit Rate (Kbps)
       children:
       - children:
         - attributes:
@@ -84,6 +89,7 @@ data:
     CALCULATED_NOMINAL_ERRORRATE:
       attributes:
         id: CALCULATED_NOMINAL_ERRORRATE
+        label: Error %
       children:
       - children:
         - attributes:
@@ -95,6 +101,7 @@ data:
     CAN2_FIFO1_MESSAGE_PRIORITY:
       attributes:
         id: CAN2_FIFO1_MESSAGE_PRIORITY
+        label: Transmit Message Priority
       children:
       - children:
         - attributes:
@@ -105,6 +112,7 @@ data:
     CAN2_FIFO1_SIZE:
       attributes:
         id: CAN2_FIFO1_SIZE
+        label: Number of Message Buffer
       children:
       - children:
         - attributes:
@@ -115,6 +123,7 @@ data:
     CAN2_FIFO2_SIZE:
       attributes:
         id: CAN2_FIFO2_SIZE
+        label: Number of Message Buffer
       children:
       - children:
         - attributes:
@@ -125,6 +134,7 @@ data:
     CAN_INTERRUPT_MODE:
       attributes:
         id: CAN_INTERRUPT_MODE
+        label: Interrupt Mode
       children:
       - children:
         - attributes:
@@ -135,6 +145,7 @@ data:
     CAN_MULTI_VECTOR_INTERRUPT:
       attributes:
         id: CAN_MULTI_VECTOR_INTERRUPT
+        label: CAN_MULTI_VECTOR_INTERRUPT
       children:
       - children:
         - attributes:
@@ -146,6 +157,7 @@ data:
     DATA_BITRATE:
       attributes:
         id: DATA_BITRATE
+        label: Bit Rate (Kbps)
       children:
       - children:
         - attributes:
@@ -156,6 +168,7 @@ data:
     DATA_SAMPLE_POINT:
       attributes:
         id: DATA_SAMPLE_POINT
+        label: Sample Point %
       children:
       - children:
         - attributes:
@@ -175,6 +188,7 @@ data:
     DATA_TIME_QUANTA_PERIOD:
       attributes:
         id: DATA_TIME_QUANTA_PERIOD
+        label: Time Quanta (ns)
       children:
       - children:
         - attributes:
@@ -186,6 +200,7 @@ data:
     DBT_BRP:
       attributes:
         id: DBT_BRP
+        label: Baudrate Prescaler
       children:
       - children:
         - attributes:
@@ -205,6 +220,7 @@ data:
     DBT_SJW:
       attributes:
         id: DBT_SJW
+        label: Synchronization Jump Width (TQ)
       children:
       - children:
         - attributes:
@@ -216,6 +232,7 @@ data:
     DBT_TOTAL_TIME_QUANTA:
       attributes:
         id: DBT_TOTAL_TIME_QUANTA
+        label: Total Time Quanta (TQ)
       children:
       - children:
         - attributes:
@@ -227,6 +244,7 @@ data:
     DBT_TSEG1:
       attributes:
         id: DBT_TSEG1
+        label: Time Segment Before Sample Point (TQ)
       children:
       - children:
         - attributes:
@@ -238,6 +256,7 @@ data:
     DBT_TSEG2:
       attributes:
         id: DBT_TSEG2
+        label: Time Segment After Sample Point (TQ)
       children:
       - children:
         - attributes:
@@ -249,6 +268,7 @@ data:
     FIFO_OFFSET:
       attributes:
         id: FIFO_OFFSET
+        label: FIFO Register offset
       children:
       - children:
         - attributes:
@@ -260,6 +280,7 @@ data:
     FILTER_OBJ_MASK_OFFSET:
       attributes:
         id: FILTER_OBJ_MASK_OFFSET
+        label: Filter Object and Mask Register offset
       children:
       - children:
         - attributes:
@@ -271,6 +292,7 @@ data:
     FILTER_OFFSET:
       attributes:
         id: FILTER_OFFSET
+        label: Filter Register offset
       children:
       - children:
         - attributes:
@@ -282,6 +304,7 @@ data:
     NBT_BRP:
       attributes:
         id: NBT_BRP
+        label: Baudrate Prescaler
       children:
       - children:
         - attributes:
@@ -301,6 +324,7 @@ data:
     NBT_SJW:
       attributes:
         id: NBT_SJW
+        label: Synchronization Jump Width (TQ)
       children:
       - children:
         - attributes:
@@ -312,6 +336,7 @@ data:
     NBT_TOTAL_TIME_QUANTA:
       attributes:
         id: NBT_TOTAL_TIME_QUANTA
+        label: Total Time Quanta (TQ)
       children:
       - children:
         - attributes:
@@ -323,6 +348,7 @@ data:
     NBT_TSEG1:
       attributes:
         id: NBT_TSEG1
+        label: Phase 1 Segment (TQ)
       children:
       - children:
         - attributes:
@@ -334,6 +360,7 @@ data:
     NBT_TSEG2:
       attributes:
         id: NBT_TSEG2
+        label: Phase 2 Segment (TQ)
       children:
       - children:
         - attributes:
@@ -345,6 +372,7 @@ data:
     NOMINAL_BITRATE:
       attributes:
         id: NOMINAL_BITRATE
+        label: Bit Rate (Kbps)
       children:
       - children:
         - attributes:
@@ -355,6 +383,7 @@ data:
     NOMINAL_SAMPLE_POINT:
       attributes:
         id: NOMINAL_SAMPLE_POINT
+        label: Sample Point %
       children:
       - children:
         - attributes:
@@ -374,6 +403,7 @@ data:
     NOMINAL_TIME_QUANTA_PERIOD:
       attributes:
         id: NOMINAL_TIME_QUANTA_PERIOD
+        label: Time Quanta (ns)
       children:
       - children:
         - attributes:
@@ -385,6 +415,7 @@ data:
     NUMBER_OF_FILTER:
       attributes:
         id: NUMBER_OF_FILTER
+        label: Number of Filters
       children:
       - children:
         - attributes:
@@ -395,6 +426,7 @@ data:
     TX_EVENT_FIFO_MESSAGE_BUFFER:
       attributes:
         id: TX_EVENT_FIFO_MESSAGE_BUFFER
+        label: Number of Message Buffer
       children:
       - children:
         - attributes:
@@ -405,6 +437,7 @@ data:
     TX_QUEUE_MESSAGE_BUFFER:
       attributes:
         id: TX_QUEUE_MESSAGE_BUFFER
+        label: Number of Message Buffer
       children:
       - children:
         - attributes:
@@ -415,6 +448,7 @@ data:
     TX_QUEUE_MESSAGE_PRIORITY:
       attributes:
         id: TX_QUEUE_MESSAGE_PRIORITY
+        label: Tx Queue Message Priority
       children:
       - children:
         - attributes:

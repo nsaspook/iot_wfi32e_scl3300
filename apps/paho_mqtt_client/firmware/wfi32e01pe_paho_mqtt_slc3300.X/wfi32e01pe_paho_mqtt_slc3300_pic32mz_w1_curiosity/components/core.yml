@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -31,6 +31,7 @@ data:
     ADCHS_CLOCK_ENABLE:
       attributes:
         id: ADCHS_CLOCK_ENABLE
+        label: ADCHS Clock Enable
       children:
       - children:
         - attributes:
@@ -42,6 +43,7 @@ data:
     ADCHS_CLOCK_FREQUENCY:
       attributes:
         id: ADCHS_CLOCK_FREQUENCY
+        label: ADCHS Clock Frequency
       children:
       - children:
         - attributes:
@@ -53,6 +55,7 @@ data:
     BA414E_CLOCK_ENABLE:
       attributes:
         id: BA414E_CLOCK_ENABLE
+        label: BA414E Clock Enable
       children:
       - children:
         - attributes:
@@ -64,6 +67,7 @@ data:
     BA414E_CLOCK_FREQUENCY:
       attributes:
         id: BA414E_CLOCK_FREQUENCY
+        label: BA414E Clock Frequency
       children:
       - children:
         - attributes:
@@ -75,6 +79,7 @@ data:
     BSP_PIN_109_MODE:
       attributes:
         id: BSP_PIN_109_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -85,6 +90,7 @@ data:
     BSP_PIN_10_MODE:
       attributes:
         id: BSP_PIN_10_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -95,6 +101,7 @@ data:
     BSP_PIN_113_CN:
       attributes:
         id: BSP_PIN_113_CN
+        label: Change Notice
       children:
       - children:
         - attributes:
@@ -105,6 +112,7 @@ data:
     BSP_PIN_113_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_113_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -115,6 +123,7 @@ data:
     BSP_PIN_113_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_113_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -125,6 +134,7 @@ data:
     BSP_PIN_113_MODE:
       attributes:
         id: BSP_PIN_113_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -135,6 +145,7 @@ data:
     BSP_PIN_118_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_118_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -145,6 +156,7 @@ data:
     BSP_PIN_118_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_118_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -155,6 +167,7 @@ data:
     BSP_PIN_119_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_119_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -165,6 +178,7 @@ data:
     BSP_PIN_119_MODE:
       attributes:
         id: BSP_PIN_119_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -175,6 +189,7 @@ data:
     BSP_PIN_123_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_123_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -185,6 +200,7 @@ data:
     BSP_PIN_126_MODE:
       attributes:
         id: BSP_PIN_126_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -195,6 +211,7 @@ data:
     BSP_PIN_129_DIR:
       attributes:
         id: BSP_PIN_129_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -205,6 +222,7 @@ data:
     BSP_PIN_129_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_129_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -215,6 +233,7 @@ data:
     BSP_PIN_129_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_129_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -225,6 +244,7 @@ data:
     BSP_PIN_129_LAT:
       attributes:
         id: BSP_PIN_129_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -235,6 +255,7 @@ data:
     BSP_PIN_129_MODE:
       attributes:
         id: BSP_PIN_129_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -245,6 +266,7 @@ data:
     BSP_PIN_129_SR:
       attributes:
         id: BSP_PIN_129_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -255,6 +277,7 @@ data:
     BSP_PIN_12_MODE:
       attributes:
         id: BSP_PIN_12_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -265,6 +288,7 @@ data:
     BSP_PIN_130_DIR:
       attributes:
         id: BSP_PIN_130_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -275,6 +299,7 @@ data:
     BSP_PIN_130_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_130_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -285,6 +310,7 @@ data:
     BSP_PIN_130_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_130_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -295,6 +321,7 @@ data:
     BSP_PIN_130_LAT:
       attributes:
         id: BSP_PIN_130_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -305,6 +332,7 @@ data:
     BSP_PIN_130_MODE:
       attributes:
         id: BSP_PIN_130_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -315,6 +343,7 @@ data:
     BSP_PIN_130_SR:
       attributes:
         id: BSP_PIN_130_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -325,6 +354,7 @@ data:
     BSP_PIN_13_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_13_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -335,6 +365,7 @@ data:
     BSP_PIN_13_MODE:
       attributes:
         id: BSP_PIN_13_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -345,6 +376,7 @@ data:
     BSP_PIN_14_DIR:
       attributes:
         id: BSP_PIN_14_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -355,6 +387,7 @@ data:
     BSP_PIN_14_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_14_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -365,6 +398,7 @@ data:
     BSP_PIN_14_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_14_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -375,6 +409,7 @@ data:
     BSP_PIN_14_LAT:
       attributes:
         id: BSP_PIN_14_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -385,6 +420,7 @@ data:
     BSP_PIN_14_MODE:
       attributes:
         id: BSP_PIN_14_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -395,6 +431,7 @@ data:
     BSP_PIN_14_PU:
       attributes:
         id: BSP_PIN_14_PU
+        label: Pull Up
       children:
       - children:
         - attributes:
@@ -405,6 +442,7 @@ data:
     BSP_PIN_14_SR:
       attributes:
         id: BSP_PIN_14_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -415,6 +453,7 @@ data:
     BSP_PIN_15_MODE:
       attributes:
         id: BSP_PIN_15_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -425,6 +464,7 @@ data:
     BSP_PIN_16_DIR:
       attributes:
         id: BSP_PIN_16_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -435,6 +475,7 @@ data:
     BSP_PIN_16_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_16_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -445,6 +486,7 @@ data:
     BSP_PIN_16_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_16_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -455,6 +497,7 @@ data:
     BSP_PIN_16_LAT:
       attributes:
         id: BSP_PIN_16_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -465,6 +508,7 @@ data:
     BSP_PIN_16_MODE:
       attributes:
         id: BSP_PIN_16_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -475,6 +519,7 @@ data:
     BSP_PIN_16_PU:
       attributes:
         id: BSP_PIN_16_PU
+        label: Pull Up
       children:
       - children:
         - attributes:
@@ -485,6 +530,7 @@ data:
     BSP_PIN_21_MODE:
       attributes:
         id: BSP_PIN_21_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -495,6 +541,7 @@ data:
     BSP_PIN_22_MODE:
       attributes:
         id: BSP_PIN_22_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -505,6 +552,7 @@ data:
     BSP_PIN_23_MODE:
       attributes:
         id: BSP_PIN_23_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -515,6 +563,7 @@ data:
     BSP_PIN_24_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_24_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -525,6 +574,7 @@ data:
     BSP_PIN_24_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_24_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -535,6 +585,7 @@ data:
     BSP_PIN_24_MODE:
       attributes:
         id: BSP_PIN_24_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -545,6 +596,7 @@ data:
     BSP_PIN_26_MODE:
       attributes:
         id: BSP_PIN_26_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -555,6 +607,7 @@ data:
     BSP_PIN_27_MODE:
       attributes:
         id: BSP_PIN_27_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -565,6 +618,7 @@ data:
     BSP_PIN_44_MODE:
       attributes:
         id: BSP_PIN_44_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -575,6 +629,7 @@ data:
     BSP_PIN_47_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_47_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -585,6 +640,7 @@ data:
     BSP_PIN_47_MODE:
       attributes:
         id: BSP_PIN_47_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -595,6 +651,7 @@ data:
     BSP_PIN_48_DIR:
       attributes:
         id: BSP_PIN_48_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -605,6 +662,7 @@ data:
     BSP_PIN_48_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_48_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -615,6 +673,7 @@ data:
     BSP_PIN_48_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_48_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -625,6 +684,7 @@ data:
     BSP_PIN_48_MODE:
       attributes:
         id: BSP_PIN_48_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -635,6 +695,7 @@ data:
     BSP_PIN_48_PU:
       attributes:
         id: BSP_PIN_48_PU
+        label: Pull Up
       children:
       - children:
         - attributes:
@@ -645,6 +706,7 @@ data:
     BSP_PIN_4_DIR:
       attributes:
         id: BSP_PIN_4_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -655,6 +717,7 @@ data:
     BSP_PIN_4_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_4_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -665,6 +728,7 @@ data:
     BSP_PIN_4_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_4_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -675,6 +739,7 @@ data:
     BSP_PIN_4_LAT:
       attributes:
         id: BSP_PIN_4_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -685,6 +750,7 @@ data:
     BSP_PIN_4_MODE:
       attributes:
         id: BSP_PIN_4_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -695,6 +761,7 @@ data:
     BSP_PIN_51_DIR:
       attributes:
         id: BSP_PIN_51_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -705,6 +772,7 @@ data:
     BSP_PIN_51_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_51_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -715,6 +783,7 @@ data:
     BSP_PIN_51_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_51_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -725,6 +794,7 @@ data:
     BSP_PIN_51_LAT:
       attributes:
         id: BSP_PIN_51_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -735,6 +805,7 @@ data:
     BSP_PIN_51_MODE:
       attributes:
         id: BSP_PIN_51_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -745,6 +816,7 @@ data:
     BSP_PIN_56_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_56_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -755,6 +827,7 @@ data:
     BSP_PIN_56_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_56_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -765,6 +838,7 @@ data:
     BSP_PIN_57_DIR:
       attributes:
         id: BSP_PIN_57_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -775,6 +849,7 @@ data:
     BSP_PIN_57_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_57_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -785,6 +860,7 @@ data:
     BSP_PIN_57_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_57_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -795,6 +871,7 @@ data:
     BSP_PIN_57_LAT:
       attributes:
         id: BSP_PIN_57_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -805,6 +882,7 @@ data:
     BSP_PIN_57_MODE:
       attributes:
         id: BSP_PIN_57_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -815,6 +893,7 @@ data:
     BSP_PIN_57_PU:
       attributes:
         id: BSP_PIN_57_PU
+        label: Pull Up
       children:
       - children:
         - attributes:
@@ -825,6 +904,7 @@ data:
     BSP_PIN_5_DIR:
       attributes:
         id: BSP_PIN_5_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -835,6 +915,7 @@ data:
     BSP_PIN_5_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_5_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -845,6 +926,7 @@ data:
     BSP_PIN_5_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_5_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -855,6 +937,7 @@ data:
     BSP_PIN_5_LAT:
       attributes:
         id: BSP_PIN_5_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -865,6 +948,7 @@ data:
     BSP_PIN_5_MODE:
       attributes:
         id: BSP_PIN_5_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -875,6 +959,7 @@ data:
     BSP_PIN_65_MODE:
       attributes:
         id: BSP_PIN_65_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -885,6 +970,7 @@ data:
     BSP_PIN_68_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_68_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -895,6 +981,7 @@ data:
     BSP_PIN_68_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_68_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -905,6 +992,7 @@ data:
     BSP_PIN_68_MODE:
       attributes:
         id: BSP_PIN_68_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -915,6 +1003,7 @@ data:
     BSP_PIN_69_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_69_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -925,6 +1014,7 @@ data:
     BSP_PIN_69_MODE:
       attributes:
         id: BSP_PIN_69_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -935,6 +1025,7 @@ data:
     BSP_PIN_69_SR:
       attributes:
         id: BSP_PIN_69_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -945,6 +1036,7 @@ data:
     BSP_PIN_6_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_6_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -955,6 +1047,7 @@ data:
     BSP_PIN_6_MODE:
       attributes:
         id: BSP_PIN_6_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -965,6 +1058,7 @@ data:
     BSP_PIN_74_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_74_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -975,6 +1069,7 @@ data:
     BSP_PIN_74_MODE:
       attributes:
         id: BSP_PIN_74_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -985,6 +1080,7 @@ data:
     BSP_PIN_74_SR:
       attributes:
         id: BSP_PIN_74_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -995,6 +1091,7 @@ data:
     BSP_PIN_76_DIR:
       attributes:
         id: BSP_PIN_76_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -1005,6 +1102,7 @@ data:
     BSP_PIN_76_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_76_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -1015,6 +1113,7 @@ data:
     BSP_PIN_76_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_76_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1025,6 +1124,7 @@ data:
     BSP_PIN_76_LAT:
       attributes:
         id: BSP_PIN_76_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -1035,6 +1135,7 @@ data:
     BSP_PIN_76_MODE:
       attributes:
         id: BSP_PIN_76_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1045,6 +1146,7 @@ data:
     BSP_PIN_77_DIR:
       attributes:
         id: BSP_PIN_77_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -1055,6 +1157,7 @@ data:
     BSP_PIN_77_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_77_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -1065,6 +1168,7 @@ data:
     BSP_PIN_77_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_77_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1075,6 +1179,7 @@ data:
     BSP_PIN_77_LAT:
       attributes:
         id: BSP_PIN_77_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -1085,6 +1190,7 @@ data:
     BSP_PIN_77_MODE:
       attributes:
         id: BSP_PIN_77_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1095,6 +1201,7 @@ data:
     BSP_PIN_77_SR:
       attributes:
         id: BSP_PIN_77_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -1105,6 +1212,7 @@ data:
     BSP_PIN_78_MODE:
       attributes:
         id: BSP_PIN_78_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1115,6 +1223,7 @@ data:
     BSP_PIN_80_MODE:
       attributes:
         id: BSP_PIN_80_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1125,6 +1234,7 @@ data:
     BSP_PIN_81_MODE:
       attributes:
         id: BSP_PIN_81_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1135,6 +1245,7 @@ data:
     BSP_PIN_82_MODE:
       attributes:
         id: BSP_PIN_82_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1145,6 +1256,7 @@ data:
     BSP_PIN_83_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_83_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1155,6 +1267,7 @@ data:
     BSP_PIN_83_MODE:
       attributes:
         id: BSP_PIN_83_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1165,6 +1278,7 @@ data:
     BSP_PIN_83_SR:
       attributes:
         id: BSP_PIN_83_SR
+        label: Slew Rate
       children:
       - children:
         - attributes:
@@ -1175,6 +1289,7 @@ data:
     BSP_PIN_84_DIR:
       attributes:
         id: BSP_PIN_84_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -1185,6 +1300,7 @@ data:
     BSP_PIN_84_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_84_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -1195,6 +1311,7 @@ data:
     BSP_PIN_84_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_84_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1205,6 +1322,7 @@ data:
     BSP_PIN_84_LAT:
       attributes:
         id: BSP_PIN_84_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -1215,6 +1333,7 @@ data:
     BSP_PIN_84_MODE:
       attributes:
         id: BSP_PIN_84_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1225,6 +1344,7 @@ data:
     BSP_PIN_86_MODE:
       attributes:
         id: BSP_PIN_86_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1235,6 +1355,7 @@ data:
     BSP_PIN_87_DIR:
       attributes:
         id: BSP_PIN_87_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -1245,6 +1366,7 @@ data:
     BSP_PIN_87_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_87_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -1255,6 +1377,7 @@ data:
     BSP_PIN_87_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_87_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1265,6 +1388,7 @@ data:
     BSP_PIN_87_LAT:
       attributes:
         id: BSP_PIN_87_LAT
+        label: Initial Latch Value
       children:
       - children:
         - attributes:
@@ -1275,6 +1399,7 @@ data:
     BSP_PIN_87_MODE:
       attributes:
         id: BSP_PIN_87_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1285,6 +1410,7 @@ data:
     BSP_PIN_88_MODE:
       attributes:
         id: BSP_PIN_88_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1295,6 +1421,7 @@ data:
     BSP_PIN_89_MODE:
       attributes:
         id: BSP_PIN_89_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1305,6 +1432,7 @@ data:
     BSP_PIN_90_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_90_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1315,6 +1443,7 @@ data:
     BSP_PIN_90_MODE:
       attributes:
         id: BSP_PIN_90_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1325,6 +1454,7 @@ data:
     BSP_PIN_91_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_91_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1335,6 +1465,7 @@ data:
     BSP_PIN_91_MODE:
       attributes:
         id: BSP_PIN_91_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1345,6 +1476,7 @@ data:
     BSP_PIN_92_DIR:
       attributes:
         id: BSP_PIN_92_DIR
+        label: Direction
       children:
       - children:
         - attributes:
@@ -1355,6 +1487,7 @@ data:
     BSP_PIN_92_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_92_FUNCTION_NAME
+        label: Name
       children:
       - children:
         - attributes:
@@ -1365,6 +1498,7 @@ data:
     BSP_PIN_92_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_92_FUNCTION_TYPE
+        label: Type
       children:
       - children:
         - attributes:
@@ -1375,6 +1509,7 @@ data:
     BSP_PIN_92_MODE:
       attributes:
         id: BSP_PIN_92_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1385,6 +1520,7 @@ data:
     BSP_PIN_93_MODE:
       attributes:
         id: BSP_PIN_93_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1395,6 +1531,7 @@ data:
     BSP_PIN_94_MODE:
       attributes:
         id: BSP_PIN_94_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1405,6 +1542,7 @@ data:
     BSP_PIN_9_MODE:
       attributes:
         id: BSP_PIN_9_MODE
+        label: Mode
       children:
       - children:
         - attributes:
@@ -1415,6 +1553,7 @@ data:
     BTCLK:
       attributes:
         id: BTCLK
+        label: Bluetooth Clock Frequency (Hz)
       children:
       - children:
         - attributes:
@@ -1425,6 +1564,7 @@ data:
     CAN1_CLOCK_FREQUENCY:
       attributes:
         id: CAN1_CLOCK_FREQUENCY
+        label: CAN1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -1436,6 +1576,7 @@ data:
     CAN2_CLOCK_ENABLE:
       attributes:
         id: CAN2_CLOCK_ENABLE
+        label: CAN2 Clock Enable
       children:
       - children:
         - attributes:
@@ -1447,6 +1588,7 @@ data:
     CAN2_CLOCK_FREQUENCY:
       attributes:
         id: CAN2_CLOCK_FREQUENCY
+        label: CAN2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -1458,6 +1600,7 @@ data:
     CAN2_MISC_INTERRUPT_ENABLE:
       attributes:
         id: CAN2_MISC_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -1469,6 +1612,7 @@ data:
     CAN2_MISC_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CAN2_MISC_INTERRUPT_ENABLE_UPDATE
+        label: CAN2_MISC_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -1480,6 +1624,7 @@ data:
     CAN2_MISC_INTERRUPT_HANDLER:
       attributes:
         id: CAN2_MISC_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -1491,6 +1636,7 @@ data:
     CAN2_MISC_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CAN2_MISC_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -1502,6 +1648,7 @@ data:
     CAN2_RX_INTERRUPT_ENABLE:
       attributes:
         id: CAN2_RX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -1513,6 +1660,7 @@ data:
     CAN2_RX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CAN2_RX_INTERRUPT_ENABLE_UPDATE
+        label: CAN2_RX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -1524,6 +1672,7 @@ data:
     CAN2_RX_INTERRUPT_HANDLER:
       attributes:
         id: CAN2_RX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -1535,6 +1684,7 @@ data:
     CAN2_RX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CAN2_RX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -1546,6 +1696,7 @@ data:
     CAN2_TX_INTERRUPT_ENABLE:
       attributes:
         id: CAN2_TX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -1557,6 +1708,7 @@ data:
     CAN2_TX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CAN2_TX_INTERRUPT_ENABLE_UPDATE
+        label: CAN2_TX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -1568,6 +1720,7 @@ data:
     CAN2_TX_INTERRUPT_HANDLER:
       attributes:
         id: CAN2_TX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -1579,6 +1732,7 @@ data:
     CAN2_TX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CAN2_TX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -1590,6 +1744,7 @@ data:
     CHANGE_NOTICE_A_INTERRUPT_ENABLE:
       attributes:
         id: CHANGE_NOTICE_A_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -1601,6 +1756,7 @@ data:
     CHANGE_NOTICE_A_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CHANGE_NOTICE_A_INTERRUPT_ENABLE_UPDATE
+        label: CHANGE_NOTICE_A_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -1612,6 +1768,7 @@ data:
     CHANGE_NOTICE_A_INTERRUPT_HANDLER:
       attributes:
         id: CHANGE_NOTICE_A_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -1623,6 +1780,7 @@ data:
     CHANGE_NOTICE_A_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CHANGE_NOTICE_A_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -1634,6 +1792,7 @@ data:
     COMPILER_CHOICE:
       attributes:
         id: COMPILER_CHOICE
+        label: Compiler
       children:
       - children:
         - attributes:
@@ -1645,17 +1804,22 @@ data:
     CONFIG_PRECON_PFMWS:
       attributes:
         id: CONFIG_PRECON_PFMWS
+        label: Program Flash memory wait states
       children:
       - children:
         - attributes:
             id: core
             value: '5'
           type: Dynamic
+        - attributes:
+            value: '3'
+          type: User
         type: Values
       type: Integer
     CONFIG_SOSCEN:
       attributes:
         id: CONFIG_SOSCEN
+        label: Secondary Oscillator Enable (SOSCEN)
       children:
       - children:
         - attributes:
@@ -1666,6 +1830,7 @@ data:
     CONFIG_SOSCSEL:
       attributes:
         id: CONFIG_SOSCSEL
+        label: Secondary Oscillator selection (SOSCSEL)
       children:
       - children:
         - attributes:
@@ -1676,6 +1841,7 @@ data:
     CONFIG_SYS_CLK_PBCLK1_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_PBCLK1_FREQ
+        label: 'Peripheral Bus Clock #1 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1686,6 +1852,7 @@ data:
     CONFIG_SYS_CLK_PBCLK2_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_PBCLK2_FREQ
+        label: 'Peripheral Bus Clock #2 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1696,6 +1863,7 @@ data:
     CONFIG_SYS_CLK_PBCLK3_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_PBCLK3_FREQ
+        label: 'Peripheral Bus Clock #3 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1706,6 +1874,7 @@ data:
     CONFIG_SYS_CLK_PBCLK4_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_PBCLK4_FREQ
+        label: 'Peripheral Bus Clock #4 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1716,6 +1885,7 @@ data:
     CONFIG_SYS_CLK_PBCLK5_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_PBCLK5_FREQ
+        label: 'Peripheral Bus Clock #5 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1726,6 +1896,7 @@ data:
     CONFIG_SYS_CLK_PBCLK6_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_PBCLK6_FREQ
+        label: 'Peripheral Bus Clock #6 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1736,6 +1907,7 @@ data:
     CONFIG_SYS_CLK_REFCLK1_ENABLE:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK1_ENABLE
+        label: Enable Reference Clock 1
       children:
       - children:
         - attributes:
@@ -1746,6 +1918,7 @@ data:
     CONFIG_SYS_CLK_REFCLK1_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK1_FREQ
+        label: 'Reference Clock #1 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1760,6 +1933,7 @@ data:
     CONFIG_SYS_CLK_REFCLK2_ENABLE:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK2_ENABLE
+        label: Enable Reference Clock 2
       children:
       - children:
         - attributes:
@@ -1770,6 +1944,7 @@ data:
     CONFIG_SYS_CLK_REFCLK2_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK2_FREQ
+        label: 'Reference Clock #2 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1784,6 +1959,7 @@ data:
     CONFIG_SYS_CLK_REFCLK3_ENABLE:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK3_ENABLE
+        label: Enable Reference Clock 3
       children:
       - children:
         - attributes:
@@ -1794,6 +1970,7 @@ data:
     CONFIG_SYS_CLK_REFCLK3_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK3_FREQ
+        label: 'Reference Clock #3 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1808,6 +1985,7 @@ data:
     CONFIG_SYS_CLK_REFCLK4_ENABLE:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK4_ENABLE
+        label: Enable Reference Clock 4
       children:
       - children:
         - attributes:
@@ -1818,6 +1996,7 @@ data:
     CONFIG_SYS_CLK_REFCLK4_FREQ:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK4_FREQ
+        label: 'Reference Clock #4 Frequency (Hz)'
       children:
       - children:
         - attributes:
@@ -1832,6 +2011,7 @@ data:
     CONFIG_SYS_CLK_REFCLK_SOURCE1:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK_SOURCE1
+        label: Reference Clock Source Select ROSEL
       children:
       - children:
         - attributes:
@@ -1850,6 +2030,7 @@ data:
     CONFIG_SYS_CLK_REFCLK_SOURCE2:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK_SOURCE2
+        label: Reference Clock Source Select ROSEL
       children:
       - children:
         - attributes:
@@ -1868,6 +2049,7 @@ data:
     CONFIG_SYS_CLK_REFCLK_SOURCE3:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK_SOURCE3
+        label: Reference Clock Source Select ROSEL
       children:
       - children:
         - attributes:
@@ -1886,6 +2068,7 @@ data:
     CONFIG_SYS_CLK_REFCLK_SOURCE4:
       attributes:
         id: CONFIG_SYS_CLK_REFCLK_SOURCE4
+        label: Reference Clock Source Select ROSEL
       children:
       - children:
         - attributes:
@@ -1904,6 +2087,7 @@ data:
     CONFIG_USERID:
       attributes:
         id: CONFIG_USERID
+        label: User ID (USERID)
       children:
       - children:
         - attributes:
@@ -1914,6 +2098,7 @@ data:
     CORE_SOFTWARE_0_INTERRUPT_ENABLE:
       attributes:
         id: CORE_SOFTWARE_0_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -1925,6 +2110,7 @@ data:
     CORE_SOFTWARE_0_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CORE_SOFTWARE_0_INTERRUPT_ENABLE_UPDATE
+        label: CORE_SOFTWARE_0_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -1936,6 +2122,7 @@ data:
     CORE_TIMER_INTERRUPT_ENABLE:
       attributes:
         id: CORE_TIMER_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -1947,6 +2134,7 @@ data:
     CORE_TIMER_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CORE_TIMER_INTERRUPT_ENABLE_UPDATE
+        label: CORE_TIMER_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -1958,6 +2146,7 @@ data:
     CORE_TIMER_INTERRUPT_HANDLER:
       attributes:
         id: CORE_TIMER_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -1969,6 +2158,7 @@ data:
     CORE_TIMER_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CORE_TIMER_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -1980,6 +2170,7 @@ data:
     CPU_CLOCK_FREQUENCY:
       attributes:
         id: CPU_CLOCK_FREQUENCY
+        label: CPU Clock Frequency (Hz)
       children:
       - children:
         - attributes:
@@ -1991,6 +2182,7 @@ data:
     CRYPTO1_FAULT_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CRYPTO1_FAULT_INTERRUPT_ENABLE_UPDATE
+        label: CRYPTO1_FAULT_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -2002,6 +2194,7 @@ data:
     CRYPTO1_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: CRYPTO1_INTERRUPT_ENABLE_UPDATE
+        label: CRYPTO1_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -2013,6 +2206,7 @@ data:
     CRYPTO_CLOCK_ENABLE:
       attributes:
         id: CRYPTO_CLOCK_ENABLE
+        label: CRYPTO Clock Enable
       children:
       - children:
         - attributes:
@@ -2024,6 +2218,7 @@ data:
     CRYPTO_CLOCK_FREQUENCY:
       attributes:
         id: CRYPTO_CLOCK_FREQUENCY
+        label: CRYPTO Clock Frequency
       children:
       - children:
         - attributes:
@@ -2035,6 +2230,7 @@ data:
     CVD_CLOCK_FREQUENCY:
       attributes:
         id: CVD_CLOCK_FREQUENCY
+        label: CVD Clock Frequency
       children:
       - children:
         - attributes:
@@ -2058,6 +2254,7 @@ data:
     DCH0_CON_CHPRI_VALUE:
       attributes:
         id: DCH0_CON_CHPRI_VALUE
+        label: DCH0_CON_CHPRI_VALUE
       children:
       - children:
         - attributes:
@@ -2069,6 +2266,7 @@ data:
     DCH0_CON_VALUE:
       attributes:
         id: DCH0_CON_VALUE
+        label: DCH0_CON_VALUE
       children:
       - children:
         - attributes:
@@ -2080,6 +2278,7 @@ data:
     DCH0_ECON_SIRQEN_VALUE:
       attributes:
         id: DCH0_ECON_SIRQEN_VALUE
+        label: DCH0_ECON_SIRQEN_VALUE
       children:
       - children:
         - attributes:
@@ -2091,6 +2290,7 @@ data:
     DCH0_ECON_VALUE:
       attributes:
         id: DCH0_ECON_VALUE
+        label: DCH0_ECON_VALUE
       children:
       - children:
         - attributes:
@@ -2102,6 +2302,7 @@ data:
     DCH1_CON_VALUE:
       attributes:
         id: DCH1_CON_VALUE
+        label: DCH1_CON_VALUE
       children:
       - children:
         - attributes:
@@ -2113,6 +2314,7 @@ data:
     DCH1_ECON_SIRQEN_VALUE:
       attributes:
         id: DCH1_ECON_SIRQEN_VALUE
+        label: DCH1_ECON_SIRQEN_VALUE
       children:
       - children:
         - attributes:
@@ -2124,6 +2326,7 @@ data:
     DCH1_ECON_VALUE:
       attributes:
         id: DCH1_ECON_VALUE
+        label: DCH1_ECON_VALUE
       children:
       - children:
         - attributes:
@@ -2135,6 +2338,7 @@ data:
     DCH2_CON_CHPRI_VALUE:
       attributes:
         id: DCH2_CON_CHPRI_VALUE
+        label: DCH2_CON_CHPRI_VALUE
       children:
       - children:
         - attributes:
@@ -2146,6 +2350,7 @@ data:
     DCH2_CON_VALUE:
       attributes:
         id: DCH2_CON_VALUE
+        label: DCH2_CON_VALUE
       children:
       - children:
         - attributes:
@@ -2157,6 +2362,7 @@ data:
     DCH2_ECON_SIRQEN_VALUE:
       attributes:
         id: DCH2_ECON_SIRQEN_VALUE
+        label: DCH2_ECON_SIRQEN_VALUE
       children:
       - children:
         - attributes:
@@ -2168,6 +2374,7 @@ data:
     DCH2_ECON_VALUE:
       attributes:
         id: DCH2_ECON_VALUE
+        label: DCH2_ECON_VALUE
       children:
       - children:
         - attributes:
@@ -2179,6 +2386,7 @@ data:
     DMA0_INTERRUPT_ENABLE:
       attributes:
         id: DMA0_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -2190,6 +2398,7 @@ data:
     DMA0_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: DMA0_INTERRUPT_ENABLE_UPDATE
+        label: DMA0_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -2201,6 +2410,7 @@ data:
     DMA0_INTERRUPT_HANDLER:
       attributes:
         id: DMA0_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -2212,6 +2422,7 @@ data:
     DMA0_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: DMA0_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -2223,6 +2434,7 @@ data:
     DMA1_INTERRUPT_ENABLE:
       attributes:
         id: DMA1_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -2234,6 +2446,7 @@ data:
     DMA1_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: DMA1_INTERRUPT_ENABLE_UPDATE
+        label: DMA1_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -2245,6 +2458,7 @@ data:
     DMA1_INTERRUPT_HANDLER:
       attributes:
         id: DMA1_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -2256,6 +2470,7 @@ data:
     DMA1_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: DMA1_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -2267,6 +2482,7 @@ data:
     DMA2_INTERRUPT_ENABLE:
       attributes:
         id: DMA2_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -2278,6 +2494,7 @@ data:
     DMA2_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: DMA2_INTERRUPT_ENABLE_UPDATE
+        label: DMA2_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -2289,6 +2506,7 @@ data:
     DMA2_INTERRUPT_HANDLER:
       attributes:
         id: DMA2_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -2300,6 +2518,7 @@ data:
     DMA2_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: DMA2_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -2311,6 +2530,7 @@ data:
     DMAC_0_PRIORITY:
       attributes:
         id: DMAC_0_PRIORITY
+        label: Channel Priority bits
       children:
       - children:
         - attributes:
@@ -2321,6 +2541,7 @@ data:
     DMAC_0_PRIORITY_VALUE:
       attributes:
         id: DMAC_0_PRIORITY_VALUE
+        label: DMAC_0_PRIORITY_VALUE
       children:
       - children:
         - attributes:
@@ -2332,6 +2553,7 @@ data:
     DMAC_2_PRIORITY:
       attributes:
         id: DMAC_2_PRIORITY
+        label: Channel Priority bits
       children:
       - children:
         - attributes:
@@ -2342,6 +2564,7 @@ data:
     DMAC_2_PRIORITY_VALUE:
       attributes:
         id: DMAC_2_PRIORITY_VALUE
+        label: DMAC_2_PRIORITY_VALUE
       children:
       - children:
         - attributes:
@@ -2353,6 +2576,7 @@ data:
     DMAC_CHAN0_ENBL:
       attributes:
         id: DMAC_CHAN0_ENBL
+        label: Enable Channel 0 ?
       children:
       - children:
         - attributes:
@@ -2363,6 +2587,7 @@ data:
     DMAC_CHAN1_ENBL:
       attributes:
         id: DMAC_CHAN1_ENBL
+        label: Enable Channel 1 ?
       children:
       - children:
         - attributes:
@@ -2373,6 +2598,7 @@ data:
     DMAC_CHAN2_ENBL:
       attributes:
         id: DMAC_CHAN2_ENBL
+        label: Enable Channel 2 ?
       children:
       - children:
         - attributes:
@@ -2383,6 +2609,7 @@ data:
     DMAC_CLOCK_FREQUENCY:
       attributes:
         id: DMAC_CLOCK_FREQUENCY
+        label: DMAC Clock Frequency
       children:
       - children:
         - attributes:
@@ -2394,6 +2621,7 @@ data:
     DMAC_HIGHEST_CHANNEL:
       attributes:
         id: DMAC_HIGHEST_CHANNEL
+        label: DMA (DMAC) Highest Active Channel
       children:
       - children:
         - attributes:
@@ -2405,6 +2633,7 @@ data:
     DMAC_REQUEST_0_SOURCE:
       attributes:
         id: DMAC_REQUEST_0_SOURCE
+        label: DMA requestor source
       children:
       - children:
         - attributes:
@@ -2415,6 +2644,7 @@ data:
     DMAC_REQUEST_0_SOURCE_VALUE:
       attributes:
         id: DMAC_REQUEST_0_SOURCE_VALUE
+        label: DMAC_REQUEST_0_SOURCE_VALUE
       children:
       - children:
         - attributes:
@@ -2426,6 +2656,7 @@ data:
     DMAC_REQUEST_1_SOURCE_VALUE:
       attributes:
         id: DMAC_REQUEST_1_SOURCE_VALUE
+        label: DMAC_REQUEST_1_SOURCE_VALUE
       children:
       - children:
         - attributes:
@@ -2437,6 +2668,7 @@ data:
     DMAC_REQUEST_2_SOURCE:
       attributes:
         id: DMAC_REQUEST_2_SOURCE
+        label: DMA requestor source
       children:
       - children:
         - attributes:
@@ -2447,6 +2679,7 @@ data:
     DMAC_REQUEST_2_SOURCE_VALUE:
       attributes:
         id: DMAC_REQUEST_2_SOURCE_VALUE
+        label: DMAC_REQUEST_2_SOURCE_VALUE
       children:
       - children:
         - attributes:
@@ -2458,6 +2691,7 @@ data:
     DMA_ENABLE:
       attributes:
         id: DMA_ENABLE
+        label: Use DMA Service ?
       children:
       - children:
         - attributes:
@@ -2469,6 +2703,7 @@ data:
     ETHCLK:
       attributes:
         id: ETHCLK
+        label: Ethernet Clock Frequency (Hz)
       children:
       - children:
         - attributes:
@@ -2479,6 +2714,7 @@ data:
     ETH_CLOCK_FREQUENCY:
       attributes:
         id: ETH_CLOCK_FREQUENCY
+        label: ETH Clock Frequency
       children:
       - children:
         - attributes:
@@ -2490,6 +2726,7 @@ data:
     EVIC_0_ENABLE:
       attributes:
         id: EVIC_0_ENABLE
+        label: Enable Core Timer Interrupt
       children:
       - children:
         - attributes:
@@ -2501,6 +2738,7 @@ data:
     EVIC_0_HANDLER_LOCK:
       attributes:
         id: EVIC_0_HANDLER_LOCK
+        label: EVIC_0_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2512,6 +2750,7 @@ data:
     EVIC_0_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_0_INTERRUPT_HANDLER
+        label: EVIC_0_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2523,6 +2762,7 @@ data:
     EVIC_0_PRIORITY:
       attributes:
         id: EVIC_0_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -2533,6 +2773,7 @@ data:
     EVIC_0_PRIVALUE:
       attributes:
         id: EVIC_0_PRIVALUE
+        label: EVIC_0_PRIVALUE
       children:
       - children:
         - attributes:
@@ -2544,6 +2785,7 @@ data:
     EVIC_13_ENABLE:
       attributes:
         id: EVIC_13_ENABLE
+        label: Enable Ext INT 2 Interrupt
       children:
       - children:
         - attributes:
@@ -2554,6 +2796,7 @@ data:
     EVIC_13_HANDLER_LOCK:
       attributes:
         id: EVIC_13_HANDLER_LOCK
+        label: EVIC_13_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2565,6 +2808,7 @@ data:
     EVIC_13_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_13_INTERRUPT_HANDLER
+        label: EVIC_13_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2576,6 +2820,7 @@ data:
     EVIC_143_ENABLE:
       attributes:
         id: EVIC_143_ENABLE
+        label: Enable CAN2 Receive Interrupt Interrupt
       children:
       - children:
         - attributes:
@@ -2587,6 +2832,7 @@ data:
     EVIC_143_HANDLER_LOCK:
       attributes:
         id: EVIC_143_HANDLER_LOCK
+        label: EVIC_143_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2598,6 +2844,7 @@ data:
     EVIC_143_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_143_INTERRUPT_HANDLER
+        label: EVIC_143_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2609,6 +2856,7 @@ data:
     EVIC_144_ENABLE:
       attributes:
         id: EVIC_144_ENABLE
+        label: Enable CAN2 Transmit Interrupt Interrupt
       children:
       - children:
         - attributes:
@@ -2620,6 +2868,7 @@ data:
     EVIC_144_HANDLER_LOCK:
       attributes:
         id: EVIC_144_HANDLER_LOCK
+        label: EVIC_144_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2631,6 +2880,7 @@ data:
     EVIC_144_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_144_INTERRUPT_HANDLER
+        label: EVIC_144_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2642,6 +2892,7 @@ data:
     EVIC_145_ENABLE:
       attributes:
         id: EVIC_145_ENABLE
+        label: Enable CAN2 Misc Interrupt Interrupt
       children:
       - children:
         - attributes:
@@ -2653,6 +2904,7 @@ data:
     EVIC_145_HANDLER_LOCK:
       attributes:
         id: EVIC_145_HANDLER_LOCK
+        label: EVIC_145_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2664,6 +2916,7 @@ data:
     EVIC_145_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_145_INTERRUPT_HANDLER
+        label: EVIC_145_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2675,6 +2928,7 @@ data:
     EVIC_166_ENABLE:
       attributes:
         id: EVIC_166_ENABLE
+        label: Enable Asymmetric Crypto Engine End Event Interrupt
       children:
       - children:
         - attributes:
@@ -2686,6 +2940,7 @@ data:
     EVIC_166_HANDLER_LOCK:
       attributes:
         id: EVIC_166_HANDLER_LOCK
+        label: EVIC_166_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2697,6 +2952,7 @@ data:
     EVIC_166_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_166_INTERRUPT_HANDLER
+        label: EVIC_166_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2708,6 +2964,7 @@ data:
     EVIC_166_PRIORITY:
       attributes:
         id: EVIC_166_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -2718,6 +2975,7 @@ data:
     EVIC_166_PRIVALUE:
       attributes:
         id: EVIC_166_PRIVALUE
+        label: EVIC_166_PRIVALUE
       children:
       - children:
         - attributes:
@@ -2729,6 +2987,7 @@ data:
     EVIC_167_ENABLE:
       attributes:
         id: EVIC_167_ENABLE
+        label: Enable Asymmetric Crypto Engine Error Event Interrupt
       children:
       - children:
         - attributes:
@@ -2740,6 +2999,7 @@ data:
     EVIC_167_HANDLER_LOCK:
       attributes:
         id: EVIC_167_HANDLER_LOCK
+        label: EVIC_167_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2751,6 +3011,7 @@ data:
     EVIC_167_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_167_INTERRUPT_HANDLER
+        label: EVIC_167_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2762,6 +3023,7 @@ data:
     EVIC_167_PRIORITY:
       attributes:
         id: EVIC_167_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -2772,6 +3034,7 @@ data:
     EVIC_167_PRIVALUE:
       attributes:
         id: EVIC_167_PRIVALUE
+        label: EVIC_167_PRIVALUE
       children:
       - children:
         - attributes:
@@ -2783,6 +3046,7 @@ data:
     EVIC_19_ENABLE:
       attributes:
         id: EVIC_19_ENABLE
+        label: Enable Timer4 Interrupt
       children:
       - children:
         - attributes:
@@ -2794,6 +3058,7 @@ data:
     EVIC_19_HANDLER_LOCK:
       attributes:
         id: EVIC_19_HANDLER_LOCK
+        label: EVIC_19_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2805,6 +3070,7 @@ data:
     EVIC_19_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_19_INTERRUPT_HANDLER
+        label: EVIC_19_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2816,6 +3082,7 @@ data:
     EVIC_19_PRIORITY:
       attributes:
         id: EVIC_19_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -2826,6 +3093,7 @@ data:
     EVIC_19_PRIVALUE:
       attributes:
         id: EVIC_19_PRIVALUE
+        label: EVIC_19_PRIVALUE
       children:
       - children:
         - attributes:
@@ -2837,6 +3105,7 @@ data:
     EVIC_1_ENABLE:
       attributes:
         id: EVIC_1_ENABLE
+        label: Enable Core Software 0 Interrupt
       children:
       - children:
         - attributes:
@@ -2848,6 +3117,7 @@ data:
     EVIC_1_ENABLE_GENERATE:
       attributes:
         id: EVIC_1_ENABLE_GENERATE
+        label: EVIC_1_ENABLE_GENERATE
       children:
       - children:
         - attributes:
@@ -2859,6 +3129,7 @@ data:
     EVIC_1_ENABLE_LOCK:
       attributes:
         id: EVIC_1_ENABLE_LOCK
+        label: EVIC_1_ENABLE_LOCK
       children:
       - children:
         - attributes:
@@ -2870,6 +3141,7 @@ data:
     EVIC_1_HANDLER_LOCK:
       attributes:
         id: EVIC_1_HANDLER_LOCK
+        label: EVIC_1_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2881,6 +3153,7 @@ data:
     EVIC_1_PRIORITY_GENERATE:
       attributes:
         id: EVIC_1_PRIORITY_GENERATE
+        label: EVIC_1_PRIORITY_GENERATE
       children:
       - children:
         - attributes:
@@ -2892,6 +3165,7 @@ data:
     EVIC_1_PRIORITY_LOCK:
       attributes:
         id: EVIC_1_PRIORITY_LOCK
+        label: EVIC_1_PRIORITY_LOCK
       children:
       - children:
         - attributes:
@@ -2903,6 +3177,7 @@ data:
     EVIC_1_SUBPRIORITY_GENERATE:
       attributes:
         id: EVIC_1_SUBPRIORITY_GENERATE
+        label: EVIC_1_SUBPRIORITY_GENERATE
       children:
       - children:
         - attributes:
@@ -2914,6 +3189,7 @@ data:
     EVIC_1_SUBPRIORITY_LOCK:
       attributes:
         id: EVIC_1_SUBPRIORITY_LOCK
+        label: EVIC_1_SUBPRIORITY_LOCK
       children:
       - children:
         - attributes:
@@ -2925,6 +3201,7 @@ data:
     EVIC_30_ENABLE:
       attributes:
         id: EVIC_30_ENABLE
+        label: Enable Flash Control Event Interrupt
       children:
       - children:
         - attributes:
@@ -2936,6 +3213,7 @@ data:
     EVIC_30_HANDLER_LOCK:
       attributes:
         id: EVIC_30_HANDLER_LOCK
+        label: EVIC_30_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2947,6 +3225,7 @@ data:
     EVIC_30_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_30_INTERRUPT_HANDLER
+        label: EVIC_30_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -2958,6 +3237,7 @@ data:
     EVIC_35_ENABLE:
       attributes:
         id: EVIC_35_ENABLE
+        label: Enable SPI_1_FAULT Interrupt
       children:
       - children:
         - attributes:
@@ -2969,6 +3249,7 @@ data:
     EVIC_35_HANDLER_LOCK:
       attributes:
         id: EVIC_35_HANDLER_LOCK
+        label: EVIC_35_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -2980,6 +3261,7 @@ data:
     EVIC_36_ENABLE:
       attributes:
         id: EVIC_36_ENABLE
+        label: Enable SPI_1_RECEIVE Interrupt
       children:
       - children:
         - attributes:
@@ -2991,6 +3273,7 @@ data:
     EVIC_36_HANDLER_LOCK:
       attributes:
         id: EVIC_36_HANDLER_LOCK
+        label: EVIC_36_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3002,6 +3285,7 @@ data:
     EVIC_36_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_36_INTERRUPT_HANDLER
+        label: EVIC_36_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3013,6 +3297,7 @@ data:
     EVIC_36_PRIORITY:
       attributes:
         id: EVIC_36_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3023,6 +3308,7 @@ data:
     EVIC_36_PRIVALUE:
       attributes:
         id: EVIC_36_PRIVALUE
+        label: EVIC_36_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3034,6 +3320,7 @@ data:
     EVIC_37_ENABLE:
       attributes:
         id: EVIC_37_ENABLE
+        label: Enable SPI_1_TRANSFER Interrupt
       children:
       - children:
         - attributes:
@@ -3045,6 +3332,7 @@ data:
     EVIC_37_HANDLER_LOCK:
       attributes:
         id: EVIC_37_HANDLER_LOCK
+        label: EVIC_37_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3056,6 +3344,7 @@ data:
     EVIC_37_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_37_INTERRUPT_HANDLER
+        label: EVIC_37_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3067,6 +3356,7 @@ data:
     EVIC_37_PRIORITY:
       attributes:
         id: EVIC_37_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3077,6 +3367,7 @@ data:
     EVIC_37_PRIVALUE:
       attributes:
         id: EVIC_37_PRIVALUE
+        label: EVIC_37_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3088,6 +3379,7 @@ data:
     EVIC_38_ENABLE:
       attributes:
         id: EVIC_38_ENABLE
+        label: Enable UART_1_FAULT Interrupt
       children:
       - children:
         - attributes:
@@ -3099,6 +3391,7 @@ data:
     EVIC_38_HANDLER_LOCK:
       attributes:
         id: EVIC_38_HANDLER_LOCK
+        label: EVIC_38_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3110,6 +3403,7 @@ data:
     EVIC_38_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_38_INTERRUPT_HANDLER
+        label: EVIC_38_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3121,6 +3415,7 @@ data:
     EVIC_39_ENABLE:
       attributes:
         id: EVIC_39_ENABLE
+        label: Enable UART_1_RECEIVE Interrupt
       children:
       - children:
         - attributes:
@@ -3132,6 +3427,7 @@ data:
     EVIC_39_HANDLER_LOCK:
       attributes:
         id: EVIC_39_HANDLER_LOCK
+        label: EVIC_39_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3143,6 +3439,7 @@ data:
     EVIC_39_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_39_INTERRUPT_HANDLER
+        label: EVIC_39_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3154,6 +3451,7 @@ data:
     EVIC_40_ENABLE:
       attributes:
         id: EVIC_40_ENABLE
+        label: Enable UART_1_TRANSFER Interrupt
       children:
       - children:
         - attributes:
@@ -3165,6 +3463,7 @@ data:
     EVIC_40_HANDLER_LOCK:
       attributes:
         id: EVIC_40_HANDLER_LOCK
+        label: EVIC_40_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3176,6 +3475,7 @@ data:
     EVIC_40_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_40_INTERRUPT_HANDLER
+        label: EVIC_40_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3187,6 +3487,7 @@ data:
     EVIC_44_ENABLE:
       attributes:
         id: EVIC_44_ENABLE
+        label: Enable PORT_A_INPUT_CHANGE_INTERRUPT Interrupt
       children:
       - children:
         - attributes:
@@ -3198,6 +3499,7 @@ data:
     EVIC_44_HANDLER_LOCK:
       attributes:
         id: EVIC_44_HANDLER_LOCK
+        label: EVIC_44_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3209,6 +3511,7 @@ data:
     EVIC_44_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_44_INTERRUPT_HANDLER
+        label: EVIC_44_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3220,6 +3523,7 @@ data:
     EVIC_4_ENABLE:
       attributes:
         id: EVIC_4_ENABLE
+        label: Enable Timer1 Interrupt
       children:
       - children:
         - attributes:
@@ -3231,6 +3535,7 @@ data:
     EVIC_4_ENABLE_GENERATE:
       attributes:
         id: EVIC_4_ENABLE_GENERATE
+        label: EVIC_4_ENABLE_GENERATE
       children:
       - children:
         - attributes:
@@ -3242,6 +3547,7 @@ data:
     EVIC_4_ENABLE_LOCK:
       attributes:
         id: EVIC_4_ENABLE_LOCK
+        label: EVIC_4_ENABLE_LOCK
       children:
       - children:
         - attributes:
@@ -3253,6 +3559,7 @@ data:
     EVIC_4_HANDLER_LOCK:
       attributes:
         id: EVIC_4_HANDLER_LOCK
+        label: EVIC_4_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3264,6 +3571,7 @@ data:
     EVIC_4_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_4_INTERRUPT_HANDLER
+        label: EVIC_4_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3275,6 +3583,7 @@ data:
     EVIC_4_PRIORITY_GENERATE:
       attributes:
         id: EVIC_4_PRIORITY_GENERATE
+        label: EVIC_4_PRIORITY_GENERATE
       children:
       - children:
         - attributes:
@@ -3286,6 +3595,7 @@ data:
     EVIC_4_PRIORITY_LOCK:
       attributes:
         id: EVIC_4_PRIORITY_LOCK
+        label: EVIC_4_PRIORITY_LOCK
       children:
       - children:
         - attributes:
@@ -3297,6 +3607,7 @@ data:
     EVIC_4_SUBPRIORITY_GENERATE:
       attributes:
         id: EVIC_4_SUBPRIORITY_GENERATE
+        label: EVIC_4_SUBPRIORITY_GENERATE
       children:
       - children:
         - attributes:
@@ -3308,6 +3619,7 @@ data:
     EVIC_4_SUBPRIORITY_LOCK:
       attributes:
         id: EVIC_4_SUBPRIORITY_LOCK
+        label: EVIC_4_SUBPRIORITY_LOCK
       children:
       - children:
         - attributes:
@@ -3319,6 +3631,7 @@ data:
     EVIC_53_ENABLE:
       attributes:
         id: EVIC_53_ENABLE
+        label: Enable SPI 2 Fault Interrupt
       children:
       - children:
         - attributes:
@@ -3330,6 +3643,7 @@ data:
     EVIC_53_HANDLER_LOCK:
       attributes:
         id: EVIC_53_HANDLER_LOCK
+        label: EVIC_53_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3341,6 +3655,7 @@ data:
     EVIC_54_ENABLE:
       attributes:
         id: EVIC_54_ENABLE
+        label: Enable SPI 2 Receive Done Interrupt
       children:
       - children:
         - attributes:
@@ -3352,6 +3667,7 @@ data:
     EVIC_54_HANDLER_LOCK:
       attributes:
         id: EVIC_54_HANDLER_LOCK
+        label: EVIC_54_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3363,6 +3679,7 @@ data:
     EVIC_54_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_54_INTERRUPT_HANDLER
+        label: EVIC_54_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3374,6 +3691,7 @@ data:
     EVIC_54_PRIORITY:
       attributes:
         id: EVIC_54_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3384,6 +3702,7 @@ data:
     EVIC_54_PRIVALUE:
       attributes:
         id: EVIC_54_PRIVALUE
+        label: EVIC_54_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3395,6 +3714,7 @@ data:
     EVIC_55_ENABLE:
       attributes:
         id: EVIC_55_ENABLE
+        label: Enable SPI 2 Transfer Done Interrupt
       children:
       - children:
         - attributes:
@@ -3406,6 +3726,7 @@ data:
     EVIC_55_HANDLER_LOCK:
       attributes:
         id: EVIC_55_HANDLER_LOCK
+        label: EVIC_55_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3417,6 +3738,7 @@ data:
     EVIC_55_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_55_INTERRUPT_HANDLER
+        label: EVIC_55_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3428,6 +3750,7 @@ data:
     EVIC_55_PRIORITY:
       attributes:
         id: EVIC_55_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3438,6 +3761,7 @@ data:
     EVIC_55_PRIVALUE:
       attributes:
         id: EVIC_55_PRIVALUE
+        label: EVIC_55_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3449,6 +3773,7 @@ data:
     EVIC_62_ENABLE:
       attributes:
         id: EVIC_62_ENABLE
+        label: Enable UART_3_FAULT Interrupt
       children:
       - children:
         - attributes:
@@ -3460,6 +3785,7 @@ data:
     EVIC_62_HANDLER_LOCK:
       attributes:
         id: EVIC_62_HANDLER_LOCK
+        label: EVIC_62_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3471,6 +3797,7 @@ data:
     EVIC_62_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_62_INTERRUPT_HANDLER
+        label: EVIC_62_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3482,6 +3809,7 @@ data:
     EVIC_63_ENABLE:
       attributes:
         id: EVIC_63_ENABLE
+        label: Enable UART_3_RECEIVE Interrupt
       children:
       - children:
         - attributes:
@@ -3493,6 +3821,7 @@ data:
     EVIC_63_HANDLER_LOCK:
       attributes:
         id: EVIC_63_HANDLER_LOCK
+        label: EVIC_63_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3504,6 +3833,7 @@ data:
     EVIC_63_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_63_INTERRUPT_HANDLER
+        label: EVIC_63_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3515,6 +3845,7 @@ data:
     EVIC_64_ENABLE:
       attributes:
         id: EVIC_64_ENABLE
+        label: Enable UART_3_TRANSFER Interrupt
       children:
       - children:
         - attributes:
@@ -3526,6 +3857,7 @@ data:
     EVIC_64_HANDLER_LOCK:
       attributes:
         id: EVIC_64_HANDLER_LOCK
+        label: EVIC_64_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3537,6 +3869,7 @@ data:
     EVIC_64_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_64_INTERRUPT_HANDLER
+        label: EVIC_64_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3548,6 +3881,7 @@ data:
     EVIC_68_ENABLE:
       attributes:
         id: EVIC_68_ENABLE
+        label: Enable DMA Channel 0 Interrupt
       children:
       - children:
         - attributes:
@@ -3559,6 +3893,7 @@ data:
     EVIC_68_HANDLER_LOCK:
       attributes:
         id: EVIC_68_HANDLER_LOCK
+        label: EVIC_68_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3570,6 +3905,7 @@ data:
     EVIC_68_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_68_INTERRUPT_HANDLER
+        label: EVIC_68_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3581,6 +3917,7 @@ data:
     EVIC_68_PRIORITY:
       attributes:
         id: EVIC_68_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3591,6 +3928,7 @@ data:
     EVIC_68_PRIVALUE:
       attributes:
         id: EVIC_68_PRIVALUE
+        label: EVIC_68_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3602,6 +3940,7 @@ data:
     EVIC_68_SUBPRIORITY:
       attributes:
         id: EVIC_68_SUBPRIORITY
+        label: Subpriority
       children:
       - children:
         - attributes:
@@ -3612,6 +3951,7 @@ data:
     EVIC_68_SUBPRIVALUE:
       attributes:
         id: EVIC_68_SUBPRIVALUE
+        label: EVIC_68_SUBPRIVALUE
       children:
       - children:
         - attributes:
@@ -3623,6 +3963,7 @@ data:
     EVIC_69_ENABLE:
       attributes:
         id: EVIC_69_ENABLE
+        label: Enable DMA Channel 1 Interrupt
       children:
       - children:
         - attributes:
@@ -3634,6 +3975,7 @@ data:
     EVIC_69_HANDLER_LOCK:
       attributes:
         id: EVIC_69_HANDLER_LOCK
+        label: EVIC_69_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3645,6 +3987,7 @@ data:
     EVIC_69_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_69_INTERRUPT_HANDLER
+        label: EVIC_69_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3656,6 +3999,7 @@ data:
     EVIC_69_PRIORITY:
       attributes:
         id: EVIC_69_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3666,6 +4010,7 @@ data:
     EVIC_69_PRIVALUE:
       attributes:
         id: EVIC_69_PRIVALUE
+        label: EVIC_69_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3677,6 +4022,7 @@ data:
     EVIC_69_SUBPRIORITY:
       attributes:
         id: EVIC_69_SUBPRIORITY
+        label: Subpriority
       children:
       - children:
         - attributes:
@@ -3687,6 +4033,7 @@ data:
     EVIC_69_SUBPRIVALUE:
       attributes:
         id: EVIC_69_SUBPRIVALUE
+        label: EVIC_69_SUBPRIVALUE
       children:
       - children:
         - attributes:
@@ -3698,6 +4045,7 @@ data:
     EVIC_70_ENABLE:
       attributes:
         id: EVIC_70_ENABLE
+        label: Enable DMA Channel 2 Interrupt
       children:
       - children:
         - attributes:
@@ -3709,6 +4057,7 @@ data:
     EVIC_70_HANDLER_LOCK:
       attributes:
         id: EVIC_70_HANDLER_LOCK
+        label: EVIC_70_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3720,6 +4069,7 @@ data:
     EVIC_70_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_70_INTERRUPT_HANDLER
+        label: EVIC_70_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3731,6 +4081,7 @@ data:
     EVIC_70_PRIORITY:
       attributes:
         id: EVIC_70_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3741,6 +4092,7 @@ data:
     EVIC_70_PRIVALUE:
       attributes:
         id: EVIC_70_PRIVALUE
+        label: EVIC_70_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3752,6 +4104,7 @@ data:
     EVIC_83_ENABLE:
       attributes:
         id: EVIC_83_ENABLE
+        label: Enable WiFi SMC Event Interrupt
       children:
       - children:
         - attributes:
@@ -3763,6 +4116,7 @@ data:
     EVIC_83_HANDLER_LOCK:
       attributes:
         id: EVIC_83_HANDLER_LOCK
+        label: EVIC_83_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3774,6 +4128,7 @@ data:
     EVIC_83_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_83_INTERRUPT_HANDLER
+        label: EVIC_83_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3785,6 +4140,7 @@ data:
     EVIC_83_PRIORITY:
       attributes:
         id: EVIC_83_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3795,6 +4151,7 @@ data:
     EVIC_83_PRIVALUE:
       attributes:
         id: EVIC_83_PRIVALUE
+        label: EVIC_83_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3806,6 +4163,7 @@ data:
     EVIC_84_ENABLE:
       attributes:
         id: EVIC_84_ENABLE
+        label: Enable WiFi MAC Event Interrupt
       children:
       - children:
         - attributes:
@@ -3817,6 +4175,7 @@ data:
     EVIC_84_HANDLER_LOCK:
       attributes:
         id: EVIC_84_HANDLER_LOCK
+        label: EVIC_84_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3828,6 +4187,7 @@ data:
     EVIC_84_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_84_INTERRUPT_HANDLER
+        label: EVIC_84_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3839,6 +4199,7 @@ data:
     EVIC_84_PRIORITY:
       attributes:
         id: EVIC_84_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3849,6 +4210,7 @@ data:
     EVIC_84_PRIVALUE:
       attributes:
         id: EVIC_84_PRIVALUE
+        label: EVIC_84_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3860,6 +4222,7 @@ data:
     EVIC_86_ENABLE:
       attributes:
         id: EVIC_86_ENABLE
+        label: Enable WiFi Timer 0 Event Interrupt
       children:
       - children:
         - attributes:
@@ -3871,6 +4234,7 @@ data:
     EVIC_86_HANDLER_LOCK:
       attributes:
         id: EVIC_86_HANDLER_LOCK
+        label: EVIC_86_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3882,6 +4246,7 @@ data:
     EVIC_86_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_86_INTERRUPT_HANDLER
+        label: EVIC_86_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3893,6 +4258,7 @@ data:
     EVIC_86_PRIORITY:
       attributes:
         id: EVIC_86_PRIORITY
+        label: Priority
       children:
       - children:
         - attributes:
@@ -3903,6 +4269,7 @@ data:
     EVIC_86_PRIVALUE:
       attributes:
         id: EVIC_86_PRIVALUE
+        label: EVIC_86_PRIVALUE
       children:
       - children:
         - attributes:
@@ -3914,6 +4281,7 @@ data:
     EVIC_9_ENABLE:
       attributes:
         id: EVIC_9_ENABLE
+        label: Enable Timer2 Interrupt
       children:
       - children:
         - attributes:
@@ -3925,6 +4293,7 @@ data:
     EVIC_9_HANDLER_LOCK:
       attributes:
         id: EVIC_9_HANDLER_LOCK
+        label: EVIC_9_HANDLER_LOCK
       children:
       - children:
         - attributes:
@@ -3936,6 +4305,7 @@ data:
     EVIC_9_INTERRUPT_HANDLER:
       attributes:
         id: EVIC_9_INTERRUPT_HANDLER
+        label: EVIC_9_INTERRUPT_HANDLER
       children:
       - children:
         - attributes:
@@ -3947,6 +4317,7 @@ data:
     EVIC_PRIORITY_1ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_1ATTRIBUTE
+        label: Interrupt with a priority level of 1 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -3958,6 +4329,7 @@ data:
     EVIC_PRIORITY_2ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_2ATTRIBUTE
+        label: Interrupt with a priority level of 2 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -3969,6 +4341,7 @@ data:
     EVIC_PRIORITY_3ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_3ATTRIBUTE
+        label: Interrupt with a priority level of 3 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -3980,6 +4353,7 @@ data:
     EVIC_PRIORITY_4ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_4ATTRIBUTE
+        label: Interrupt with a priority level of 4 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -3991,6 +4365,7 @@ data:
     EVIC_PRIORITY_5ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_5ATTRIBUTE
+        label: Interrupt with a priority level of 5 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -4002,6 +4377,7 @@ data:
     EVIC_PRIORITY_6ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_6ATTRIBUTE
+        label: Interrupt with a priority level of 6 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -4013,6 +4389,7 @@ data:
     EVIC_PRIORITY_7ATTRIBUTE:
       attributes:
         id: EVIC_PRIORITY_7ATTRIBUTE
+        label: Interrupt with a priority level of 7 uses ISR Attribute
       children:
       - children:
         - attributes:
@@ -4024,6 +4401,7 @@ data:
     EVIC_SRS_ENABLE:
       attributes:
         id: EVIC_SRS_ENABLE
+        label: Enable Shadow Register Set Feature
       children:
       - children:
         - attributes:
@@ -4035,6 +4413,7 @@ data:
     EWPLLCON_ETHCLKOUTEN_VALUE:
       attributes:
         id: EWPLLCON_ETHCLKOUTEN_VALUE
+        label: Ethernet Clock Out pin Enable Bit
       children:
       - children:
         - attributes:
@@ -4045,6 +4424,7 @@ data:
     EWPLLCON_EWPLLBSWSEL_VALUE:
       attributes:
         id: EWPLLCON_EWPLLBSWSEL_VALUE
+        label: PLL Bandwidth Select
       children:
       - children:
         - attributes:
@@ -4056,6 +4436,7 @@ data:
     EWPLLCON_VALUE:
       attributes:
         id: EWPLLCON_VALUE
+        label: EWPLLCON_VALUE
       children:
       - children:
         - attributes:
@@ -4067,6 +4448,7 @@ data:
     EWPLL_ENABLE:
       attributes:
         id: EWPLL_ENABLE
+        label: Enable Ethernet/Wifi PLL
       children:
       - children:
         - attributes:
@@ -4078,6 +4460,7 @@ data:
     EXTERNAL_2_EXTERNAL_INTERRUPT_UPDATE:
       attributes:
         id: EXTERNAL_2_EXTERNAL_INTERRUPT_UPDATE
+        label: EXTERNAL_2_EXTERNAL_INTERRUPT_UPDATE
       children:
       - children:
         - attributes:
@@ -4089,6 +4472,7 @@ data:
     EXTERNAL_2_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: EXTERNAL_2_INTERRUPT_ENABLE_UPDATE
+        label: EXTERNAL_2_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4100,6 +4484,7 @@ data:
     FLASH_CONTROL_INTERRUPT_ENABLE:
       attributes:
         id: FLASH_CONTROL_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4111,6 +4496,7 @@ data:
     FLASH_CONTROL_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: FLASH_CONTROL_INTERRUPT_ENABLE_UPDATE
+        label: FLASH_CONTROL_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4122,6 +4508,7 @@ data:
     FLASH_CONTROL_INTERRUPT_HANDLER:
       attributes:
         id: FLASH_CONTROL_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4133,6 +4520,7 @@ data:
     FLASH_CONTROL_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: FLASH_CONTROL_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4144,6 +4532,7 @@ data:
     I2C1_CLOCK_FREQUENCY:
       attributes:
         id: I2C1_CLOCK_FREQUENCY
+        label: I2C1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4155,6 +4544,7 @@ data:
     I2C2_CLOCK_FREQUENCY:
       attributes:
         id: I2C2_CLOCK_FREQUENCY
+        label: I2C2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4166,6 +4556,7 @@ data:
     ICAP1_CLOCK_FREQUENCY:
       attributes:
         id: ICAP1_CLOCK_FREQUENCY
+        label: ICAP1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4177,6 +4568,7 @@ data:
     ICAP2_CLOCK_FREQUENCY:
       attributes:
         id: ICAP2_CLOCK_FREQUENCY
+        label: ICAP2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4188,6 +4580,7 @@ data:
     ICAP3_CLOCK_FREQUENCY:
       attributes:
         id: ICAP3_CLOCK_FREQUENCY
+        label: ICAP3 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4199,6 +4592,7 @@ data:
     ICAP4_CLOCK_FREQUENCY:
       attributes:
         id: ICAP4_CLOCK_FREQUENCY
+        label: ICAP4 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4222,6 +4616,7 @@ data:
     KEIL_STACK_HEAP_SIZE:
       attributes:
         id: KEIL_STACK_HEAP_SIZE
+        label: KEIL_STACK_HEAP_SIZE
       children:
       - children:
         - attributes:
@@ -4233,6 +4628,7 @@ data:
     OCMP1_CLOCK_FREQUENCY:
       attributes:
         id: OCMP1_CLOCK_FREQUENCY
+        label: OCMP1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4244,6 +4640,7 @@ data:
     OCMP2_CLOCK_FREQUENCY:
       attributes:
         id: OCMP2_CLOCK_FREQUENCY
+        label: OCMP2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4255,6 +4652,7 @@ data:
     OCMP3_CLOCK_FREQUENCY:
       attributes:
         id: OCMP3_CLOCK_FREQUENCY
+        label: OCMP3 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4266,6 +4664,7 @@ data:
     OCMP4_CLOCK_FREQUENCY:
       attributes:
         id: OCMP4_CLOCK_FREQUENCY
+        label: OCMP4 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4277,6 +4676,7 @@ data:
     OSCCON_NOSC_VALUE:
       attributes:
         id: OSCCON_NOSC_VALUE
+        label: New Oscillator Selection bits
       children:
       - children:
         - attributes:
@@ -4288,6 +4688,7 @@ data:
     OSCCON_SOSCEN_VALUE:
       attributes:
         id: OSCCON_SOSCEN_VALUE
+        label: 32 kHz Secondary (LP) Oscillator Enable bit
       children:
       - children:
         - attributes:
@@ -4299,6 +4700,7 @@ data:
     OSCCON_VALUE:
       attributes:
         id: OSCCON_VALUE
+        label: OSCCON_VALUE
       children:
       - children:
         - attributes:
@@ -4310,6 +4712,7 @@ data:
     PMD1_REG_VALUE:
       attributes:
         id: PMD1_REG_VALUE
+        label: PMD1 Register Value
       children:
       - children:
         - attributes:
@@ -4321,6 +4724,7 @@ data:
     PMD2_REG_VALUE:
       attributes:
         id: PMD2_REG_VALUE
+        label: PMD2 Register Value
       children:
       - children:
         - attributes:
@@ -4332,6 +4736,7 @@ data:
     PMD3_REG_VALUE:
       attributes:
         id: PMD3_REG_VALUE
+        label: PMD3 Register Value
       children:
       - children:
         - attributes:
@@ -4343,6 +4748,7 @@ data:
     PTG_CLOCK_FREQUENCY:
       attributes:
         id: PTG_CLOCK_FREQUENCY
+        label: PTG Clock Frequency
       children:
       - children:
         - attributes:
@@ -4354,6 +4760,7 @@ data:
     REFO1_CLOCK_FREQUENCY:
       attributes:
         id: REFO1_CLOCK_FREQUENCY
+        label: REFO1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4365,6 +4772,7 @@ data:
     REFO2_CLOCK_FREQUENCY:
       attributes:
         id: REFO2_CLOCK_FREQUENCY
+        label: REFO2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4376,6 +4784,7 @@ data:
     REFO3_CLOCK_FREQUENCY:
       attributes:
         id: REFO3_CLOCK_FREQUENCY
+        label: REFO3 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4387,6 +4796,7 @@ data:
     REFO4_CLOCK_FREQUENCY:
       attributes:
         id: REFO4_CLOCK_FREQUENCY
+        label: REFO4 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4398,6 +4808,7 @@ data:
     REFOCON1_VALUE:
       attributes:
         id: REFOCON1_VALUE
+        label: REFOCON1_VALUE
       children:
       - children:
         - attributes:
@@ -4409,6 +4820,7 @@ data:
     REFOCON2_VALUE:
       attributes:
         id: REFOCON2_VALUE
+        label: REFOCON2_VALUE
       children:
       - children:
         - attributes:
@@ -4420,6 +4832,7 @@ data:
     REFOCON3_VALUE:
       attributes:
         id: REFOCON3_VALUE
+        label: REFOCON3_VALUE
       children:
       - children:
         - attributes:
@@ -4431,6 +4844,7 @@ data:
     REFOCON4_VALUE:
       attributes:
         id: REFOCON4_VALUE
+        label: REFOCON4_VALUE
       children:
       - children:
         - attributes:
@@ -4442,6 +4856,7 @@ data:
     RFMAC_INTERRUPT_ENABLE:
       attributes:
         id: RFMAC_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4453,6 +4868,7 @@ data:
     RFMAC_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: RFMAC_INTERRUPT_ENABLE_UPDATE
+        label: RFMAC_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4464,6 +4880,7 @@ data:
     RFMAC_INTERRUPT_HANDLER:
       attributes:
         id: RFMAC_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4475,6 +4892,7 @@ data:
     RFMAC_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: RFMAC_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4486,6 +4904,7 @@ data:
     RFSMC_INTERRUPT_ENABLE:
       attributes:
         id: RFSMC_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4497,6 +4916,7 @@ data:
     RFSMC_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: RFSMC_INTERRUPT_ENABLE_UPDATE
+        label: RFSMC_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4508,6 +4928,7 @@ data:
     RFSMC_INTERRUPT_HANDLER:
       attributes:
         id: RFSMC_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4519,6 +4940,7 @@ data:
     RFSMC_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: RFSMC_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4530,6 +4952,7 @@ data:
     RFTM0_INTERRUPT_ENABLE:
       attributes:
         id: RFTM0_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4541,6 +4964,7 @@ data:
     RFTM0_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: RFTM0_INTERRUPT_ENABLE_UPDATE
+        label: RFTM0_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4552,6 +4976,7 @@ data:
     RFTM0_INTERRUPT_HANDLER:
       attributes:
         id: RFTM0_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4563,6 +4988,7 @@ data:
     RFTM0_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: RFTM0_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4574,6 +5000,7 @@ data:
     RNG_CLOCK_ENABLE:
       attributes:
         id: RNG_CLOCK_ENABLE
+        label: RNG Clock Enable
       children:
       - children:
         - attributes:
@@ -4585,6 +5012,7 @@ data:
     RNG_CLOCK_FREQUENCY:
       attributes:
         id: RNG_CLOCK_FREQUENCY
+        label: RNG Clock Frequency
       children:
       - children:
         - attributes:
@@ -4596,6 +5024,7 @@ data:
     RTCC_CLOCK_FREQUENCY:
       attributes:
         id: RTCC_CLOCK_FREQUENCY
+        label: RTCC Clock Frequency
       children:
       - children:
         - attributes:
@@ -4607,6 +5036,7 @@ data:
     SPI1_CLOCK_ENABLE:
       attributes:
         id: SPI1_CLOCK_ENABLE
+        label: SPI1 Clock Enable
       children:
       - children:
         - attributes:
@@ -4618,6 +5048,7 @@ data:
     SPI1_CLOCK_FREQUENCY:
       attributes:
         id: SPI1_CLOCK_FREQUENCY
+        label: SPI1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4629,6 +5060,7 @@ data:
     SPI1_FAULT_INTERRUPT_ENABLE:
       attributes:
         id: SPI1_FAULT_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4640,6 +5072,7 @@ data:
     SPI1_FAULT_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SPI1_FAULT_INTERRUPT_ENABLE_UPDATE
+        label: SPI1_FAULT_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4651,6 +5084,7 @@ data:
     SPI1_FAULT_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: SPI1_FAULT_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4662,6 +5096,7 @@ data:
     SPI1_RX_INTERRUPT_ENABLE:
       attributes:
         id: SPI1_RX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4673,6 +5108,7 @@ data:
     SPI1_RX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SPI1_RX_INTERRUPT_ENABLE_UPDATE
+        label: SPI1_RX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4684,6 +5120,7 @@ data:
     SPI1_RX_INTERRUPT_HANDLER:
       attributes:
         id: SPI1_RX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4695,6 +5132,7 @@ data:
     SPI1_RX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: SPI1_RX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4706,6 +5144,7 @@ data:
     SPI1_TX_INTERRUPT_ENABLE:
       attributes:
         id: SPI1_TX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4717,6 +5156,7 @@ data:
     SPI1_TX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SPI1_TX_INTERRUPT_ENABLE_UPDATE
+        label: SPI1_TX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4728,6 +5168,7 @@ data:
     SPI1_TX_INTERRUPT_HANDLER:
       attributes:
         id: SPI1_TX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4739,6 +5180,7 @@ data:
     SPI1_TX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: SPI1_TX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4750,6 +5192,7 @@ data:
     SPI2_CLOCK_ENABLE:
       attributes:
         id: SPI2_CLOCK_ENABLE
+        label: SPI2 Clock Enable
       children:
       - children:
         - attributes:
@@ -4761,6 +5204,7 @@ data:
     SPI2_CLOCK_FREQUENCY:
       attributes:
         id: SPI2_CLOCK_FREQUENCY
+        label: SPI2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4772,6 +5216,7 @@ data:
     SPI2_FAULT_INTERRUPT_ENABLE:
       attributes:
         id: SPI2_FAULT_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4783,6 +5228,7 @@ data:
     SPI2_FAULT_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SPI2_FAULT_INTERRUPT_ENABLE_UPDATE
+        label: SPI2_FAULT_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4794,6 +5240,7 @@ data:
     SPI2_FAULT_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: SPI2_FAULT_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4805,6 +5252,7 @@ data:
     SPI2_RX_INTERRUPT_ENABLE:
       attributes:
         id: SPI2_RX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4816,6 +5264,7 @@ data:
     SPI2_RX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SPI2_RX_INTERRUPT_ENABLE_UPDATE
+        label: SPI2_RX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4827,6 +5276,7 @@ data:
     SPI2_RX_INTERRUPT_HANDLER:
       attributes:
         id: SPI2_RX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4838,6 +5288,7 @@ data:
     SPI2_RX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: SPI2_RX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4849,6 +5300,7 @@ data:
     SPI2_TX_INTERRUPT_ENABLE:
       attributes:
         id: SPI2_TX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -4860,6 +5312,7 @@ data:
     SPI2_TX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SPI2_TX_INTERRUPT_ENABLE_UPDATE
+        label: SPI2_TX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -4871,6 +5324,7 @@ data:
     SPI2_TX_INTERRUPT_HANDLER:
       attributes:
         id: SPI2_TX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -4882,6 +5336,7 @@ data:
     SPI2_TX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: SPI2_TX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -4893,6 +5348,7 @@ data:
     SQI1_CLOCK_FREQUENCY:
       attributes:
         id: SQI1_CLOCK_FREQUENCY
+        label: SQI1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -4904,6 +5360,7 @@ data:
     SYS_CLK_FREQ:
       attributes:
         id: SYS_CLK_FREQ
+        label: System Clock Frequency (Hz)
       children:
       - children:
         - attributes:
@@ -4914,6 +5371,7 @@ data:
     SYS_PORT_A_ANSEL:
       attributes:
         id: SYS_PORT_A_ANSEL
+        label: ANSELA Value
       children:
       - children:
         - attributes:
@@ -4925,6 +5383,7 @@ data:
     SYS_PORT_A_CNEN:
       attributes:
         id: SYS_PORT_A_CNEN
+        label: CNENA Value
       children:
       - children:
         - attributes:
@@ -4936,6 +5395,7 @@ data:
     SYS_PORT_A_CNPU:
       attributes:
         id: SYS_PORT_A_CNPU
+        label: CNPUA Value
       children:
       - children:
         - attributes:
@@ -4947,6 +5407,7 @@ data:
     SYS_PORT_A_CN_USED:
       attributes:
         id: SYS_PORT_A_CN_USED
+        label: Use Change Notice On PORT A
       children:
       - children:
         - attributes:
@@ -4958,6 +5419,7 @@ data:
     SYS_PORT_A_LAT:
       attributes:
         id: SYS_PORT_A_LAT
+        label: LATA Value
       children:
       - children:
         - attributes:
@@ -4969,6 +5431,7 @@ data:
     SYS_PORT_A_SRCON0:
       attributes:
         id: SYS_PORT_A_SRCON0
+        label: SRCON0A Value
       children:
       - children:
         - attributes:
@@ -4980,6 +5443,7 @@ data:
     SYS_PORT_A_SRCON1:
       attributes:
         id: SYS_PORT_A_SRCON1
+        label: SRCON1A Value
       children:
       - children:
         - attributes:
@@ -4991,6 +5455,7 @@ data:
     SYS_PORT_A_TRIS:
       attributes:
         id: SYS_PORT_A_TRIS
+        label: TRISACLR Value
       children:
       - children:
         - attributes:
@@ -5002,6 +5467,7 @@ data:
     SYS_PORT_B_ANSEL:
       attributes:
         id: SYS_PORT_B_ANSEL
+        label: ANSELB Value
       children:
       - children:
         - attributes:
@@ -5013,6 +5479,7 @@ data:
     SYS_PORT_B_CNPU:
       attributes:
         id: SYS_PORT_B_CNPU
+        label: CNPUB Value
       children:
       - children:
         - attributes:
@@ -5024,6 +5491,7 @@ data:
     SYS_PORT_B_LAT:
       attributes:
         id: SYS_PORT_B_LAT
+        label: LATB Value
       children:
       - children:
         - attributes:
@@ -5035,6 +5503,7 @@ data:
     SYS_PORT_B_TRIS:
       attributes:
         id: SYS_PORT_B_TRIS
+        label: TRISBCLR Value
       children:
       - children:
         - attributes:
@@ -5046,6 +5515,7 @@ data:
     SYS_PORT_C_LAT:
       attributes:
         id: SYS_PORT_C_LAT
+        label: LATC Value
       children:
       - children:
         - attributes:
@@ -5057,6 +5527,7 @@ data:
     SYS_PORT_C_SRCON0:
       attributes:
         id: SYS_PORT_C_SRCON0
+        label: SRCON0C Value
       children:
       - children:
         - attributes:
@@ -5068,6 +5539,7 @@ data:
     SYS_PORT_C_SRCON1:
       attributes:
         id: SYS_PORT_C_SRCON1
+        label: SRCON1C Value
       children:
       - children:
         - attributes:
@@ -5079,6 +5551,7 @@ data:
     SYS_PORT_C_TRIS:
       attributes:
         id: SYS_PORT_C_TRIS
+        label: TRISCCLR Value
       children:
       - children:
         - attributes:
@@ -5090,6 +5563,7 @@ data:
     SYS_PORT_K_ANSEL:
       attributes:
         id: SYS_PORT_K_ANSEL
+        label: ANSELK Value
       children:
       - children:
         - attributes:
@@ -5101,6 +5575,7 @@ data:
     SYS_PORT_K_LAT:
       attributes:
         id: SYS_PORT_K_LAT
+        label: LATK Value
       children:
       - children:
         - attributes:
@@ -5112,6 +5587,7 @@ data:
     SYS_PORT_K_TRIS:
       attributes:
         id: SYS_PORT_K_TRIS
+        label: TRISKCLR Value
       children:
       - children:
         - attributes:
@@ -5123,6 +5599,7 @@ data:
     SYS_PORT_PPS_INPUT_FUNCTION_0:
       attributes:
         id: SYS_PORT_PPS_INPUT_FUNCTION_0
+        label: Function
       children:
       - children:
         - attributes:
@@ -5141,6 +5618,7 @@ data:
     SYS_PORT_PPS_INPUT_FUNCTION_1:
       attributes:
         id: SYS_PORT_PPS_INPUT_FUNCTION_1
+        label: Function
       children:
       - children:
         - attributes:
@@ -5159,6 +5637,7 @@ data:
     SYS_PORT_PPS_INPUT_FUNCTION_2:
       attributes:
         id: SYS_PORT_PPS_INPUT_FUNCTION_2
+        label: Function
       children:
       - children:
         - attributes:
@@ -5177,6 +5656,7 @@ data:
     SYS_PORT_PPS_INPUT_FUNCTION_3:
       attributes:
         id: SYS_PORT_PPS_INPUT_FUNCTION_3
+        label: Function
       children:
       - children:
         - attributes:
@@ -5195,6 +5675,7 @@ data:
     SYS_PORT_PPS_INPUT_FUNCTION_4:
       attributes:
         id: SYS_PORT_PPS_INPUT_FUNCTION_4
+        label: Function
       children:
       - children:
         - attributes:
@@ -5213,6 +5694,7 @@ data:
     SYS_PORT_PPS_INPUT_PIN_0:
       attributes:
         id: SYS_PORT_PPS_INPUT_PIN_0
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5231,6 +5713,7 @@ data:
     SYS_PORT_PPS_INPUT_PIN_1:
       attributes:
         id: SYS_PORT_PPS_INPUT_PIN_1
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5249,6 +5732,7 @@ data:
     SYS_PORT_PPS_INPUT_PIN_2:
       attributes:
         id: SYS_PORT_PPS_INPUT_PIN_2
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5267,6 +5751,7 @@ data:
     SYS_PORT_PPS_INPUT_PIN_3:
       attributes:
         id: SYS_PORT_PPS_INPUT_PIN_3
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5285,6 +5770,7 @@ data:
     SYS_PORT_PPS_INPUT_PIN_4:
       attributes:
         id: SYS_PORT_PPS_INPUT_PIN_4
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5303,6 +5789,7 @@ data:
     SYS_PORT_PPS_OUTPUT_FUNCTION_0:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_FUNCTION_0
+        label: Function
       children:
       - children:
         - attributes:
@@ -5321,6 +5808,7 @@ data:
     SYS_PORT_PPS_OUTPUT_FUNCTION_1:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_FUNCTION_1
+        label: Function
       children:
       - children:
         - attributes:
@@ -5339,6 +5827,7 @@ data:
     SYS_PORT_PPS_OUTPUT_FUNCTION_2:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_FUNCTION_2
+        label: Function
       children:
       - children:
         - attributes:
@@ -5357,6 +5846,7 @@ data:
     SYS_PORT_PPS_OUTPUT_FUNCTION_3:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_FUNCTION_3
+        label: Function
       children:
       - children:
         - attributes:
@@ -5375,6 +5865,7 @@ data:
     SYS_PORT_PPS_OUTPUT_FUNCTION_4:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_FUNCTION_4
+        label: Function
       children:
       - children:
         - attributes:
@@ -5393,6 +5884,7 @@ data:
     SYS_PORT_PPS_OUTPUT_FUNCTION_5:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_FUNCTION_5
+        label: Function
       children:
       - children:
         - attributes:
@@ -5411,6 +5903,7 @@ data:
     SYS_PORT_PPS_OUTPUT_PIN_0:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_PIN_0
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5429,6 +5922,7 @@ data:
     SYS_PORT_PPS_OUTPUT_PIN_1:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_PIN_1
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5447,6 +5941,7 @@ data:
     SYS_PORT_PPS_OUTPUT_PIN_2:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_PIN_2
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5465,6 +5960,7 @@ data:
     SYS_PORT_PPS_OUTPUT_PIN_3:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_PIN_3
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5483,6 +5979,7 @@ data:
     SYS_PORT_PPS_OUTPUT_PIN_4:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_PIN_4
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5501,6 +5998,7 @@ data:
     SYS_PORT_PPS_OUTPUT_PIN_5:
       attributes:
         id: SYS_PORT_PPS_OUTPUT_PIN_5
+        label: Pin
       children:
       - children:
         - attributes:
@@ -5519,6 +6017,7 @@ data:
     TIMER_1_INTERRUPT_ENABLE:
       attributes:
         id: TIMER_1_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5530,6 +6029,7 @@ data:
     TIMER_1_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: TIMER_1_INTERRUPT_ENABLE_UPDATE
+        label: TIMER_1_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5541,6 +6041,7 @@ data:
     TIMER_2_INTERRUPT_ENABLE:
       attributes:
         id: TIMER_2_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5552,6 +6053,7 @@ data:
     TIMER_2_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: TIMER_2_INTERRUPT_ENABLE_UPDATE
+        label: TIMER_2_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5563,6 +6065,7 @@ data:
     TIMER_2_INTERRUPT_HANDLER:
       attributes:
         id: TIMER_2_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -5574,6 +6077,7 @@ data:
     TIMER_2_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: TIMER_2_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -5585,6 +6089,7 @@ data:
     TIMER_4_INTERRUPT_ENABLE:
       attributes:
         id: TIMER_4_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5596,6 +6101,7 @@ data:
     TIMER_4_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: TIMER_4_INTERRUPT_ENABLE_UPDATE
+        label: TIMER_4_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5607,6 +6113,7 @@ data:
     TIMER_4_INTERRUPT_HANDLER:
       attributes:
         id: TIMER_4_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -5618,6 +6125,7 @@ data:
     TIMER_4_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: TIMER_4_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -5629,6 +6137,7 @@ data:
     TMR1_CLOCK_ENABLE:
       attributes:
         id: TMR1_CLOCK_ENABLE
+        label: TMR1 Clock Enable
       children:
       - children:
         - attributes:
@@ -5640,6 +6149,7 @@ data:
     TMR1_CLOCK_FREQUENCY:
       attributes:
         id: TMR1_CLOCK_FREQUENCY
+        label: TMR1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5651,6 +6161,7 @@ data:
     TMR2_CLOCK_ENABLE:
       attributes:
         id: TMR2_CLOCK_ENABLE
+        label: TMR2 Clock Enable
       children:
       - children:
         - attributes:
@@ -5662,6 +6173,7 @@ data:
     TMR2_CLOCK_FREQUENCY:
       attributes:
         id: TMR2_CLOCK_FREQUENCY
+        label: TMR2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5673,6 +6185,7 @@ data:
     TMR3_CLOCK_FREQUENCY:
       attributes:
         id: TMR3_CLOCK_FREQUENCY
+        label: TMR3 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5684,6 +6197,7 @@ data:
     TMR4_CLOCK_ENABLE:
       attributes:
         id: TMR4_CLOCK_ENABLE
+        label: TMR4 Clock Enable
       children:
       - children:
         - attributes:
@@ -5695,6 +6209,7 @@ data:
     TMR4_CLOCK_FREQUENCY:
       attributes:
         id: TMR4_CLOCK_FREQUENCY
+        label: TMR4 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5706,6 +6221,7 @@ data:
     TMR5_CLOCK_FREQUENCY:
       attributes:
         id: TMR5_CLOCK_FREQUENCY
+        label: TMR5 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5717,6 +6233,7 @@ data:
     TMR6_CLOCK_FREQUENCY:
       attributes:
         id: TMR6_CLOCK_FREQUENCY
+        label: TMR6 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5728,6 +6245,7 @@ data:
     TMR7_CLOCK_FREQUENCY:
       attributes:
         id: TMR7_CLOCK_FREQUENCY
+        label: TMR7 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5739,6 +6257,7 @@ data:
     UART1_CLOCK_ENABLE:
       attributes:
         id: UART1_CLOCK_ENABLE
+        label: UART1 Clock Enable
       children:
       - children:
         - attributes:
@@ -5750,6 +6269,7 @@ data:
     UART1_CLOCK_FREQUENCY:
       attributes:
         id: UART1_CLOCK_FREQUENCY
+        label: UART1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5761,6 +6281,7 @@ data:
     UART1_FAULT_INTERRUPT_ENABLE:
       attributes:
         id: UART1_FAULT_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5772,6 +6293,7 @@ data:
     UART1_FAULT_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: UART1_FAULT_INTERRUPT_ENABLE_UPDATE
+        label: UART1_FAULT_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5783,6 +6305,7 @@ data:
     UART1_FAULT_INTERRUPT_HANDLER:
       attributes:
         id: UART1_FAULT_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -5794,6 +6317,7 @@ data:
     UART1_FAULT_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: UART1_FAULT_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -5805,6 +6329,7 @@ data:
     UART1_RX_INTERRUPT_ENABLE:
       attributes:
         id: UART1_RX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5816,6 +6341,7 @@ data:
     UART1_RX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: UART1_RX_INTERRUPT_ENABLE_UPDATE
+        label: UART1_RX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5827,6 +6353,7 @@ data:
     UART1_RX_INTERRUPT_HANDLER:
       attributes:
         id: UART1_RX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -5838,6 +6365,7 @@ data:
     UART1_RX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: UART1_RX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -5849,6 +6377,7 @@ data:
     UART1_TX_INTERRUPT_ENABLE:
       attributes:
         id: UART1_TX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5860,6 +6389,7 @@ data:
     UART1_TX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: UART1_TX_INTERRUPT_ENABLE_UPDATE
+        label: UART1_TX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5871,6 +6401,7 @@ data:
     UART1_TX_INTERRUPT_HANDLER:
       attributes:
         id: UART1_TX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -5882,6 +6413,7 @@ data:
     UART1_TX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: UART1_TX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -5893,6 +6425,7 @@ data:
     UART2_CLOCK_FREQUENCY:
       attributes:
         id: UART2_CLOCK_FREQUENCY
+        label: UART2 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5904,6 +6437,7 @@ data:
     UART3_CLOCK_ENABLE:
       attributes:
         id: UART3_CLOCK_ENABLE
+        label: UART3 Clock Enable
       children:
       - children:
         - attributes:
@@ -5915,6 +6449,7 @@ data:
     UART3_CLOCK_FREQUENCY:
       attributes:
         id: UART3_CLOCK_FREQUENCY
+        label: UART3 Clock Frequency
       children:
       - children:
         - attributes:
@@ -5926,6 +6461,7 @@ data:
     UART3_FAULT_INTERRUPT_ENABLE:
       attributes:
         id: UART3_FAULT_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5937,6 +6473,7 @@ data:
     UART3_FAULT_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: UART3_FAULT_INTERRUPT_ENABLE_UPDATE
+        label: UART3_FAULT_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5948,6 +6485,7 @@ data:
     UART3_FAULT_INTERRUPT_HANDLER:
       attributes:
         id: UART3_FAULT_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -5959,6 +6497,7 @@ data:
     UART3_FAULT_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: UART3_FAULT_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -5970,6 +6509,7 @@ data:
     UART3_RX_INTERRUPT_ENABLE:
       attributes:
         id: UART3_RX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -5981,6 +6521,7 @@ data:
     UART3_RX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: UART3_RX_INTERRUPT_ENABLE_UPDATE
+        label: UART3_RX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -5992,6 +6533,7 @@ data:
     UART3_RX_INTERRUPT_HANDLER:
       attributes:
         id: UART3_RX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -6003,6 +6545,7 @@ data:
     UART3_RX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: UART3_RX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -6014,6 +6557,7 @@ data:
     UART3_TX_INTERRUPT_ENABLE:
       attributes:
         id: UART3_TX_INTERRUPT_ENABLE
+        label: Vector Peripheral Enable
       children:
       - children:
         - attributes:
@@ -6025,6 +6569,7 @@ data:
     UART3_TX_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: UART3_TX_INTERRUPT_ENABLE_UPDATE
+        label: UART3_TX_INTERRUPT_ENABLE_UPDATE
       children:
       - children:
         - attributes:
@@ -6036,6 +6581,7 @@ data:
     UART3_TX_INTERRUPT_HANDLER:
       attributes:
         id: UART3_TX_INTERRUPT_HANDLER
+        label: Vector Peripheral Handler
       children:
       - children:
         - attributes:
@@ -6047,6 +6593,7 @@ data:
     UART3_TX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: UART3_TX_INTERRUPT_HANDLER_LOCK
+        label: Vector Peripheral Handler Lock
       children:
       - children:
         - attributes:
@@ -6058,6 +6605,7 @@ data:
     USB1_CLOCK_FREQUENCY:
       attributes:
         id: USB1_CLOCK_FREQUENCY
+        label: USB1 Clock Frequency
       children:
       - children:
         - attributes:
@@ -6069,6 +6617,7 @@ data:
     USBCLK:
       attributes:
         id: USBCLK
+        label: USB Clock Frequency (Hz)
       children:
       - children:
         - attributes:
@@ -6090,6 +6639,7 @@ data:
     USE_PPS_INPUT_0:
       attributes:
         id: USE_PPS_INPUT_0
+        label: USE PPS Input0
       children:
       - children:
         - attributes:
@@ -6100,6 +6650,7 @@ data:
     USE_PPS_INPUT_1:
       attributes:
         id: USE_PPS_INPUT_1
+        label: USE PPS Input1
       children:
       - children:
         - attributes:
@@ -6110,6 +6661,7 @@ data:
     USE_PPS_INPUT_2:
       attributes:
         id: USE_PPS_INPUT_2
+        label: USE PPS Input2
       children:
       - children:
         - attributes:
@@ -6120,6 +6672,7 @@ data:
     USE_PPS_INPUT_3:
       attributes:
         id: USE_PPS_INPUT_3
+        label: USE PPS Input3
       children:
       - children:
         - attributes:
@@ -6130,6 +6683,7 @@ data:
     USE_PPS_INPUT_4:
       attributes:
         id: USE_PPS_INPUT_4
+        label: USE PPS Input4
       children:
       - children:
         - attributes:
@@ -6140,6 +6694,7 @@ data:
     USE_PPS_OUTPUT_0:
       attributes:
         id: USE_PPS_OUTPUT_0
+        label: USE PPS Output0
       children:
       - children:
         - attributes:
@@ -6150,6 +6705,7 @@ data:
     USE_PPS_OUTPUT_1:
       attributes:
         id: USE_PPS_OUTPUT_1
+        label: USE PPS Output1
       children:
       - children:
         - attributes:
@@ -6160,6 +6716,7 @@ data:
     USE_PPS_OUTPUT_2:
       attributes:
         id: USE_PPS_OUTPUT_2
+        label: USE PPS Output2
       children:
       - children:
         - attributes:
@@ -6170,6 +6727,7 @@ data:
     USE_PPS_OUTPUT_3:
       attributes:
         id: USE_PPS_OUTPUT_3
+        label: USE PPS Output3
       children:
       - children:
         - attributes:
@@ -6180,6 +6738,7 @@ data:
     USE_PPS_OUTPUT_4:
       attributes:
         id: USE_PPS_OUTPUT_4
+        label: USE PPS Output4
       children:
       - children:
         - attributes:
@@ -6190,6 +6749,7 @@ data:
     USE_PPS_OUTPUT_5:
       attributes:
         id: USE_PPS_OUTPUT_5
+        label: USE PPS Output5
       children:
       - children:
         - attributes:
@@ -6200,6 +6760,7 @@ data:
     WIFICLK:
       attributes:
         id: WIFICLK
+        label: Wifi Clock Frequency (Hz)
       children:
       - children:
         - attributes:
@@ -6210,6 +6771,7 @@ data:
     WIFI_CLOCK_ENABLE:
       attributes:
         id: WIFI_CLOCK_ENABLE
+        label: WIFI Clock Enable
       children:
       - children:
         - attributes:
@@ -6221,6 +6783,7 @@ data:
     WIFI_CLOCK_FREQUENCY:
       attributes:
         id: WIFI_CLOCK_FREQUENCY
+        label: WIFI Clock Frequency
       children:
       - children:
         - attributes:
@@ -6232,6 +6795,7 @@ data:
     XC32_HEAP_SIZE:
       attributes:
         id: XC32_HEAP_SIZE
+        label: Heap Size (bytes)
       children:
       - children:
         - attributes:
@@ -6243,6 +6807,7 @@ data:
     clkSvcMode:
       attributes:
         id: clkSvcMode
+        label: clkSvcMode
       children:
       - children:
         - attributes:

@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.16.0
+  version: v3.15.1
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -31,6 +31,7 @@ data:
     SYS_CONSOLE_PRINT_BUFFER_SIZE:
       attributes:
         id: SYS_CONSOLE_PRINT_BUFFER_SIZE
+        label: Console Print Buffer Size (128-8192)
       children:
       - children:
         - attributes:
@@ -42,6 +43,7 @@ data:
     SYS_CONSOLE_UART_CONNECTION_COUNTER:
       attributes:
         id: SYS_CONSOLE_UART_CONNECTION_COUNTER
+        label: Number of Instances Using UART
       children:
       - children:
         - attributes:

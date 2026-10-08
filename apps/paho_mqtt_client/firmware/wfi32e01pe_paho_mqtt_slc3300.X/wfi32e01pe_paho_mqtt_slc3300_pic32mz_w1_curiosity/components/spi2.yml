@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: spi2
-          x: '660'
-          y: '20'
+          x: '814'
+          y: '182'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -31,6 +31,7 @@ data:
     SPIS_SLAVE_SELECT_ENABLE:
       attributes:
         id: SPIS_SLAVE_SELECT_ENABLE
+        label: Enable Slave Select
       children:
       - children:
         - attributes:
@@ -42,6 +43,7 @@ data:
     SPI_BAUD_RATE:
       attributes:
         id: SPI_BAUD_RATE
+        label: Baud Rate in Hz
       children:
       - children:
         - attributes:
@@ -52,6 +54,7 @@ data:
     SPI_BRG_VALUE:
       attributes:
         id: SPI_BRG_VALUE
+        label: SPI_BRG_VALUE
       children:
       - children:
         - attributes:
@@ -63,6 +66,7 @@ data:
     SPI_DUMMY_DATA:
       attributes:
         id: SPI_DUMMY_DATA
+        label: Dummy Data
       children:
       - children:
         - attributes:
@@ -82,6 +86,7 @@ data:
     SPI_SPICON_MODE:
       attributes:
         id: SPI_SPICON_MODE
+        label: Data Width
       children:
       - children:
         - attributes:
@@ -92,6 +97,7 @@ data:
     SPI_SPICON_MSSEN:
       attributes:
         id: SPI_SPICON_MSSEN
+        label: Master Mode Slave Select Enable bit
       children:
       - children:
         - attributes:

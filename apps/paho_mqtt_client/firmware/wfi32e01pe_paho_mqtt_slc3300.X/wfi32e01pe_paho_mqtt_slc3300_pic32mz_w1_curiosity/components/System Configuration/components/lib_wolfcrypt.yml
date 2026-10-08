@@ -15,7 +15,7 @@ dependency:
 - dependencyPackage: ''
   name: wolfssl
   type: package
-  version: v5.4.0-stable
+  version: v5.4.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -35,6 +35,7 @@ data:
     cryptoCrya_03710:
       attributes:
         id: cryptoCrya_03710
+        label: cryptoCrya_03710
       children:
       - children:
         - attributes:
@@ -46,6 +47,7 @@ data:
     cryptoCrya_U2803:
       attributes:
         id: cryptoCrya_U2803
+        label: cryptoCrya_U2803
       children:
       - children:
         - attributes:
@@ -57,6 +59,7 @@ data:
     cryptoCrya_U2805:
       attributes:
         id: cryptoCrya_U2805
+        label: cryptoCrya_U2805
       children:
       - children:
         - attributes:
@@ -68,6 +71,7 @@ data:
     wolfSslRTOSSupport:
       attributes:
         id: wolfSslRTOSSupport
+        label: Threading Support
       children:
       - children:
         - attributes:
@@ -82,6 +86,7 @@ data:
     wolfcrypt_hw:
       attributes:
         id: wolfcrypt_hw
+        label: Enable Hardware Cryptography?
       children:
       - children:
         - attributes:
@@ -93,6 +98,7 @@ data:
     wolfcrypt_random:
       attributes:
         id: wolfcrypt_random
+        label: Support Random Number Generation?
       children:
       - children:
         - attributes:

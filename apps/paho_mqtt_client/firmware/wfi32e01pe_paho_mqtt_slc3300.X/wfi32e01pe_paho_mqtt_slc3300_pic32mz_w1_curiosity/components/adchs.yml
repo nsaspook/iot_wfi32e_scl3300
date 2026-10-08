@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: adchs
-          x: '1220'
-          y: '20'
+          x: '645'
+          y: '270'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -31,6 +31,7 @@ data:
     ADCCON2__ADCDIV:
       attributes:
         id: ADCCON2__ADCDIV
+        label: Shared ADC Clock Divider bits
       children:
       - children:
         - attributes:
@@ -49,6 +50,7 @@ data:
     ADCCON2__SAMC:
       attributes:
         id: ADCCON2__SAMC
+        label: Sample Time for the Shared ADC bits
       children:
       - children:
         - attributes:
@@ -67,6 +69,7 @@ data:
     ADCCON3__CONCLKDIV:
       attributes:
         id: ADCCON3__CONCLKDIV
+        label: Select Clock Divider
       children:
       - children:
         - attributes:
@@ -77,6 +80,7 @@ data:
     ADCCSS1__CSS2:
       attributes:
         id: ADCCSS1__CSS2
+        label: Select AN2 for Input Scan
       children:
       - children:
         - attributes:
@@ -95,6 +99,7 @@ data:
     ADCCSS1__CSS6:
       attributes:
         id: ADCCSS1__CSS6
+        label: Select AN6 for Input Scan
       children:
       - children:
         - attributes:
@@ -113,6 +118,7 @@ data:
     ADCCSS1__CSS9:
       attributes:
         id: ADCCSS1__CSS9
+        label: Select AN9 for Input Scan
       children:
       - children:
         - attributes:
@@ -131,6 +137,7 @@ data:
     ADCHS_0_ENABLE:
       attributes:
         id: ADCHS_0_ENABLE
+        label: ADC 0
       children:
       - children:
         - attributes:
@@ -141,6 +148,7 @@ data:
     ADCHS_7_ENABLE:
       attributes:
         id: ADCHS_7_ENABLE
+        label: Shared Module 7
       children:
       - children:
         - attributes:
@@ -151,6 +159,7 @@ data:
     ADCHS_ADCCON2:
       attributes:
         id: ADCHS_ADCCON2
+        label: ADCCON2 register value
       children:
       - children:
         - attributes:
@@ -162,6 +171,7 @@ data:
     ADCHS_ADCCON3:
       attributes:
         id: ADCHS_ADCCON3
+        label: ADCCON3 register value
       children:
       - children:
         - attributes:
@@ -173,6 +183,7 @@ data:
     ADCHS_ADCCSS1:
       attributes:
         id: ADCHS_ADCCSS1
+        label: ADCCSS1 Register
       children:
       - children:
         - attributes:
@@ -184,6 +195,7 @@ data:
     ADCHS_ADCTRGMODE:
       attributes:
         id: ADCHS_ADCTRGMODE
+        label: ADCTRGMODE Register
       children:
       - children:
         - attributes:
@@ -195,6 +207,7 @@ data:
     ADCHS_CONV_RATE0:
       attributes:
         id: ADCHS_CONV_RATE0
+        label: ADC0 Conversion Rate (ksps)
       children:
       - children:
         - attributes:
@@ -214,6 +227,7 @@ data:
     ADCHS_CONV_RATE7:
       attributes:
         id: ADCHS_CONV_RATE7
+        label: ADC7 Conversion Rate (ksps)
       children:
       - children:
         - attributes:
@@ -233,6 +247,7 @@ data:
     ADCHS_DMA_STATUS_REG:
       attributes:
         id: ADCHS_DMA_STATUS_REG
+        label: ADCHS_DMA_STATUS_REG
       children:
       - children:
         - attributes:
@@ -244,6 +259,7 @@ data:
     ADCHS_TADC0:
       attributes:
         id: ADCHS_TADC0
+        label: ADC0 Clock (Tadc) (nano sec)
       children:
       - children:
         - attributes:
@@ -263,6 +279,7 @@ data:
     ADCHS_TADC7:
       attributes:
         id: ADCHS_TADC7
+        label: ADC7 Clock (Tadc) (nano sec)
       children:
       - children:
         - attributes:
@@ -282,6 +299,7 @@ data:
     ADCHS_TCLK:
       attributes:
         id: ADCHS_TCLK
+        label: ADCHS Clock (Tclk) (nano sec)
       children:
       - children:
         - attributes:
@@ -293,6 +311,7 @@ data:
     ADCHS_TQ:
       attributes:
         id: ADCHS_TQ
+        label: ADCHS Control clock (Tq) (nano sec)
       children:
       - children:
         - attributes:
@@ -304,6 +323,7 @@ data:
     ADC_CALLBACK_API:
       attributes:
         id: ADC_CALLBACK_API
+        label: ADC_CALLBACK_API
       children:
       - children:
         - attributes:
@@ -315,6 +335,7 @@ data:
     ADC_CH_PHASE_U:
       attributes:
         id: ADC_CH_PHASE_U
+        label: ADC_CH_PHASE_U
       children:
       - children:
         - attributes:
@@ -326,6 +347,7 @@ data:
     ADC_CH_PHASE_V:
       attributes:
         id: ADC_CH_PHASE_V
+        label: ADC_CH_PHASE_V
       children:
       - children:
         - attributes:
@@ -337,6 +359,7 @@ data:
     ADC_CH_POT:
       attributes:
         id: ADC_CH_POT
+        label: ADC_CH_POT
       children:
       - children:
         - attributes:
@@ -348,6 +371,7 @@ data:
     ADC_CH_VDC_BUS:
       attributes:
         id: ADC_CH_VDC_BUS
+        label: ADC_CH_VDC_BUS
       children:
       - children:
         - attributes:
@@ -359,6 +383,7 @@ data:
     ADC_GET_RESULT_API:
       attributes:
         id: ADC_GET_RESULT_API
+        label: ADC_GET_RESULT_API
       children:
       - children:
         - attributes:
@@ -370,6 +395,7 @@ data:
     ADC_IS_RESULT_READY_API:
       attributes:
         id: ADC_IS_RESULT_READY_API
+        label: ADC_IS_RESULT_READY_API
       children:
       - children:
         - attributes:
@@ -381,6 +407,7 @@ data:
     ADC_START_CONV_API:
       attributes:
         id: ADC_START_CONV_API
+        label: ADC_START_CONV_API
       children:
       - children:
         - attributes:
@@ -392,6 +419,7 @@ data:
     AN2:
       attributes:
         id: AN2
+        label: Configure Analog Input AN2
       children:
       - children:
         - attributes:
@@ -402,6 +430,7 @@ data:
     AN21:
       attributes:
         id: AN21
+        label: Configure Analog Input AN21
       children:
       - children:
         - attributes:
@@ -412,6 +441,7 @@ data:
     AN6:
       attributes:
         id: AN6
+        label: Configure Analog Input AN6
       children:
       - children:
         - attributes:
@@ -422,6 +452,7 @@ data:
     AN9:
       attributes:
         id: AN9
+        label: Configure Analog Input AN9
       children:
       - children:
         - attributes:
@@ -432,6 +463,7 @@ data:
     INTERRUPT_ADC_RESULT:
       attributes:
         id: INTERRUPT_ADC_RESULT
+        label: INTERRUPT_ADC_RESULT
       children:
       - children:
         - attributes:

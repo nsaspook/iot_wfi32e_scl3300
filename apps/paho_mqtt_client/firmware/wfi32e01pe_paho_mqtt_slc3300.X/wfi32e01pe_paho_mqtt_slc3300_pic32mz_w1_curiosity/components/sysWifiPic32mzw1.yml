@@ -31,6 +31,7 @@ data:
     SYS_WIFI_AP_ENABLE:
       attributes:
         id: SYS_WIFI_AP_ENABLE
+        label: AP Mode
       children:
       - children:
         - attributes:
@@ -63,6 +64,7 @@ data:
     SYS_WIFI_STA_AUTH:
       attributes:
         id: SYS_WIFI_STA_AUTH
+        label: Security type
       children:
       - children:
         - attributes:
@@ -73,6 +75,7 @@ data:
     SYS_WIFI_STA_ENT_DATE_EPOCH:
       attributes:
         id: SYS_WIFI_STA_ENT_DATE_EPOCH
+        label: Certificate Date Epoch
       children:
       - children:
         - attributes:
@@ -84,6 +87,7 @@ data:
     SYS_WIFI_STA_PWD_NAME:
       attributes:
         id: SYS_WIFI_STA_PWD_NAME
+        label: Password
       children:
       - children:
         - attributes:
@@ -94,6 +98,7 @@ data:
     SYS_WIFI_STA_SSID_NAME:
       attributes:
         id: SYS_WIFI_STA_SSID_NAME
+        label: SSID
       children:
       - children:
         - attributes:

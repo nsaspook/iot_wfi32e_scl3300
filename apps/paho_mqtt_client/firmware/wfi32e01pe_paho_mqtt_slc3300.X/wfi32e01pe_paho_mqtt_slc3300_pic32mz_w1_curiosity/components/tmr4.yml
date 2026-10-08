@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.0
+  version: v3.22.2
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: tmr4
-          x: '940'
-          y: '20'
+          x: '832'
+          y: '13'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -31,6 +31,7 @@ data:
     TCON_REG_VALUE:
       attributes:
         id: TCON_REG_VALUE
+        label: TCON_REG_VALUE
       children:
       - children:
         - attributes:
@@ -42,6 +43,7 @@ data:
     TIMER_32BIT_MODE_SEL:
       attributes:
         id: TIMER_32BIT_MODE_SEL
+        label: 32-Bit Timer Mode Select bit
       children:
       - children:
         - attributes:
@@ -52,6 +54,7 @@ data:
     TIMER_PERIOD:
       attributes:
         id: TIMER_PERIOD
+        label: Period Register
       children:
       - children:
         - attributes:
@@ -71,6 +74,7 @@ data:
     TIMER_TIME_PERIOD_MS:
       attributes:
         id: TIMER_TIME_PERIOD_MS
+        label: Time
       children:
       - children:
         - attributes:
@@ -89,6 +93,7 @@ data:
     TIMER_UNIT:
       attributes:
         id: TIMER_UNIT
+        label: Timer Period Unit
       children:
       - children:
         - attributes:
@@ -99,6 +104,7 @@ data:
     TMR_IEC_REG:
       attributes:
         id: TMR_IEC_REG
+        label: TMR_IEC_REG
       children:
       - children:
         - attributes:
@@ -110,6 +116,7 @@ data:
     TMR_IFS_REG:
       attributes:
         id: TMR_IFS_REG
+        label: TMR_IFS_REG
       children:
       - children:
         - attributes:
@@ -121,6 +128,7 @@ data:
     TMR_INTERRUPT_MODE:
       attributes:
         id: TMR_INTERRUPT_MODE
+        label: Enable Interrrupts ?
       children:
       - children:
         - attributes:

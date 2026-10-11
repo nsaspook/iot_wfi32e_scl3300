@@ -59,7 +59,7 @@ data:
     type: TCP/IP STACK
   elementPosition:
     attributes:
-      id: System Configuration
+      id: __ROOTVIEW
     children:
     - children:
       - attributes:

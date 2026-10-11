@@ -119,7 +119,7 @@ extern "C" {
 #define SYS_MQTT_INDEX0_KEEPALIVE_INTERVAL 				60
 #define SYS_MQTT_INDEX0_MQTT_INTF        				SYS_MQTT_INTF_WIFI
 
-#define SYS_MQTT_INDEX0_SUB_QOS							1
+#define SYS_MQTT_INDEX0_SUB_QOS							2
 #define SYS_MQTT_INDEX0_SUB_TOPIC_COUNT					1
 #define SYS_MQTT_INDEX0_TOPIC_NAME        				"mateq84/data/info"
 #define SYS_MQTT_INDEX0_ENTRY_VALID        				true
@@ -128,7 +128,7 @@ extern "C" {
 
 
 #define SYS_MQTT_DEF_PUB_TOPIC_NAME							"mateq84/data/imu"
-#define SYS_MQTT_DEF_PUB_QOS							1
+#define SYS_MQTT_DEF_PUB_QOS							2
 #define SYS_MQTT_DEF_PUB_RETAIN								false
 
 

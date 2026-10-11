@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "wfipic32host-import-fps") (type "KiCad") (uri "${KIPRJMOD}/wfipic32host-import-fps.pretty") (options "kicad_import_cache=1") (descr ""))
+)

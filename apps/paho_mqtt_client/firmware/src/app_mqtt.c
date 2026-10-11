@@ -119,6 +119,11 @@ int32_t MqttCallback(SYS_MQTT_EVENT_TYPE eEventType, void *data, uint16_t len, v
 		SYS_MQTT_PublishConfig *psMsg = (SYS_MQTT_PublishConfig *) data;
 		psMsg->message[psMsg->messageLength] = 0;
 		psMsg->topicName[psMsg->topicLength] = 0;
+		/*
+		 * send data to DL controller serial port
+		 */
+		UART3_Write(psMsg->message, psMsg->messageLength);
+		
 		SYS_CONSOLE_PRINT("\nMqttCallback(): Msg received on Topic: %s ; Msg: %s\r\n",
 			psMsg->topicName, psMsg->message);
 	}

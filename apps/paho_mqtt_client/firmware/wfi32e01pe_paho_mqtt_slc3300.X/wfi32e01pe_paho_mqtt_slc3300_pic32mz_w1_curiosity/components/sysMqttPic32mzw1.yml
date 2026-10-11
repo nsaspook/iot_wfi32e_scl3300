@@ -127,4 +127,37 @@ data:
           type: User
         type: Values
       type: String
+    SYS_MQTT_SUB_QOS:
+      attributes:
+        id: SYS_MQTT_SUB_QOS
+        label: QOS
+      children:
+      - children:
+        - attributes:
+            value: Exactly once (2)
+          type: User
+        type: Values
+      type: Combo
+    SYS_MQTT_PUB_QOS:
+      attributes:
+        id: SYS_MQTT_PUB_QOS
+        label: QOS
+      children:
+      - children:
+        - attributes:
+            value: Exactly once (2)
+          type: User
+        type: Values
+      type: Combo
+    SYS_MQTT_ENABLE_CLICMD:
+      attributes:
+        id: SYS_MQTT_ENABLE_CLICMD
+        label: Enable CLI Commands
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
   userData: {}

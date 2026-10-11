@@ -762,23 +762,11 @@ data:
       attributes:
         id: BSP_PIN_51_DIR
         label: Direction
-      children:
-      - children:
-        - attributes:
-            value: Out
-          type: User
-        type: Values
       type: String
     BSP_PIN_51_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_51_FUNCTION_NAME
         label: Name
-      children:
-      - children:
-        - attributes:
-            value: GPIO_RB12
-          type: User
-        type: Values
       type: String
     BSP_PIN_51_FUNCTION_TYPE:
       attributes:
@@ -787,7 +775,7 @@ data:
       children:
       - children:
         - attributes:
-            value: GPIO
+            value: U3RX
           type: User
         type: Values
       type: String
@@ -795,12 +783,6 @@ data:
       attributes:
         id: BSP_PIN_51_LAT
         label: Initial Latch Value
-      children:
-      - children:
-        - attributes:
-            value: High
-          type: User
-        type: Values
       type: String
     BSP_PIN_51_MODE:
       attributes:
@@ -1004,23 +986,11 @@ data:
       attributes:
         id: BSP_PIN_69_FUNCTION_TYPE
         label: Type
-      children:
-      - children:
-        - attributes:
-            value: U3RX
-          type: User
-        type: Values
       type: String
     BSP_PIN_69_MODE:
       attributes:
         id: BSP_PIN_69_MODE
         label: Mode
-      children:
-      - children:
-        - attributes:
-            value: DIGITAL
-          type: User
-        type: Values
       type: String
     BSP_PIN_69_SR:
       attributes:
@@ -1029,7 +999,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -1084,7 +1054,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -1543,12 +1513,6 @@ data:
       attributes:
         id: BSP_PIN_9_MODE
         label: Mode
-      children:
-      - children:
-        - attributes:
-            value: DIGITAL
-          type: User
-        type: Values
       type: String
     BTCLK:
       attributes:
@@ -5484,7 +5448,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '128'
+            value: '4224'
           type: Dynamic
         type: Values
       type: Hex
@@ -5496,7 +5460,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4224'
+            value: '128'
           type: Dynamic
         type: Values
       type: Hex
@@ -5508,7 +5472,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4224'
+            value: '128'
           type: Dynamic
         type: Values
       type: Hex
@@ -5532,7 +5496,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '24576'
+            value: '0'
           type: Dynamic
         type: Values
       type: Hex
@@ -5706,7 +5670,7 @@ data:
         type: Attributes
       - children:
         - attributes:
-            value: '14'
+            value: '43'
           type: User
         type: Values
       type: KeyValueSet
@@ -6907,6 +6871,40 @@ data:
           type: Boolean
         type: Attributes
       type: File
+    EVIC_39_PRIVALUE:
+      attributes:
+        id: EVIC_39_PRIVALUE
+        label: EVIC_39_PRIVALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '134217728'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EVIC_39_PRIORITY:
+      attributes:
+        id: EVIC_39_PRIORITY
+        label: Priority
+      children:
+      - children:
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: Combo
+    BSP_PIN_51_PU:
+      attributes:
+        id: BSP_PIN_51_PU
+        label: Pull Up
+      children:
+      - children:
+        - attributes:
+            value: 'True'
+          type: User
+        type: Values
+      type: String
   userData:
     children:
     - attributes:

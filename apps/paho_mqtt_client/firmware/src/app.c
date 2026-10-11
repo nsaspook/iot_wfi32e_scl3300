@@ -86,17 +86,19 @@ uint32_t count = 0;
 
 static TCPIP_NET_HANDLE netHdl;
 
-const char build_version[] = "MQTT WFI32E01 Serial  V0.100 ";
+const char build_version[] = "MQTT WFI32E01 Serial  V0.200 ";
 const char *build_date = __DATE__, *build_time = __TIME__;
 char id_string[128], id_client[128], id_mqtt[128];
 void iot_version(void);
-int32_t APP_MQTT_PublishMsg_local(char *);
+int32_t APP_MQTT_PublishMsg_local(char *, char *);
 static void add_mqtt_id(char *);
 cJSON *json;
 
 char buffer[BUFFER_SIZE];
+uint8_t inbuffer[BUFFER_SIZE];
 bool wait = true, ip_show = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
+size_t inbuffer_len;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 volatile double qa0 = 1.0, qa1 = 0.0, qa2 = 0.0, qa3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 
@@ -104,7 +106,8 @@ extern SYS_MQTT_Handle g_asSysMqttHandle[1];
 #define MQTT_DEVICE	"slc3300wfi"	// client base-name
 
 extern SYS_MODULE_OBJ g_sSysMqttHandle;
-#define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL	"mateq84/data/imu"
+#define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL		"mateq84/data/imu"
+#define SYS_MQTT_DEF_PUB_TOPIC_NAME_SERIAL	"mateq84/data/imu/serial"
 
 sSensorData_t accel = {
 	.id = 1,
@@ -189,6 +192,7 @@ void APP_Tasks(void)
 		eaDogM_WriteStringAtPos(2, 0, imu_buffer);
 		iot_version();
 		eaDogM_WriteStringAtPos(4, 0, imu_buffer);
+		OledUpdate();
 
 		/*
 		 * print the driver version
@@ -229,7 +233,7 @@ void APP_Tasks(void)
 			snprintf(buffer, MAX_BBUF, "Starting WIFI %s", id_client);
 			eaDogM_WriteStringAtPos(7, 0, buffer);
 		}
-		OledUpdate();
+		//		OledUpdate();
 		break;
 	}
 
@@ -256,10 +260,10 @@ void APP_Tasks(void)
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
 				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d ", pUTCSeconds, pMs);
-				UART3_Write((uint8_t*) buffer, strlen(buffer));
+				//				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
 				snprintf(buffer, MAX_BBUF, "SNTP, Waiting %d  ", ntp_ret);
-				UART3_Write((uint8_t*) buffer, strlen(buffer));
+				//				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			}
 			eaDogM_WriteStringAtPos(9, 0, buffer);
 			if (ip_show) {
@@ -328,8 +332,10 @@ void APP_Tasks(void)
 			 * get the data string for publishing
 			 */
 			char *json_str = cJSON_Print(json);
-			//			eaDogM_WriteStringAtPos(6, 0, json_str);
-			APP_MQTT_PublishMsg_local(json_str);
+//			eaDogM_WriteStringAtPos(6, 0, json_str);
+			if (APP_MQTT_GetStatus(0) != SYS_MQTT_FAILURE) {
+				//				APP_MQTT_PublishMsg_local(json_str, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+			}
 			cJSON_free(json_str);
 			cJSON_Delete(json);
 
@@ -345,7 +351,7 @@ void APP_Tasks(void)
 			eaDogM_WriteStringAtPos(12, 0, buffer);
 			snprintf(buffer, MAX_BBUF, "TOPIC %s", SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
 			eaDogM_WriteStringAtPos(15, 0, buffer);
-			appData.state = APP_STATE_SERVICE_TASKS;
+			appData.state = APP_STATE_MQTT_SERIAL;
 
 			/*
 			 * visualize tilt values
@@ -374,6 +380,24 @@ void APP_Tasks(void)
 			}
 		}
 		break;
+	case APP_STATE_MQTT_SERIAL:
+		UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
+		/*
+		 * read serial data to post to MQTT topic
+		 */
+		inbuffer_len = UART3_ReadCountGet();
+		if (inbuffer_len > 0) {
+			UART3_Read(inbuffer, inbuffer_len);
+			inbuffer[inbuffer_len] = 0;
+			if (APP_MQTT_GetStatus(0) != SYS_MQTT_FAILURE) {
+				APP_MQTT_PublishMsg_local((char *) inbuffer, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+				LED_RED_Toggle();
+			}
+		} else {
+			LED_RED_Off();
+		}
+		appData.state = APP_STATE_SERVICE_TASKS;
+		break;
 
 		/* The default state should never be executed. */
 	default:
@@ -389,13 +413,13 @@ void iot_version(void)
 	snprintf(imu_buffer, MAX_FBUF, "%s %s %s", build_version, build_date, build_time);
 }
 
-int32_t APP_MQTT_PublishMsg_local(char *message)
+int32_t APP_MQTT_PublishMsg_local(char *message, char *local_topic)
 {
 	SYS_MQTT_PublishTopicCfg sMqttTopicCfg;
 	int32_t retVal = SYS_MQTT_FAILURE;
 
-	strcpy(sMqttTopicCfg.topicName, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
-	sMqttTopicCfg.topicLength = strlen(SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+	strcpy(sMqttTopicCfg.topicName, local_topic);
+	sMqttTopicCfg.topicLength = strlen(local_topic);
 	sMqttTopicCfg.retain = SYS_MQTT_DEF_PUB_RETAIN;
 	sMqttTopicCfg.qos = SYS_MQTT_DEF_PUB_QOS;
 

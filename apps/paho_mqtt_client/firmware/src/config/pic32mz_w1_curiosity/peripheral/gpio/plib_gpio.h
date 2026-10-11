@@ -117,16 +117,6 @@
 #define TP1_GetLatch()          ((LATA >> 13) & 0x1U)
 #define TP1_PIN                  GPIO_PIN_RA13
 
-/*** Macros for GPIO_RB12 pin ***/
-#define GPIO_RB12_Set()               (LATBSET = (1U<<12))
-#define GPIO_RB12_Clear()             (LATBCLR = (1U<<12))
-#define GPIO_RB12_Toggle()            (LATBINV= (1U<<12))
-#define GPIO_RB12_OutputEnable()      (TRISBCLR = (1U<<12))
-#define GPIO_RB12_InputEnable()       (TRISBSET = (1U<<12))
-#define GPIO_RB12_Get()               ((PORTB >> 12) & 0x1U)
-#define GPIO_RB12_GetLatch()          ((LATB >> 12) & 0x1U)
-#define GPIO_RB12_PIN                  GPIO_PIN_RB12
-
 /*** Macros for AN1_T pin ***/
 #define AN1_T_Get()               ((PORTB >> 9) & 0x1U)
 #define AN1_T_GetLatch()          ((LATB >> 9) & 0x1U)

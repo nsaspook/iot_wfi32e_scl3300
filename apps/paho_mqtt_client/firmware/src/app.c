@@ -29,18 +29,18 @@
 
 /*
  Harmony components to be cloned with MCC Content Manager	Version
-bsp	v3.17.0
+bsp	v3.22.0
 CMSIS-FreeRTOS	v11.0.1
-core	v3.13.2
-crypto	v3.8.0
+core	v3.15.1
+crypto	v3.8.2
 cryptoauthlib	v3.7.4
-csp	v3.18.2
+csp	v3.22.2
 dev_packs	v3.18.1
 net	v3.11.0
 paho.mqtt.embedded-c	v1.2.3
 usb	v3.12.0
-wireless_wifi	v3.9.1
-wireless_system_pic32mzw1_wfi32e01	v3.9.0
+wireless_wifi	v3.12.2
+wireless_system_pic32mzw1_wfi32e01	v3.9.1
 wolfssl	v5.4.0
 Devices	Master Branch
 touch	v3.15.0
@@ -101,13 +101,14 @@ uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 size_t inbuffer_len;
 volatile double q0 = 1.0, q1 = 0.0, q2 = 0.0, q3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
 volatile double qa0 = 1.0, qa1 = 0.0, qa2 = 0.0, qa3 = 0.0; // quaternion of sensor frame relative to auxiliary frame
+IPV4_ADDR ipAddr;
 
 extern SYS_MQTT_Handle g_asSysMqttHandle[1];
 #define MQTT_DEVICE	"slc3300wfi"	// client base-name
 
 extern SYS_MODULE_OBJ g_sSysMqttHandle;
 #define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL		"mateq84/data/imu"
-#define SYS_MQTT_DEF_PUB_TOPIC_NAME_SERIAL	"mateq84/data/imu/serial"
+#define SYS_MQTT_DEF_PUB_TOPIC_NAME_SERIAL		"mateq84/data/imu/serial"
 
 sSensorData_t accel = {
 	.id = 1,
@@ -271,7 +272,6 @@ void APP_Tasks(void)
 				 * net functions in  tcpip_manager.h
 				 */
 				netHdl = TCPIP_STACK_NetHandleGet("PIC32MZW1");
-				IPV4_ADDR ipAddr;
 				ipAddr.Val = TCPIP_STACK_NetAddress(netHdl);
 				if (ipAddr.Val) {
 					snprintf(buffer, MAX_BBUF, "STA IPADDR:%d.%d.%d.%d           ", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
@@ -298,6 +298,7 @@ void APP_Tasks(void)
 		 * convert IMU data to JSON string for MQTT publishing
 		 */
 		if (counter++ >= IMU_UPDATE_SPEED) {
+			char ipaddr[256];
 			ADCHS_ChannelConversionStart(ADCHS_CH21);
 			/*
 			 * format data to JSON using printf formatting
@@ -306,6 +307,9 @@ void APP_Tasks(void)
 			json = cJSON_CreateObject();
 			add_mqtt_id("Wname"); // results in global buffer variable
 			cJSON_AddStringToObject(json, buffer, build_version);
+			add_mqtt_id("Wipaddress");
+			snprintf(ipaddr, 254, "STA IPADDR: %d.%d.%d.%d", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
+			cJSON_AddStringToObject(json, buffer, ipaddr);
 			add_mqtt_id("Wsequence");
 			cJSON_AddNumberToObject(json, buffer, count);
 			add_mqtt_id("WUTC");
@@ -332,9 +336,9 @@ void APP_Tasks(void)
 			 * get the data string for publishing
 			 */
 			char *json_str = cJSON_Print(json);
-//			eaDogM_WriteStringAtPos(6, 0, json_str);
+			//			eaDogM_WriteStringAtPos(6, 0, json_str);
 			if (APP_MQTT_GetStatus(0) != SYS_MQTT_FAILURE) {
-				//				APP_MQTT_PublishMsg_local(json_str, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+				APP_MQTT_PublishMsg_local(json_str, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
 			}
 			cJSON_free(json_str);
 			cJSON_Delete(json);
@@ -381,7 +385,14 @@ void APP_Tasks(void)
 		}
 		break;
 	case APP_STATE_MQTT_SERIAL:
-		UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
+		if (UART3_TransmitComplete()) {
+			size_t i;
+			i = UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
+			if (i == 0) {
+				UART3_ErrorGet();
+				LED_RED_On();
+			}
+		}
 		/*
 		 * read serial data to post to MQTT topic
 		 */
@@ -391,9 +402,10 @@ void APP_Tasks(void)
 			inbuffer[inbuffer_len] = 0;
 			if (APP_MQTT_GetStatus(0) != SYS_MQTT_FAILURE) {
 				APP_MQTT_PublishMsg_local((char *) inbuffer, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
-				LED_RED_Toggle();
+				LED_GREEN_Toggle();
 			}
 		} else {
+			LED_GREEN_On();
 			LED_RED_Off();
 		}
 		appData.state = APP_STATE_SERVICE_TASKS;

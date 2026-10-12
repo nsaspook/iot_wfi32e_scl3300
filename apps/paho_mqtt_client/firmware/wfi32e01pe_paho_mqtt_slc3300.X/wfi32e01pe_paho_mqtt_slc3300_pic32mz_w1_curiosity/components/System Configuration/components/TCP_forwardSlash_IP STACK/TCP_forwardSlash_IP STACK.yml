@@ -11,11 +11,11 @@ dependency:
 - dependencyPackage: ''
   name: bsp
   type: package
-  version: v3.22.0
+  version: v3.25.0
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.15.1
+  version: v3.17.1
 - dependencyPackage: ''
   name: crypto
   type: package
@@ -23,7 +23,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.2
+  version: v3.26.1
 - dependencyPackage: ''
   name: net
   type: package
@@ -39,7 +39,7 @@ dependency:
 - dependencyPackage: ''
   name: wireless_wifi
   type: package
-  version: v3.12.0
+  version: v3.12.2
 - dependencyPackage: ''
   name: wolfssl
   type: package
@@ -59,7 +59,7 @@ data:
     type: TCP/IP STACK
   elementPosition:
     attributes:
-      id: __ROOTVIEW
+      id: System Configuration
     children:
     - children:
       - attributes:

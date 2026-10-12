@@ -151,7 +151,7 @@ static SYS_CMD_INIT cmdInitData;       // data the command processor has been in
 
 static SYS_CMD_DESCRIPTOR_TABLE   usrCmdTbl[MAX_CMD_GROUP] = { {0} };    // current command table
 
-static int stopRequested = 0;       // request to stop the command processor 
+static int stopRequested = 0;       // request to stop the command processor
 
 // function processing the VT100 escape sequence
 typedef void (*keySeqProcess)(SYS_CMD_IO_DCPT* pCmdIO, const struct KEY_SEQ_DCPT_T* pSeqDcpt);
@@ -172,8 +172,8 @@ static void lkeyHomeProcess(SYS_CMD_IO_DCPT* pCmdIO, const KEY_SEQ_DCPT* pSeqDcp
 static void lkeyEndProcess(SYS_CMD_IO_DCPT* pCmdIO, const KEY_SEQ_DCPT* pSeqDcpt);
 
 
-/* MISRA C-2012 Rule 4.1, 17.1 and 21.6 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_4_1_DR_1, H3_MISRAC_2012_R_17_1_DR_1 and H3_MISRAC_2012_R_21_6_DR_1 */
+/* MISRA C-2023 Rule 4.1, 17.1 and 21.6 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_4_1_DR_1, H3_MISRAC_2023_R_17_1_DR_1 and H3_MISRAC_2023_R_21_6_DR_1 */
 // dummy table holding the escape sequences + expected sequence size
 // detection of a sequence is done using only the first 3 characters
 #define         VT100_DETECT_SEQ_SIZE    3
@@ -237,8 +237,8 @@ static const SYS_CMD_DESCRIPTOR    builtinCmdTbl[]=
 // *****************************************************************************
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.3 deviated : 2, 11.8 deviated :2. Deviation record ID -
-   H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+/* MISRA C-2023 Rule 11.3 deviated : 2, 11.8 deviated :2. Deviation record ID -
+   H3_MISRAC_2023_R_11_3_DR_1 & H3_MISRAC_2023_R_11_8_DR_1*/
 /* Function:
     bool SYS_CMD_Initialize( const SYS_MODULE_INIT * const init  )
 

@@ -1,0 +1,35 @@
+configVersion: 1.0.0
+componentName: lib_pahomqtt
+coreVersion: 5.9.0
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: lib_pahomqtt
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: paho.mqtt.embedded-c
+  type: package
+  version: v1.2.3
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: System Configuration
+    children:
+    - children:
+      - attributes:
+          id: lib_pahomqtt
+          x: '410'
+          y: '620'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}

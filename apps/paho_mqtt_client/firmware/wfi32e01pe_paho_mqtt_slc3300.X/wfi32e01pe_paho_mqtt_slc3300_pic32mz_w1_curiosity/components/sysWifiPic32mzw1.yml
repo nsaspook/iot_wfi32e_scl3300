@@ -106,4 +106,15 @@ data:
           type: User
         type: Values
       type: String
+    SYS_WIFI_MAX_CBS:
+      attributes:
+        id: SYS_WIFI_MAX_CBS
+        label: Number of Clients
+      children:
+      - children:
+        - attributes:
+            value: '4'
+          type: User
+        type: Values
+      type: Integer
   userData: {}

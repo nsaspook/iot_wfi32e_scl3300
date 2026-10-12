@@ -218,12 +218,6 @@ extern "C" {
 #define TCPIP_STACK_USE_ICMP_SERVER
 #define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
 
-/*** ICMPv4 Client Configuration ***/
-#define TCPIP_STACK_USE_ICMP_CLIENT
-#define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
-#define TCPIP_ICMP_TASK_TICK_RATE              33
-#define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
-#define TCPIP_ICMP_COMMAND_ENABLE              false
 
 #define SYS_WIFIPROV_NVMADDR        		0x900FF000
 #define SYS_WIFIPROV_SAVECONFIG        			true
@@ -429,7 +423,7 @@ extern "C" {
 #define TCPIP_UDP_MAX_SOCKETS		                	10
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
-#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			16
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
 #define TCPIP_UDP_USE_POOL_BUFFERS   false
 #define TCPIP_UDP_USE_TX_CHECKSUM             			true
 #define TCPIP_UDP_USE_RX_CHECKSUM             			true
@@ -503,7 +497,7 @@ extern "C" {
 #define SYS_WIFI_DEVMODE        			SYS_WIFI_STA
 
 
-#define SYS_WIFI_MAX_CBS					2
+#define SYS_WIFI_MAX_CBS					4
 #define SYS_WIFI_COUNTRYCODE        	   "GEN"
 #define SYS_WIFI_STA_SSID        			"newage"
 #define SYS_WIFI_STA_PWD        			"01090203020206050003050003"

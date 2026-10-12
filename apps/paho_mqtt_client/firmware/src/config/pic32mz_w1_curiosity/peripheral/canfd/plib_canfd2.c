@@ -146,9 +146,9 @@ static inline void CAN2_ZeroInitialize(volatile void* pData, size_t dataSize)
     }
 }
 
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 11.6 deviated 5 times. Deviation record ID -  H3_MISRAC_2012_R_11_6_DR_1 */
-/* MISRA C-2012 Rule 5.1 deviated 1 time. Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRAC 2023 deviation block start */
+/* MISRA C-2023 Rule 11.6 deviated 5 times. Deviation record ID -  H3_MISRAC_2023_R_11_6_DR_1 */
+/* MISRA C-2023 Rule 5.1 deviated 1 time. Deviation record ID -  H3_MISRAC_2023_R_5_1_DR_1 */
 
 // *****************************************************************************
 // *****************************************************************************
@@ -340,19 +340,19 @@ bool CAN2_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, uint8_t fi
 
         if (fifoQueueNum == 0U)
         {
-            CFD2TXQCON |= _CFD2TXQCON_TXQEIE_MASK;
-
             /* Request the transmit */
             CFD2TXQCON |= _CFD2TXQCON_UINC_MASK;
             CFD2TXQCON |= _CFD2TXQCON_TXREQ_MASK;
+
+            CFD2TXQCON |= _CFD2TXQCON_TXQEIE_MASK;
         }
         else
         {
-            *(volatile uint32_t *)(&CFD2FIFOCON1 + ((fifoQueueNum - 1U) * CANFD_FIFO_OFFSET)) |= _CFD2FIFOCON1_TFERFFIE_MASK;
-
             /* Request the transmit */
             *(volatile uint32_t *)(&CFD2FIFOCON1 + ((fifoQueueNum - 1U) * CANFD_FIFO_OFFSET)) |= _CFD2FIFOCON1_UINC_MASK;
             *(volatile uint32_t *)(&CFD2FIFOCON1 + ((fifoQueueNum - 1U) * CANFD_FIFO_OFFSET)) |= _CFD2FIFOCON1_TXREQ_MASK;
+
+            *(volatile uint32_t *)(&CFD2FIFOCON1 + ((fifoQueueNum - 1U) * CANFD_FIFO_OFFSET)) |= _CFD2FIFOCON1_TFERFFIE_MASK;
         }
         CFD2INT |= _CFD2INT_TXIE_MASK;
     }
@@ -1160,4 +1160,4 @@ void __attribute__((used)) CAN2_MISC_InterruptHandler(void)
 }
 
 
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */

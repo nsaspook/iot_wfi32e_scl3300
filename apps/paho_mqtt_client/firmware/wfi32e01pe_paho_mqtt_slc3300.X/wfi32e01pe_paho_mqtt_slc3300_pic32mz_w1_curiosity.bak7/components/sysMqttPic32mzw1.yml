@@ -1,0 +1,163 @@
+configVersion: 1.0.0
+componentName: sysMqttPic32mzw1
+coreVersion: 5.9.0
+device: PIC32MZ1025W104132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysMqttPic32mzw1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_pic32mzw1_wfi32e01
+  type: package
+  version: v3.9.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysMqttPic32mzw1
+          x: '189'
+          y: '115'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_MQTT_APPDEBUG_DBG_LEVEL:
+      attributes:
+        id: SYS_MQTT_APPDEBUG_DBG_LEVEL
+        label: Enable Debug Level
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_APPDEBUG_ENABLE:
+      attributes:
+        id: SYS_MQTT_APPDEBUG_ENABLE
+        label: Enable Debug Logs
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_APPDEBUG_INFO_LEVEL:
+      attributes:
+        id: SYS_MQTT_APPDEBUG_INFO_LEVEL
+        label: Enable Info Level
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_BROKER_NAME:
+      attributes:
+        id: SYS_MQTT_BROKER_NAME
+        label: Broker Name
+      children:
+      - children:
+        - attributes:
+            value: 10.1.1.172
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_CLIENT_ID:
+      attributes:
+        id: SYS_MQTT_CLIENT_ID
+        label: Client Id
+      children:
+      - children:
+        - attributes:
+            value: slc3300wfi
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_PUB_ENABLE:
+      attributes:
+        id: SYS_MQTT_PUB_ENABLE
+        label: Publish to Topic
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_PUB_TOPIC_NAME:
+      attributes:
+        id: SYS_MQTT_PUB_TOPIC_NAME
+        label: Topic Name
+      children:
+      - children:
+        - attributes:
+            value: mateq84/data/imu
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_SUB_ENABLE:
+      attributes:
+        id: SYS_MQTT_SUB_ENABLE
+        label: Subscribe Topic
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_SUB_TOPIC_NAME:
+      attributes:
+        id: SYS_MQTT_SUB_TOPIC_NAME
+        label: Topic Name
+      children:
+      - children:
+        - attributes:
+            value: mateq84/data/info
+          type: User
+        type: Values
+      type: String
+    SYS_MQTT_SUB_QOS:
+      attributes:
+        id: SYS_MQTT_SUB_QOS
+        label: QOS
+      children:
+      - children:
+        - attributes:
+            value: Exactly once (2)
+          type: User
+        type: Values
+      type: Combo
+    SYS_MQTT_PUB_QOS:
+      attributes:
+        id: SYS_MQTT_PUB_QOS
+        label: QOS
+      children:
+      - children:
+        - attributes:
+            value: Exactly once (2)
+          type: User
+        type: Values
+      type: Combo
+    SYS_MQTT_ENABLE_CLICMD:
+      attributes:
+        id: SYS_MQTT_ENABLE_CLICMD
+        label: Enable CLI Commands
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+  userData: {}

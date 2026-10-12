@@ -134,9 +134,9 @@ void SYS_INT_Enable( void );
   Example:
     <code>
       bool interruptState;
-     
+
       interruptState = SYS_INT_Disable();
-      
+
       SYS_INT_Restore(interruptState)
     </code>
 
@@ -171,7 +171,7 @@ bool SYS_INT_Disable( void );
     <code>
        if(true == SYS_INT_IsEnabled())
        {
-             
+
        }
     </code>
 
@@ -179,8 +179,8 @@ bool SYS_INT_Disable( void );
     None.
 */
 
-/* MISRA C-2012 Rule 5.5, 8.6 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_5_5_DR_1 & H3_MISRAC_2012_R_8_6_DR_1*/
+/* MISRA C-2023 Rule 5.5, 8.6 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_5_5_DR_1 & H3_MISRAC_2023_R_8_6_DR_1*/
 
 bool SYS_INT_IsEnabled( void );
 
@@ -207,10 +207,10 @@ bool SYS_INT_IsEnabled( void );
   Example:
     <code>
       bool interruptState;
-      
-      interruptState = SYS_INT_Disable();      
 
-      
+      interruptState = SYS_INT_Disable();
+
+
       SYS_INT_Restore(interruptState)
     </code>
 
@@ -316,7 +316,7 @@ bool SYS_INT_SourceDisable( INT_SOURCE source );
       bool status;
 
       status = SYS_INT_SourceDisable( aSrcId );
-      
+
       SYS_INT_SourceRestore( aSrcId, status )
     </code>
 
@@ -416,7 +416,7 @@ bool SYS_INT_SourceStatusGet( INT_SOURCE source );
     None.
 
   Example:
-    <code>      
+    <code>
     SYS_INT_SourceStatusSet(USART0_IRQn);
     </code>
 
@@ -448,7 +448,7 @@ void SYS_INT_SourceStatusSet( INT_SOURCE source );
     None.
 
   Example:
-    <code>      
+    <code>
        SYS_INT_SourceStatusClear(USART0_IRQn);
     </code>
 

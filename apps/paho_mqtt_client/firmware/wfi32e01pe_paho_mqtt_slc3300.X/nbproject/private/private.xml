@@ -10,7 +10,9 @@
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/lcd_drv/lcd_drv.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app_mqtt.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/main.c</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/driver/wifi/pic32mzw1/wdrv_pic32mzw.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/system/mqtt/sys_mqtt.h</file>
+            <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/config/pic32mz_w1_curiosity/peripheral/uart/plib_uart1.c</file>
             <file>file:/ldrv/iot_wfi32e_scl3300/apps/paho_mqtt_client/firmware/src/app.c</file>
         </group>
     </open-files>

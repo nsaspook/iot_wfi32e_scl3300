@@ -243,22 +243,6 @@ typedef struct
 */
 typedef enum
 {
-    /* Wi-Fi Provisioning system service is in NVM read state */
-    SYS_WIFIPROV_STATUS_NVM_READ,
-
-    /* Wi-Fi Provisioning system service is in NVM read Wi-Fi Configuration 
-      checking state */
-    SYS_WIFIPROV_STATUS_CONFIG_CHECK,
-
-    /* Wi-Fi Provisioning system service is in NVM erase state */
-    SYS_WIFIPROV_STATUS_NVM_ERASE,
-
-    /* Wi-Fi Provisioning system service is in NVM write state */
-    SYS_WIFIPROV_STATUS_NVM_WRITE,
-
-    /* Wi-Fi Provisioning system service is in wait for NVM write to 
-       complate state */
-    SYS_WIFIPROV_STATUS_WAITFORWRITE,
     /* Wi-Fi Provisioning system service is in client request state */
     SYS_WIFIPROV_STATUS_WAITFORREQ,
 

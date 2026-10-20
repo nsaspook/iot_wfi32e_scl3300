@@ -40,4 +40,15 @@ data:
           type: Dynamic
         type: Values
       type: Boolean
+    SYS_WIFIPROV_CONFIG_MENU:
+      attributes:
+        id: SYS_WIFIPROV_CONFIG_MENU
+        label: WiFi Configuration Stored At?
+      children:
+      - children:
+        - attributes:
+            value: User
+          type: User
+        type: Values
+      type: Combo
   userData: {}

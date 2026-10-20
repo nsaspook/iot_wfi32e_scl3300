@@ -385,14 +385,6 @@ void APP_Tasks(void)
 		}
 		break;
 	case APP_STATE_MQTT_SERIAL:
-		if (UART3_TransmitComplete()) {
-			size_t i;
-			i = UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
-			if (i == 0) {
-				UART3_ErrorGet();
-				LED_RED_On();
-			}
-		}
 		/*
 		 * read serial data to post to MQTT topic
 		 */
@@ -407,6 +399,15 @@ void APP_Tasks(void)
 		} else {
 			LED_GREEN_On();
 			LED_RED_Off();
+		}
+
+		if (UART3_TransmitComplete()) {
+			size_t i;
+			i = UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
+			if (i == 0) {
+				UART3_ErrorGet();
+				LED_RED_On();
+			}
 		}
 		appData.state = APP_STATE_SERVICE_TASKS;
 		break;

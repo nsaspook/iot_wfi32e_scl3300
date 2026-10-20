@@ -55,14 +55,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 typedef enum 
 {
-    /* Wi-Fi Provisioning service NVM write state */
-    SYS_WIFIPROV_NVM_WRITE = 0,
-
-    /* Wi-Fi Provisioning service NVM erase state */
-    SYS_WIFIPROV_NVM_ERASE,
-
-    /* Wi-Fi Provisioning service NVM read state */
-    SYS_WIFIPROV_NVM_READ,
     /* Wi-Fi Provisioning service invalid state */
     SYS_WIFIPROV_NONE = 255
 } SYS_WIFIPROV_NVMTYPEOPER; //NVM Operation
@@ -72,8 +64,6 @@ typedef struct
     /* The WiFi service current status */
     SYS_WIFIPROV_STATUS status;
 
-    /* The WiFi service NVM type operation  */
-    SYS_WIFIPROV_NVMTYPEOPER nvmTypeOfOperation;
 } SYS_WIFIPROV_OBJ; /*Wi-Fi Provision system service Object*/
 
 // *****************************************************************************
@@ -82,7 +72,7 @@ typedef struct
 // *****************************************************************************
 // *****************************************************************************
 /*Wi-Fi Provisioning Object */
-static  SYS_WIFIPROV_OBJ      g_wifiProvSrvcObj = {SYS_WIFIPROV_STATUS_NONE, SYS_WIFIPROV_NONE};
+static  SYS_WIFIPROV_OBJ      g_wifiProvSrvcObj = {SYS_WIFIPROV_STATUS_NONE};
 /* Wi-Fi Provisioning Configuration */
 static  SYS_WIFIPROV_CONFIG   g_wifiProvSrvcConfig CACHE_ALIGN;
 
@@ -170,7 +160,8 @@ static void inline SYS_WIFIPROV_InitConfig(SYS_WIFIPROV_CONFIG *config)
         g_wifiProvSrvcConfig.staConfig.authType = SYS_WIFI_STA_AUTHTYPE;
         memcpy(g_wifiProvSrvcConfig.staConfig.ssid, SYS_WIFI_STA_SSID, sizeof (SYS_WIFI_STA_SSID));
         memcpy(g_wifiProvSrvcConfig.staConfig.psk, SYS_WIFI_STA_PWD, sizeof (SYS_WIFI_STA_PWD));
-        SYS_WIFIPROV_SetTaskstatus(SYS_WIFIPROV_STATUS_NVM_READ);
+        SYS_WIFIPROV_WriteConfig();
+        SYS_WIFIPROV_SetTaskstatus(SYS_WIFIPROV_STATUS_WAITFORREQ);
     } 
     else 
     {
@@ -182,43 +173,6 @@ static void inline SYS_WIFIPROV_InitConfig(SYS_WIFIPROV_CONFIG *config)
     }
 }
 
-static void SYS_WIFIPROV_CheckConfig(void) 
-{
-    /* when NVM read provide empty data, the save config value will be 0xFF */
-    if (0xFF != g_wifiProvSrvcConfigRead.saveConfig) 
-    {
-        SYS_WIFIPROV_SetTaskstatus(SYS_WIFIPROV_STATUS_WAITFORREQ);
-        memcpy(&g_wifiProvSrvcConfig, &g_wifiProvSrvcConfigRead, sizeof (SYS_WIFIPROV_CONFIG));
-        memset(&g_wifiProvSrvcConfigRead, 0, sizeof (SYS_WIFIPROV_CONFIG));
-        SYS_WIFIPROV_CallBackFun(SYS_WIFIPROV_SETCONFIG, &g_wifiProvSrvcConfig, g_wifiProvSrvcCookie);
-    } 
-    else 
-    {     /* Write valid Wi-Fi Config into NVM */
-          /* NVM write command sequence: first Erase than write */
-        SYS_WIFIPROV_SetTaskstatus(SYS_WIFIPROV_STATUS_NVM_ERASE);
-    }
-}
-
-static inline void SYS_WIFIPROV_NVMRead(void) 
-{
-    /* Start the NVM read operation */
-    g_wifiProvSrvcObj.nvmTypeOfOperation = SYS_WIFIPROV_NVM_READ;
-    NVM_Read((uint32_t *)&g_wifiProvSrvcConfigRead, sizeof (g_wifiProvSrvcConfigRead), SYS_WIFIPROV_NVMADDR);
-}
-
-static inline void SYS_WIFIPROV_NVMWrite(void) 
-{
-    /* Start the NVM Write operation */
-    g_wifiProvSrvcObj.nvmTypeOfOperation = SYS_WIFIPROV_NVM_WRITE;
-    NVM_RowWrite((uint32_t *)&g_wifiProvSrvcConfig, SYS_WIFIPROV_NVMADDR);
-}
-
-static inline void SYS_WIFIPROV_NVMErase(void) 
-{
-    /* Start the NVM Erase operation */
-    g_wifiProvSrvcObj.nvmTypeOfOperation = SYS_WIFIPROV_NVM_ERASE;
-    NVM_PageErase(SYS_WIFIPROV_NVMADDR);
-}
 static void SYS_WIFIPROV_PrintConfig(void) 
 {
     SYS_CONSOLE_PRINT("\r\n mode=%d (0-STA,1-AP) saveConfig=%d countryCode=%s\r\n ", g_wifiProvSrvcConfig.mode, g_wifiProvSrvcConfig.saveConfig, g_wifiProvSrvcConfig.countryCode);
@@ -226,19 +180,8 @@ static void SYS_WIFIPROV_PrintConfig(void)
 }
 static void SYS_WIFIPROV_WriteConfig(void) 
 {
-    if (true == g_wifiProvSrvcConfig.saveConfig) 
-    {
-        /* User has enabled Save Config,
-           so first copy the Wi-Fi configuration into NVM flash */
-        SYS_WIFIPROV_SetTaskstatus(SYS_WIFIPROV_STATUS_NVM_ERASE);
-    } 
-    else 
-    {
-        /* User has not enabled Save Config,
-           so no need to copy the Wi-Fi configuration into NVM flash */
-        /* Just generate the callback to Wi-Fi service for connection request */
-        SYS_WIFIPROV_CallBackFun(SYS_WIFIPROV_SETCONFIG, &g_wifiProvSrvcConfig, g_wifiProvSrvcCookie);
-    }
+    /* Just generate the callback to Wi-Fi service for connection request */
+    SYS_WIFIPROV_CallBackFun(SYS_WIFIPROV_SETCONFIG, &g_wifiProvSrvcConfig, g_wifiProvSrvcCookie);
 }
 
 static SYS_WIFIPROV_STATUS SYS_WIFIPROV_ExecuteBlock
@@ -253,63 +196,6 @@ static SYS_WIFIPROV_STATUS SYS_WIFIPROV_ExecuteBlock
     {
         switch (wifiProvSrvcObj->status) 
         {
-           case SYS_WIFIPROV_STATUS_NVM_READ:
-            {
-                /* Check if NVM flash performing any operation */
-                if (!NVM_IsBusy()) 
-                {
-                    /* Start the NVM Read Operation */
-                    SYS_WIFIPROV_NVMRead();                           
-                    wifiProvSrvcObj->status = SYS_WIFIPROV_STATUS_CONFIG_CHECK;
-                }
-                break;
-            }
-
-            case SYS_WIFIPROV_STATUS_CONFIG_CHECK:
-            {
-                /* verify the NVM Read output, based on NVM Read 
-                   output set new state */
-                SYS_WIFIPROV_CheckConfig();
-                break;
-            }
-
-            case SYS_WIFIPROV_STATUS_NVM_ERASE:
-            {
-                /* Check if NVM flash performing any operation */
-                if (!NVM_IsBusy()) 
-                {
-                    /* Start the NVM Erase Operation */
-                    SYS_WIFIPROV_NVMErase();                      
-                    wifiProvSrvcObj->status = SYS_WIFIPROV_STATUS_NVM_WRITE;
-                }
-                break;
-            }
-
-            case SYS_WIFIPROV_STATUS_NVM_WRITE:
-            {
-                /* Check if NVM flash performing any operation */
-                if (!NVM_IsBusy()) 
-                {
-                    /* Start the NVM Write operation */
-                    SYS_WIFIPROV_NVMWrite();                      
-                    wifiProvSrvcObj->status = SYS_WIFIPROV_STATUS_WAITFORWRITE;
-                }
-                break;
-            }
-
-            /* Wait for NVM Write to complete */
-            case SYS_WIFIPROV_STATUS_WAITFORWRITE:
-            {
-                /* Check if NVM flash performing any operation */
-                if (!NVM_IsBusy()) 
-                {
-                    /* Update the Wi-Fi configuration to Wi-Fi service 
-                       with the callback */
-                    SYS_WIFIPROV_CallBackFun(SYS_WIFIPROV_SETCONFIG, &g_wifiProvSrvcConfig, g_wifiProvSrvcCookie);
-                    wifiProvSrvcObj->status = SYS_WIFIPROV_STATUS_WAITFORREQ;
-                }
-                break;
-            }
             case SYS_WIFIPROV_STATUS_WAITFORREQ:
             default:
             {

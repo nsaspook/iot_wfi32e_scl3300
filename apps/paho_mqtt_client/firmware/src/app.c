@@ -96,6 +96,7 @@ cJSON *json;
 
 char buffer[BUFFER_SIZE];
 uint8_t inbuffer[BUFFER_SIZE];
+static volatile uint8_t dData;
 bool wait = true, ip_show = true;
 uint32_t board_serial_id = 0x35A, cpu_serial_id = 0x1957;
 size_t inbuffer_len;
@@ -261,10 +262,8 @@ void APP_Tasks(void)
 			if (ntp_ret == SNTP_RES_OK) {
 				TCPIP_SNTP_TimeStampGet(&pTStamp, &pLastUpdate);
 				snprintf(buffer, MAX_BBUF, "SNTP UNIX time %d.%d ", pUTCSeconds, pMs);
-				//				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			} else {
 				snprintf(buffer, MAX_BBUF, "SNTP, Waiting %d  ", ntp_ret);
-				//				UART3_Write((uint8_t*) buffer, strlen(buffer));
 			}
 			eaDogM_WriteStringAtPos(9, 0, buffer);
 			if (ip_show) {
@@ -406,7 +405,26 @@ void APP_Tasks(void)
 			i = UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
 			if (i == 0) {
 				UART3_ErrorGet();
+
+				/* If it's a overrun error then clear it to flush FIFO */
+				if ((U3STA & _U3STA_OERR_MASK) != 0U) {
+					U3STACLR = _U3STA_OERR_MASK;
+				}
+
+				/* Read existing error bytes from FIFO to clear parity and framing error flags */
+				while ((U3STA & _U3STA_URXDA_MASK) != 0U) {
+					dData = (uint8_t) U3RXREG;
+				}
+
+				/* Clear error interrupt flag */
+				IFS1CLR = _IFS1_U3EIF_MASK;
+
+				/* Clear up the receive interrupt flag so that RX interrupt is not
+				 * triggered for error bytes */
+				IFS1CLR = _IFS1_U3RXIF_MASK;
 				LED_RED_On();
+			} else {
+				LED_RED_Off();
 			}
 		}
 		appData.state = APP_STATE_SERVICE_TASKS;

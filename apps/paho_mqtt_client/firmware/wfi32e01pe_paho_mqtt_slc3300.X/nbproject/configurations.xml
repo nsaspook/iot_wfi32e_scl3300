@@ -214,10 +214,6 @@
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/cache/plib_cache_local.h</itemPath>
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/cache/plib_cache_pic32mz.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="canfd" displayName="canfd" projectFiles="true">
-              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd2.h</itemPath>
-              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd_common.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="f4" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
@@ -687,7 +683,6 @@
           <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sysWifiProvPic32mzw1.yml</itemPath>
           <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/core.yml</itemPath>
           <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sys_console_0.yml</itemPath>
-          <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/can2.yml</itemPath>
           <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/tmr4.yml</itemPath>
           <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/dfp.yml</itemPath>
           <itemPath>wfi32e01pe_paho_mqtt_slc3300_pic32mz_w1_curiosity/components/sysMqttPic32mzw1.yml</itemPath>
@@ -817,9 +812,6 @@
             <logicalFolder name="cache" displayName="cache" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/cache/plib_cache_pic32mz.S</itemPath>
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/cache/plib_cache.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="canfd" displayName="canfd" projectFiles="true">
-              <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd2.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f4" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/clk/plib_clk.c</itemPath>

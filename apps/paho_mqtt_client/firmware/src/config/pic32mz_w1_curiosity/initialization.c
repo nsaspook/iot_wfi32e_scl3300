@@ -645,8 +645,6 @@ void SYS_Initialize ( void* data )
     PRECONbits.PFMWS = 3;
 
 
-    CAN2_Initialize();
-
 
 	GPIO_Initialize();
 

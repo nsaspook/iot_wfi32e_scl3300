@@ -86,9 +86,6 @@ void DMA2_Handler (void);
 void RFSMC_Handler (void);
 void RFMAC_Handler (void);
 void RFTM0_Handler (void);
-void CAN2_RX_Handler (void);
-void CAN2_TX_Handler (void);
-void CAN2_MISC_Handler (void);
 void CRYPTO1_Handler (void);
 void CRYPTO1_FAULT_Handler (void);
 
@@ -191,21 +188,6 @@ void __attribute__((used)) __ISR(_RFMAC_VECTOR, ipl7SRS) RFMAC_Handler (void)
 void __attribute__((used)) __ISR(_RFTM0_VECTOR, ipl7SRS) RFTM0_Handler (void)
 {
     WDRV_PIC32MZW_TasksRFTimer0ISR();
-}
-
-void __attribute__((used)) __ISR(_CAN2_RX_VECTOR, ipl1SRS) CAN2_RX_Handler (void)
-{
-    CAN2_RX_InterruptHandler();
-}
-
-void __attribute__((used)) __ISR(_CAN2_TX_VECTOR, ipl1SRS) CAN2_TX_Handler (void)
-{
-    CAN2_TX_InterruptHandler();
-}
-
-void __attribute__((used)) __ISR(_CAN2_MISC_VECTOR, ipl1SRS) CAN2_MISC_Handler (void)
-{
-    CAN2_MISC_InterruptHandler();
 }
 
 void __attribute__((used)) __ISR(_CRYPTO1_VECTOR, ipl2SRS) CRYPTO1_Handler (void)

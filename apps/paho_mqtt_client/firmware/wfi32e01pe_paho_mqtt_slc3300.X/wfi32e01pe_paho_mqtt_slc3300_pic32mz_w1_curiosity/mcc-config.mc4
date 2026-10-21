@@ -62,7 +62,6 @@ groupModules:
 modules:
 - BSP_PIC32MZ_W1_Curiosity
 - adchs
-- can2
 - core
 - dfp
 - lib_wolfssl
@@ -100,7 +99,7 @@ generatedFileHashHistoryMap:
 - file: ../src/config/pic32mz_w1_curiosity/crypto/src/crypto.c
   hash: 4c1b271685e092105d8271ee0615ac36c95abbea944b3e3c8e5bc194da00c014
 - file: ../src/config/pic32mz_w1_curiosity/definitions.h
-  hash: 37d5050d55777ea3cdfd7be6e179ec9c990aecf3fcd99620a0284357006a1dfd
+  hash: 73be21c59c3ddb18f9548b18cab7f38e64245e9d0ea48753adb05c241e1035de
 - file: ../src/config/pic32mz_w1_curiosity/device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ../src/config/pic32mz_w1_curiosity/device_cache.h
@@ -192,11 +191,11 @@ generatedFileHashHistoryMap:
 - file: ../src/config/pic32mz_w1_curiosity/exceptions.c
   hash: 76a5e1f97aaa1ef74367e169dc10e40c1e3b94a4b18b43af80830666efcab3d8
 - file: ../src/config/pic32mz_w1_curiosity/initialization.c
-  hash: cb317daab992900f0a6d715b9d89d41d30bd1b8d9c7b9f26b4bb20d8385ec994
+  hash: ae6baa842d329122dbae9d45cda96130581ff33e8f87f0a3a890449d3ea42cbd
 - file: ../src/config/pic32mz_w1_curiosity/interrupts.c
-  hash: 2d78e699efaa83030726b032f192d99ae962e835f2bde5fc2cc240228c66003c
+  hash: 7e127a7a661a4a75d9e0a26e095a22615c4430a585b1661be97d1953537f8381
 - file: ../src/config/pic32mz_w1_curiosity/interrupts.h
-  hash: 245681b4b0fe0ebfd9b89c6e9e647d8d650b324aee0f2672d3b8958e1c65669a
+  hash: 5d5ca11f7625666f5780df57cf4005dcc44ec68d004b055e7e7084433e74bbd9
 - file: ../src/config/pic32mz_w1_curiosity/library/tcpip/arp.h
   hash: 2a5925ed5186568c3339c61bf48c38ecfe05c640c39c49764d30381df6d667f4
 - file: ../src/config/pic32mz_w1_curiosity/library/tcpip/berkeley_api.h
@@ -525,14 +524,8 @@ generatedFileHashHistoryMap:
   hash: 227a6c622b0100cceef847043fb5afdace49f27df33d00e61d413bc9da34932d
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/cache/plib_cache_pic32mz.h
   hash: e401b896c670e8d0e1714eafc2b93a12b1fe6592783951e2353471bb4ced58e8
-- file: ../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd2.c
-  hash: d5a0d2cc0593bbbe86fd55be6cd96b57161ccc4b77d118a4de2ebe471811b289
-- file: ../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd2.h
-  hash: 680be9443d59ea7e67a9c08375a8ed771ef623cd7f7eea7f14641e84f6560ba7
-- file: ../src/config/pic32mz_w1_curiosity/peripheral/canfd/plib_canfd_common.h
-  hash: fbf5091541d361f023f2c1fa3f04173ed84db75e64f475d14e1919856f1bf620
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/clk/plib_clk.c
-  hash: 0fdcc7dfde983a7f38e9f0719822ca1363212112b22ee988437d2fc55f4a1b76
+  hash: be60251a3d8104be8fb4e9e777e148df3cb0b3eeb3c8565a334509ea284567b4
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/clk/plib_clk.h
   hash: e898efaccaf25a733d0de02c3ccac5011ea50f04fa4c24fe4790d16f64d15e17
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/coretimer/plib_coretimer.c
@@ -544,13 +537,13 @@ generatedFileHashHistoryMap:
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/dmac/plib_dmac.h
   hash: 78b9533671371600d12031eb6280ef51c292677cc636c809bb1b16ab772a4f8d
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.c
-  hash: 16ca58b23aaf9eb704f62635e3574ff89682a909f278c7a63a31aaaf57e46fe3
+  hash: 2b25551002cbf995d282a648291354cf822039f1f94cbb786134aa6a1afe9a81
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/evic/plib_evic.h
   hash: adf1db24a43fb89e8ca09361bd244305da7543f75b6354dd5a74e2e5b5b1d9e6
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/gpio/plib_gpio.c
-  hash: df787e3d7eb7883a89d9e9db2f478d8aff71c99321d34989c2180b4f96607983
+  hash: 5b2bfbb92f28f1d07591105d15a0206594bbbc97d2a984bdefd22f83c80eeb72
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/gpio/plib_gpio.h
-  hash: 82821826906973f923573c31a4b8279e05311c7f767d570de339a5a65428f02d
+  hash: 85015f441b675ac9e554182d5485a3b3fe167e4ec051765ccac41605be60fadf
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.c
   hash: 7f90f012390cc376cccb84d1c00c1cd1210cb9a2cc3b341aa3d85b09afb64888
 - file: ../src/config/pic32mz_w1_curiosity/peripheral/nvm/plib_nvm.h

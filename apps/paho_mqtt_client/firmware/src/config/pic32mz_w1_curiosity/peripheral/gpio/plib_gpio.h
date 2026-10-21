@@ -157,6 +157,16 @@
 #define should_be_sdo1_GetLatch()          ((LATC >> 8) & 0x1U)
 #define should_be_sdo1_PIN                  GPIO_PIN_RC8
 
+/*** Macros for GPIO_RK7 pin ***/
+#define GPIO_RK7_Set()               (LATKSET = (1U<<7))
+#define GPIO_RK7_Clear()             (LATKCLR = (1U<<7))
+#define GPIO_RK7_Toggle()            (LATKINV= (1U<<7))
+#define GPIO_RK7_OutputEnable()      (TRISKCLR = (1U<<7))
+#define GPIO_RK7_InputEnable()       (TRISKSET = (1U<<7))
+#define GPIO_RK7_Get()               ((PORTK >> 7) & 0x1U)
+#define GPIO_RK7_GetLatch()          ((LATK >> 7) & 0x1U)
+#define GPIO_RK7_PIN                  GPIO_PIN_RK7
+
 /*** Macros for IMU_INT2 pin ***/
 #define IMU_INT2_Set()               (LATASET = (1U<<14))
 #define IMU_INT2_Clear()             (LATACLR = (1U<<14))
@@ -171,6 +181,16 @@
 #define VREF_IN_Get()               ((PORTB >> 8) & 0x1U)
 #define VREF_IN_GetLatch()          ((LATB >> 8) & 0x1U)
 #define VREF_IN_PIN                  GPIO_PIN_RB8
+
+/*** Macros for GPIO_RB4 pin ***/
+#define GPIO_RB4_Set()               (LATBSET = (1U<<4))
+#define GPIO_RB4_Clear()             (LATBCLR = (1U<<4))
+#define GPIO_RB4_Toggle()            (LATBINV= (1U<<4))
+#define GPIO_RB4_OutputEnable()      (TRISBCLR = (1U<<4))
+#define GPIO_RB4_InputEnable()       (TRISBSET = (1U<<4))
+#define GPIO_RB4_Get()               ((PORTB >> 4) & 0x1U)
+#define GPIO_RB4_GetLatch()          ((LATB >> 4) & 0x1U)
+#define GPIO_RB4_PIN                  GPIO_PIN_RB4
 
 /*** Macros for DIS_MODE pin ***/
 #define DIS_MODE_Set()               (LATCSET = (1U<<10))

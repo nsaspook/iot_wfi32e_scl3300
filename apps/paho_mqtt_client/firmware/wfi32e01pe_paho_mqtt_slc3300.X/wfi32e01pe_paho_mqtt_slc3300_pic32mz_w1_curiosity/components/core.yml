@@ -1326,56 +1326,26 @@ data:
       attributes:
         id: BSP_PIN_87_DIR
         label: Direction
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
       type: String
     BSP_PIN_87_FUNCTION_NAME:
       attributes:
         id: BSP_PIN_87_FUNCTION_NAME
         label: Name
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
       type: String
     BSP_PIN_87_FUNCTION_TYPE:
       attributes:
         id: BSP_PIN_87_FUNCTION_TYPE
         label: Type
-      children:
-      - children:
-        - attributes:
-            value: C2TX
-          type: User
-        type: Values
       type: String
     BSP_PIN_87_LAT:
       attributes:
         id: BSP_PIN_87_LAT
         label: Initial Latch Value
-      children:
-      - children:
-        - attributes:
-            value: High
-          type: User
-        type: Values
       type: String
     BSP_PIN_87_MODE:
       attributes:
         id: BSP_PIN_87_MODE
         label: Mode
-      children:
-      - children:
-        - attributes:
-            value: DIGITAL
-          type: User
-        type: Values
       type: String
     BSP_PIN_88_MODE:
       attributes:
@@ -1447,12 +1417,6 @@ data:
       attributes:
         id: BSP_PIN_92_DIR
         label: Direction
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
       type: String
     BSP_PIN_92_FUNCTION_NAME:
       attributes:
@@ -1461,7 +1425,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: GPIO_RK7
           type: User
         type: Values
       type: String
@@ -1472,7 +1436,7 @@ data:
       children:
       - children:
         - attributes:
-            value: C2RX
+            value: GPIO
           type: User
         type: Values
       type: String
@@ -1541,13 +1505,6 @@ data:
       attributes:
         id: CAN2_CLOCK_ENABLE
         label: CAN2 Clock Enable
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CAN2_CLOCK_FREQUENCY:
       attributes:
@@ -1557,7 +1514,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '100000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -1565,13 +1522,6 @@ data:
       attributes:
         id: CAN2_MISC_INTERRUPT_ENABLE
         label: Vector Peripheral Enable
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CAN2_MISC_INTERRUPT_ENABLE_UPDATE:
       attributes:
@@ -1581,7 +1531,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'false'
+            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1589,37 +1539,16 @@ data:
       attributes:
         id: CAN2_MISC_INTERRUPT_HANDLER
         label: Vector Peripheral Handler
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: CAN2_MISC_InterruptHandler
-          type: Dynamic
-        type: Values
       type: String
     CAN2_MISC_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CAN2_MISC_INTERRUPT_HANDLER_LOCK
         label: Vector Peripheral Handler Lock
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CAN2_RX_INTERRUPT_ENABLE:
       attributes:
         id: CAN2_RX_INTERRUPT_ENABLE
         label: Vector Peripheral Enable
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CAN2_RX_INTERRUPT_ENABLE_UPDATE:
       attributes:
@@ -1629,7 +1558,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'false'
+            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1637,37 +1566,16 @@ data:
       attributes:
         id: CAN2_RX_INTERRUPT_HANDLER
         label: Vector Peripheral Handler
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: CAN2_RX_InterruptHandler
-          type: Dynamic
-        type: Values
       type: String
     CAN2_RX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CAN2_RX_INTERRUPT_HANDLER_LOCK
         label: Vector Peripheral Handler Lock
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CAN2_TX_INTERRUPT_ENABLE:
       attributes:
         id: CAN2_TX_INTERRUPT_ENABLE
         label: Vector Peripheral Enable
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CAN2_TX_INTERRUPT_ENABLE_UPDATE:
       attributes:
@@ -1677,7 +1585,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'false'
+            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1685,25 +1593,11 @@ data:
       attributes:
         id: CAN2_TX_INTERRUPT_HANDLER
         label: Vector Peripheral Handler
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: CAN2_TX_InterruptHandler
-          type: Dynamic
-        type: Values
       type: String
     CAN2_TX_INTERRUPT_HANDLER_LOCK:
       attributes:
         id: CAN2_TX_INTERRUPT_HANDLER_LOCK
         label: Vector Peripheral Handler Lock
-      children:
-      - children:
-        - attributes:
-            id: can2
-            value: 'true'
-          type: Dynamic
-        type: Values
       type: Boolean
     CHANGE_NOTICE_A_INTERRUPT_ENABLE:
       attributes:
@@ -2789,7 +2683,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2801,7 +2695,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2813,7 +2707,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: CAN2_RX_InterruptHandler
+            value: CAN2_RX_Handler
           type: Dynamic
         type: Values
       type: String
@@ -2825,7 +2719,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2837,7 +2731,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2849,7 +2743,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: CAN2_TX_InterruptHandler
+            value: CAN2_TX_Handler
           type: Dynamic
         type: Values
       type: String
@@ -2861,7 +2755,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2873,7 +2767,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2885,7 +2779,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: CAN2_MISC_InterruptHandler
+            value: CAN2_MISC_Handler
           type: Dynamic
         type: Values
       type: String
@@ -4705,7 +4599,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '151191570'
+            value: '419627026'
           type: Dynamic
         type: Values
       type: Hex
@@ -5364,7 +5258,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '8210'
+            value: '9234'
           type: Dynamic
         type: Values
       type: Hex
@@ -5388,7 +5282,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '50'
+            value: '18'
           type: Dynamic
         type: Values
       type: Hex
@@ -5436,7 +5330,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4224'
+            value: '4240'
           type: Dynamic
         type: Values
       type: Hex
@@ -6651,7 +6545,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -6717,7 +6611,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -6902,6 +6796,50 @@ data:
       - children:
         - attributes:
             value: 'True'
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_111_PU:
+      attributes:
+        id: BSP_PIN_111_PU
+        label: Pull Up
+      children:
+      - children:
+        - attributes:
+            value: 'True'
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_122_MODE:
+      attributes:
+        id: BSP_PIN_122_MODE
+        label: Mode
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_122_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_122_FUNCTION_TYPE
+        label: Type
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_122_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_122_FUNCTION_NAME
+        label: Name
+      children:
+      - children:
+        - attributes:
+            value: GPIO_RB4
           type: User
         type: Values
       type: String

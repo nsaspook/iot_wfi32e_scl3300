@@ -108,7 +108,7 @@ extern SYS_MQTT_Handle g_asSysMqttHandle[1];
 #define MQTT_DEVICE	"slc3300wfi"	// client base-name
 
 extern SYS_MODULE_OBJ g_sSysMqttHandle;
-#define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL		"mateq84/data/imu"
+#define SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL		"mateq84/data/imu/data"
 #define SYS_MQTT_DEF_PUB_TOPIC_NAME_SERIAL		"mateq84/data/imu/serial"
 
 sSensorData_t accel = {
@@ -297,7 +297,6 @@ void APP_Tasks(void)
 		 * convert IMU data to JSON string for MQTT publishing
 		 */
 		if (counter++ >= IMU_UPDATE_SPEED) {
-			char ipaddr[256];
 			ADCHS_ChannelConversionStart(ADCHS_CH21);
 			/*
 			 * format data to JSON using printf formatting
@@ -307,6 +306,8 @@ void APP_Tasks(void)
 			add_mqtt_id("Wname"); // results in global buffer variable
 			cJSON_AddStringToObject(json, buffer, build_version);
 			add_mqtt_id("Wipaddress");
+			char ipaddr[256];
+
 			snprintf(ipaddr, 254, "STA IPADDR: %d.%d.%d.%d", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
 			cJSON_AddStringToObject(json, buffer, ipaddr);
 			add_mqtt_id("Wsequence");
@@ -335,9 +336,11 @@ void APP_Tasks(void)
 			 * get the data string for publishing
 			 */
 			char *json_str = cJSON_Print(json);
-			//			eaDogM_WriteStringAtPos(6, 0, json_str);
+
 			if (APP_MQTT_GetStatus(0) != SYS_MQTT_FAILURE) {
+#ifdef IMU_JSON
 				APP_MQTT_PublishMsg_local(json_str, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
+#endif
 			}
 			cJSON_free(json_str);
 			cJSON_Delete(json);
@@ -387,19 +390,22 @@ void APP_Tasks(void)
 		/*
 		 * read serial data to post to MQTT topic
 		 */
-		inbuffer_len = UART3_ReadCountGet();
-		if (inbuffer_len > 0) {
-			UART3_Read(inbuffer, inbuffer_len);
+		inbuffer_len = UART3_Read(inbuffer, BUFFER_SIZE - 1);
+
+		if (inbuffer_len > SERIAL_MSG_LEN) {
 			inbuffer[inbuffer_len] = 0;
 			if (APP_MQTT_GetStatus(0) != SYS_MQTT_FAILURE) {
 				APP_MQTT_PublishMsg_local((char *) inbuffer, SYS_MQTT_DEF_PUB_TOPIC_NAME_LOCAL);
 				LED_GREEN_Toggle();
 			}
+			snprintf(buffer, MAX_BBUF, "inbuffer_len = %d       ", inbuffer_len);
+			eaDogM_WriteStringAtPos(6, 0, buffer);
 		} else {
 			LED_GREEN_On();
 			LED_RED_Off();
 		}
 
+#ifdef	LOOP_TX
 		if (UART3_TransmitComplete()) {
 			size_t i;
 			i = UART3_Write((uint8_t *) "{\r\nNSASPOOK\r\n}", 15);
@@ -427,6 +433,8 @@ void APP_Tasks(void)
 				LED_RED_Off();
 			}
 		}
+#endif		
+
 		appData.state = APP_STATE_SERVICE_TASKS;
 		break;
 

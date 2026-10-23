@@ -76,6 +76,9 @@ extern "C" {
 #define WDT_CAL			25
 #define IMU_UPDATE_SPEED	100
 #define IP_UPDATE_SPEED		10000
+	
+#define	SERIAL_MSG_LEN		350
+//#define	IMU_JSON
 
 	/*
 	 * setup external interrupt #2 for IMU BMA4x0 data update interrupt trigger output
